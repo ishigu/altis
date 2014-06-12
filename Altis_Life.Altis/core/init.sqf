@@ -4,7 +4,7 @@
 */
 life_firstSpawn = true;
 private["_handle","_timeStamp"];
-cutText["Setting up client, please wait...","BLACK FADED"];
+0 cutText["Setting up client, please wait...","BLACK FADED"];
 0 cutFadeOut 9999999;
 _timeStamp = diag_tickTime;
 diag_log "------------------------------------------------------------------------------------------------------";
@@ -30,7 +30,7 @@ waitUntil {(!isNil {clientGangLeader})};
 diag_log "::Life Client:: Received server functions.";
 [] call SOCK_fnc_dataQuery;
 waitUntil {life_session_completed};
-cutText["Finishing client setup procedure","BLACK FADED"];
+0 cutText["Finishing client setup procedure","BLACK FADED"];
 0 cutFadeOut 9999999;
 
 //diag_log "::Life Client:: Group Base Execution";
@@ -74,7 +74,7 @@ diag_log format["                End of Stratis Life Client Init :: Total Execut
 diag_log "------------------------------------------------------------------------------------------------------";
 life_sidechat = true;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
-cutText ["","BLACK IN"];
+0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 [] call life_fnc_settingsInit;
@@ -84,12 +84,6 @@ life_fnc_moveIn = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
-uiNamespace setVariable["RscDisplayRemoteMissions",displayNull]; //For Spy-Glass..
 [] call life_fnc_setupActions;
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
-
-/*
-	Initialize SpyGlass
-*/
-[] call SPY_fnc_payLoad;

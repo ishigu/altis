@@ -19,6 +19,11 @@ _mapKey = actionKeys "ShowMap" select 0;
 //hint str _code;
 _interruptionKeys = [17,30,31,32]; //A,S,W,D
 
+//Vault handling...
+if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(player getVariable ["restrained",false])}) exitWith {
+	true;
+};
+
 if(life_action_inUse) exitWith {
 	if(!life_interrupted && _code in _interruptionKeys) then {life_interrupted = true;};
 	_handled;
@@ -29,7 +34,9 @@ switch (_code) do
 	//Space key for Jumping
 	case 57:
 	{
-		if(_shift && {animationState player != "AovrPercMrunSrasWrflDf"} && {isTouchingGround player} && {stance player == "STAND"} && {speed player > 2} && {!life_is_arrested}) then {
+		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
+		if(_shift && {animationState player != "AovrPercMrunSrasWrflDf"} && {isTouchingGround player} && {stance player == "STAND"} && {speed player > 2} && {!life_is_arrested} && {(velocity player) select 2 < 2.5} && {time - jumpActionTime > 1.5}) then {
+			jumpActionTime = time; //Update the time.
 			[player,true] spawn life_fnc_jumpFnc; //Local execution
 			[[player,false],"life_fnc_jumpFnc",nil,FALSE] call life_fnc_MP; //Global execution 
 			_handled = true;
@@ -43,6 +50,22 @@ switch (_code) do
 		{
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
+		};
+	};
+	
+	//Holster / recall weapon.
+	case 35:
+	{
+		if(_shift && !_ctrlKey && currentWeapon player != "") then {
+			life_curWep_h = currentWeapon player;
+			player action ["SwitchWeapon", player, player, 100];
+			player switchcamera cameraView;
+		};
+		
+		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(life_curWep_h != "")}) then {
+			if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
+				player selectWeapon life_curWep_h;
+			};
 		};
 	};
 	
@@ -111,10 +134,14 @@ switch (_code) do
 	case 38: 
 	{
 		//If cop run checks for turning lights on.
-		if(_shift && playerSide == west) then {
+		if(_shift && playerSide in [west,independent]) then {
 			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
 				if(!isNil {vehicle player getVariable "lights"}) then {
-					[vehicle player] call life_fnc_sirenLights;
+					if(playerSide == west) then {
+						[vehicle player] call life_fnc_sirenLights;
+					} else {
+						[vehicle player] call life_fnc_medicSirenLights;
+					};
 					_handled = true;
 				};
 			};
@@ -130,15 +157,11 @@ switch (_code) do
 			[] call life_fnc_p_openMenu;
 		};
 	};
-	//V Key
-	case 47:
-	{
-		if(playerSide != west && (player getVariable "restrained") OR (player getVariable "transporting")) then {_handled = true;};
-	};
+	
 	//F Key
 	case 33:
 	{
-		if(playerSide == west && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
+		if(playerSide in [west,independent] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
 			[] spawn
 			{
@@ -157,7 +180,12 @@ switch (_code) do
 			{
 				titleText ["Sirens On","PLAIN"];
 				_veh setVariable["siren",true,true];
-				[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
+				if(playerSide == west) then {
+					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
+				} else {
+					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
+					//[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+				};
 			};
 		};
 	};

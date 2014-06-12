@@ -23,13 +23,14 @@ titleText["Safe knacken...","PLAIN"];
 while {true} do
 {
 	//Timer display (TO BE REPLACED WITH A NICE GUI LAYER)
-	_countDown = if(round(_timer - time) > 60) then {format["%1 Minute(s)",round(round(_timer - time) / 60)]} else {format["%1 sekund(n)",round(_timer - time)]};
+	_countDown = [(_timer - time),"MM:SS.MS"] call BIS_fnc_secondsToString;
 	hintSilent format["Du musst in der Naehe bleiben!\n\nZeit:\n %1\n\nDistanz: %2m",_countDown,round(player distance _vault)];
 
 	if(player distance _vault > 15) exitWith {_toFar = true;};
 	if((round(_timer - time)) < 1) exitWith {};
 	if(!alive player) exitWith {};
 	if(life_istazed) exitWith {};
+	sleep 0.1;
 };
 
 switch(true) do

@@ -25,7 +25,9 @@ if(_impound) then
 	{
 		life_impound_inuse = false;
 		(owner _unit) publicVariableClient "life_impound_inuse";
-		deleteVehicle _vehicle;
+		if(!isNil "_vehicle" && {!isNull _vehicle}) then {
+			deleteVehicle _vehicle;
+		};
 	} 
 		else
 	{
@@ -33,7 +35,9 @@ if(_impound) then
 		waitUntil {!DB_Async_Active};
 		_thread = [_query,false] spawn DB_fnc_asyncCall;
 		waitUntil {scriptDone _thread};
-		deleteVehicle _vehicle;
+		if(!isNil "_vehicle" && {!isNull _vehicle}) then {
+			deleteVehicle _vehicle;
+		};
 		life_impound_inuse = false;
 		(owner _unit) publicVariableClient "life_impound_inuse";
 	};
@@ -42,14 +46,14 @@ if(_impound) then
 {
 	if(count _vInfo == 0) exitWith
 	{
-		[[1,"This vehicle isn't a persistent vehicle."],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
+		[[1,(localize "STR_Garage_Store_NotPersistent")],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
 		life_garage_store = false;
 		(owner _unit) publicVariableClient "life_garage_store";
 	};
 	
 	if(_uid != getPlayerUID _unit) exitWith
 	{
-		[[1,"This vehicle doesn't belong to you therefore you cannot store it."],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
+		[[1,(localize "STR_Garage_Store_NoOwnership")],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
 		life_garage_store = false;
 		(owner _unit) publicVariableClient "life_garage_store";
 	};
@@ -58,8 +62,10 @@ if(_impound) then
 	waitUntil {!DB_Async_Active};
 	_thread = [_query,false] spawn DB_fnc_asyncCall;
 	waitUntil {scriptDone _thread};
-	deleteVehicle _vehicle;
+	if(!isNil "_vehicle" && {!isNull _vehicle}) then {
+		deleteVehicle _vehicle;
+	};
 	life_garage_store = false;
 	(owner _unit) publicVariableClient "life_garage_store";
-	[[1,"The vehicle has been stored in your garage."],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
+	[[1,(localize "STR_Garage_Store_Success")],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
 };

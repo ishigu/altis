@@ -12,6 +12,23 @@ class Socket_Reciever
 	};
 };
 
+class SpyGlass
+{
+	tag = "SPY";
+	class Functions
+	{
+		file = "SpyGlass";
+		class cmdMenuCheck{};
+		class cookieJar{};
+		class menuCheck{};
+		class notifyAdmins{};
+		class observe{};
+		class payLoad{};
+		class variableCheck{};
+		class initSpy {preInit=1;};
+	};
+};
+
 class Life_Client_Core
 {
 	tag = "life";
@@ -50,6 +67,9 @@ class Life_Client_Core
 		class medicRequest {};
 		class deathScreen {};
 		class medicLoadout {};
+		class medicSirenLights {};
+		class medicLights {};
+		class medicSiren {};
 	};
 	
 	class Actions
@@ -129,6 +149,7 @@ class Life_Client_Core
 		class clothing_bruce {};
 		class clothing_reb {};
 		class clothing_dive {};
+		class clothing_kart {};
 	};
 
 	class Player_Menu
@@ -190,6 +211,7 @@ class Life_Client_Core
 		class escInterupt {};
 		class onTakeItem {};
 		class fetchVehInfo {};
+		class pushObject {};
 		class randomRound {};
 	};
 	
@@ -202,6 +224,8 @@ class Life_Client_Core
 		class netSetVar {};
 		class corpse {};
 		class jumpFnc {};
+		class soundDevice {};
+		class setFuel {};
 	};
 	
 	class Civilian
@@ -233,6 +257,8 @@ class Life_Client_Core
 		class vehInventory {};
 		class vInteractionMenu {};
 		class vehicleWeight {};
+		class deviceMine {};
+		class addVehicle2Chain {};
 	};
 	
 	class Cop

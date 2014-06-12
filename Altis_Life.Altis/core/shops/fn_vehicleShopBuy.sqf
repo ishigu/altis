@@ -59,6 +59,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle attachTo[_hs,[-0.4,-4,14]];
 	_vehicle lock 2;
 	[_vehicle,_colorIndex] call life_fnc_colorVehicle;
+	[_vehicle] call life_fnc_clearVehicleAmmo;
 	_vehicle setVariable["trunk_in_use",false,true];
 	_vehicle setVariable["vehicle_info_owners",[[getPlayerUID player,name player]],true];
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
@@ -89,6 +90,10 @@ switch(playerSide) do {
 		if((life_veh_shop select 2) == "civ" && {_className == "B_Heli_Light_01_F"}) then {
 			[_vehicle,"civ_littlebird",true] spawn life_fnc_vehicleAnimate;
 		};
+	};
+	
+	case independent: {
+		[_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
 	};
 };
 

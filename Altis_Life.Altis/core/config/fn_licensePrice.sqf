@@ -38,4 +38,5 @@ switch (_type) do
 	case "medical": {30000};
 	case "meth": {100000};
 	case "dangerousgoods": {5000};
+	case "mair": {15000};
 };

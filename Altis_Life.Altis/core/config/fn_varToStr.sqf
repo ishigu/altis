@@ -67,11 +67,11 @@ switch (_var) do
 	case "life_inv_meth": {"Meth"};
 	
 	//License Block
-	case "license_civ_driver": {"Führerschein"};
+	case "license_civ_driver": {"Fuehrerschein"};
 	case "license_civ_air": {"Pilotenschein"};
 	case "license_civ_heroin": {"Heroinzubereitung"};
 	case "license_civ_gang": {"Gruppenlizenz"};
-	case "license_civ_oil": {"Öllizenz"};
+	case "license_civ_oil": {"Oellizenz"};
 	case "license_civ_dive": {"Taucherschein"};
 	case "license_civ_boat": {"Bootsschein"};
 	case "license_civ_gun": {"Waffenlizenz"};
@@ -79,7 +79,7 @@ switch (_var) do
 	case "license_cop_swat": {"Spezialausbildung"};
 	case "license_cop_cg": {"Kuestenwache"};
 	case "license_civ_rebel": {"Rebellenausbildung"};
-	case "license_civ_truck": {"LKW Führerschein"};
+	case "license_civ_truck": {"LKW Fuehrerschein"};
 	case "license_civ_diamond": {"Diamantenverarbeitung"};
 	case "license_civ_copper": {"Kupferverarbeitung"};
 	case "license_civ_iron": {"Eisenverarbeitung"};
@@ -93,4 +93,6 @@ switch (_var) do
 	case "license_civ_medical": {"Medizinlizenz"};
 	case "license_civ_meth": {"Methlizenz"};
 	case "license_civ_dangerousgoods": {"Gefahrengutlizenz"};
+	case "license_med_air": {"Pilotenlizenz Sani"};
+
 };
