@@ -17026,14 +17026,14 @@ class Mission
 			text="Garage";
 			type="o_service";
 		};
-		class Item211
+		class Item217
 		{
 			position[]={9296.8389,42.430538,8061.811};
 			name="air_g_1_1";
 			type="Empty";
 			angle=75;
 		};
-		class Item212
+		class Item218
 		{
 			position[]={9279.3643,41.98344,8056.2017};
 			name="civ_gar_1_1_1";
