@@ -8,7 +8,7 @@
 private["_unit"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 disableSerialization;
-if(!(createDialog "life_ticket_give")) exitWith {hint "Couldn't open the ticketing interface"};
+if(!(createDialog "life_ticket_give")) exitWith {hint "Das Ticket-Interface kann nicht geoeffnet werden."};
 if(isNull _unit OR !isPlayer _unit) exitwith {};
-ctrlSetText[2651,format["Ticketing %1",name _unit]];
+ctrlSetText[2651,format["Strafzettel %1",name _unit]];
 life_ticket_unit = _unit;

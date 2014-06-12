@@ -2,6 +2,10 @@
 	Master UI Resource File
 */
 #include "common.hpp"
+#include "common_EditorWrapper.hpp"
+#include "picturebutton.hpp"
+
+
 #include "shop_items.hpp"
 #include "player_inv.hpp"
 #include "settings.hpp"
@@ -13,7 +17,13 @@
 #include "shops.hpp"
 #include "ui.hpp"
 #include "admin_menu.hpp"
+
 #include "cell_phone.hpp"
+#include "cellphone_extended.hpp"
+
+#include "market.hpp"
+
+
 #include "wanted_list.hpp"
 #include "ticket.hpp"
 #include "clothing.hpp"

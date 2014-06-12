@@ -19,4 +19,4 @@ if(hmd player != "") then {
 	player unlinkItem (hmd player);
 };
 
-player setObjectTextureGlobal [0,"textures\medic_uniform.jpg"];
+player setObjectTextureGlobal [0,"textures\saniuniform.jpg"];

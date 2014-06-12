@@ -16,15 +16,15 @@ if(player distance _vault > 10) exitWith {[[_vault,-1],"TON_fnc_robberyState",fa
 if(_funds < 50000) exitWith{[[_vault,-1],"TON_fnc_robberyState",false,false] spawn life_fnc_MP; hint "There wasn't enough funds in the reserve...";};
 
 _timer = time + (10 * 60); //Default timer is 10 minutes to rob.
-titleText["Cracking the safe...","PLAIN"];
-[[2,"$$$ THE FEDERAL RESERVE IS BEING ROBBED!!! $$$"],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+titleText["Safe knacken...","PLAIN"];
+[[2,"$$$ DIE BANK WIRD AUSGERAUBT!!! $$$"],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 
 
 while {true} do
 {
 	//Timer display (TO BE REPLACED WITH A NICE GUI LAYER)
-	_countDown = if(round(_timer - time) > 60) then {format["%1 minute(s)",round(round(_timer - time) / 60)]} else {format["%1 second(s)",round(_timer - time)]};
-	hintSilent format["You need to stay within 15m!\n\nTime Remaining:\n %1\n\nDistance: %2m",_countDown,round(player distance _vault)];
+	_countDown = if(round(_timer - time) > 60) then {format["%1 Minute(s)",round(round(_timer - time) / 60)]} else {format["%1 sekund(n)",round(_timer - time)]};
+	hintSilent format["Du musst in der Naehe bleiben!\n\nZeit:\n %1\n\nDistanz: %2m",_countDown,round(player distance _vault)];
 
 	if(player distance _vault > 15) exitWith {_toFar = true;};
 	if((round(_timer - time)) < 1) exitWith {};
@@ -36,25 +36,25 @@ switch(true) do
 {
 	case (_toFar):
 	{
-		hint "You went to far from the safe, the robbery has failed!";
+		hint "Du hast dich zu weit vom Safe entfernt. Der Bankraub ist gescheitert!";
 		[[_vault,0],"TON_fnc_robberyState",false,false] spawn life_fnc_MP;
 	};
 	
 	case (!alive player):
 	{
-		hint "Because you died the robbery failed.";
+		hint "Du bist gestorben. Der Bankraub ist gescheitert!";
 		[[_vault,0],"TON_fnc_robberyState",false,false] spawn life_fnc_MP;
 	};
 	
 	case (life_istazed):
 	{
-		hint "You were tazed, the robbery has failed!";
+		hint "Du wurdest getazert. Der Bankraub ist gescheitert.";
 		[[_vault,0],"TON_fnc_robberyState",false,false] spawn life_fnc_MP;
 	};
 	
 	case ((round(_timer - time)) < 1):
 	{
-		hint format["You have successfully robbed $%1\n\nTo avoid the cops tracing you, your bank card will not work for 8 minutes",[_funds] call life_fnc_numberText];
+		hint format["Du hast die Bank um $%1 erleichtert.\n\nAus Sicherheitsgruenden ist die Bank 8 Minuten geschlossen.",[_funds] call life_fnc_numberText];
 		[] spawn
 		{
 			life_use_atm = false;

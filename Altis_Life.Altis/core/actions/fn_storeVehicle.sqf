@@ -30,8 +30,8 @@ if(vehicle player != player) then
 	};
 };
 
-if(isNil "_vehicle") exitWith {hint "There isn't a vehicle near the NPC."};
+if(isNil "_vehicle") exitWith {hint "Es musst ein Fahrzeug in die Naehe stehen."};
 if(isNull _vehicle) exitWith {};
 [[_vehicle,false,(_this select 1)],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
-hint "The server is trying to store the vehicle...";
+hint "Bitte Warte bis dein Fahrzeug eingelagert wurde...";
 life_garage_store = true;

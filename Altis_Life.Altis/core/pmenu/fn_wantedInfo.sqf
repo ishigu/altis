@@ -13,9 +13,9 @@ _list = _display displayCtrl 2402;
 _data = lbData[2401,(lbCurSel 2401)];
 _mylist = [];
 _data = call compile format["%1", _data];
-if(isNil "_data") exitWith {_list lbAdd "Failed to fetch crimes";};
-if(typeName _data != "ARRAY") exitWith {_list lbAdd "Failed to fetch crimes";};
-if(count _data == 0) exitWith {_list lbAdd "Failed to fetch crimes";};
+if(isNil "_data") exitWith {_list lbAdd "Keine Straftaten gefunden";};
+if(typeName _data != "ARRAY") exitWith {_list lbAdd "Keine Straftaten gefunden";};
+if(count _data == 0) exitWith {_list lbAdd "Keine Straftaten gefunden";};
 lbClear _list;
 
 _crimes = _data select 2;
@@ -30,4 +30,4 @@ _bounty = _data select 3;
 	};
 } foreach _crimes;
 
-ctrlSetText[2403,format["Current Bounty Price: $%1",[_bounty] call life_fnc_numberText]];
+ctrlSetText[2403,format["Momentanes Kopfgeld: $%1",[_bounty] call life_fnc_numberText]];

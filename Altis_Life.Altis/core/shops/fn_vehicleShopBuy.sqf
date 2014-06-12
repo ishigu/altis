@@ -9,7 +9,9 @@ private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPo
 _mode = _this select 0;
 if((lbCurSel 2302) == -1) exitWith {hint "You did not pick a vehicle!"};
 _className = lbData[2302,(lbCurSel 2302)];
-_basePrice = lbValue[2302,(lbCurSel 2302)]; if(_mode) then {_basePrice = round(_basePrice * 1.5)};
+_vIndex = lbValue[2302,(lbCurSel 2302)];
+_vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
+ if(_mode) then {_basePrice = round(_basePrice * 1.5)};
 _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 //Series of checks (YAY!)
@@ -21,6 +23,18 @@ _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
 
 if((life_veh_shop select 0) == "med_air_hs") then {
+	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
+} else {
+	//Check if there is multiple spawn points and find a suitable spawnpoint.
+	if(typeName _spawnPoints == typeName []) then {
+		//Find an available spawn point.
+		{if(count(nearestObjects[(getMarkerPos _x),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _x};} foreach _spawnPoints;
+	} else {
+		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
+	};
+};
+
+if((life_veh_shop select 0) == "adac_air_hs") then {
 	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
 } else {
 	//Check if there is multiple spawn points and find a suitable spawnpoint.

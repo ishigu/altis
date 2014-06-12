@@ -98,6 +98,8 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
+		class gatherChemical{};
+		class surrender {};
 	};
 	
 	class Config
@@ -120,6 +122,7 @@ class Life_Client_Core
 		class vehicleAnimate {};
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
+		class clothingCfg{};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -187,6 +190,7 @@ class Life_Client_Core
 		class escInterupt {};
 		class onTakeItem {};
 		class fetchVehInfo {};
+		class randomRound {};
 	};
 	
 	class Network
@@ -322,4 +326,33 @@ class Life_Client_Core
 		class bankTransfer {};
 		class garageLBChange {};
 	};
+
+	class market
+	{
+		file = "core\market";
+		class refreshMarketView {};
+		class openMarketView {};
+		class MarketShortView {};
+		class marketSetPriceRow {};
+		class marketSell {};
+		class marketReset {};
+		class marketGetSellPrice {};
+		class marketGetRow {};
+		class marketGetPriceRow {};
+		class marketGetBuyPrice {};
+		class marketconfiguration {};
+		class marketChange {};
+		class marketBuy {};
+		
+	}
+		
+	class Cellphone_Extended
+	{
+		file = "core\cellphoneextended";
+		
+		class cellex_open;
+		class cellex_sendClick;
+	};
+
+		
 };

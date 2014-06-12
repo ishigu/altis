@@ -7,7 +7,7 @@
 */
 private["_item"];
 disableSerialization;
-if((lbCurSel 2005) == -1) exitWith {hint "You need to select an item first!";};
+if((lbCurSel 2005) == -1) exitWith {hint "Du musst etwas auswahlen!";};
 _item = lbData[2005,(lbCurSel 2005)];
 
 switch (true) do
@@ -21,6 +21,16 @@ switch (true) do
 		};
 	};
 	
+	case (_item == "sekt" or _item == "wine" or _item == "vodca" or _item == "blackbeer" or _item == "beer"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 100;
+			player setFatigue 1;
+			titleText["Du hast getrunken und fühlst dich nicht so gut.","PLAIN"];
+		};
+	};
+	
 	case (_item == "redgull"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
@@ -30,7 +40,7 @@ switch (true) do
 			[] spawn
 			{
 				life_redgull_effect = time;
-				titleText["You can now run farther for 3 minutes","PLAIN"];
+				titleText["Ich fuehle mich gut","PLAIN"];
 				player enableFatigue false;
 				waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
 				player enableFatigue true;

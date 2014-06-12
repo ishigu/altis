@@ -6,7 +6,7 @@
 	Master handling of the weapon shop for buying / selling an item.
 */
 private["_price","_item","_itemInfo","_bad"];
-if((lbCurSel 38403) == -1) exitWith {hint "You need to select an item to buy/sell."};
+if((lbCurSel 38403) == -1) exitWith {hint "Du musst etwas Auswaehlem zum Kaufen/Verkaufen."};
 _price = lbValue[38403,(lbCurSel 38403)]; if(isNil "_price") then {_price = 0;};
 _item = lbData[38403,(lbCurSel 38403)];
 _itemInfo = [_item] call life_fnc_fetchCfgDetails;
@@ -17,7 +17,7 @@ if((_itemInfo select 6) != "CfgVehicles") then
 {
 	if((_itemInfo select 4) in [4096,131072]) then
 	{
-		if(!(player canAdd _item) && (uiNamespace getVariable["Weapon_Shop_Filter",0]) != 1) exitWith {_bad = "You don't have enough room for that item."};
+		if(!(player canAdd _item) && (uiNamespace getVariable["Weapon_Shop_Filter",0]) != 1) exitWith {_bad = "Du hast nicht genug Platz im Inventar."};
 	};
 };
 

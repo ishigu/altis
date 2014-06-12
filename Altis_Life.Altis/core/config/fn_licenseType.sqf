@@ -38,6 +38,11 @@ switch (_mode) do
 			case "iron": {_var = "license_civ_iron"};
 			case "copper": {_var = "license_civ_copper"};
 			case "cement": {_var = "license_civ_cement"};
+			case "chemical": {_var = "license_civ_chemical"};
+			case "benzin": {_var = "license_civ_benzin"};
+			case "medical": {_var = "license_civ_medical"};
+			case "meth": {_var = "license_civ_meth"};
+			case "dangerousgoods": {_var = "license_civ_dangerousgoods"};	
 			default {_var = ""};
 		};
 	};
@@ -68,6 +73,11 @@ switch (_mode) do
 			case "license_civ_iron": {_var = "iron"};
 			case "license_civ_copper": {_var = "copper"};
 			case "license_civ_cement": {_var = "cement"};
+			case "license_civ_chemical": {_var = "chemical"};
+			case "license_civ_benzin": {_var = "benzin"};
+			case "license_civ_medical": {_var = "medical"};
+			case "license_civ_meth": {_var = "meth"};
+			case "license_civ_dangerousgoods": {_var = "dangerousgoods"};
 			default {_var = ""};
 		};
 	};

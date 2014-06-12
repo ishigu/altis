@@ -34,6 +34,11 @@ switch (_mode) do
 			case "turtle": {"life_inv_turtle"};
 			case "fishing": {"life_inv_fishingpoles"};
 			case "coffee": {"life_inv_coffee"};
+			case "beer": {"life_inv_beer"};
+			case "blackbeer": {"life_inv_blackbeer"};
+			case "vodca": {"life_inv_vodca"};
+			case "wine": {"life_inv_wine"};
+			case "sekt": {"life_inv_sekt"};
 			case "turtlesoup": {"life_inv_turtlesoup"};
 			case "donuts": {"life_inv_donuts"};
 			case "fuelE": {"life_inv_fuelE"};
@@ -60,6 +65,11 @@ switch (_mode) do
 			case "cement": {"life_inv_cement"};
 			case "rock": {"life_inv_rock"};
 			case "goldbar": {"life_inv_goldbar"};
+			case "chemical": {"life_inv_chemical"};
+			case "benzin": {"life_inv_benzin"};
+			case "medical": {"life_inv_medical"};
+			case "meth": {"life_inv_meth"};
+			case "dangerousgoods": {"life_inv_dangerousgoods"};
 		};
 	};
 	
@@ -111,6 +121,16 @@ switch (_mode) do
 			case "life_inv_cement": {"cement"};
 			case "life_inv_rock": {"rock"};
 			case "life_inv_goldbar": {"goldbar"};
+			case "life_inv_chemical": {"chemical"};
+			case "life_inv_benzin": {"benzin"};
+			case "life_inv_medical": {"medical"};
+			case "life_inv_meth": {"meth"};
+			case "life_inv_beer": {"beer"};
+			case "life_inv_blackbeer": {"blackbeer"};
+			case "life_inv_vodca": {"vodca"};
+			case "life_inv_wine": {"wine"};
+			case "life_inv_sekt": {"sekt"};
+			case "life_inv_dangerousgoods": {"dangerousgoods"};
 		};
 	};
 };

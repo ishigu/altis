@@ -26,7 +26,7 @@ _units = [];
 	};
 } foreach _info;
 
-ctrlSetText[2404,"Connection Established"];
+ctrlSetText[2404,"Verbunden"];
 
 if(((lbSize _list)-1) == -1) then
 {

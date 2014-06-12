@@ -7,7 +7,7 @@
 */
 if(isNull (findDisplay 2900)) then
 {
-	if(!createDialog "TAW_VD") exitWith {hint "Something went wrong, the menu won't open?"};
+	if(!createDialog "TAW_VD") exitWith {hint "Es ist ein Fehler aufgetreten!"};
 };
 
 disableSerialization;

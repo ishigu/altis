@@ -1,5 +1,5 @@
-author = "Tonic";
-onLoadName = "Altis Life RPG v3.1.3";
+author = "Lasdios & Felix";
+onLoadName = "Westerland v3.1.3";
 onLoadMission = "A RPG game mode developed by Tonic";
 joinUnassigned = 1;
 respawn = BASE;

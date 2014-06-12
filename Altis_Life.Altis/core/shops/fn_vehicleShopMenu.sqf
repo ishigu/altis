@@ -16,7 +16,7 @@ disableSerialization;
 //Long boring series of checks
 if(dialog) exitWith {};
 if(_shop == "") exitWith {};
-if(_sideCheck != sideUnknown && {playerSide != _sideCheck}) exitWith {hint "You are not allowed to use this shop!"};
+if(_sideCheck != sideUnknown && {playerSide != _sideCheck}) exitWith {hint "Du kannst diesen Shop nicht benutzen!"};
 
 if(!createDialog "Life_Vehicle_Shop_v2") exitWith {};
 
@@ -46,5 +46,5 @@ ctrlShow [2304,false];
 	_control lbAdd (_vehicleInfo select 3);
 	_control lbSetPicture [(lbSize _control)-1,(_vehicleInfo select 2)];
 	_control lbSetData [(lbSize _control)-1,_className];
-	_control lbSetValue [(lbSize _control)-1,_basePrice];
+	_control lbSetValue [(lbSize _control)-1,_ForEachIndex];
 } foreach _vehicleList;

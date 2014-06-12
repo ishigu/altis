@@ -11,7 +11,7 @@ class Life_cell_phone {
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
-			w = 0.64;
+			w = 0.66;
 			h = (1 / 25);
 		};
 		
@@ -20,7 +20,7 @@ class Life_cell_phone {
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
-			w = 0.64;
+			w = 0.66;
 			h = 0.25 - (5 / 250);
 		};
 	};
@@ -34,7 +34,7 @@ class Life_cell_phone {
 			text = "$STR_CELL_Title";
 			x = 0.1;
 			y = 0.2;
-			w = 0.6;
+			w = 0.62;
 			h = (1 / 25);
 		};
 		
@@ -128,6 +128,19 @@ class Life_cell_phone {
 			
 			x = 0.53;
 			y = 0.4;
+			w = 0.2;
+			h = (1 / 25);
+		};
+		
+		class CopMsgAllButton : life_RscButtonMenu 
+		{
+			idc = 3023;
+			text = "CopMsg All";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			onButtonClick = "[] call fnc_cell_copmsgall";
+			
+			x = 0.74;
+			y = 0.35;
 			w = 0.2;
 			h = (1 / 25);
 		};

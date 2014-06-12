@@ -5,12 +5,12 @@
 	Description:
 	Doesn't matter, will be revised later.
 */
-if(life_cash < 50) exitWith {hint "You do not have $50 to be healed."};
-titleText["Doctor Alan is healing you... Don't be scared...","PLAIN"];
+if(life_cash < 50) exitWith {hint "Du benoetigt $50 um dich Verartzen zu lassen."};
+titleText["Doktor Alan heilt dich... Hab keine Angst...","PLAIN"];
 sleep 2;
-titleText["Opps, I think I stuck the needle in the wrong spot..","PLAIN"];
+titleText["Ups, da habe ich die Nadel wohl ins falsche Loch gesteckt...","PLAIN"];
 sleep 5;
-if(player distance (_this select 0) > 5) exitWith {titleText["You need to be within 5m while the doctor is healing you.","PLAIN"]};
-titleText["You are now fully healed!","PLAIN"];
+if(player distance (_this select 0) > 5) exitWith {titleText["Du musst in der Naehe des Doktors bleiben, um geheilt zu werden.","PLAIN"]};
+titleText["Du bist jetzt voellig genesen!","PLAIN"];
 player setdamage 0;
 life_cash = life_cash - 50;

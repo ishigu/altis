@@ -14,17 +14,21 @@ if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
 _itemInfo = switch (_type) do
 {
-	case "oil": {["oilu","oilp",1200,"Processing Oil"];};
-	case "diamond": {["diamond","diamondc",1350,"Processing Diamond"]};
-	case "heroin": {["heroinu","heroinp",2100,"Processing Heroin"]};
-	case "copper": {["copperore","copper_r",750,"Processing Copper"]};
-	case "iron": {["ironore","iron_r",1120,"Processing Iron"]};
-	case "sand": {["sand","glass",650,"Processing Sand"]};
-	case "salt": {["salt","salt_r",450,"Processing Salt"]};
-	case "cocaine": {["cocaine","cocainep",1500,"Processing Cocaine"]};
-	case "marijuana": {["cannabis","marijuana",500,"Processing Marijuana"]};
-	case "heroin": {["heroinu","heroinp",1720,"Processing Heroin"]};
-	case "cement": {["rock","cement",350,"Mixing Cement"]};
+	case "oil": {["oilu","oilp",1200,"Oel Raffenerieren"];};
+	case "diamond": {["diamond","diamondc",1350,"Diamanten veredeln"]};
+	case "heroin": {["heroinu","heroinp",2100,"Heroin herstellen"]};
+	case "copper": {["copperore","copper_r",750,"Kupfer veredeln"]};
+	case "iron": {["ironore","iron_r",1120,"Eisen veredeln"]};
+	case "sand": {["sand","glass",650,"Glas brennen"]};
+	case "salt": {["salt","salt_r",450,"Salz verarbeiten"]};
+	case "cocaine": {["cocaine","cocainep",1500,"Cocaine verarbeiten"]};
+	case "marijuana": {["cannabis","marijuana",500,"Marijuana verarbeiten"]};
+	case "heroin": {["heroinu","heroinp",1720,"Heroin verarbeiten"]};
+	case "cement": {["rock","cement",350,"Zement Mischen"]};
+	case "chemical": {["oilu","chemical",500,"Chemie Raffenerieren"]};
+	case "benzin": {["oilu","benzin",1000,"Benzin herstellen"]};
+	case "medical": {["chemical","medical",1200,"Medizin herstellen"]};
+	case "meth": {["chemical","meth",1500,"Meth kochen"]};
 	default {[]};
 };
 
@@ -68,16 +72,16 @@ if(_hasLicense) then
 		if(player distance _vendor > 10) exitWith {};
 	};
 	
-	if(player distance _vendor > 10) exitWith {hint "You need to stay within 10m to process."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(player distance _vendor > 10) exitWith {hint "Du musst in der Naehe bleiben."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
 	5 cutText ["","PLAIN"];
-	titleText[format["You have processed %1 into %2",_oldVal,_itemName],"PLAIN"];
+	titleText[format["Du hast %1 %2 hergestellt",_oldVal,_itemName],"PLAIN"];
 	life_is_processing = false;
 }
 	else
 {
-	if(life_cash < _cost) exitWith {hint format["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(life_cash < _cost) exitWith {hint format["Du brauchst $%1 um das ohne eine Lizenz zu verarbeiten!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	
 	while{true} do
 	{
@@ -89,12 +93,12 @@ if(_hasLicense) then
 		if(player distance _vendor > 10) exitWith {};
 	};
 	
-	if(player distance _vendor > 10) exitWith {hint "You need to stay within 10m to process."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(life_cash < _cost) exitWith {hint format["You need $%1 to process  without a license!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(player distance _vendor > 10) exitWith {hint "Du musst in der Naehe bleiben."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(life_cash < _cost) exitWith {hint format["Du brauchst $%1 um das ohne eine Lizenz zu verarbeiten!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
 	5 cutText ["","PLAIN"];
-	titleText[format["You have processed %1 into %2 for $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
+	titleText[format["Du hast %1 %2 hergestellt. Das hat dich $%3 gekostet",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash - _cost;
 	life_is_processing = false;
 };	

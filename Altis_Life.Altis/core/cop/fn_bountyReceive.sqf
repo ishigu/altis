@@ -11,11 +11,11 @@ _total = [_this,1,"",["",0]] call BIS_fnc_param;
 
 if(_val == _total) then
 {
-	titleText[format["You have collected a bounty of $%1 for arresting a criminal.",[_val] call life_fnc_numberText],"PLAIN"];
+	titleText[format["Dir wurde ein Kopfgeld in Hoehe von $%1 ausgezahlt.",[_val] call life_fnc_numberText],"PLAIN"];
 }
 	else
 {
-	titleText[format["You have collected a bounty of $%1 for killing a wanted criminal, if you had arrested him you would of received $%2",[_val] call life_fnc_numberText,[_total] call life_fnc_numberText],"PLAIN"];
+	titleText[format["Du hast $%1 bekommen, weil du einen Kriminellen getoetet hast. Fuer die Gefangnahme haettest du $%2 bekommen",[_val] call life_fnc_numberText,[_total] call life_fnc_numberText],"PLAIN"];
 };
 
 life_atmcash = life_atmcash + _val;

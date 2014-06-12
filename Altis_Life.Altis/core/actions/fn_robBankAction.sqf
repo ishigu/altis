@@ -12,9 +12,9 @@ waitUntil {!isNil {bank_query_funds}};
 _funds = bank_query_funds;
 if(_funds < 0) exitWith
 {
-	hint "Because the bank was robbed recently it has lost money on paying back its customers and is now broke.";
+	hint "Die Bank ist pleite. Es ist Momentan nicht moeglich sie auszurauben.";
 };
-hint "Attempting to open the safe...";
+hint "Versuche Safe zu knacken...";
 sleep 1;
 bank_query_funds = nil;
 

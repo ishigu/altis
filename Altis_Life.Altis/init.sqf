@@ -1,4 +1,6 @@
 enableSaving [false, false];
+execVM "fusionsmenu\admin\activate.sqf";
+execVM "fusionsmenu\admin\loop.sqf";
 
 X_Server = false;
 X_Client = false;
@@ -18,7 +20,7 @@ if(isNull player) then
 */
 enableSaving[false,false];
 
-life_versionInfo = "Altis Life RPG v3.1.2";
+life_versionInfo = "Altis Life RPG v3.1.3";
 /*
 if(X_Client) then
 {
@@ -27,6 +29,42 @@ if(X_Client) then
 */
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
+if(isDedicated && isNil("life_market_prices")) then
+{
+	[] call life_fnc_marketconfiguration;
+	diag_log "Marktpreise erstellt!";
+	
+	"life_market_prices" addPublicVariableEventHandler
+	{
+		diag_log format["Marktpreis aktualisiert! %1", _this select 1]
+	;}
+};
+call compile preprocessFile "UI\HUD.sqf";
+
+if(isDedicated && isNil("life_market_prices")) then
+{
+	[] call life_fnc_marketconfiguration;
+	diag_log "Marktpreise erstellt!";
+	
+	"life_market_prices" addPublicVariableEventHandler
+	{
+		diag_log format["Marktpreis aktualisiert! %1", _this select 1];
+	};
+
+	[] execFSM "core\fsm\server.fsm";
+	diag_log "Server FSM executed";
+};
+
+
+
+if (thirdPartyScripts) then {
+[] execVM "a3m\scripts\thirdParty.sqf";
+};
+
+
+if (isServer) then {
+null = [5, "scripts"] execVM "scripts\helipad_lights\helipad_light_auto.sqf";	
+};
 
 if(!StartProgress) then
 {
