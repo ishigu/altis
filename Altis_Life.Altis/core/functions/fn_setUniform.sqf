@@ -60,8 +60,8 @@ if(str(player) in ["adac_1","adac_2"]) then {
 			_unit setObjectTextureGlobal [0,_path];
 		};
 	};
-	if((backpack _unit) == "B_Kitbag_cbr") then {
-		(unitBackpack _unit) setObjectTextureGlobal [0, "textures\med_rucksack.jpg"];
-	};
+	//if((backpack _unit) == "B_Kitbag_cbr") then {
+	//	(unitBackpack _unit) setObjectTextureGlobal [0, "textures\xxx.jpg"];
+	//};
 };
 

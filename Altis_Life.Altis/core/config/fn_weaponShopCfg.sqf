@@ -32,7 +32,9 @@ switch(_shop) do
 						["ToolKit",nil,0],
 						["NVGoggles",nil,100],
 						["Chemlight_yellow",nil,10],
-						["SmokeShellYellow",nil,10]
+						["SmokeShellYellow",nil,10],
+						["U_I_CombatUniform","Uniform",500],
+						["B_Kitbag_cbr",nil,250]
 					]
 				];
 			};
@@ -53,7 +55,9 @@ switch(_shop) do
 						["FirstAidKit",nil,0],
 						["Medikit",nil,0],
 						["NVGoggles",nil,200],
-						["B_FieldPack_ocamo",nil,300],
+						["B_Kitbag_cbr",nil,250],
+						["H_Cap_blk",nil,50],
+						["U_I_CombatUniform","Uniform",500],
 						["Chemlight_red",nil,10],
 						["SmokeShellPurple",nil,10]
 					]
