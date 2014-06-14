@@ -16,8 +16,9 @@ _price = 0;
 	};
 } foreach life_clothing_purchase;
 
-if(_price > life_cash) exitWith {titleText["Du hast nicht genug Geld.","PLAIN"];};
+if(_price > life_cash) exitWith {titleText["Du hast nicht genug Geld.","PLAIN"];[player, uniform player] call life_fnc_setUniform;};
 life_cash = life_cash - _price;
 
 life_clothesPurchased = true;
+[player, uniform player] call life_fnc_setUniform;
 closeDialog 0;

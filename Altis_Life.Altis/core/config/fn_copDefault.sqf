@@ -34,3 +34,4 @@ player addItem "ItemCompass";
 player assignItem "ItemCompass";
 
 [] call life_fnc_saveGear;
+[player, uniform player] call life_fnc_setUniform;

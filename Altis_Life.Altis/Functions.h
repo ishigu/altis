@@ -142,7 +142,6 @@ class Life_Client_Core
 		class vehicleAnimate {};
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
-		class clothingCfg{};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -213,6 +212,7 @@ class Life_Client_Core
 		class fetchVehInfo {};
 		class pushObject {};
 		class randomRound {};
+		class setUniform {};
 	};
 	
 	class Network

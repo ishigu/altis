@@ -28,5 +28,5 @@ _totalPrice = 0;
 		_totalPrice = _totalPrice + _x;
 	};
 } foreach life_clothing_purchase;
-
+[player, uniform player] call life_fnc_setUniform;
 _total ctrlSetStructuredText parseText format ["Total: <t color='#8cff9b'>$%1</t>",[_totalPrice] call life_fnc_numberText];
