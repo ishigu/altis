@@ -42,6 +42,10 @@ switch (life_veh_shop select 0) do
 			_ret = true;
 		};
 	};
+	case "donator": {_ret = true;};
+	case "donator_airport": {_ret = true;};
+	case "donator_heli": {_ret = true;};
+	case "donator_car": {_ret = true;};
 };
 
 _ret;
