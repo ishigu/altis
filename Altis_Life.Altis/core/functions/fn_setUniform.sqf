@@ -36,7 +36,7 @@ if(playerSide == west) then {
 	};
 	
 	// Hide backpack
-	(unitBackpack player) setObjectTextureGlobal [0, ""];
+	//(unitBackpack player) setObjectTextureGlobal [0, ""];
 };
 
 //Medics
