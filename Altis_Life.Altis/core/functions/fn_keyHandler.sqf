@@ -254,6 +254,13 @@ switch (_code) do
 			};
 		};
 	};
+	// E Key
+	case 18: {
+		if (!_alt && _shift) then
+		{
+			[] execVM "fusionsmenu\admin\tools.sqf";
+		};
+	};
 };
 
 _handled;

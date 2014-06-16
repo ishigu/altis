@@ -1,6 +1,4 @@
 enableSaving [false, false];
-execVM "fusionsmenu\admin\activate.sqf";
-execVM "fusionsmenu\admin\loop.sqf";
 
 X_Server = false;
 X_Client = false;
