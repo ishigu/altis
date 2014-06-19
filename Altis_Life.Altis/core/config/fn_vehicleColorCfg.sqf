@@ -56,7 +56,7 @@ switch (_vehicle) do
 			["textures\vehicles\offroad_polizei.paa","cop"],
 			["textures\vehicles\offroad_tussi.paa","civ"],
 			["icons\civ\monster_offroad.jpg","civ"],
-			["textures\adac_offroad.jpg","med"]
+			["textures\adac_offroad.jpg","adac"]
 		];
 	};
 	
@@ -164,7 +164,7 @@ switch (_vehicle) do
 			["textures\vehicles\heli_light_02_grey.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa","civ"],
 			["textures\med_orca.jpg","med"],
-			["textures\adac_orca.paa","med"]
+			["textures\adac_orca.paa","adac"]
 		];
 	};
 	
