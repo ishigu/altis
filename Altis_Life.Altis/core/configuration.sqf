@@ -422,3 +422,8 @@ life_garage_sell =
 	["O_Truck_03_fuel_F",80000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
+
+
+// Medic/ADAC
+life_independent_group = "";
+life_independent_isMedic = false;

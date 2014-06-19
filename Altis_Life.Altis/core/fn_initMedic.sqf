@@ -14,6 +14,8 @@ if(str(player) in ["medic_1","medic_2","medic_3","medic_4"]) then {
 		["Du bist kein Notarzt",FALSE,TRUE] call BIS_fnc_endMission;
 		sleep 35;
 	};
+	life_independent_group = "medic";
+	life_independent_isMedic = true;
 	[] call life_fnc_medicLoadout;
 };
 
@@ -22,6 +24,7 @@ if(str(player) in ["adac_1","adac_2"]) then {
 		["Du bist kein Adac",FALSE,TRUE] call BIS_fnc_endMission;
 		sleep 35;
     };
+	life_independent_group = "adac";
 	[] call life_fnc_adacLoadout;
 };
 

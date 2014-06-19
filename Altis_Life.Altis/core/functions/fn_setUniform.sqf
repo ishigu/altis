@@ -40,7 +40,7 @@ if(playerSide == west) then {
 };
 
 //Medics
-if(str(player) in ["medic_1","medic_2","medic_3","medic_4"]) then {
+if(life_independent_group == "medic") then {
 	switch(_type) do {
 		case "U_I_CombatUniform" : {
 			_path = "textures\saniuniform.jpg";
@@ -53,7 +53,7 @@ if(str(player) in ["medic_1","medic_2","medic_3","medic_4"]) then {
 };
 
 //ADAC
-if(str(player) in ["adac_1","adac_2"]) then {
+if(life_independent_group = "adac") then {
 	switch(_type) do {
 		case "U_I_CombatUniform" : {
 			_path = "textures\ADAC.jpg";

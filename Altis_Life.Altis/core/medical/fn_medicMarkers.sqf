@@ -15,7 +15,7 @@ if(visibleMap) then {
 
 	// Get medics and patients
 	{
-		_medic = str(_x) in ["medic_1","medic_2","medic_3","medic_4"];
+		_medic = (life_independent_group == "medic");
 		_down = _x getVariable ["Revive",false];
 		if(_medic) then {
 			_units set[count _units,_x];
