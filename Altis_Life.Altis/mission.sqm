@@ -2829,7 +2829,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Donator Fahrzeuge"",life_fnc_vehicleShopMenu,[""donator"",civilian,[""donator_2"",""donator_2_1""],""reb"",""Donator Hubschrauber Shop""],0,false,false,"""",'!isNil ""life_donator"" && {(call life_donator) > 0'];;";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Donator Fahrzeuge"",life_fnc_vehicleShopMenu,[""donator"",civilian,[""donator_2"",""donator_2_1""],""civ"",""Donator Hubschrauber Shop""],0,false,false,"""",'!isNil ""life_donator"" && {(call life_donator) > 0'];;";
 				};
 				class Item81
 				{
@@ -2840,7 +2840,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Donator Fahrzeuge"",life_fnc_vehicleShopMenu,[""donator"",civilian,[""donator_1"",""donator_1_1""],""reb"",""Donator Hubschrauber Shop""],0,false,false,"""",'!isNil ""life_donator"" && {(call life_donator) > 0'];;";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Donator Fahrzeuge"",life_fnc_vehicleShopMenu,[""donator"",civilian,[""donator_1"",""donator_1_1""],""civ"",""Donator Hubschrauber Shop""],0,false,false,"""",'!isNil ""life_donator"" && {(call life_donator) > 0'];;";
 				};
 				class Item82
 				{
