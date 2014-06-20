@@ -216,6 +216,10 @@ switch (_shop) do
 		};
 		if(__GETC__(life_donator) > 2) then
 		{
+			_return set[count _return,["C_Kart_01_Fuel_F",10000]];
+			_return set[count _return,["C_Kart_01_Vrana_F",10000]];
+			_return set[count _return,["C_Kart_01_Blu_F",10000]];
+			_return set[count _return,["C_Kart_01_Red_F",10000]];
 			_return set[count _return,["O_Truck_03_device_F",500000]];
 			_return set[count _return,["O_Truck_03_covered_F",500000]];
 			_return set[count _return,["O_Truck_03_ammo_F",500000]];

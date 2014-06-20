@@ -2,13 +2,13 @@
 /*
 	File: fn_weaponShopCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration file for the weapon shops.
-	
+
 	Return:
 	String: Close the menu
-	Array: 
+	Array:
 	[Shop Name,
 	[ //Array of items to add to the store
 		[classname,Custom Name (set nil for default),price]
@@ -22,7 +22,7 @@ switch(_shop) do
 {
 	case "adac_basic":
 	{
-		switch (true) do 
+		switch (true) do
 		{
 			case (playerSide != independent): {"Du bist kein ADAC!"};
 			default {
@@ -43,7 +43,7 @@ switch(_shop) do
 
 	case "med_basic":
 	{
-		switch (true) do 
+		switch (true) do
 		{
 			case (playerSide != independent): {"Du bist kein Notarzt!"};
 			default {
@@ -65,7 +65,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "cop_basic":
 	{
 		switch(true) do
@@ -155,7 +155,7 @@ switch(_shop) do
 						["Chemlight_yellow",nil,100],
 						["Chemlight_green",nil,100],
 						["Chemlight_blue",nil,100]
-						
+
 					]
 				];
 			};
@@ -174,15 +174,15 @@ switch(_shop) do
 					[
 						["srifle_EBR_F",nil,20000],
 						["20Rnd_762x51_Mag",nil,200],
-						["optic_SOS",nil,200], 
+						["optic_SOS",nil,200],
 						["muzzle_snds_B",nil,2000],
 						["arifle_MXC_Black_F",nil,20000],
 						["30Rnd_65x39_caseless_mag",nil,300],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,300],
 						["optic_Hamr",nil,3500],
-						["muzzle_snds_H",nil,2000],	
+						["muzzle_snds_H",nil,2000],
 						["B_UAV_01_backpack_F",nil,50000],
-						["B_UavTerminal",nil,50000],						
+						["B_UavTerminal",nil,50000],
 						["rangefinder",nil,1000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
@@ -285,7 +285,7 @@ switch(_shop) do
 			{
 				["Altis Polizeipraesident",
 					[
-						
+
 						["srifle_EBR_F",nil,20000],
 						["20Rnd_762x51_Mag",nil,200],
 						["optic_SOS",nil,200],
@@ -313,7 +313,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "rebel":
 	{
 		switch(true) do
@@ -324,25 +324,31 @@ switch(_shop) do
 			{
 				["Mohammed's Jihadi Shop",
 					[
-						["arifle_TRG20_F",nil,25000],
-						["arifle_Katiba_F",nil,30000],
-						["srifle_DMR_01_F",nil,50000],
-						["arifle_SDAR_F",nil,20000],
+						["arifle_TRG20_F",nil,50000],
+						["arifle_Katiba_F",nil,75000],
+						["30Rnd_65x39_caseless_green",nil,275],
+						["muzzle_snds_H",nil,15000],
+						["srifle_DMR_01_F",nil,120000],
+						["10Rnd_762x51_Mag",nil,500],
+						["muzzle_snds_B",nil,30000],
+						["arifle_SDAR_F",nil,35000],
+						["muzzle_snds_M",nil,5000],
+						["SMG_01_F",nil,30000],
 						["optic_ACO_grn",nil,3500],
 						["optic_Holosight",nil,3600],
+						["optic_SOS",nil,3600],
 						["acc_flashlight",nil,1000],
 						["optic_Hamr",nil,7500],
+						["30Rnd_45ACP_Mag_SMG_01",nil,300],
 						["30Rnd_9x21_Mag",nil,200],
 						["20Rnd_556x45_UW_mag",nil,125],
-						["30Rnd_556x45_Stanag",nil,300],
-						["10Rnd_762x51_Mag",nil,500],
-						["30Rnd_65x39_caseless_green",nil,275]
+						["30Rnd_556x45_Stanag",nil,300]
 					]
 				];
 			};
 		};
 	};
-	
+
 	case "gun":
 	{
 		switch(true) do
@@ -368,7 +374,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "donator":
 	{
 		switch(true) do
@@ -384,7 +390,18 @@ switch(_shop) do
 						["ToolKit",nil,50],
 						["itemgps",nil,50],
 						["16Rnd_9x21_Mag",nil,25],
-						["30Rnd_9x21_Mag",nil,75]
+						["30Rnd_9x21_Mag",nil,75],
+						["H_PilotHelmetHeli_O",nil,1000],
+						["U_B_PilotCoveralls",nil,1000],
+						["V_PlateCarrierH_CTRG",nil,1000],
+						["V_PlateCarrierIA2_dgtl",nil,1000],
+						["H_Cap_blk_CMMG",nil,1000],
+						["U_C_Journalist",nil,1000],
+						["V_Press_F",nil,1000],
+						["H_Shemag_tan",nil,1000],
+						["H_Cap_press",nil,1000],
+						["U_C_Scientist",nil,1000],
+						["U_NikosBody",nil,1000]
 					]
 				];
 			};
@@ -395,14 +412,24 @@ switch(_shop) do
 					[
 						["hgun_Rook40_F",nil,750],
 						["hgun_PDW2000_F",nil,6500],
-						["arifle_MK20C_plain_F",nil,25000],
 						["optic_ACO_grn_smg",nil,750],
 						["NVGoggles",nil,350],
 						["ToolKit",nil,50],
 						["itemgps",nil,50],
 						["16Rnd_9x21_Mag",nil,25],
 						["30Rnd_9x21_Mag",nil,75],
-						["30Rnd_556x45_Stanag",nil,125]
+						["30Rnd_556x45_Stanag",nil,125],
+						["H_PilotHelmetHeli_O",nil,1000],
+						["U_B_PilotCoveralls",nil,1000],
+						["V_PlateCarrierH_CTRG",nil,1000],
+						["V_PlateCarrierIA2_dgtl",nil,1000],
+						["H_Cap_blk_CMMG",nil,1000],
+						["U_C_Journalist",nil,1000],
+						["V_Press_F",nil,1000],
+						["H_Shemag_tan",nil,1000],
+						["H_Cap_press",nil,1000],
+						["U_C_Scientist",nil,1000],
+						["U_NikosBody",nil,1000]
 					]
 				];
 			};
@@ -415,8 +442,9 @@ switch(_shop) do
 						["hgun_PDW2000_F",nil,6500],
 						["hgun_pistol_heavy_01_F",nil,5850],
 						["arifle_Mk20C_plain_F",nil,25000],
+						["LMG_Mk200_F",nil,35000],
 						["optic_ACO_grn_smg",nil,750],
-						["optic_MRCO",nil,10000],
+						["optic_MRCO",nil,5000],
 						["NVGoggles",nil,350],
 						["ToolKit",nil,50],
 						["itemgps",nil,50],
@@ -424,22 +452,44 @@ switch(_shop) do
 						["16Rnd_9x21_Mag",nil,25],
 						["30Rnd_9x21_Mag",nil,75],
 						["11Rnd_45ACP_Mag",nil,85],
-						["30Rnd_556x45_Stanag",nil,125]
+						["200Rnd_65x39_cased_Box",nil,125],
+						["200Rnd_65x39_cased_Box_Tracer",nil,125],
+						["30Rnd_556x45_Stanag",nil,125],
+						["H_PilotHelmetHeli_O",nil,1000],
+						["U_B_PilotCoveralls",nil,1000],
+						["V_PlateCarrierH_CTRG",nil,1000],
+						["V_PlateCarrierIA2_dgtl",nil,1000],
+						["H_Cap_blk_CMMG",nil,1000],
+						["U_C_Journalist",nil,1000],
+						["V_Press_F",nil,1000],
+						["H_Shemag_tan",nil,1000],
+						["H_Cap_press",nil,1000],
+						["U_C_Scientist",nil,1000],
+						["U_NikosBody",nil,1000],
+						["U_C_Driver_1",nil,1000],
+						["H_RacingHelmet_1_F",nil,1000],
+						["U_C_Driver_2",nil,1000],
+						["H_RacingHelmet_2_F",nil,1000],
+						["U_C_Driver_3",nil,1000],
+						["H_RacingHelmet_3_F",nil,1000],
+						["U_C_Driver_4",nil,1000],
+						["H_RacingHelmet_4_F",nil,1000]
 					]
 				];
 			};
 		};
 	};
-	
+
 	case "genstore":
 	{
 		["Allgemeines Zubehoer",
 			[
 				["Binocular",nil,150],
-				["ItemGPS",nil,100],
+				["ItemMap",nil,100],
+				["ItemGPS",nil,1000],
 				["ToolKit",nil,250],
 				["FirstAidKit",nil,150],
-				["NVGoggles",nil,2000],
+				["NVGoggles",nil,2000]
 				["Chemlight_red",nil,300],
 				["Chemlight_yellow",nil,300],
 				["Chemlight_green",nil,300],
