@@ -43,7 +43,8 @@ switch (_mode) do
 			case "medical": {_var = "license_civ_medical"};
 			case "meth": {_var = "license_civ_meth"};
 			case "dangerousgoods": {_var = "license_civ_dangerousgoods"};
-			case "mair": {_var = "license_med_air"};	
+			case "mair": {_var = "license_med_air"};
+			case "mcar": {_var = "license_med_car"};
 			default {_var = ""};
 		};
 	};
@@ -80,6 +81,7 @@ switch (_mode) do
 			case "license_civ_meth": {_var = "meth"};
 			case "license_civ_dangerousgoods": {_var = "dangerousgoods"};
 			case "license_med_air": {_var = "mair"};
+			case "license_med_car": {_var = "mcar"};
 			default {_var = ""};
 		};
 	};

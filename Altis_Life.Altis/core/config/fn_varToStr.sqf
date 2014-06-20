@@ -94,5 +94,6 @@ switch (_var) do
 	case "license_civ_meth": {"Methlizenz"};
 	case "license_civ_dangerousgoods": {"Gefahrengutlizenz"};
 	case "license_med_air": {"Pilotenlizenz Sani"};
+	case "license_med_car": {"Fuehrerschein Sani"};
 
 };
