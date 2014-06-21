@@ -46,10 +46,8 @@ switch (_className) do
 	case "O_Truck_03_covered_F": {500};
 	case "O_Truck_03_device_F": {500};
 	case "O_Truck_03_fuel_F": {500};
-	case "O_Truck_03_fuel_F": {500};
 	case "O_Truck_03_transport_F": {285};
-	case "O_Truck_03_covered_F": {300};
-	case "O_Truck_03_device_F": {350};
 	case "I_Heli_light_03_unarmed_F": {150};
+	case "I_Plane_Fighter_03_CAS_F": {10};
 	default {-1};
 };
