@@ -54,13 +54,13 @@
 			<Original>Einzahlen</Original>
 		</Key>
 		<Key ID="STR_ATM_Transfer">
-			<Original>Überweisen</Original>
+			<Original>ueberweisen</Original>
 		</Key>
 		<Key ID="STR_ATM_GreaterThan">
 			<Original>Du kannst nicht mehr als $999,999 einzahlen!</Original>
 		</Key>
 		<Key ID="STR_ATM_notnumeric">
-			<Original>Ungültige Zeichen eingegeben.</Original>
+			<Original>Ungueltige Zeichen eingegeben.</Original>
 		</Key>
 	</Package>
 	<Package name="Cell_Phone">
@@ -114,7 +114,7 @@
 			<Original>Sperren</Original>
 		</Key>
 		<Key ID="STR_Gang_Unlock">
-			<Original>Öffnen</Original>
+			<Original>oeffnen</Original>
 		</Key>
 		<Key ID="STR_Gang_Kick">
 			<Original>Kick</Original>
@@ -176,10 +176,10 @@
 			<Original>Ein Fahrzeug blockiert den Weg. Die Lagerkosten werden dir erstattet.</Original>
 		</Key>
 		<Key ID="STR_Garage_SoldCar">
-			<Original>Du hast das Fahrzeug für $%1 verkauft</Original>
+			<Original>Du hast das Fahrzeug fuer $%1 verkauft</Original>
 		</Key>
 		<Key ID="STR_Garage_Store_NotPersistent">
-			<Original>Mietfahrzeuge können nicht in die Garage geparkt werden.</Original>
+			<Original>Mietfahrzeuge koennen nicht in die Garage geparkt werden.</Original>
 		</Key>
 		<Key ID="STR_Garage_Store_NoOwnership">
 			<Original>Du kannst keine Fahrzeuge einparken, die nicht auf dich gemeldet sind.</Original>
@@ -190,7 +190,7 @@
 	</Package>
 	<Package name="Key_Chain">
 		<Key ID="STR_Keys_Title">
-			<Original>Schlüsselliste</Original>
+			<Original>Schluesselliste</Original>
 		</Key>
 		<Key ID="STR_Keys_DropKey">
 			<Original>Schluessel wegwerfen</Original>
@@ -201,7 +201,7 @@
 	</Package>
 	<Package name="Player_Menu">
 		<Key ID="STR_PM_Title">
-			<Original>Spielermenü</Original>
+			<Original>Spielermenue</Original>
 		</Key>
 		<Key ID="STR_PM_cItems">
 			<Original>Items</Original>
@@ -222,10 +222,10 @@
 			<Original>Handy</Original>
 		</Key>
 		<Key ID="STR_PM_KeyChain">
-			<Original>Schlüsselbund</Original>
+			<Original>Schluesselbund</Original>
 		</Key>
 		<Key ID="STR_PM_AdminMenu">
-			<Original>Admin Menü</Original>
+			<Original>Admin Menue</Original>
 		</Key>
 		<Key ID="STR_PM_SyncData">
 			<Original>Speichern</Original>
@@ -330,7 +330,7 @@
 			<Original>Fahndungsliste</Original>
 		</Key>
 		<Key ID="STR_Wanted_Pardon">
-			<Original>Eintrag löschen</Original>
+			<Original>Eintrag loeschen</Original>
 		</Key>
 	</Package>
 	<Package name="Animals">
@@ -347,7 +347,7 @@
 			<Original>Thunfisch</Original>
 		</Key>
 		<Key ID="STR_ANIM_Mullet">
-			<Original>Meeräsche</Original>
+			<Original>Meeraesche</Original>
 		</Key>
 		<Key ID="STR_ANIM_Catshark">
 			<Original>Katzenhai</Original>
@@ -370,7 +370,7 @@
 			<Original>Du hast einen %1 gefangen.</Original>
 		</Key>
 		<Key ID="STR_NOTF_CaughtTurtle">
-			<Original>Du hast Schildkrötenfleisch gesammelt</Original>
+			<Original>Du hast Schildkroetenfleisch gesammelt</Original>
 		</Key>
 		<Key ID="STR_NOTF_Earned_1">
 			<Original>Du hast $%1 verdient!</Original>
@@ -394,7 +394,7 @@
 			<Original>Sammle %1...</Original>
 		</Key>
 		<Key ID="STR_NOTF_ChopSoldCar">
-			<Original>Du hast einen %1 für $%2 verkauft</Original>
+			<Original>Du hast einen %1 fuer $%2 verkauft</Original>
 		</Key>
 		<Key ID="STR_NOTF_Picked">
 			<Original>Du hast %1 %2 gesammelt</Original>
@@ -433,7 +433,7 @@
 			<Original>Beschlagnahmung abgebrochen.</Original>
 		</Key>
 		<Key ID="STR_NOTF_Impounded">
-			<Original>Du hast einen %1 beschlagnahmt.\n\nDu erhälst $%2 für das Sauberhalten unserer Insel!</Original>
+			<Original>Du hast einen %1 beschlagnahmt.\n\nDu erhaelst $%2 fuer das Sauberhalten unserer Insel!</Original>
 		</Key>
 		<Key ID="STR_NOTF_HasImpounded">
 			<Original>%1 hat %2's %3 beschlagnahmt</Original>
@@ -448,16 +448,16 @@
 			<Original>Das Fahrzeug ist voll</Original>
 		</Key>
 		<Key ID="STR_NOTF_notNearResource">
-			<Original>Du bist nicht in der Nähe einer Mine</Original>
+			<Original>Du bist nicht in der Naehe einer Mine</Original>
 		</Key>
 		<Key ID="STR_NOTF_MiningStopped">
-			<Original>Du kannst das Fahrzeug nicht starten während du abbaust</Original>
+			<Original>Du kannst das Fahrzeug nicht starten waehrend du abbaust</Original>
 		</Key>
 		<Key ID="STR_NOTF_DeviceMining">
-			<Original>Das Gerät baut ab...</Original>
+			<Original>Das Geraet baut ab...</Original>
 		</Key>
 		<Key ID="STR_NOTF_DeviceMined">
-			<Original>Zyklus abgeschlossen, das Gerät hat %1 abgebaut</Original>
+			<Original>Zyklus abgeschlossen, das Geraet hat %1 abgebaut</Original>
 		</Key>
 		<Key ID="STR_NOTF_OutOfFuel">
 			<Original>Kein Treibstoff mehr</Original>
@@ -471,7 +471,7 @@
 			<Original>Apfel</Original>
 		</Key>
 		<Key ID="STR_Item_Apples">
-			<Original>Äpfel</Original>
+			<Original>aepfel</Original>
 		</Key>
 		<Key ID="STR_Item_Cocaine">
 			<Original>Kokain</Original>
@@ -480,7 +480,7 @@
 			<Original>Heroin</Original>
 		</Key>
 		<Key ID="STR_Item_Oil">
-			<Original>Öl</Original>
+			<Original>oel</Original>
 		</Key>
 		<Key ID="STR_Item_Peach">
 			<Original>Pfirsich</Original>
@@ -491,7 +491,7 @@
 	</Package>
 	<Package name="Federal_Reserve">
 		<Key ID="STR_NOTF_FRRobbery_fail">
-			<Original>Der Bankraub ist aus ungeklärten Gründen gescheitert</Original>
+			<Original>Der Bankraub ist aus ungeklaerten Gruenden gescheitert</Original>
 		</Key>
 		<Key ID="STR_NOTF_FRRobbery_Success">
 			<Original>$%1 wurden aus der Zentralbank geraubt</Original>
@@ -505,7 +505,7 @@
 	</Package>
 	<Package name="Player_Interaction">
 		<Key ID="STR_pInAct_Title">
-			<Original>Spielerinteraktionsmenü</Original>
+			<Original>Spielerinteraktionsmenue</Original>
 		</Key>
 		<Key ID="STR_pInAct_PutInCar">
 			<Original>Ins Fahrzeug setzen</Original>
@@ -540,13 +540,13 @@
 			<Original>Fahrzeug Menu</Original>
 		</Key>
 		<Key ID="STR_vInAct_Unflip">
-			<Original>Fahrzeug aufstellen</Original>
+			<Original>Aufstellen</Original>
 		</Key>
 		<Key ID="STR_vInAct_GetInKart">
-			<Original>In Kart einsteigen</Original>
+			<Original>Einsteigen</Original>
 		</Key>
 		<Key ID="STR_vInAct_PushBoat">
-			<Original>Boot schieben</Original>
+			<Original>Schieben</Original>
 		</Key>
 		<Key ID="STR_vInAct_Repair">
 			<Original>Reparieren</Original>
@@ -567,7 +567,7 @@
 			<Original>Beschlagnahmen</Original>
 		</Key>
 		<Key ID="STR_vInAct_DeviceMine">
-			<Original>Mit Gerät abbauen</Original>
+			<Original>Mit Geraet abbauen</Original>
 		</Key>
 	</Package>
 </Project>
