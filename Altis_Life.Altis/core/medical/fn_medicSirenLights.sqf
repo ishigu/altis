@@ -17,5 +17,5 @@ if(_trueorfalse) then {
 	_vehicle setVariable["lights",FALSE,TRUE];
 } else {
 	_vehicle setVariable["lights",TRUE,TRUE];
-	[[_vehicle,0.32],"life_fnc_medicLights",true,false] call life_fnc_MP;
+	[[_vehicle,0.22],"life_fnc_medicLights",true,false] call life_fnc_MP;
 };

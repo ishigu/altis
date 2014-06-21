@@ -22,32 +22,32 @@ switch (typeOf _vehicle) do {
 	case "B_APC_Wheeled_01_cannon_F": { _attach = [[-1, -2.8, 0.55], [1, -2.8, 0.55]]; };	
 	case "B_MRAP_01_hmg_F": { _attach = [[-1, -2.8, 0.55], [1, -2.8, 0.55]]; };
 	case "B_MRAP_01_F": { _attach = [[-1, -2.8, 0.55], [1, -2.8, 0.55]]; };
-	case "O_Heli_Light_02_unarmed_F": { _attach = [[-0.26, +2.15, -2],[0.26, +2.15, -2]]; };
+	case "O_Heli_Light_02_unarmed_F": { _attach = [[-0.75, +4.2, -1.5],[0.75, +4.2, -1.5]]; };
 };
 
-_lightRed = [20, 0.1, 0.1];
-_lightBlue = [20, 0.1, 0.1];
+_lightRed = [1, 0.1, 0.1];
+_lightBlue = [0.1, 0.1, 1];
 
 _lightleft = createVehicle ["#lightpoint", getPos _vehicle, [], 0, "CAN_COLLIDE"];
 sleep 0.2;
 _lightleft setLightColor _lightBlue;
 _lightleft setLightBrightness 0;
 _lightleft lightAttachObject [_vehicle, _attach select 0];
-_lightleft setLightAttenuation [0.181, 0, 1000, 130];
-_lightleft setLightIntensity 20;
+_lightleft setLightAttenuation [0.200, 800, 1000, 130];
+_lightleft setLightIntensity 10;
 _lightleft setLightFlareSize 0.30;
 _lightleft setLightFlareMaxDistance 130;
 _lightleft setLightUseFlare true;
 _lightleft setLightDayLight true;
-_lightleft setLightAmbient [1,0.1,0.1];
+_lightleft setLightAmbient [0.1,0.1,1];
 
 _lightright = createVehicle ["#lightpoint", getPos _vehicle, [], 0, "CAN_COLLIDE"];
 sleep 0.2;
-_lightright setLightColor _lightBlue;
+_lightright setLightColor _lightRed;
 _lightright setLightBrightness 0;
 _lightright lightAttachObject [_vehicle, _attach select 1];
-_lightright setLightAttenuation [0.181, 0, 1000, 130];
-_lightright setLightIntensity 10;
+_lightright setLightAttenuation [0.200, 800, 1000, 130];
+_lightright setLightIntensity 5;
 _lightright setLightFlareSize 0.30;
 _lightright setLightFlareMaxDistance 130;
 _lightright setLightUseFlare true;
@@ -55,9 +55,9 @@ _lightright setLightAmbient [1,0.1,0.1];
 _lightright setLightDayLight true;
 
 if (sunOrMoon < 1) then {
-	_brightness = 30;
+	_brightness = 15;
 } else {
-	_brightness = 50;
+	_brightness = 30;
 };
 
 _leftRed = true;  
