@@ -5,23 +5,30 @@
 	Description:
 	Marks downed players on the map when it's open.
 */
-private["_markers","_units","_patients"];
+private["_markers","_units","_patients","_selfmedic"];
 _markers = [];
 _units = [];
 _patients = [];
+_selfmedic = (player call life_fnc_isMedic);
 
 sleep 0.25;
 if(visibleMap) then {
 
 	// Get medics and patients
 	{
-		_medic = (life_independent_group == "medic");
-		_down = _x getVariable ["Revive",false];
-		if(_medic) then {
-			_units set[count _units,_x];
-		};
-		if(_down) then {
-			_patients set[count _patients,_x];
+		if (_selfmedic) then {
+			if((_x call life_fnc_isMedic)) then {
+				_units set[count _units,_x];
+			};
+			
+			_down = _x getVariable ["Revive",false];
+			if(_down) then {
+				_patients set[count _patients,_x];
+			};
+		} else {
+			if(!(_x call life_fnc_isMedic)) then {
+				_units set[count _units,_x];
+			};
 		};
 	} foreach playableUnits;
 	
