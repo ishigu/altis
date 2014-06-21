@@ -123,6 +123,12 @@ class Life_Client_Core
 		class surrender {};
 	};
 	
+	class ADAC
+	{
+		file = "core\adac";
+		class adacLoadout {};
+	};
+	
 	class Config
 	{
 		file = "core\config";
