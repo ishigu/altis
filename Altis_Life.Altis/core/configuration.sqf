@@ -423,4 +423,4 @@ life_garage_sell =
 ];
 __CONST__(life_garage_sell,life_garage_sell);
 
-life_medic_slots = ["medic_1","medic_2","medic_3","medic_4"];
+life_medic_slots = ["medic_1","medic_2","medic_3","medic_4","medic_5","medic_6"];
