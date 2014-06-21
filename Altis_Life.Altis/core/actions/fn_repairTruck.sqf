@@ -11,7 +11,7 @@ life_interrupted = false;
 if(isNull _veh) exitwith {};
 if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) then
 {
-	if("ToolKit" in (items player)) then
+	if("ToolKit" in (items player) || (!(player call life_fnc_isMedic) && (side player == independent))) then
 	{
 		life_action_inUse = true;
 		_displayName = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
@@ -47,7 +47,10 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		player playActionNow "stop";
 		if(life_interrupted) exitWith {life_interrupted = false; titleText["Aktion abgebrochen!","PLAIN"]; life_action_inUse = false;};
 		if(player != vehicle player) exitWith {titleText["Du darfst nicht im Fahrzeug sein.","PLAIN"];};
+		if(!(!(player call life_fnc_isMedic) && (side player == independent))) then
+		{
 		player removeItem "ToolKit";
+		};
 		_veh setDamage 0;
 		titleText["Du hast das Fahrzeug repariert.","PLAIN"];
 	};
