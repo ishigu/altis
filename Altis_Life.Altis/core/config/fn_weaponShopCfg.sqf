@@ -489,7 +489,7 @@ switch(_shop) do
 				["ItemGPS",nil,1000],
 				["ToolKit",nil,250],
 				["FirstAidKit",nil,150],
-				["NVGoggles",nil,2000]
+				["NVGoggles",nil,2000],
 				["Chemlight_red",nil,300],
 				["Chemlight_yellow",nil,300],
 				["Chemlight_green",nil,300],
