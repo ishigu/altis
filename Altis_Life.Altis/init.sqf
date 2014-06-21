@@ -5,6 +5,12 @@ X_Client = false;
 X_JIP = false;
 StartProgress = false;
 
+// **********  Custom Settings *********** //
+thirdPartyScripts = true; // Starts all external scripts
+fastRoping = true; // Fast Rope from Choppers
+doors = false; // enable HeliDoors
+// **********  Custom Settings *********** //
+
 if(!isDedicated) then { X_Client = true;};
 /*
 if(isNull player) then 
