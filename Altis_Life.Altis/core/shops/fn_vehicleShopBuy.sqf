@@ -93,7 +93,9 @@ switch(playerSide) do {
 	};
 	
 	case independent: {
-		[_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
+		if ((player call life_fnc_isMedic)) then {
+			[_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
+		};
 	};
 };
 
