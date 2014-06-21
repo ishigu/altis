@@ -30,17 +30,8 @@ player createDiarySubject ["Steuerung","Steuerung"];
 				"
 		]
 	];
-	
-	//player createDiaryRecord["changelog",
-		[
-			"Custom Change Log",
-				"
-					This section is meant for people doing their own edits to the mission, DO NOT REMOVE THE ABOVE.
-				"
-		]
-	];
 
-		player createDiaryRecord ["Serverregeln",
+	player createDiaryRecord ["Serverregeln",
 		[
 			"Exploits", 
 				"
@@ -257,8 +248,9 @@ player createDiarySubject ["Steuerung","Steuerung"];
 				Admin  Felix<br/><br/>
 				Supporter [BFC]graVediga<br/><br/>
 				Supporter Harbinger<br/><br/>
-				Supporter [R.I.B.]BeckZ<br/><br/>
-				Supporter [R.I.B.]Kaaras<br/><br/>
+				Supporter oVo<br/><br/>
+				Supporter Malu<br/><br/>
+				Supporter ishi<br/><br/>
 				"
 		]
 	];
