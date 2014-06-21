@@ -40,7 +40,7 @@ if(playerSide == west) then {
 };
 
 //Medics
-if(life_independent_group == "medic") then {
+if((player call life_fnc_isMedic)) then {
 	switch(_type) do {
 		case "U_I_CombatUniform" : {
 			_path = "textures\saniuniform.jpg";
@@ -53,7 +53,7 @@ if(life_independent_group == "medic") then {
 };
 
 //ADAC
-if(life_independent_group = "adac") then {
+if(!(player call life_fnc_isMedic) && (side player == independent)) then {
 	switch(_type) do {
 		case "U_I_CombatUniform" : {
 			_path = "textures\ADAC.jpg";

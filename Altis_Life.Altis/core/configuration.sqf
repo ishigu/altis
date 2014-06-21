@@ -423,7 +423,4 @@ life_garage_sell =
 ];
 __CONST__(life_garage_sell,life_garage_sell);
 
-
-// Medic/ADAC
-life_independent_group = "";
-life_independent_isMedic = false;
+life_medic_slots = ["medic_1","medic_2","medic_3","medic_4"];
