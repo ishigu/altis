@@ -173,7 +173,8 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","cop"],
-			["textures\vehicles\hunter_polizei.paa","cop"]
+			["textures\vehicles\hunter_polizei.paa","cop"],
+			["textures\vehicles\hunter_sek.paa","cop"]
 		];
 	};
 	
