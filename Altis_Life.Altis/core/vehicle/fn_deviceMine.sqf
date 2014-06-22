@@ -49,6 +49,7 @@ _vehicle setVariable ["mining",true,true]; //Lock the device
 life_action_inUse = false; //Unlock it since it's going to do it's own thing...
 
 while {true} do {
+	if(!(_vehicle in life_vehicles)) exitWith {};
 	if(!alive _vehicle OR isNull _vehicle) exitWith {};
 	if(isEngineOn _vehicle) exitWith {titleText[localize "STR_NOTF_MiningStopped","PLAIN"];};
 	titleText[localize "STR_NOTF_DeviceMining","PLAIN"];
