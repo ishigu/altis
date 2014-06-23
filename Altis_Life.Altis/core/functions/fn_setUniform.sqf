@@ -60,8 +60,8 @@ if(!(player call life_fnc_isMedic) && (side player == independent)) then {
 			_unit setObjectTextureGlobal [0,_path];
 		};
 	};
-	//if((backpack _unit) == "B_Kitbag_cbr") then {
-	//	(unitBackpack _unit) setObjectTextureGlobal [0, "textures\xxx.jpg"];
-	//};
+	if((backpack _unit) == "B_Kitbag_cbr") then {
+		(unitBackpack _unit) setObjectTextureGlobal [0, "textures\uniform\adacbackpack.jpg"];
+	};
 };
 
