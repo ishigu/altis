@@ -3378,8 +3378,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14592.505,17.91,16762.609};
-					azimut=-85.908401;
+					position[]={16154.285,13.415576,17044.057};
+					azimut=240;
 					special="NONE";
 					id=197;
 					side="CIV";
@@ -17746,7 +17746,7 @@ class Mission
 		};
 		class Item237
 		{
-			position[]={14592.505,17.91,16762.715};
+			position[]={16154.496,13.408876,17044.281};
 			name="medical_trader_1";
 			text="Medikamentenhaendler";
 			type="b_unknown";
