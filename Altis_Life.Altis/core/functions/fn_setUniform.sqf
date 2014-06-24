@@ -43,12 +43,12 @@ if(playerSide == west) then {
 if((player call life_fnc_isMedic)) then {
 	switch(_type) do {
 		case "U_I_CombatUniform" : {
-			_path = "textures\saniuniform.jpg";
+			_path = "textures\uniform\medic.paa";
 			_unit setObjectTextureGlobal [0,_path];
 		};
 	};
 	if((backpack _unit) == "B_Kitbag_cbr") then {
-		(unitBackpack _unit) setObjectTextureGlobal [0, "textures\med_rucksack.jpg"];
+		(unitBackpack _unit) setObjectTextureGlobal [0, "textures\medic_backpack.paa"];
 	};
 };
 
@@ -56,12 +56,12 @@ if((player call life_fnc_isMedic)) then {
 if(!(player call life_fnc_isMedic) && (side player == independent)) then {
 	switch(_type) do {
 		case "U_I_CombatUniform" : {
-			_path = "textures\ADAC.jpg";
+			_path = "textures\uniform\adac.jpg";
 			_unit setObjectTextureGlobal [0,_path];
 		};
 	};
 	if((backpack _unit) == "B_Kitbag_cbr") then {
-		(unitBackpack _unit) setObjectTextureGlobal [0, "textures\uniform\adacbackpack.jpg"];
+		(unitBackpack _unit) setObjectTextureGlobal [0, "textures\adac_backpack.paa"];
 	};
 };
 

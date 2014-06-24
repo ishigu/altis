@@ -25,9 +25,14 @@ switch (_vehicle) do
 			case 6: {_color = "Schwarz"};
 			case 7: {_color = "Taxi"};
 			case 8: {_color = "Polizei"};
-			case 9: {_color = "Tussy"};
-			case 10: {_color = "Monster"};
-			case 11: {_color = "Adac"};
+			case 9: {_color = "Greenfoot"};
+			case 10: {_color = "Tussy"};
+			case 11: {_color = "Hard Work"};
+			case 12: {_color = "Mario"};
+			case 13: {_color = "Monster"};
+			case 14: {_color = "Nyan"};
+			case 15: {_color = "Pokemon"};
+			case 16: {_color = "ADAC"};
 		};
 	};
 	
@@ -59,8 +64,11 @@ switch (_vehicle) do
 			case 5: {_color = "Weiss"};
 			case 6: {_color = "Grau"};
 			case 7: {_color = "Schwarz"};
-			case 8:  {_color = "Metallica"};
-			case 9: {_color = "Polizei"};
+			case 8: {_color = "Pimp"};
+			case 9: {_color = "Hello Kitty"};
+			case 10: {_color = "Pimp Blue"};
+			case 11: {_color = "Metallica"};
+			case 12: {_color = "Polizei"};
 		};
 	};
 	
@@ -89,9 +97,11 @@ switch (_vehicle) do
 			case 3: {_color = "Weiss";};
 			case 4: {_color = "Polizei";};
 			case 5: {_color = "Carbon";};
-			case 6: {_color = "Batman";};
-			case 7: {_color = "Superman";};
-			case 8: {_color = "Notarzt";};
+			case 6: {_color = "Carbon / Felgen";};
+			case 7: {_color = "RageCore";};
+			case 8: {_color = "Batman";};
+			case 9: {_color = "Superman";};
+			case 10: {_color = "Notarzt";};
 		};
 	};
 	
@@ -182,9 +192,10 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Schwarz"};
-			case 1: {_color = "Polizei"};
-			case 2: {_color = "SEK"};
+			case 0: {_color = "Regular"};
+			case 1: {_color = "Schwarz"};
+			case 2: {_color = "Polizei"};
+			case 3: {_color = "SEK"};
 		};
 	};
 	
@@ -202,8 +213,11 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-		case 0: {_color = "Black"};
-		case 1: {_color = "Sand"};
+			case 0: {_color = "Black"};
+			case 1: {_color = "Death"};
+			case 2: {_color = "Sand"};
+			case 3: {_color = "GoldGelb"};
+			case 4: {_color = "BluePixel"};
 		};
 	};
 	
