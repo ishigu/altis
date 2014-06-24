@@ -33,7 +33,6 @@ _lightleft setLightColor _lightBlue;
 _lightleft setLightBrightness 0;
 _lightleft lightAttachObject [_vehicle, _attach select 0];
 _lightleft setLightAttenuation [0.181, 0, 1000, 130];
-_lightleft setLightIntensity 20;
 _lightleft setLightFlareSize 0.38;
 _lightleft setLightFlareMaxDistance 150;
 _lightleft setLightUseFlare true;
@@ -46,17 +45,26 @@ _lightright setLightColor _lightBlue;
 _lightright setLightBrightness 0;
 _lightright lightAttachObject [_vehicle, _attach select 1];
 _lightright setLightAttenuation [0.181, 0, 1000, 130];
-_lightright setLightIntensity 10;
 _lightright setLightFlareSize 0.38;
 _lightright setLightFlareMaxDistance 150;
 _lightright setLightUseFlare true;
 _lightright setLightAmbient [0.1,0.1,1]; 
 _lightright setLightDayLight true;
 
-if (sunOrMoon < 1) then {
+if (sunOrMoon < 1) then { //Nacht
 	_brightness = 15;
-} else {
-	_brightness = 50;
+	_lightleft setLightIntensity 10;
+	_lightright setLightIntensity 5;
+} else { //Tag
+	if((_vehicle isKindOf "Air")) then { //Heli?
+		_brightness = 65;
+		_lightleft setLightIntensity 25;
+		_lightright setLightIntensity 15;
+	} else {
+		_brightness = 55; 
+		_lightleft setLightIntensity 20;
+		_lightright setLightIntensity 10;
+	};
 };
 
 _leftRed = true;  

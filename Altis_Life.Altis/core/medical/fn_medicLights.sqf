@@ -25,17 +25,16 @@ switch (typeOf _vehicle) do {
 	case "O_Heli_Light_02_unarmed_F": { _attach = [[-0.75, +4.2, -1.5],[0.75, +4.2, -1.5]]; };
 };
 
-_lightRed = [1, 0.1, 0.1];
-_lightBlue = [0.1, 0.1, 1];
+_lightRed = [20, 0.1, 0.1];
+_lightBlue = [0.1, 0.1, 20];
 
 _lightleft = createVehicle ["#lightpoint", getPos _vehicle, [], 0, "CAN_COLLIDE"];
 sleep 0.2;
 _lightleft setLightColor _lightBlue;
 _lightleft setLightBrightness 0;
 _lightleft lightAttachObject [_vehicle, _attach select 0];
-_lightleft setLightAttenuation [0.200, 800, 1000, 130];
-_lightleft setLightIntensity 10;
-_lightleft setLightFlareSize 0.30;
+_lightleft setLightAttenuation [0.181, 0, 1000, 130];
+_lightleft setLightFlareSize 0.38;
 _lightleft setLightFlareMaxDistance 130;
 _lightleft setLightUseFlare true;
 _lightleft setLightDayLight true;
@@ -46,18 +45,27 @@ sleep 0.2;
 _lightright setLightColor _lightRed;
 _lightright setLightBrightness 0;
 _lightright lightAttachObject [_vehicle, _attach select 1];
-_lightright setLightAttenuation [0.200, 800, 1000, 130];
-_lightright setLightIntensity 5;
-_lightright setLightFlareSize 0.30;
+_lightright setLightAttenuation [0.181, 0, 1000, 130];
+_lightright setLightFlareSize 0.38;
 _lightright setLightFlareMaxDistance 130;
 _lightright setLightUseFlare true;
 _lightright setLightAmbient [1,0.1,0.1]; 
 _lightright setLightDayLight true;
 
-if (sunOrMoon < 1) then {
+if (sunOrMoon < 1) then { // Nacht
 	_brightness = 15;
-} else {
-	_brightness = 30;
+	_lightleft setLightIntensity 10;
+	_lightright setLightIntensity 10;
+} else { //Tag
+	if((_vehicle isKindOf "Air")) then { //Heli?
+		_brightness = 65;
+		_lightleft setLightIntensity 25;
+		_lightright setLightIntensity 25;
+	} else {
+		_brightness = 55; //Tag
+		_lightleft setLightIntensity 20;
+		_lightright setLightIntensity 20;
+	};
 };
 
 _leftRed = true;  
