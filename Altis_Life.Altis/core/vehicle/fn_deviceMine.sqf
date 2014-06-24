@@ -32,7 +32,7 @@ switch(true) do { // 27 secs per interval = ~5 times slower than normal mining/g
 	case (_zone in ["peaches_1","peaches_2","peaches_3","peaches_4"]): {_item="peach"; _amount = 15;};
 	case (_zone in ["heroin_1"]): {_item = "heroinu"; _amount = 5;};
 	case (_zone in ["cocaine_1"]): {_item = "cocaine"; _amount = 5;};
-	case (_zone in ["weed_1"]): {_item = "marijuana"; _amount = 5;};
+	case (_zone in ["weed_1"]): {_item = "cannabis"; _amount = 5;};
 	case (_zone in ["lead_1"]): {_item = "copperore"; _amount = 10;};
 	case (_zone in ["iron_1"]): {_item = "ironore"; _amount = 10;};
 	case (_zone in ["salt_1"]): {_item = "salt"; _amount = 20;};
