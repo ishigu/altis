@@ -68,7 +68,7 @@ while {true} do {
 	_space = _vInv select 1;
 	_itemIndex = [_item,_items] call fnc_index;
 	_weight = [_vehicle] call life_fnc_vehicleWeight;
-	_sum = [_item,_amount,_weight select 1,_weight select 0] call life_fnc_calWeightDiff; //Get a sum base of the remaining weight.. 
+	_sum = [_item,5*_amount,_weight select 1,_weight select 0] call life_fnc_calWeightDiff; //Get a sum base of the remaining weight.. 
 	if(_sum < 1) exitWith {titleText[localize "STR_NOTF_DeviceFull","PLAIN"];};
 	_itemWeight = ([_item] call life_fnc_itemWeight) * _sum;
 	if(_itemIndex == -1) then {
