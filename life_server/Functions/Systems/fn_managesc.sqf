@@ -8,7 +8,7 @@
 private["_unit","_bool","_side"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _bool = [_this,1,false,[false]] call BIS_fnc_param;
-_side = [_this,2,civilian,[west]] call BIS_fnc_param;
+_side = [_this,2,civilian,[west,independent]] call BIS_fnc_param;
 
 if(isNull _unit) exitWith {};
 
@@ -42,11 +42,11 @@ switch (_side) do
 	{
 		if(_bool) then
 		{
-			life_radio_indep radioChannelAdd [_unit];
+			life_radio_civ radioChannelAdd [_unit]; // Use SideChat together with civilians
 		}
 			else
 		{
-			life_radio_indep radioChannelRemove [_unit];
+			life_radio_civ radioChannelRemove [_unit];
 		};
 	};
 };
