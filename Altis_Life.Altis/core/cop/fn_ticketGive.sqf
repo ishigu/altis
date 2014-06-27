@@ -8,6 +8,7 @@
 private["_val"];
 if(isNil {life_ticket_unit}) exitWith {hint "Person to ticket is nil"};
 if(isNull life_ticket_unit) exitWith {hint "Person to ticket doesn't exist."};
+if(!(life_ticket_unit getVariable["restrained",false])) exitWith {hint "Person to ticket isn't restrained."};
 _val = ctrlText 2652;
 if(!([_val] call fnc_isnumber)) exitWith {hint "You didn't enter actual number format."};
 if((parseNumber _val) > 100000) exitWith {hint "Tickets can not be more than $100,000!"};
