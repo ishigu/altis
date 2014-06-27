@@ -109,7 +109,7 @@ if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_SUV_01_F") then
 	_vehicle setVariable["lights",false,true];
 };
 
-if((_vInfo select 1) == "cop" && (_vInfo select 2) in ["B_MRAP_01_F","C_SUV_01_F"]) then {
+if((_vInfo select 1) == "cop") then { //(_vInfo select 2) in ["B_MRAP_01_F","C_SUV_01_F"]
 	_vehicle setVariable["lights",false,true];
 };
 
