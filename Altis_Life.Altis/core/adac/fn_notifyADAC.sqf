@@ -4,7 +4,7 @@
 	Description:
 	Checks if player is ADAC and notifies them
 */
-private["_sender","_msg","_posx"];
+private["_sender","_msg","_pos"];
 if(isNil (_this select 0)) exitWith{};
 _sender = name _this select 0;
 _pos = mapGridPosition player;
