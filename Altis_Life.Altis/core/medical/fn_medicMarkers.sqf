@@ -14,16 +14,11 @@ _selfmedic = (player call life_fnc_isMedic);
 sleep 0.25;
 if(visibleMap) then {
 
-	// Get medics and patients
+	// Get medics / ADAC
 	{
 		if (_selfmedic) then {
 			if((_x call life_fnc_isMedic)) then {
 				_units set[count _units,_x];
-			};
-			
-			_down = _x getVariable ["Revive",false];
-			if(_down) then {
-				_patients set[count _patients,_x];
 			};
 		} else {
 			if(!(_x call life_fnc_isMedic) && side _x == independent) then {
@@ -31,6 +26,13 @@ if(visibleMap) then {
 			};
 		};
 	} foreach playableUnits;
+	
+	// Get patients
+	{
+		if (_selfmedic) then {
+			_patients set[count _patients,_x];
+		};
+	} foreach allDeadMen;
 	
 	//Loop through and create markers.
 	{
@@ -43,14 +45,8 @@ if(visibleMap) then {
 	
 	{
 		_marker = createMarkerLocal [format["%1_dead_marker",_x],visiblePosition _x];
-		_marker setMarkerTypeLocal "loc_Hospital";
-
-		/*if((_x getVariable["tcb_ais_nearDeath", false])) then {
-			_marker setMarkerColorLocal "ColorRed";
-		} else {*/
-			_marker setMarkerColorLocal "ColorBlack";
-		//};
-		
+		_marker setMarkerTypeLocal "mil_objective";
+		_marker setMarkerColorLocal "ColorRed";
 		_marker setMarkerTextLocal format["%1",(_x getVariable["name","Unknown Player"])];
 		_markers set[count _markers,[_marker,_x]];
 	} foreach _patients;
