@@ -59,10 +59,6 @@ if(playerSide == west) then {
 			_Btn6 ctrlSetText localize "STR_vInAct_GetInKart";
 			_Btn6 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
-		} else {
-			_Btn6 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn6 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
 		};
 	};
 	
@@ -78,9 +74,11 @@ if(playerSide == west) then {
 			_Btn2 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
 		} else {
-			_Btn2 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
+			if (!(player call life_fnc_isMedic) && (side player == independent)) then {
+				_Btn2 ctrlSetText localize "STR_vInAct_Unflip";
+				_Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
+				if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
+			};
 		};
 	};
 	
