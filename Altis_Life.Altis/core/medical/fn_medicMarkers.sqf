@@ -26,7 +26,7 @@ if(visibleMap) then {
 				_patients set[count _patients,_x];
 			};
 		} else {
-			if(!(_x call life_fnc_isMedic)) then {
+			if(!(_x call life_fnc_isMedic) && side _x == independent) then {
 				_units set[count _units,_x];
 			};
 		};
