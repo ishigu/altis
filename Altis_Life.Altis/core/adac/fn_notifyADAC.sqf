@@ -7,7 +7,7 @@
 private["_sender","_msg","_pos"];
 if(isNil (_this select 0)) exitWith{};
 _sender = name _this select 0;
-_pos = mapGridPosition player;
+_pos = mapGridPosition _this select 0;
 _msg = _this select 1;
 
 if( player == _sender && _msg == "") exitWith {hint "Du musst eine Nachricht eingeben!";};
