@@ -2305,7 +2305,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce"",0,FALSE,FALSE,"""",'playerSide != independent'];";
 				};
 				class Item36
 				{
@@ -2386,7 +2386,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Kleidung"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Kleidung"",life_fnc_clothingMenu,""bruce"",0,FALSE,FALSE,"""",'playerSide != independent'];";
 				};
 				class Item43
 				{
@@ -2479,7 +2479,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce"",0,FALSE,FALSE,"""",'playerSide != independent'];";
 				};
 				class Item51
 				{
@@ -2760,7 +2760,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce"",0,FALSE,FALSE,"""",'playerSide != independent'];";
 				};
 				class Item75
 				{
@@ -4376,7 +4376,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce"",0,FALSE,FALSE,"""",'playerSide != independent'];";
 				};
 				class Item2
 				{
