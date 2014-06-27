@@ -221,6 +221,7 @@ class Life_Client_Core
 		class randomRound {};
 		class setUniform {};
 		class keyRestore {};
+		class renewUniform {};
 	};
 	
 	class Network

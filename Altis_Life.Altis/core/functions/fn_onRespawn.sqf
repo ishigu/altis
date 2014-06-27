@@ -55,4 +55,8 @@ cutText ["","BLACK IN"];
 
 [] call life_fnc_civFetchGear;
 [] call SOCK_fnc_updateRequest;
-[player, uniform player] call life_fnc_setUniform;
+
+[_unit] spawn {
+	sleep 2;
+	[(_this select 0), uniform (_this select 0)] call life_fnc_setUniform;
+};
