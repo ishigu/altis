@@ -95,6 +95,7 @@ switch(playerSide) do {
 	case independent: {
 		if ((player call life_fnc_isMedic)) then {
 			[_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
+			_vehicle setVariable["lights",false,true];
 		};
 	};
 };
