@@ -99,12 +99,12 @@ if((_vInfo select 1) == "cop" && (_vInfo select 2) == "C_Offroad_01_F") then
 	[[_vehicle,"cop_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
 
-if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_Offroad_01_F" && (player call life_fnc_isMedic)) then
+if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_Offroad_01_F") then
 {
 	[[_vehicle,"med_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
 
-if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_SUV_01_F" && (player call life_fnc_isMedic)) then
+if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_SUV_01_F") then
 {
 	_vehicle setVariable["lights",false,true];
 };
