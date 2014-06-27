@@ -86,4 +86,6 @@ life_fnc_moveIn = compileFinal
 [] execVM "core\init_survival.sqf";
 [] call life_fnc_setupActions;
 
+[] spawn life_fnc_keyRestore;
+
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.

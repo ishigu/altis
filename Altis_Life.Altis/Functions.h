@@ -220,6 +220,7 @@ class Life_Client_Core
 		class pushObject {};
 		class randomRound {};
 		class setUniform {};
+		class keyRestore {};
 	};
 	
 	class Network
