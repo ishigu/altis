@@ -132,23 +132,10 @@ class Life_cell_phone {
 			h = (1 / 25);
 		};
 		
-		class CopMsgAllButton : life_RscButtonMenu 
-		{
-			idc = 3023;
-			text = "CopMsg All";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[] call fnc_cell_copmsgall";
-			
-			x = 0.74;
-			y = 0.35;
-			w = 0.2;
-			h = (1 / 25);
-		};
-		
 		class EMSRequest : life_RscButtonMenu
 		{
 			idc = 3022;
-			text = "$STR_CELL_EMSRequest";
+			text = "$STR_CELL_TextMedics";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[[player,ctrlText 3003,false],""life_fnc_medicRequestRecieve"",true,false] spawn life_fnc_MP";
 			
@@ -161,13 +148,13 @@ class Life_cell_phone {
 		class ADACMsgAllButton : life_RscButtonMenu
 		{
 			idc= 3024;
-			text = "ADAC rufen";
+			text = "Text ADAC";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[[player,ctrlText 3003],""life_fnc_notifyADAC"",true,false] spawn life_fnc_MP";
 			
 			x = 0.32;
 			y = 0.45;
-			w = 0.15;
+			w = 0.2;
 			h = (1 / 25);
 		};
 			
