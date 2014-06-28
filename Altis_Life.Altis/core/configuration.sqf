@@ -165,7 +165,8 @@ life_inv_items =
 	"life_inv_vodca",
 	"life_inv_wine",
 	"life_inv_sekt",
-	"life_inv_benzin"
+	"life_inv_benzin",
+	"life_inv_defib"
 	
 	/*
 	"life_inv_cocoa",
@@ -261,7 +262,8 @@ sell_array =
 	["oilp",1950],
 	["benzin",2000],
 	["medical",3900],
-	["meth",6000]
+	["meth",6000],
+	["defib",150]
 	/*
 	["cocoa",100],
 	["milk",300],
@@ -296,7 +298,8 @@ buy_array =
 	["blackbeer",150],
 	["vodca",150],
 	["wine",150],
-	["sekt",150]
+	["sekt",150],
+	["defib",300]
 ];
 __CONST__(buy_array,buy_array);
 

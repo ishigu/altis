@@ -70,6 +70,7 @@ switch (_mode) do
 			case "medical": {"life_inv_medical"};
 			case "meth": {"life_inv_meth"};
 			case "dangerousgoods": {"life_inv_dangerousgoods"};
+			case "defib": {"life_inv_defib"};
 		};
 	};
 	
@@ -131,6 +132,7 @@ switch (_mode) do
 			case "life_inv_wine": {"wine"};
 			case "life_inv_sekt": {"sekt"};
 			case "life_inv_dangerousgoods": {"dangerousgoods"};
+			case "life_inv_defib": {"defib"};
 		};
 	};
 };

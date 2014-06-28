@@ -41,7 +41,7 @@ switch (_side) do
 		[
 			["medic_spawn_1","Kavala Krankenhaus","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
 			["medic_spawn_2","Athira","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["adac_spawn_1","Adac","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
+			["adac_spawn_1","ADAC","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
 			
 		];
 	};

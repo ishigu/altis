@@ -60,6 +60,7 @@ switch (_item) do
 	case "benzin": {6};
 	case "meth": {2};
 	case "medical": {3};
+	case "defib":{5};
 	/*
 	case "cocoa": {2};
 	case "milk": {2};
