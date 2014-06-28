@@ -24,6 +24,9 @@ if(life_atmcash > (call life_revive_fee)) then {
 	life_atmcash = 0;
 };
 
+//Retexturing of units clothing, vanilla files only retexture the EMS unit.
+[player, uniform player] call life_fnc_setUniform;
+
 //Bring me back to life.
 player setDir _dir;
 player setPosASL (visiblePositionASL life_corpse);
