@@ -25,6 +25,26 @@ if(!(player call life_fnc_isMedic) && (side player == independent)) then {
 	[] call life_fnc_adacLoadout;
 };
 
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {uniform player == "U_I_CombatUniform"};
+        [player, uniform player] call life_fnc_setUniform;
+        waitUntil {uniform player != "U_I_CombatUniform"};
+    };
+};
+
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {backpack player == "B_Kitbag_cbr"};
+        [player, uniform player] call life_fnc_setUniform;
+        waitUntil {backpack player != "B_Kitbag_cbr"};
+    };
+};
+
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
