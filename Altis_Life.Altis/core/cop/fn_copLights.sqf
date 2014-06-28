@@ -15,7 +15,7 @@ switch (typeOf _vehicle) do {
 	case "C_Offroad_01_F": { _attach = [[-0.37, 0.0, 0.56], [0.37, 0.0, 0.56]]; };
 	case "C_SUV_01_F": { _attach = [[-0.4, 2.3, -0.55], [0.4, 2.3, -0.52]]; };
 	case "B_Heli_Light_01_F": { _attach = [[-0.37, 0.0, 0.56], [0.37, 0.0, 0.56]]; };
-	case "B_Heli_Transport_01_F": { _attach = [[-0.5, 0.0, 0.96], [0.5, 0.0, 0.96]]; };
+	case "B_Heli_Transport_01_F": { _attach = [[-0.66, 5.82, -1.85], [0.63, 5.82, -1.85]]; };
 	case "I_Heli_light_03_unarmed_F": { _attach = [[-0.37, 0.0, 0.56], [0.37, 0.0, 0.56]]; };
 	case "I_MRAP_03_hmg_F": { _attach = [[-0.37, 0.0, 0.56], [0.37, 0.0, 0.56]]; };
 	case "I_MRAP_03_F": { _attach = [[-0.37, 0.0, 0.56], [0.37, 0.0, 0.56]]; };	
@@ -57,9 +57,9 @@ if (sunOrMoon < 1) then { //Nacht
 	_lightright setLightIntensity 5;
 } else { //Tag
 	if((_vehicle isKindOf "Air")) then { //Heli?
-		_brightness = 65;
-		_lightleft setLightIntensity 25;
-		_lightright setLightIntensity 15;
+		_brightness = 70;
+		_lightleft setLightIntensity 30;
+		_lightright setLightIntensity 20;
 	} else {
 		_brightness = 55; 
 		_lightleft setLightIntensity 20;
