@@ -324,7 +324,9 @@ switch(_shop) do
 			{
 				["Mohammed's Jihadi Shop",
 					[
-						["arifle_TRG20_F",nil,50000],
+						["arifle_TRG20_F","TRG-20 5,56 mm",50000],
+                        ["30Rnd_556x45_Stanag",nil,300],
+                        ["muzzle_snds_M",nil,5000],
 						["arifle_Katiba_F",nil,75000],
 						["30Rnd_65x39_caseless_green",nil,275],
 						["muzzle_snds_H",nil,15000],
@@ -332,17 +334,18 @@ switch(_shop) do
 						["10Rnd_762x51_Mag",nil,500],
 						["muzzle_snds_B",nil,30000],
 						["arifle_SDAR_F",nil,35000],
+                        ["20Rnd_556x45_UW_mag",nil,125],
+						["30Rnd_556x45_Stanag",nil,300],
 						["muzzle_snds_M",nil,5000],
 						["SMG_01_F",nil,30000],
+                        ["muzzle_snds_acp",nil,6000],
+                        ["30Rnd_45ACP_Mag_SMG_01",nil,300],
 						["optic_ACO_grn",nil,3500],
 						["optic_Holosight",nil,3600],
 						["optic_SOS",nil,3600],
 						["acc_flashlight",nil,1000],
 						["optic_Hamr",nil,7500],
-						["30Rnd_45ACP_Mag_SMG_01",nil,300],
-						["30Rnd_9x21_Mag",nil,200],
-						["20Rnd_556x45_UW_mag",nil,125],
-						["30Rnd_556x45_Stanag",nil,300]
+						["30Rnd_9x21_Mag",nil,200]
 					]
 				];
 			};
@@ -382,7 +385,7 @@ switch(_shop) do
 			case (__GETC__(life_donator) == 0): {"Du bist kein Donator!"};
 			case (__GETC__(life_donator) == 1):
 			{
-				["STS Donator Shop Tier 1",
+				["Donator Shop Tier 1",
 					[
 						["hgun_Rook40_F",nil,750],
 						["hgun_PDW2000_F",nil,6500],
@@ -408,7 +411,7 @@ switch(_shop) do
 
 			case (__GETC__(life_donator) == 2):
 			{
-				["STS Donator Shop Tier 2",
+				["Donator Shop Tier 2",
 					[
 						["hgun_Rook40_F",nil,750],
 						["hgun_PDW2000_F",nil,6500],
@@ -436,7 +439,7 @@ switch(_shop) do
 
 			case (__GETC__(life_donator) >= 3):
 			{
-				["STS Donator Shop Tier 3",
+				["Donator Shop Tier 3",
 					[
 						["hgun_Rook40_F",nil,500],
 						["hgun_PDW2000_F",nil,6500],
@@ -445,6 +448,52 @@ switch(_shop) do
 						["LMG_Mk200_F",nil,35000],
 						["optic_ACO_grn_smg",nil,750],
 						["optic_MRCO",nil,5000],
+						["NVGoggles",nil,350],
+						["ToolKit",nil,50],
+						["itemgps",nil,50],
+						["FirstAidKit",nil,25],
+						["16Rnd_9x21_Mag",nil,25],
+						["30Rnd_9x21_Mag",nil,75],
+						["11Rnd_45ACP_Mag",nil,85],
+						["200Rnd_65x39_cased_Box",nil,125],
+						["200Rnd_65x39_cased_Box_Tracer",nil,125],
+						["30Rnd_556x45_Stanag",nil,125],
+						["H_PilotHelmetHeli_O",nil,1000],
+						["U_B_PilotCoveralls",nil,1000],
+						["V_PlateCarrierH_CTRG",nil,1000],
+						["V_PlateCarrierIA2_dgtl",nil,1000],
+						["H_Cap_blk_CMMG",nil,1000],
+						["U_C_Journalist",nil,1000],
+						["V_Press_F",nil,1000],
+						["H_Shemag_tan",nil,1000],
+						["H_Cap_press",nil,1000],
+						["U_C_Scientist",nil,1000],
+						["U_NikosBody",nil,1000],
+						["U_C_Driver_1",nil,1000],
+						["H_RacingHelmet_1_F",nil,1000],
+						["U_C_Driver_2",nil,1000],
+						["H_RacingHelmet_2_F",nil,1000],
+						["U_C_Driver_3",nil,1000],
+						["H_RacingHelmet_3_F",nil,1000],
+						["U_C_Driver_4",nil,1000],
+						["H_RacingHelmet_4_F",nil,1000]
+					]
+				];
+			};
+            
+            case (__GETC__(life_adminlevel) > 0):
+			{
+				["Admin Shop",
+					[
+						["hgun_Rook40_F",nil,500],
+						["hgun_PDW2000_F",nil,6500],
+						["hgun_pistol_heavy_01_F",nil,5850],
+						["arifle_Mk20C_plain_F",nil,25000],
+						["LMG_Mk200_F",nil,35000],
+						["optic_ACO_grn_smg",nil,750],
+						["optic_MRCO",nil,5000],
+                        ["optic_Nightstalker",nil,100],
+                        ["optic_tws_mg",nil,100],
 						["NVGoggles",nil,350],
 						["ToolKit",nil,50],
 						["itemgps",nil,50],
