@@ -11,9 +11,9 @@ switch (playerSide) do
 		//Drop fishing net
 		life_actions = [player addAction["Drop Fishing Net",life_fnc_dropFishingNet,"",0,false,false,"",'
 		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];
-		//Rob person
+		//Rob person_revivable = cursorTarget getVariable["Revive",FALSE];
 		life_actions = life_actions + [player addAction["Rob Person",life_fnc_robAction,"",0,false,false,"",'
-		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
+		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && (animationState cursorTarget == "Incapacitated" || !(cursorTarget getVariable["Revive",true])) && !(cursorTarget getVariable["robbed",FALSE]) ']];
 	};
 };
 
