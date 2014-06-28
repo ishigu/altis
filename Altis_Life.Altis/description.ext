@@ -112,10 +112,19 @@ class CfgDebriefing
 
 class CfgNotifications
 {
+	class ADACDispatch
+	{
+		title = "ADAC benoetigt";
+		iconPicture = "icons\messagepolice.paa";
+		description= "%1";
+		duration = 5;
+		priority = 7;
+	};
+		
 	class MedicalRequestEmerg
 	{
 		title = "Sanitaeter angefordert";
-		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		iconPicture = "icons\messagepolice.paa";
 		description = "%1";
 		duration = 5;
 		priority = 7;

@@ -71,6 +71,7 @@ class Life_Client_Core
 		class medicLights {};
 		class medicSiren {};
 		class isMedic {};
+		class medicRequestRecieve {};
 	};
 	
 	class Actions
