@@ -2,7 +2,15 @@ _pathtotools = "fusionsmenu\admin\tools\";
 _EXECscript1 = 'player execVM "'+_pathtotools+'%1"';
 
 
-if ((getPlayerUID player) in ["76561198030241549", "76561197989320695", "76561198068609909", "76561198076320576", "76561197985341100", "76561197988496339", "76561198118515568", "76561198011512873"]) then { //all admins
+if ((getPlayerUID player) in ["76561197989320695", // Lasdios
+							"76561198030241549",   // ishi
+							"76561198068609909",   // oVo
+							"76561198058535830",   // Malu
+							"76561198076320576",   // Felix
+							"76561197985341100",   // graVediga
+							"76561197985458229",   // Shentoza
+							"76561198011512873"]   // Harbinger 
+							) then { //all admins
 	adminmenu =
 	[
 		["Fusions Menu",true],
