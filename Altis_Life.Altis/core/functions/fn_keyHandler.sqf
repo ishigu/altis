@@ -167,7 +167,7 @@ switch (_code) do
 				};
 			};
 		};
-	}
+	};
 	//Y Player Menu
 	case 21:
 	{
