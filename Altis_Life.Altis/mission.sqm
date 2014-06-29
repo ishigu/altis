@@ -127,7 +127,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=123;
+		items=122;
 		class Item0
 		{
 			side="CIV";
@@ -1880,7 +1880,7 @@ class Mission
 				class Item0
 				{
 					position[]={8353.9648,85.637505,24953.943};
-					azimut=-201.90804;
+					azimut=-201.908;
 					special="NONE";
 					id=80;
 					side="CIV";
@@ -2726,7 +2726,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					skill=0.60000002;
 					text="h1_3_1";
-					init="this enableSimulation false; this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""];  this allowDamage false;  this addAction[""Cop Clothing Shop"",life_fnc_clothingMenu,""cop""];  this addAction[""Polizeirekut"",life_fnc_weaponShopMenu,""cop_basic""];  this addAction[""Polizeibeamter"",life_fnc_weaponShopMenu,""cop_patrol""];  this addAction[""Polizeiteam"",life_fnc_weaponShopMenu,""cop_sergeant""];  this addAction[""Polizei Teamleiter"",life_fnc_weaponShopMenu,""cop_leader""]; this addAction[""GSG9"",life_fnc_weaponShopMenu,""cop_gsg9""]; this addAction[""GSG9Leiter"",life_fnc_weaponShopMenu,""cop_gsg9Lead""]; this addAction[""Polizeipraesident"",life_fnc_weaponShopMenu,""cop_chef""]; this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""]    call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];    this addAction[format[""%1 ($%2)"",[""license_cop_cg""] call life_fnc_varToStr,[([""cg""]    call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide == west '];";";
+					init="this enableSimulation false; this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""];  this allowDamage false;  this addAction[""Cop Clothing Shop"",life_fnc_clothingMenu,""cop""];  this addAction[""Polizeirekut"",life_fnc_weaponShopMenu,""cop_basic""];  this addAction[""Polizeibeamter"",life_fnc_weaponShopMenu,""cop_patrol""];  this addAction[""Polizeiteam"",life_fnc_weaponShopMenu,""cop_sergeant""];  this addAction[""Polizei Teamleiter"",life_fnc_weaponShopMenu,""cop_leader""]; this addAction[""GSG9"",life_fnc_weaponShopMenu,""cop_gsg9""]; this addAction[""GSG9Leiter"",life_fnc_weaponShopMenu,""cop_gsg9Lead""]; this addAction[""Polizeipraesident"",life_fnc_weaponShopMenu,""cop_chef""]; this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""]    call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];    this addAction[format[""%1 ($%2)"",[""license_cop_cg""] call life_fnc_varToStr,[([""cg""]    call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide == west '];";
 				};
 				class Item72
 				{
@@ -4144,7 +4144,7 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=41;
+				items=46;
 				class Item0
 				{
 					position[]={8622.416,85.634468,25206.998};
@@ -4687,15 +4687,7 @@ class Mission
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Polizeibeamter";
 				};
-			};
-		};
-		class Item122
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=5;
-				class Item0
+				class Item41
 				{
 					position[]={8636.9756,83.948051,25191.934};
 					azimut=-794.64697;
@@ -4703,13 +4695,12 @@ class Mission
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
-					leader=1;
 					skill=0.60000002;
 					text="cop_42";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Polizeibeamter";
 				};
-				class Item1
+				class Item42
 				{
 					position[]={8637,84.014832,25190.83};
 					azimut=-794.64697;
@@ -4722,7 +4713,7 @@ class Mission
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Polizeibeamter";
 				};
-				class Item2
+				class Item43
 				{
 					position[]={8636.9746,84.091202,25189.744};
 					azimut=-794.64697;
@@ -4735,7 +4726,7 @@ class Mission
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Polizeibeamter";
 				};
-				class Item3
+				class Item44
 				{
 					position[]={8636.9336,84.174347,25188.605};
 					azimut=-794.64697;
@@ -4748,7 +4739,7 @@ class Mission
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Polizeibeamter";
 				};
-				class Item4
+				class Item45
 				{
 					position[]={8636.917,84.221359,25187.504};
 					azimut=-794.64697;
