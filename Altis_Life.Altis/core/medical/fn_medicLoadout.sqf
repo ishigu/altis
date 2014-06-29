@@ -8,11 +8,8 @@
 removeAllContainers player;
 removeAllWeapons player;
 player addUniform "U_I_CombatUniform";
-player addItem "FirstAidKit";
-player addItem "FirstAidKit";
-player addItem "FirstAidKit";
-player addItem "FirstAidKit";
-player addItem "FirstAidKit";
+player addItem "B_Kitbag_cbr";
+player addItem "Medikit";
 removeGoggles player;
 removeHeadGear player;
 if(hmd player != "") then {
