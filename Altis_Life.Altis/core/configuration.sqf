@@ -206,7 +206,8 @@ life_licenses =
 	["license_civ_medical","civ"],
 	["license_civ_meth","civ"],
 	["license_med_air","med"],
-	["license_med_car","med"]
+	["license_med_car","med"],
+	["license_civ_lawyer","civ"]
 
 	/*
 	["license_civ_chocolate","civ"],

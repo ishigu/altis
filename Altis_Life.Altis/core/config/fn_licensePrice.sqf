@@ -39,4 +39,5 @@ switch (_type) do
 	case "meth": {100000};
 	case "dangerousgoods": {5000};
 	case "mair": {15000};
+	case "clawyer":{150000};
 };
