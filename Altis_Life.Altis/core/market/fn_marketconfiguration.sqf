@@ -25,7 +25,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["benzin", 2000, 1000, 3000, 1, 1, 
+	["benzin", 2000, 1000, 3000, 5, 1, 
 		[ 
 			["diamondc",1],
 			["chemical",1],
@@ -51,7 +51,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["medical", 3900, 1000, 4900, 3, 1, 
+	["medical", 3900, 1000, 4900, 6, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",0],
@@ -65,7 +65,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["oilp", 1950, 500, 2950, 3, 1, 
+	["oilp", 1950, 500, 2950, 5, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",0],
@@ -79,7 +79,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["iron_r", 2400, 1500, 3600, 2, 1,  
+	["iron_r", 2400, 1500, 3600, 4, 1,  
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -93,7 +93,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["diamondc", 2500, 700, 4000, 2, 1, 
+	["diamondc", 2500, 700, 4000, 4, 1, 
 		[ 
 			["oilp",1],
 			["benzin",1],
@@ -107,7 +107,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["copper_r", 800, 300, 1550, 2, 1, 
+	["copper_r", 800, 300, 1550, 4, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -121,7 +121,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["salt_r", 1750, 500, 2750, 2, 1, 
+	["salt_r", 1750, 500, 2750, 6, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -135,7 +135,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["glass", 1000, 500, 1800, 2, 1, 
+	["glass", 1000, 500, 1800, 5, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -149,7 +149,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["cement", 1000, 500, 1800, 2, 1, 
+	["cement", 1000, 500, 1800, 4, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -165,7 +165,7 @@ life_market_resources = [
 	
 	///////////////////////////////////
 	
-	["turtle", 9000, 5000, 15000, 20, 1,  
+	["turtle", 9000, 5000, 15000, 40, 1,  
 		[ 
 			["marijuana",1], 
 			["cocainep",1],
@@ -174,7 +174,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["marijuana", 2250, 1500, 3000, 5, 1,   
+	["marijuana", 2250, 1500, 3000, 10, 1,   
 		[ 
 			["turtle",1], 
 			["cocainep",1],
@@ -183,7 +183,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["cocainep", 3500, 2000, 4500, 4, 1,   
+	["cocainep", 3500, 2000, 4500, 8, 1,   
 		[ 
 			["marijuana",1], 
 			["turtle",1],
@@ -192,7 +192,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["heroinp", 2850, 1500, 3600, 5, 1,   
+	["heroinp", 2850, 1500, 3600, 10, 1,   
 		[ 
 			["marijuana",1], 
 			["cocainep",1],
@@ -201,7 +201,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["meth", 6000, 2000, 9500, 8, 1,   
+	["meth", 6000, 2000, 9500, 16, 1,   
 		[ 
 			["marijuana",1], 
 			["cocainep",1],
