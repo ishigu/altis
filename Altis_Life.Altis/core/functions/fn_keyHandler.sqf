@@ -284,6 +284,14 @@ switch (_code) do
 			[] execVM "fusionsmenu\admin\tools.sqf";
 		};
 	};
+	//1 Key
+	case 2:
+	{
+		if(playerSide == west) then
+		{
+			[] call life_fnc_wantedMenu;
+		};
+	};
 };
 
 _handled;
