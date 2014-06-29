@@ -256,6 +256,10 @@ switch (_code) do
 					};
 					systemChat "You have unlocked your vehicle.";
 					playSound "carunlock";
+					if((typeOf _veh) == "B_Heli_Transport_01_F") then 
+					{
+						[_veh] call life_fnc_clearVehicleAmmo;
+					};
 				}
 					else
 				{

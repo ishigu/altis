@@ -78,6 +78,7 @@ waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
 _vehicle setPos _sp;
 _vehicle setVectorUp (surfaceNormal _sp);
 [[_vehicle,2], "life_fnc_lockVehicle",_vehicle,false] spawn life_fnc_MP;
+[[_vehicle],"life_fnc_clearVehicleAmmo",_unit,false] spawn life_fnc_MP;
 _vehicle setOwner _unit; //Transfer ownership
 //Reskin the vehicle 
 [[_vehicle,parseNumber(_vInfo select 8)],"life_fnc_colorVehicle",_unit,false] spawn life_fnc_MP;
