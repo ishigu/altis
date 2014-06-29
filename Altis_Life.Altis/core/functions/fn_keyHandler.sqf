@@ -15,6 +15,7 @@ _speed = speed cursorTarget;
 _handled = false;
 
 _interactionKey = if(count (actionKeys "User10") == 0) then {219} else {(actionKeys "User10") select 0};
+_adminKey = if(count (actionKeys "User15") == 0) then {18} else {(actionKeys "User15") select 0};
 _mapKey = actionKeys "ShowMap" select 0;
 //hint str _code;
 _interruptionKeys = [17,30,31,32]; //A,S,W,D
@@ -277,10 +278,9 @@ switch (_code) do
 			};
 		};
 	};
-	// E Key
-	case 18: {
-		if (!_alt && _shift) then
-		{
+	// Admin Menü, Aktionstaste 15
+	case _adminKey: {
+		if (_adminKey != 18 || (_adminKey == 18 && !_alt && _shift)) then {
 			[] execVM "fusionsmenu\admin\tools.sqf";
 		};
 	};
