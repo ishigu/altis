@@ -10,7 +10,7 @@ _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _source = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {};
 
-cutText["Waiting to respawn....","BLACK FADED"];
+cutText["Warte auf Respawn....","BLACK FADED"];
 0 cutFadeOut 9999999;
 
 if(playerSide == civilian) then
@@ -39,7 +39,7 @@ if(side _source == west && !life_use_atm) then
 {
 	if(life_cash != 0) then
 	{
-		[format["$%1 from the Federal Reserve robbery was returned from the robber being killed.",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[format["$%1 wurde vom Bankraub zurueckgeholt, da der Raeuber getoetet wurde.",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		life_cash = 0;
 	};
 };

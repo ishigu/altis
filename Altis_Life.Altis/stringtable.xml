@@ -555,7 +555,7 @@
 			<Original>Fahrzeugpapiere</Original>
 		</Key>
 		<Key ID="STR_vInAct_SearchVehicle">
-			<Original>Fahrzeug durchsuchen</Original>
+			<Original>Stauraum pruefen</Original>
 		</Key>
 		<Key ID="STR_vInAct_PullOut">
 			<Original>Rausziehen</Original>
@@ -564,7 +564,7 @@
 			<Original>Beschlagnahmen</Original>
 		</Key>
 		<Key ID="STR_vInAct_DeviceMine">
-			<Original>Mit Geraet abbauen</Original>
+			<Original>Mit Geraet</Original>
 		</Key>
 	</Package>
 </Project>

@@ -30,8 +30,8 @@ if(vehicle player != player) then
 	};
 };
 
-if(isNil "_vehicle") exitWith {hint "Es musst ein Fahrzeug in die Naehe stehen."};
+if(isNil "_vehicle") exitWith {hint "Es muss ein Fahrzeug in der Naehe stehen."};
 if(isNull _vehicle) exitWith {};
 [[_vehicle,false,(_this select 1)],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
-hint "Bitte Warte bis dein Fahrzeug eingelagert wurde...";
+hint "Bitte warte bis dein Fahrzeug eingelagert wurde...";
 life_garage_store = true;

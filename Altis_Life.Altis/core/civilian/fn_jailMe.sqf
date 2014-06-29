@@ -55,7 +55,7 @@ switch (true) do
 	{
 		life_is_arrested = false;
 		life_bail_paid = false;
-		hint "Du hast deine Kaution bezahlt und bist wieder Frei.";
+		hint "Du hast deine Kaution bezahlt und bist wieder frei.";
 		serv_wanted_remove = [player];
 		player setPos (getMarkerPos "jail_release");
 		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
@@ -65,7 +65,7 @@ switch (true) do
 	case (_esc) :
 	{
 		life_is_arrested = false;
-		hint "Du bist aus dem Gefaengnis ausgebrochen, daher wirst du zusaezlich wegen ausbruchs gesucht.";
+		hint "Du bist aus dem Gefaengnis ausgebrochen, daher wirst du zusaezlich wegen Ausbruch gesucht.";
 		[[0,format["%1 ist aus dem Gefaengnis ausgebrochen!",name player]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		[[getPlayerUID player,name player,"901"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	};

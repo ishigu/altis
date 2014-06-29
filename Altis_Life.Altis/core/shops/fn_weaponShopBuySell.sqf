@@ -32,9 +32,9 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 }
 	else
 {
-	if(_price > life_cash) exitWith {hint "You do not have enough money!"};
+	if(_price > life_cash) exitWith {hint "Du hast nicht genuegend Geld!"};
 	[_item,true,false,true,false] call life_fnc_handleItem;
-	hint parseText format["You bought a %1 for <t color='#8cff9b'>$%2</t>",_itemInfo select 1,[_price] call life_fnc_numberText];
+	hint parseText format["Du hast ein %1 fuer <t color='#8cff9b'>$%2</t> gekauft",_itemInfo select 1,[_price] call life_fnc_numberText];
 	life_cash = life_cash - _price;
 };
 

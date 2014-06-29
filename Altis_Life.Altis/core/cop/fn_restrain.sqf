@@ -25,12 +25,12 @@ if(isNull _cop) exitWith {};
 			player setVariable["Escorting",FALSE,TRUE];
 			player setVariable["transporting",false,true];
 			detach player;
-			titleText["You have been released automatically for excessive restrainment time","PLAIN"];
+			titleText["Du wurdest automatisch freigelassen, wegen zu langer Verhaftungszeit","PLAIN"];
 		};
 	};
 };
 
-titleText[format["You have been restrained by %1",name _cop],"PLAIN"];
+titleText[format["Du wurdest von %1 festgenommen",name _cop],"PLAIN"];
 				
 while {player getVariable "restrained"} do
 {

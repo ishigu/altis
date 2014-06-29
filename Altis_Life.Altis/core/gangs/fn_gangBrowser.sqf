@@ -32,6 +32,6 @@ _gangs = _dialog displayCtrl 2521;
 
 if(((lbSize _gangs)-1) == -1) then
 {
-	_gangs lbAdd "No gangs currently created.";
+	_gangs lbAdd "Aktuell gibt es keine Gangs.";
 	ctrlShow[2522,false];
 };

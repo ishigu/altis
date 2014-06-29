@@ -14,7 +14,7 @@ if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
 _itemInfo = switch (_type) do
 {
-	case "oil": {["oilu","oilp",1200,"Oel Raffenerieren"];};
+	case "oil": {["oilu","oilp",1200,"Oel raffinieren"];};
 	case "diamond": {["diamond","diamondc",1350,"Diamanten veredeln"]};
 	case "heroin": {["heroinu","heroinp",2100,"Heroin herstellen"]};
 	case "copper": {["copperore","copper_r",750,"Kupfer veredeln"]};
@@ -25,7 +25,7 @@ _itemInfo = switch (_type) do
 	case "marijuana": {["cannabis","marijuana",500,"Marijuana verarbeiten"]};
 	case "heroin": {["heroinu","heroinp",1720,"Heroin verarbeiten"]};
 	case "cement": {["rock","cement",350,"Zement Mischen"]};
-	case "chemical": {["oilu","chemical",500,"Chemie Raffenerieren"]};
+	case "chemical": {["oilu","chemical",500,"Chemie raffinieren"]};
 	case "benzin": {["oilu","benzin",1000,"Benzin herstellen"]};
 	case "medical": {["chemical","medical",1200,"Medizin herstellen"]};
 	case "meth": {["chemical","meth",1500,"Meth kochen"]};

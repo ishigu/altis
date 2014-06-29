@@ -15,22 +15,22 @@ if(_uid == "" OR _type == "" OR _name == "") exitWith {}; //Bad data passed.
 //What is the crime?
 switch(_type) do
 {
-	case "187V": {_type = ["Vehicular Manslaughter",6500]};
-	case "187": {_type = ["Manslaughter",8500]};
-	case "901": {_type = ["Escaping Jail",4500]};
-	case "261": {_type = ["Rape",5000]};
-	case "261A": {_type = ["Attempted Rape",3000]};
-	case "215": {_type = ["Attempted Auto Theft",2000]};
-	case "213": {_type = ["Use of illegal explosives",10000]};
-	case "211": {_type = ["Robbery",1000]};
-	case "207": {_type = ["Kidnapping",3500]};
-	case "207A": {_type = ["Attempted Kidnapping",2000]};
-	case "487": {_type = ["Grand Theft",1500]};
-	case "488": {_type = ["Petty Theft",700]};
-	case "480": {_type = ["Hit and run",1300]};
-	case "481": {_type = ["Drug Possession",1000]};
+	case "187V": {_type = ["Toeten mit Fahrzeug",6500]};
+	case "187": {_type = ["Mord",200000]};
+	case "901": {_type = ["Gefaengnisausbruch",4500]};
+	case "261": {_type = ["Vergewaltigung",5000]};
+	case "261A": {_type = ["Versuchte Vergewaltigung",3000]};
+	case "215": {_type = ["Versuchter Autodiebstahl",5000]};
+	case "213": {_type = ["Illegale Verwendung von Sprengstoff",10000]};
+	case "211": {_type = ["Raubueberfall",40000]};
+	case "207": {_type = ["Entfuehrung",100000]};
+	case "207A": {_type = ["Versuchte Entfuehrung",30000]};
+	case "487": {_type = ["Autodiebstahl",20000]};
+	case "488": {_type = ["Diebstahl",2000]};
+	case "480": {_type = ["Fahrerflucht",5000]};
+	case "481": {_type = ["Besitz illegaler Waren",25000]};
 	case "482": {_type = ["Intent to distribute",5000]};
-	case "483": {_type = ["Drug Trafficking",9500]};
+	case "483": {_type = ["Drogenhandel",50000]};
 	default {_type = [];};
 };
 

@@ -45,7 +45,7 @@ life_action_inUse = false;
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
 if(!alive player) exitWith {};
-if(life_interrupted) exitWith {life_interrupted = false; titleText["Action cancelled","PLAIN"];};
+if(life_interrupted) exitWith {life_interrupted = false; titleText["Aktion abgebrochen","PLAIN"];};
 
 
 switch (true) do

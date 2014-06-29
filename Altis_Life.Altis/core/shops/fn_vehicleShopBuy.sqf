@@ -7,7 +7,7 @@
 */
 private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle"];
 _mode = _this select 0;
-if((lbCurSel 2302) == -1) exitWith {hint "You did not pick a vehicle!"};
+if((lbCurSel 2302) == -1) exitWith {hint "Du hast kein Fahrzeug ausgewaehlt!"};
 _className = lbData[2302,(lbCurSel 2302)];
 _vIndex = lbValue[2302,(lbCurSel 2302)];
 _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
@@ -16,8 +16,8 @@ _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 //Series of checks (YAY!)
 if(_basePrice < 0) exitWith {}; //Bad price entry
-if(life_cash < _basePrice) exitWith {hint format["You do not have enough cash to purchase this vehicle.\n\nAmount Lacking: $%1",[_basePrice - life_cash] call life_fnc_numberText];};
-if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg_F") exitWith {hint "You do not have the required license!"};
+if(life_cash < _basePrice) exitWith {hint format["Du hast nicht genuegend Geld, um dir dieses Fahrzeug zu kaufen.\n\nFehlende Summe: $%1",[_basePrice - life_cash] call life_fnc_numberText];};
+if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg_F") exitWith {hint "Du hast nicht die benoetigte Lizenz!"};
 
 _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
@@ -47,9 +47,9 @@ if((life_veh_shop select 0) == "adac_air_hs") then {
 };
 
 
-if(_spawnPoint == "") exitWith {hint "There is a vehicle currently blocking the spawn point(s)";};
+if(_spawnPoint == "") exitWith {hint "Ein anderes Fahrzeug blockiert den Spawnpunkt";};
 life_cash = life_cash - _basePrice;
-hint format["You bought a %1 for $%2",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
+hint format["Du hast ein %1 fuer $%2 gekauft",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.
 if((life_veh_shop select 0) == "med_air_hs") then {

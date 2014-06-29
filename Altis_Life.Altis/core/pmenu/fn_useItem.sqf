@@ -50,7 +50,7 @@ switch (true) do
 	
 	case (_item == "spikeStrip"):
 	{
-		if(!isNull life_spikestrip) exitWith {hint "You already have a Spike Strip active in deployment"};
+		if(!isNull life_spikestrip) exitWith {hint "Du hast bereits ein Nagelband ausgelegt"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_spikeStrip;
@@ -67,7 +67,7 @@ switch (true) do
 	
 	case (_item == "fuelF"):
 	{
-		if(vehicle player != player) exitWith {hint "You can't refuel the vehicle while in it!"};
+		if(vehicle player != player) exitWith {hint "Du kannst das Fahrzeug nicht von innen betanken!"};
 		[] spawn life_fnc_jerryRefuel;
 	};
 	
@@ -101,7 +101,7 @@ switch (true) do
 	
 	default
 	{
-		hint "This item isn't usable.";
+		hint "Dieser Gegenstand kann nicht verwendet werden.";
 	};
 };
 	

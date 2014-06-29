@@ -17,19 +17,19 @@ sleep 45;
 
 if(_funds >= life_atmcash && !life_has_insurance) then
 {
-	hint "Due to the robbery on the Federal Reserve you have lost a percentage of your money but you have went bankrupt.\n\nNext time buy some banking insurance on your next visit to a ATM to better protect your assets!";
+	hint "Wegen dem Bankraubs wurde dir ein Teil deines Geldes geklaut, du bist nun Bankrott.\n\n Fuer das naechste mal lieber eine Bankversicherung am ATM abschliessen!";
 	life_atmcash = 0;
 }
 	else
 {
 	if(life_has_insurance) then
 	{
-		hint "The recent robbery on the Federal reserve has hit civilians where it hurts the most but thankfully you have banking insurance so you didn't lose a penny!\n\nHowever you have lost your banking insurance! Be sure to visit a ATM to renew your plan!";
+		hint "Der Bankraub traf die Zivilisten, wo es am meisten weh tut. Gluecklicherweise hast du eine Versicherung und somit keinen Cent verloren!\n\nJedoch solltest du deine Versicherung erneuern, da diese verloren ist!";
 		life_has_insurance = false;
 	}
 		else
 	{
-		hint format["Due to the recent robbery on the Federal Reserve you have lost $%1 from your bank account, next time buy some banking insurance!\n\nYou can buy banking insurance from a ATM!",[_funds] call life_fnc_numberText];
+		hint format["Wegen dem Bankraub wurden $%1 deinem Konto entwendet, kauf dir lieber eine Versicherung das naechste Mal!\n\nDu kannst eine Versicherung am ATM abschließen!",[_funds] call life_fnc_numberText];
 		life_atmcash = life_atmcash - _funds;
 	};
 };
