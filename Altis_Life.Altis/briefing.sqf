@@ -244,13 +244,15 @@ player createDiarySubject ["Steuerung","Steuerung"];
 		[
 			"Admin",
 				"
-				Admin  Lasdios<br/><br/>
-				Admin  Felix<br/><br/>
-				Supporter [BFC]graVediga<br/><br/>
-				Supporter Harbinger<br/><br/>
-				Supporter oVo<br/><br/>
-				Supporter Malu<br/><br/>
-				Supporter ishi<br/><br/>
+				Projektleiter  Lasdios<br/><br/>
+				Projektleiter  Felix<br/><br/>
+				Admin [BFC]graVediga<br/><br/>
+				Admin Harbinger<br/><br/>
+				Admin oVo<br/><br/>
+				Admin Malu<br/><br/>
+				Admin ishi<br/><br/>
+				Admin Shentoza<br/><br/>
+				Admin NeoX<br/><br/>
 				"
 		]
 	];
@@ -573,8 +575,10 @@ player createDiarySubject ["Steuerung","Steuerung"];
 				U: Fahrzeug auf und abschliessen<br/>
 				F: Polizei Sirene (Nur Polizisten)<br/>
 				T: Kofferraum<br/>
+				Q: Spitzhacke benutzen<br/>
 				Left Shift + R: Festnehmen (Nur Polizisten)<br/>
-				Left Shift + G: Ausrauben (Nur Zivilisten)<br/>
+				Left Shift + F: Blaulicht (Nur Polizisten)<br/>
+				Left Shift + G: Niederschlagen (Nur Zivilisten)<br/>
 				Left Shift + V: Ergeben<br/>
 				"
 		]
