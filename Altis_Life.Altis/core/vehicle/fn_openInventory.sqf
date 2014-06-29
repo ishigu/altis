@@ -14,12 +14,12 @@ if((_vehicle getVariable ["trunk_in_use",false])) exitWith {hint "This vehicle's
 _vehicle setVariable["trunk_in_use",true,true];
 if(!createDialog "TrunkMenu") exitWith {"Failed Creating Dialog";}; //Couldn't create the menu?
 disableSerialization;
-ctrlSetText[3501,format["Vehicle Trunk - %1",getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")]];
+ctrlSetText[3501,format["Fahrzeuginventar - %1",getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")]];
 
 _veh_data = [_vehicle] call life_fnc_vehicleWeight;
 if(_veh_data select 0 == -1) exitWith {closeDialog 0; _vehicle setVariable["trunk_in_use",false,true]; hint "This vehicle isn't capable of storing virtual items.";};
 
-ctrlSetText[3504,format["Weight: %1/%2",_veh_data select 1,_veh_data select 0]];
+ctrlSetText[3504,format["Gewicht: %1/%2",_veh_data select 1,_veh_data select 0]];
 [_vehicle] call life_fnc_vehInventory;
 life_trunk_vehicle = _vehicle;
 

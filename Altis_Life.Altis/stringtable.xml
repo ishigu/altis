@@ -54,7 +54,7 @@
 			<Original>Einzahlen</Original>
 		</Key>
 		<Key ID="STR_ATM_Transfer">
-			<Original>ueberweisen</Original>
+			<Original>Ueberweisen</Original>
 		</Key>
 		<Key ID="STR_ATM_GreaterThan">
 			<Original>Du kannst nicht mehr als $999,999 einzahlen!</Original>
@@ -190,10 +190,10 @@
 			<Original>Schluesselliste</Original>
 		</Key>
 		<Key ID="STR_Keys_DropKey">
-			<Original>Schluessel wegwerfen</Original>
+			<Original>Wegwerfen</Original>
 		</Key>
 		<Key ID="STR_Keys_GiveKey">
-			<Original>Schluessel geben</Original>
+			<Original>Geben</Original>
 		</Key>
 	</Package>
 	<Package name="Player_Menu">
@@ -327,7 +327,7 @@
 			<Original>Fahndungsliste</Original>
 		</Key>
 		<Key ID="STR_Wanted_Pardon">
-			<Original>Eintrag loeschen</Original>
+			<Original>Verzeihen</Original>
 		</Key>
 	</Package>
 	<Package name="Animals">
@@ -468,7 +468,7 @@
 			<Original>Apfel</Original>
 		</Key>
 		<Key ID="STR_Item_Apples">
-			<Original>aepfel</Original>
+			<Original>Aepfel</Original>
 		</Key>
 		<Key ID="STR_Item_Cocaine">
 			<Original>Kokain</Original>
@@ -477,7 +477,7 @@
 			<Original>Heroin</Original>
 		</Key>
 		<Key ID="STR_Item_Oil">
-			<Original>oel</Original>
+			<Original>Oel</Original>
 		</Key>
 		<Key ID="STR_Item_Peach">
 			<Original>Pfirsich</Original>
