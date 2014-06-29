@@ -38,7 +38,8 @@ switch (_state) do
 	{
 		if(license_civ_driver OR license_civ_air OR license_civ_truck OR license_civ_boat) then {
 			license_civ_driver = false;
-			hint "Aufgrund eines Unfalls, welcher einen Todesfall zur folge hatte, wurde dir dein Fuehrerschein entzogen.";
+			license_civ_truck = false;
+			hint "Aufgrund eines Unfalls, welcher einen Todesfall zur Folge hatte, wurde dir dein Fuehrerschein entzogen.";
 		};
 	};
 	
@@ -47,7 +48,7 @@ switch (_state) do
 	{
 		if(license_civ_gun) then {
 			license_civ_gun = false;
-			hint "Aufgrund eines Mordes an einer Person, wurde dir deine Waffenlizenz entzogen.";
+			hint "Aufgrund eines Mords wurde dir deine Waffenlizenz entzogen.";
 		};
 	};
 };
