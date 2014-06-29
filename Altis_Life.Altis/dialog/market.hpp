@@ -35,7 +35,7 @@ class marketView
 		class lblResourceName: RscText
 		{
 			idc = 1000;
-			text = "Resource"; //--- ToDo: Localize;
+			text = "Rohstoff"; //--- ToDo: Localize;
 			x = 16.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 18 * GUI_GRID_W;

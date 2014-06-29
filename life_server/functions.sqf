@@ -313,7 +313,7 @@ compileFinal "
 			private[""_message"",""_admin""];
 			_message = format[""!!!ADMIN NACHRICHT: %1"",_msg];
 			_admin = format[""Von Admin: %1"", _from];
-			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Nachricht<br/><br/><t color='#33CC33'><t align='left'><t size='1'>An: <t color='#ffffff'>All Players<br/><t color='#33CC33'>Von: <t color='#ffffff'>Den Admins<br/><br/><t color='#33CC33'>Nachricht:<br/><t color='#ffffff'>%1"",_msg];
+			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Nachricht<br/><br/><t color='#33CC33'><t align='left'><t size='1'>An: <t color='#ffffff'>Alle Spieler<br/><t color='#33CC33'>Von: <t color='#ffffff'>Den Admins<br/><br/><t color='#33CC33'>Nachricht:<br/><t color='#ffffff'>%1"",_msg];
 			
 			[""AdminMessage"",[""Du hast eine Nachricht von einem Admin erhalten!""]] call bis_fnc_showNotification;
 			systemChat _message;
