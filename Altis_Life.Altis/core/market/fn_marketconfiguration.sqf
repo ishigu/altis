@@ -25,11 +25,11 @@ life_market_resources = [
 		] 
 	],
 	
-	["benzin", 2000, 1000, 3000, 10, 5, 
+	["benzin", 2000, 1000, 3000, 1, 1, 
 		[ 
 			["diamondc",1],
 			["chemical",1],
-			["oilp",1],
+			["oilp",0],
 			["iron_r",1],
 			["copper_r",1],
 			["cement",1],
@@ -39,10 +39,24 @@ life_market_resources = [
 		
 	["chemical", 1000, 500, 1750, 10, 5, 
 		[ 
-			["benzin",1],
-			["medical",1],
-			["oilp",1],
+			["benzin",0],
+			["medical",0],
+			["oilp",0],
+			["diamondc",0], 
+			["iron_r",0],
+			["copper_r",0],
+			["salt_r",0],
+			["cement",0],
+			["glass",0] 
+		] 
+	],
+	
+	["medical", 3900, 1000, 4900, 3, 1, 
+		[ 
 			["diamondc",1], 
+			["benzin",0],
+			["chemical",1],
+			["oilp",0],
 			["iron_r",1],
 			["copper_r",1],
 			["salt_r",1],
@@ -51,53 +65,11 @@ life_market_resources = [
 		] 
 	],
 	
-	["medical", 3900, 1500, 4500, 5, 3, 
+	["oilp", 1950, 500, 2950, 3, 1, 
 		[ 
 			["diamondc",1], 
-			["benzin",1],
-			["chemical",1],
-			["oilp",1],
-			["iron_r",1],
-			["copper_r",1],
-			["salt_r",1],
-			["cement",1],
-			["glass",1] 
-		] 
-	],
-	
-	["oilp", 1950, 1000, 2750, 3, 1, 
-		[ 
-			["diamondc",1], 
-			["benzin",1],
-			["chemical",1],
-			["medical",1],
-			["iron_r",1],
-			["copper_r",1],
-			["salt_r",1],
-			["cement",1],
-			["glass",1] 
-		] 
-	],
-	
-	["iron_r", 2400, 1500, 3600, 4, 1,  
-		[ 
-			["diamondc",1], 
-			["benzin",1],
-			["chemical",1],
-			["medical",1],
-			["oilp",1],
-			["copper_r",1],
-			["salt_r",1],
-			["cement",1],
-			["glass",1] 
-		] 
-	],
-	
-	["diamondc", 2500, 1000, 4000, 4, 3, 
-		[ 
-			["oilp",1],
-			["benzin",1],
-			["chemical",1],
+			["benzin",0],
+			["chemical",0],
 			["medical",1],
 			["iron_r",1],
 			["copper_r",1],
@@ -107,7 +79,35 @@ life_market_resources = [
 		] 
 	],
 	
-	["copper_r", 800, 500, 1250, 3, 1, 
+	["iron_r", 2400, 1500, 3600, 2, 1,  
+		[ 
+			["diamondc",1], 
+			["benzin",1],
+			["chemical",1],
+			["medical",1],
+			["oilp",1],
+			["copper_r",1],
+			["salt_r",1],
+			["cement",1],
+			["glass",1] 
+		] 
+	],
+	
+	["diamondc", 2500, 700, 4000, 2, 1, 
+		[ 
+			["oilp",1],
+			["benzin",1],
+			["chemical",1],
+			["medical",1],
+			["iron_r",1],
+			["copper_r",1],
+			["salt_r",1],
+			["cement",1],
+			["glass",1] 
+		] 
+	],
+	
+	["copper_r", 800, 300, 1550, 2, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -121,7 +121,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["salt_r", 1750, 500, 2750, 6, 1, 
+	["salt_r", 1750, 500, 2750, 2, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -165,16 +165,16 @@ life_market_resources = [
 	
 	///////////////////////////////////
 	
-	["turtle", 9000, 5000, 15000, 20, 2,  
+	["turtle", 9000, 5000, 15000, 20, 1,  
 		[ 
 			["marijuana",1], 
 			["cocainep",1],
 			["heroinp",1],
-			["meth",1]
+			["meth",0]
 		] 
 	],
 	
-	["marijuana", 2250, 1500, 3000, 5, 2,   
+	["marijuana", 2250, 1500, 3000, 5, 1,   
 		[ 
 			["turtle",1], 
 			["cocainep",1],
@@ -183,7 +183,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["cocainep", 3500, 2000, 4500, 4, 2,   
+	["cocainep", 3500, 2000, 4500, 4, 1,   
 		[ 
 			["marijuana",1], 
 			["turtle",1],
@@ -192,7 +192,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["heroinp", 2850, 1500, 3600, 5, 2,   
+	["heroinp", 2850, 1500, 3600, 5, 1,   
 		[ 
 			["marijuana",1], 
 			["cocainep",1],
@@ -201,11 +201,11 @@ life_market_resources = [
 		] 
 	],
 	
-	["meth", 6000, 2000, 9500, 11, 2,   
+	["meth", 6000, 2000, 9500, 8, 1,   
 		[ 
 			["marijuana",1], 
 			["cocainep",1],
-			["turtle",1]
+			["turtle",0]
 		] 
 	]
 	
