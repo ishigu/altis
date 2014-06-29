@@ -576,8 +576,10 @@ player createDiarySubject ["Steuerung","Steuerung"];
 				F: Polizei Sirene (Nur Polizisten)<br/>
 				T: Kofferraum<br/>
 				Q: Spitzhacke benutzen<br/>
+				1: Wanted-Liste (Nur Polizisten)<br/>
+				L: Radarmessung mit der Taser-Pistole (Nur Polizisten)<br/>
 				Left Shift + R: Festnehmen (Nur Polizisten)<br/>
-				Left Shift + F: Blaulicht (Nur Polizisten)<br/>
+				Left Shift + L: Blaulicht (Nur Polizisten)<br/>
 				Left Shift + G: Niederschlagen (Nur Zivilisten)<br/>
 				Left Shift + V: Ergeben<br/>
 				"
