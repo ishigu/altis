@@ -4,7 +4,7 @@
 
 */
 
-private["_rand","_modifier","_price", "_globalchange","_defaultprice","_shortname","_difference"];
+private["_rand","_modifier","_price", "_globalchange","_defaultprice","_shortname","_difference","_minprice","_maxprice"];
 
 _rand = [0,200] call life_fnc_randomRound; //0-200
 
@@ -23,16 +23,8 @@ switch(true) do
 		{
 			if(random(10) <= 4) then //Random for each resource
 			{
-				/*_price = _x select 1;
-				_globalchange = _x select 2;*/
-				
 				_modifier = [-20,20] call life_fnc_randomRound; //Verkaufte/Gekaufte Items
-				/*_modifier = _price * _modifier;
-				
-				_price = _price + _modifier;
-				_globalchange = _globalchange + _modifier;
-				
-				life_market_prices set [_forEachIndex, [_x select 0, _price, _globalchange, _modifier] ];*/
+
 				
 				if(_modifier < 0) then
 				{
@@ -143,6 +135,8 @@ switch(true) do
 				if((_x select 0) == _shortname) exitWith
 				{
 					_defaultprice = _x select 1;
+					_minprice = _x select 2;
+					_maxprice = _x select 3;
 				};
 			}
 			foreach life_market_resources;
@@ -171,15 +165,16 @@ switch(true) do
 					[_x select 0, _modifier, true] call life_fnc_marketBuy; 
 				};*/
 				
-				diag_log format["+Market+ Correcting market value of %1 from %2 to %3 by %4", _shortname, _price, (_price + _modifier), _modifier];
+				//diag_log format["+Market+ Correcting market value of %1 from %2 to %3 by %4", _shortname, _price, (_price + _modifier), _modifier];
 				
 				_price = _price + _modifier;
-				_globalchange = _globalchange + _modifier;
+				if(_price > _maxprice) then {_price = _maxprice;};
+				if(_price < _minprice) then {_price = _minprice;};
 				
-				
-				
+				_globalchange = -(_defaultprice - _price); //_globalchange = _globalchange + _modifier;
+				diag_log format["+Market+ TEST %1 oldprice:%2 newprice:%3 globalchange:%4 locchange:%5", _shortname, (_price - _modifier), _price, _globalchange, -(_modifier)];
 				//New price arr
-				life_market_prices set [_forEachIndex, [_shortname, _price,_globalchange,_modifier] ]; //set raw values
+				life_market_prices set [_forEachIndex, [_shortname, _price,_globalchange,-(_modifier)] ]; //set raw values
 			
 			}
 			else
