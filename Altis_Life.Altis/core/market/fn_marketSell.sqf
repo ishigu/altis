@@ -4,7 +4,7 @@
 
 */
 
-private["_shortname","_amount","_price","_modifier","_globalprice","_min","_dir","_israw","_arr_resource","_arr_price","_modifier","_send","_relamount","_max"];
+private["_shortname","_amount","_price","_modifier","_globalprice","_min","_dir","_israw","_arr_resource","_arr_price","_modifier","_send","_relamount","_max","_min","_def"];
 
 _shortname = _this select 0;
 _amount = _this select 1;
@@ -22,15 +22,17 @@ _globalprice = _arr_price select 2; //current change rate
 _modifier = (_amount * (_arr_resource select 4)); //calculate modifier
 
 _price = _price - _modifier;
-_globalprice = _globalprice - _modifier;
+//_globalprice = _globalprice - _modifier;
 
 _max = _arr_resource select 3;
 _min = _arr_resource select 2;
+_def = _arr_resource select 1;
 
 if(_price > _max) then {_price = _max;};
 if(_price < _min) then {_price = _min;};
-if(_globalprice > _max) then {_globalprice = _max;};
-if(_globalprice < _min) then {_globalprice = _min;};
+
+_globalprice = -(_def - _price);
+_modifier = _price - (_arr_price select 1);
 
 //Check borders
 if(_price < 0) then {_price = 0;};
