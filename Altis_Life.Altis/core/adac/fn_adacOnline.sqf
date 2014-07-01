@@ -4,9 +4,7 @@
 */
 private ["_return"];
 _return = false;
-
-{
-	if(!(isNil (_x))) then { _return = true;};
-}forEach life_adac_slots;
+if(((!isNil "adac_1") && (alive adac_1)) || ((!isNil "adac_2") && (alive adac_2)) || ((!isNil "adac_3") && (alive adac_3)) || ((!isNil "adac_3") || (alive adac_3)) || ((!isNil "adac_4") || (alive adac_4)))
+then { _return = true;};
 
 _return
