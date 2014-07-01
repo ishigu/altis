@@ -75,7 +75,7 @@ switch (true) do
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			[] spawn fnc_drugweed_use;
+			[] spawn fnc_weed;
 		};
 	};
 	

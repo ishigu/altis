@@ -343,6 +343,7 @@ class Life_Client_Core
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};
+		class weed {};
 	};
 	
 	class Dialog_Controls
