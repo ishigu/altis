@@ -94,7 +94,7 @@
 
 		class HUD_fps_PIC : IceBasePictureHUD
 		{
-			text = "images\fps.paa";
+			text = "icons\fps.paa";
 			idc = -1;
 			x = 0.98 * safezoneW + safezoneX;
 			y = 0.9325 * safezoneH + safezoneY;
@@ -104,7 +104,7 @@
 
 		class HUD_fatigue_PIC : IceBasePictureHUD
 		{
-			text = "images\fatigue.paa";
+			text = "icons\fatigue.paa";
 			idc = -1;
 			x = 0.98 * safezoneW + safezoneX;
 			y = 0.9575 * safezoneH + safezoneY;

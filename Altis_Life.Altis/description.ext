@@ -27,6 +27,7 @@ corpseRemovalMaxTime = 9999;
 
 class RscTitles
 {
+	#include "UI\defines.hpp"
 	#include "dialog\ui.hpp"
 	#include "dialog\progress.hpp"
 };
