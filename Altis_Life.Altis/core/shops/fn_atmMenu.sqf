@@ -9,7 +9,7 @@ private["_display","_text","_units","_type"];
 
 if(!life_use_atm) exitWith
 {
-	hint "Da die Westerland Bank ausgeraubt wurde, ist die Bank 5 minuten nicht erreichbar.";
+	hint "Da die Westerland Bank ausgeraubt wurde, ist die Bank 5 Minuten nicht erreichbar.";
 };
 
 if(!dialog) then

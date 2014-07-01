@@ -78,11 +78,14 @@ if(playerSide == west) then {
 				_Btn2 ctrlSetText localize "STR_vInAct_Unflip";
 				_Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
 				if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
+				
+				_Btn3 ctrlSetText localize "STR_vInAct_Impound";
+				_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
 			};
 		};
 	};
-	
-	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles)) then {
+	//Tempest Device non ADAC
+	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (!(!(player call life_fnc_isMedic) && (side player == independent)))) then {
 		_Btn3 ctrlSetText localize "STR_vInAct_DeviceMine";
 		_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
 		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
@@ -91,10 +94,24 @@ if(playerSide == west) then {
 			_Btn3 ctrlEnable true;
 		};
 	} else {
+		if(!(!(player call life_fnc_isMedic) && (side player == independent))) then {
 		_Btn3 ctrlShow false;
+		};
 	};
-	
-	_Btn4 ctrlShow false;
+	//Tempest Device als ADAC
+	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (!(player call life_fnc_isMedic) && (side player == independent))) then {
+		_Btn4 ctrlSetText localize "STR_vInAct_DeviceMine";
+		_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
+		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
+			_Btn4 ctrlEnable false;
+		} else {
+			_Btn4 ctrlEnable true;
+		};
+	} else {
+		_Btn4 ctrlShow false;
+		};
+	if (!(!(player call life_fnc_isMedic) && (side player == independent))) then {
+	_Btn4 ctrlShow false; };
 	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
 };
