@@ -129,6 +129,7 @@ class Life_Client_Core
 		file = "core\adac";
 		class adacLoadout {};
 		class notifyADAC {};
+		class adacOnline {};
 	};
 	
 	class Config

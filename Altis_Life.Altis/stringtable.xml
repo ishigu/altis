@@ -421,7 +421,7 @@
 			<Original>Du bist nun genesen.</Original>
 		</Key>
 		<Key ID="STR_NOTF_BeingImpounded">
-			<Original>%1 dein %2 wird von der Polizei beschlagnahmt.</Original>
+			<Original>%1 dein %2 wird beschlagnahmt.</Original>
 		</Key>
 		<Key ID="STR_NOTF_Impounding">
 			<Original>Beschlagnahme Fahrzeug</Original>
@@ -433,7 +433,7 @@
 			<Original>Du hast einen %1 beschlagnahmt.\n\nDu erhaelst $%2 fuer das Sauberhalten unserer Insel!</Original>
 		</Key>
 		<Key ID="STR_NOTF_HasImpounded">
-			<Original>%1 hat %2's %3 beschlagnahmt</Original>
+			<Original>%1 hat %2s %3 beschlagnahmt</Original>
 		</Key>
 		<Key ID="STR_NOTF_AbortESC">
 			<Original>Abbruch in %1</Original>
