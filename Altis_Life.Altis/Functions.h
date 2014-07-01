@@ -72,6 +72,7 @@ class Life_Client_Core
 		class medicSiren {};
 		class isMedic {};
 		class medicRequestRecieve {};
+		class countMedic {};
 	};
 	
 	class Actions
@@ -129,7 +130,8 @@ class Life_Client_Core
 		file = "core\adac";
 		class adacLoadout {};
 		class notifyADAC {};
-		class adacOnline {};
+		class countADAC {};
+		class isADAC {};
 	};
 	
 	class Config
