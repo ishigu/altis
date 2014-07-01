@@ -30,11 +30,12 @@ switch(_shop) do
 					[
 						["ItemGPS",nil,100],
 						["ToolKit",nil,0],
+						["FirstAidKit",nil,0],
 						["NVGoggles",nil,100],
 						["Chemlight_yellow",nil,10],
 						["SmokeShellYellow",nil,10],
-						["U_I_CombatUniform","Uniform",500],
-						["B_Kitbag_cbr",nil,250]
+						["U_Rangemaster","Uniform",500],
+						["B_Kitbag_cbr","Rucksack",nil,250]
 					]
 				];
 			};
@@ -82,7 +83,7 @@ switch(_shop) do
 						["MineDetector",nil,1000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
+						["ToolKit",nil,2500],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
 						["Chemlight_red",nil,100],
@@ -117,7 +118,7 @@ switch(_shop) do
 						["rangefinder",nil,1000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
+						["ToolKit",nil,2500],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
 						["Chemlight_red",nil,100],
@@ -148,7 +149,7 @@ switch(_shop) do
 						["rangefinder",nil,1000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
+						["ToolKit",nil,2500],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
 						["Chemlight_red",nil,100],
@@ -186,7 +187,7 @@ switch(_shop) do
 						["rangefinder",nil,1000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
+						["ToolKit",nil,2500],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
 						["Chemlight_red",nil,100],
@@ -223,7 +224,7 @@ switch(_shop) do
 						["rangefinder",nil,1000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
+						["ToolKit",nil,2500],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
 						["Chemlight_red",nil,100],
@@ -261,7 +262,7 @@ switch(_shop) do
 						["rangefinder",nil,1000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
+						["ToolKit",nil,2500],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
 						["Chemlight_red",nil,100],
@@ -298,7 +299,7 @@ switch(_shop) do
 						["rangefinder",nil,1000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
+						["ToolKit",nil,2500],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
 						["Chemlight_red",nil,100],
@@ -382,15 +383,15 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (__GETC__(life_donator) == 0): {"Du bist kein Donator!"};
-			case (__GETC__(life_donator) == 1):
+			case (__GETC__(life_donator) == 0 && __GETC__(life_adminlevel) == 0): {"Du bist kein Donator!"};
+			case (__GETC__(life_donator) == 1 && __GETC__(life_adminlevel) == 0):
 			{
 				["Donator Shop Tier 1",
 					[
 						["hgun_Rook40_F",nil,750],
 						["hgun_PDW2000_F",nil,6500],
 						["optic_ACO_grn_smg",nil,750],
-						["ToolKit",nil,50],
+						["ToolKit",nil,250],
 						["itemgps",nil,50],
 						["16Rnd_9x21_Mag",nil,25],
 						["30Rnd_9x21_Mag",nil,75],
@@ -409,7 +410,7 @@ switch(_shop) do
 				];
 			};
 
-			case (__GETC__(life_donator) == 2):
+			case (__GETC__(life_donator) == 2 && __GETC__(life_adminlevel) == 0):
 			{
 				["Donator Shop Tier 2",
 					[
@@ -417,7 +418,7 @@ switch(_shop) do
 						["hgun_PDW2000_F",nil,6500],
 						["optic_ACO_grn_smg",nil,750],
 						["NVGoggles",nil,350],
-						["ToolKit",nil,50],
+						["ToolKit",nil,250],
 						["itemgps",nil,50],
 						["16Rnd_9x21_Mag",nil,25],
 						["30Rnd_9x21_Mag",nil,75],
@@ -437,7 +438,7 @@ switch(_shop) do
 				];
 			};
 
-			case (__GETC__(life_donator) >= 3):
+			case (__GETC__(life_donator) >= 3 && __GETC__(life_adminlevel) == 0):
 			{
 				["Donator Shop Tier 3",
 					[
@@ -449,7 +450,7 @@ switch(_shop) do
 						["optic_ACO_grn_smg",nil,750],
 						["optic_MRCO",nil,5000],
 						["NVGoggles",nil,350],
-						["ToolKit",nil,50],
+						["ToolKit",nil,250],
 						["itemgps",nil,50],
 						["FirstAidKit",nil,25],
 						["16Rnd_9x21_Mag",nil,25],
@@ -536,7 +537,7 @@ switch(_shop) do
 				["Binocular",nil,150],
 				["ItemMap",nil,100],
 				["ItemGPS",nil,1000],
-				["ToolKit",nil,250],
+				["ToolKit",nil,2500],
 				["FirstAidKit",nil,150],
 				["NVGoggles",nil,2000],
 				["Chemlight_red",nil,300],

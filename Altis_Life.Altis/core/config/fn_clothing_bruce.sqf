@@ -18,6 +18,7 @@ switch (_filter) do
 	case 0:
 	{
 		[
+		["U_NikosAgedBody","Anzug",250],
 		["U_C_Poloshirt_blue","Poloshirt Blue",250],
 		["U_C_Poloshirt_burgundy","Poloshirt Burgundy",275],
 		["U_C_Poloshirt_redwhite","Poloshirt Red/White",150],
