@@ -132,6 +132,8 @@ class Life_Client_Core
 		class notifyADAC {};
 		class countADAC {};
 		class isADAC {};
+		class adacRepaintMenu {};
+		class adacRepaintVehicle {};
 	};
 	
 	class Config

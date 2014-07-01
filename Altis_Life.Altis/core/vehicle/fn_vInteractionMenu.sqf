@@ -81,6 +81,9 @@ if(playerSide == west) then {
 				
 				_Btn3 ctrlSetText localize "STR_vInAct_Impound";
 				_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+				
+				_Btn4 ctrlSetText localize "STR_vInAct_Repaint";
+				_Btn4 buttonSetAction "closeDialog 0; [] spawn life_fnc_adacRepaintMenu;";
 			};
 		};
 	};
@@ -100,18 +103,20 @@ if(playerSide == west) then {
 	};
 	//Tempest Device als ADAC
 	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (!(player call life_fnc_isMedic) && (side player == independent))) then {
-		_Btn4 ctrlSetText localize "STR_vInAct_DeviceMine";
-		_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
+		_Btn5 ctrlSetText localize "STR_vInAct_DeviceMine";
+		_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
 		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
-			_Btn4 ctrlEnable false;
+			_Btn5 ctrlEnable false;
 		} else {
-			_Btn4 ctrlEnable true;
+			_Btn5 ctrlEnable true;
 		};
 	} else {
-		_Btn4 ctrlShow false;
-		};
+		_Btn5 ctrlShow false;
+	};
+
 	if (!(!(player call life_fnc_isMedic) && (side player == independent))) then {
-	_Btn4 ctrlShow false; };
-	_Btn5 ctrlShow false;
+		_Btn4 ctrlShow false; 
+		_Btn5 ctrlShow false;
+	};
 	_Btn6 ctrlShow false;
 };

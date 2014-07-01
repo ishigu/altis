@@ -25,5 +25,5 @@ switch (_shop) do
 	case "benzin": {["Benzinhaendler",["benzin"]]};
 	case "medical": {["Medikamentenhaendler",["medical"]]};
 	case "medic": {["Notarztitems",["water","tbacon","defib"]]};
-    case "adac": {["ADAC Shop",["water","tbacon","fuelF"]]};
+    case "adac": {["ADAC Shop",["water","tbacon","fuelF","paint"]]};
 };

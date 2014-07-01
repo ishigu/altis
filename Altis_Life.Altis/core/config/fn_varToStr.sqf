@@ -66,6 +66,7 @@ switch (_var) do
 	case "life_inv_medical": {"Medikamente"};
 	case "life_inv_meth": {"Meth"};
 	case "life_inv_defib":{"Defibrillator"};
+	case "life_inv_paint":{"Farbeimer"};
 	
 	//License Block
 	case "license_civ_driver": {"Fuehrerschein"};

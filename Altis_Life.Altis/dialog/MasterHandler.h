@@ -33,3 +33,4 @@
 #include "pInteraction.h"
 #include "deathScreen.h"
 #include "vehicleShop.h"
+#include "veh_repaint.hpp" // ADAC

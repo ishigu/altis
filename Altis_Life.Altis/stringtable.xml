@@ -566,5 +566,8 @@
 		<Key ID="STR_vInAct_DeviceMine">
 			<Original>Mit Geraet</Original>
 		</Key>
+		<Key ID="STR_vInAct_Repaint">
+			<Original>Umlackieren</Original>
+		</Key>
 	</Package>
 </Project>

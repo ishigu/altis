@@ -49,6 +49,8 @@ class CfgFunctions
 			class insertVehicle {};
 			class bool{};
 			class mresString {};
+			
+			class repaintVehicle {};
 		};
 	};
 	
@@ -111,6 +113,7 @@ class CfgFunctions
 			class silentSync {};
 			class clientDisconnect {};
 			class cleanupRequest {};
+			class vehicleRepaint {};
 		};
 	};
 };
