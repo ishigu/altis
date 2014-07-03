@@ -24,6 +24,8 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = ObjNull;
+life_pylon = ObjNull;
+life_barrier = ObjNull;
 life_respawn_timer = 1; //Scaled in minutes
 life_has_insurance = false;
 life_knockout = false;
@@ -168,7 +170,8 @@ life_inv_items =
 	"life_inv_benzin",
 	"life_inv_defib",
 	"life_inv_paint",
-	"life_inv_pylon"
+	"life_inv_pylon",
+	"life_inv_barrier"
 	
 	/*
 	"life_inv_cocoa",
@@ -267,7 +270,9 @@ sell_array =
 	["medical",3900],
 	["meth",6000],
 	["defib",150],
-	["paint",300]
+	["paint",300],
+	["pylon",50],
+	["barrier",200]
 	/*
 	["cocoa",100],
 	["milk",300],
@@ -304,7 +309,9 @@ buy_array =
 	["wine",150],
 	["sekt",150],
 	["defib",300],
-	["paint",750]
+	["paint",750],
+	["pylon",50],
+	["barrier",200]
 ];
 __CONST__(buy_array,buy_array);
 

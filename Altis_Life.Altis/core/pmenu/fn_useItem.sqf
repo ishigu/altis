@@ -66,6 +66,15 @@ switch (true) do
 		};
 	};
 	
+	case (_item == "barrier"):
+	{
+		if(!isNull life_barrier) exitWith {hint "Du stellst schon eine Straßensperre auf!"};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_barrier;
+		};
+	};
+	
 	case (_item == "heroinp"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then

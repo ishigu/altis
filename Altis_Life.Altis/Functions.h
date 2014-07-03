@@ -124,6 +124,7 @@ class Life_Client_Core
 		class gatherChemical{};
 		class surrender {};
 		class packuppylon {};
+		class packupbarrier {};
 	};
 	
 	class ADAC
@@ -355,6 +356,7 @@ class Life_Client_Core
 		class jerryRefuel {};
 		class weed {};
 		class pylon {};
+		class barrier {};
 	};
 	
 	class Dialog_Controls

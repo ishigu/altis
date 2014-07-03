@@ -11,7 +11,7 @@ _pylon attachTo[player,[0,5.5,0.2]];
 _pylon setDir 90;
 _pylon setVariable["item","pylonDeployed",true];
 
-life_action_pylonDeploy = player addAction["<t color='#00FF00'>Pylon aufstellen</t>",{if(!isNull life_pylon) then {detach life_pylon; life_pylon = ObjNull;}; player removeAction life_action_pylonDeploy; life_action_pylonDeploy = nil;},"",999,false,false,"",'!isNull life_pylon && side != civilian'];
+life_action_pylonDeploy = player addAction["<t color='#00FF00'>Pylon aufstellen</t>",{if(!isNull life_pylon) then {detach life_pylon; life_pylon = ObjNull;}; player removeAction life_action_pylonDeploy; life_action_pylonDeploy = nil;},"",999,false,false,"",'!isNull life_pylon && side player != civilian'];
 life_pylon = _pylon;
 waitUntil {isNull life_pylon};
 if(!isNil "life_action_pylonDeploy") then {player removeAction life_action_pylonDeploy;};
@@ -40,4 +40,4 @@ _pylon allowDamage false;
 };
 */
 life_action_pylonPickup = player addAction["Pylon einpacken",life_fnc_packuppylon,"",0,false,false,"",
-' _pylon = nearestObjects[getPos player,["RoadCone_F"],2] select 0; !isNil "_pylon" && !isNil {(_pylon getVariable "item")} && side != civilian'];
+' _pylon = nearestObjects[getPos player,["RoadCone_F"],2] select 0; !isNil "_pylon" && !isNil {(_pylon getVariable "item")} && side player != civilian'];

@@ -73,6 +73,7 @@ switch (_mode) do
 			case "defib": {"life_inv_defib"};
 			case "paint": {"life_inv_paint"};
 			case "pylon": {"life_inv_pylon"};
+			case "barrier": {"life_inv_barrier"};
 		};
 	};
 	
@@ -137,6 +138,7 @@ switch (_mode) do
 			case "life_inv_defib": {"defib"};
 			case "life_inv_paint": {"paint"};
 			case "life_inv_pylon": {"pylon"};
+			case "life_inv_barrier": {"barrier"};
 		};
 	};
 };
