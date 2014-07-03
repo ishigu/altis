@@ -123,6 +123,7 @@ class Life_Client_Core
 		class sellTurtle {};
 		class gatherChemical{};
 		class surrender {};
+		class packuppylon {};
 	};
 	
 	class ADAC
@@ -349,6 +350,7 @@ class Life_Client_Core
 		class spikeStrip {};
 		class jerryRefuel {};
 		class weed {};
+		class pylon {};
 	};
 	
 	class Dialog_Controls

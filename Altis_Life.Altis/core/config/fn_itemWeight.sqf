@@ -62,6 +62,7 @@ switch (_item) do
 	case "medical": {3};
 	case "defib":{5};
 	case "paint":{4};
+	case "pylon":{2};
 	/*
 	case "cocoa": {2};
 	case "milk": {2};
