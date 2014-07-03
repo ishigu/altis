@@ -167,7 +167,8 @@ life_inv_items =
 	"life_inv_sekt",
 	"life_inv_benzin",
 	"life_inv_defib",
-	"life_inv_paint"
+	"life_inv_paint",
+	"life_inv_pylon"
 	
 	/*
 	"life_inv_cocoa",
