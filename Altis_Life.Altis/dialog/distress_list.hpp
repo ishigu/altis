@@ -79,7 +79,7 @@ class life_distress_menu {
 		class PardonButtonKey : Life_RscButtonMenu {
 			idc = 13104;
 			text = "$STR_Distress_Remove";
-			onButtonClick = "[lbCurSel 13102] call life_fnc_distressRemove;";
+			onButtonClick = "[[lbCurSel 13102],""life_fnc_distressRemove"",true,false] spawn life_fnc_MP";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
