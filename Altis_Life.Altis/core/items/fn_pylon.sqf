@@ -7,7 +7,7 @@
 */
 private["_position","_pylon"];
 _pylon = "RoadCone_F" createVehicle [0,0,0];
-_pylon attachTo[player,[0,5.5,0.2]];
+_pylon attachTo[player,[0,2.5,0.2]];
 _pylon setDir 90;
 _pylon setVariable["item","pylonDeployed",true];
 

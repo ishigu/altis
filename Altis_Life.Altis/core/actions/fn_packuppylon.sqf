@@ -7,7 +7,7 @@
 	Hebt einen Pylon auf.
 */
 private["_pylon"];
-_pylon = nearestObjects[getPos player,["RoadCone_F"],8] select 0;
+_pylon = nearestObjects[getPos player,["RoadCone_F"],2] select 0;
 if(isNil "_pylon") exitWith {};
 
 if(([true,"pylon",1] call life_fnc_handleInv)) then
