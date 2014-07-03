@@ -4798,7 +4798,7 @@ class Mission
 					vehicle="C_man_1_2_F";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Benzin Händler"",life_fnc_virt_menu,""benzin""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Benzin Haendler"",life_fnc_virt_menu,""benzin""];";
 				};
 			};
 		};
