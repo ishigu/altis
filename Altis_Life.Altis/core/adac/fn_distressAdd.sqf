@@ -5,7 +5,7 @@
 	Adds or updates a unit to the ADAC distress list.
 	distress array = [index,unit,distpos,msg]
 */
-private["_unit","_index","_distpos","_msg","_array","_alreadyIn"];
+private["_unit","_index","_distpos","_msg","_array"];
 if(isServer) exitWith{};
 if(!(player call life_fnc_isADAC)) exitWith{};
 if(isNil "_this") exitWith{};
@@ -18,11 +18,10 @@ _alreadyIn = false;
 if(count life_adac_distress > 0) then
 {
 	{
-		if(_x select 1 == _unit) exitWith{_alreadyIn = true;};
+		if(_x select 1 == _unit) exitWith{};
 			_index = _index+1;
 	} forEach life_adac_distress;
 
-	if(!_alreadyIn) then{ _index = _index +1;};
 };
 _array = [_index,_unit,_distpos,_msg];
 life_adac_distress set [_index,_array]; //insert new array, or update the existing one
