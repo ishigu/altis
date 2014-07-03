@@ -135,6 +135,10 @@ class Life_Client_Core
 		class isADAC {};
 		class adacRepaintMenu {};
 		class adacRepaintVehicle {};
+		class distressAdd {};
+		class distressRemove {};
+		class adacMarkers {};
+		class distressMenu {};
 	};
 	
 	class Config

@@ -34,3 +34,4 @@
 #include "deathScreen.h"
 #include "vehicleShop.h"
 #include "veh_repaint.hpp" // ADAC
+#include "distress_list.hpp"

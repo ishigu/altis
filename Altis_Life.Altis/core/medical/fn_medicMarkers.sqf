@@ -6,6 +6,8 @@
 	Marks downed players on the map when it's open.
 */
 private["_markers","_units","_patients","_selfmedic"];
+if(isServer) exitWith{};
+if(!(player call life_fnc_isMedic)) exitWith{};
 _markers = [];
 _units = [];
 _patients = [];
@@ -18,10 +20,6 @@ if(visibleMap) then {
 	{
 		if (_selfmedic) then {
 			if((_x call life_fnc_isMedic)) then {
-				_units set[count _units,_x];
-			};
-		} else {
-			if(!(_x call life_fnc_isMedic) && side _x == independent) then {
 				_units set[count _units,_x];
 			};
 		};

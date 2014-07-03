@@ -47,11 +47,16 @@ switch (_code) do
 	//Map Key
 	case _mapKey:
 	{
-		switch (playerSide) do 
-		{
-			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
-			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
-		};
+		
+			if(playerSide == west) then {if(!visibleMap) then {
+				[] spawn life_fnc_copMarkers;};}
+				else{
+					if(player call life_fnc_isMedic) then {if(!visibleMap) then {
+						[] spawn life_fnc_medicMarkers;};}
+				else {
+					if(player call life_fnc_isADAC) then {
+						if(!visibleMap) then {
+						[] spawn life_fnc_adacMarkers;};};};};
 	};
 	
 	//Holster / recall weapon.
