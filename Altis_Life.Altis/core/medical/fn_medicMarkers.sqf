@@ -16,7 +16,7 @@ _selfmedic = (player call life_fnc_isMedic);
 sleep 0.25;
 if(visibleMap) then {
 
-	// Get medics / ADAC
+	// Get medics
 	{
 		if (_selfmedic) then {
 			if((_x call life_fnc_isMedic)) then {
@@ -28,7 +28,10 @@ if(visibleMap) then {
 	// Get patients
 	{
 		if (_selfmedic) then {
-			_patients set[count _patients,_x];
+			_name = _x getVariable "name";
+			if(!isNil "_name") then {
+				_patients set[count _patients,_x];
+			};
 		};
 	} foreach allDeadMen;
 	
