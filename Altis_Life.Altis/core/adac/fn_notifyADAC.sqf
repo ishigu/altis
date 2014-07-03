@@ -23,3 +23,4 @@ _message = format[">>>ADAC Notruf von %1 bei (%2) : %3",_from,_pos,_msg];
 systemChat _message;
 
 hint parseText format["<t color='#FFCC00'><t size='2'><t align='center'>ADAC Notruf<br/><t color='#33CC33'><t align='left'><t size='1'>Position:   %1<br/>An: <t color='#ffffff'>ADAC Team<t color='#33CC33'><br/>Von: <t color='#ffffff'>%2<br/><br/><t color='#33CC33'>Nachricht:<br/><t color='#ffffff'>%3",_pos,_from,_msg];
+[[_sender,visiblePosition _sender,_msg],"life_fnc_distressAdd",true,false] spawn life_fnc_MP;

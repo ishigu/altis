@@ -432,3 +432,4 @@ __CONST__(life_garage_sell,life_garage_sell);
 
 life_medic_slots = ["medic_1","medic_2","medic_3","medic_4","medic_5","medic_6","medic_7","medic_8","medic_9","medic_10"];
 life_adac_slots = ["adac_1","adac_2","adac_3","adac_4"];
+life_adac_distress =[];

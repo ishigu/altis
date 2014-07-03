@@ -329,6 +329,17 @@
 		<Key ID="STR_Wanted_Pardon">
 			<Original>Verzeihen</Original>
 		</Key>
+	<Package name="Distress_Menu">
+		<Key ID="STR_Distress_Title">
+			<Original>Notrufliste</Original>
+		</Key>
+		<Key ID="STR_Distress_Remove">
+			<Original>Entfernen</Original>
+		</Key>
+		<Key ID="STR_Distress_Menu">
+			<Original>ADAC</Original>
+		</Key>
+		
 	</Package>
 	<Package name="Animals">
 		<Key ID="STR_ANIM_Salema">
