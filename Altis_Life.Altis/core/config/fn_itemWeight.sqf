@@ -63,7 +63,7 @@ switch (_item) do
 	case "defib":{5};
 	case "paint":{4};
 	case "pylon":{2};
-	case "barrier":{2};
+	case "barrier":{15};
 	/*
 	case "cocoa": {2};
 	case "milk": {2};
