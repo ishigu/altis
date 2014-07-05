@@ -25,7 +25,8 @@ switch (_shop) do
 	case "adac_shop":
 	{
 		_return = [
-			["C_Offroad_01_F",5000]
+			["C_Offroad_01_F",5000],
+			["B_Truck_01_mover_F",5000]
 		];
 	};
 	

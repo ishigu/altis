@@ -217,7 +217,7 @@ switch (_code) do
 	//Q Key
     case 16:
     {    
-        if((!life_action_inUse) && (vehicle player == player) ) then
+        if((!life_action_inUse) && (vehicle player == player) && (!life_action_mining_hotkey_inuse) && (!life_delay_pickaxe)) then
         {
             {
                 _str = [_x] call life_fnc_varToStr;
@@ -226,6 +226,7 @@ switch (_code) do
                 {
                     if( _str == "Spitzhacke" || _str == "pickaxe" ) then
                     {
+						delay_pickaxe = true;
                         [] spawn life_fnc_pickAxeUse;
                     };
                 };

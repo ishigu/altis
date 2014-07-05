@@ -16,6 +16,18 @@ switch (playerSide) do
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && (animationState cursorTarget == "Incapacitated" || !(cursorTarget getVariable["Revive",true])) && !(cursorTarget getVariable["robbed",FALSE]) ']];
 	};
 };
+//Use Chemlights in hand
+life_actions = life_actions + [player addAction["Knicklicht (Rot) in die Hand nehmen",life_fnc_chemlightUse,"red",-1,false,false,"",
+' isNil "life_chemlight" && "Chemlight_red" in (magazines player) && vehicle player == player ']];
+life_actions = life_actions + [player addAction["Knicklicht (Gelb) in die Hand nehmen",life_fnc_chemlightUse,"yellow",-1,false,false,"",
+' isNil "life_chemlight" && "Chemlight_yellow" in (magazines player) && vehicle player == player ']];
+life_actions = life_actions + [player addAction["Knicklicht (Grün) in die Hand nehmen",life_fnc_chemlightUse,"green",-1,false,false,"",
+' isNil "life_chemlight" && "Chemlight_green" in (magazines player) && vehicle player == player ']];
+life_actions = life_actions + [player addAction["Knicklicht (Blau) in die Hand nehmen",life_fnc_chemlightUse,"blue",-1,false,false,"",
+' isNil "life_chemlight" && "Chemlight_blue" in (magazines player) && vehicle player == player ']];
+//Drop Chemlight
+life_actions = life_actions + [player addAction["Drop Chemlight",{if(isNil "life_chemlight") exitWith {};if(isNull life_chemlight) exitWith {};detach life_chemlight; life_chemlight = nil;},"",-1,false,false,"",'!isNil "life_chemlight" && !isNull life_chemlight && vehicle player == player ']];
+
 
 /*
 	Undecided actions

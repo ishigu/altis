@@ -16,6 +16,8 @@ if(_medicsOnline) then {
 	// [[life_corpse,name player],"life_fnc_copMedicRequest",west,FALSE] spawn life_fnc_MP;
 };
 
+life_request_timer = true;
+
 //Create a thread to monitor duration since last request (prevent spammage).
 [] spawn 
 {

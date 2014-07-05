@@ -45,6 +45,7 @@ if(isDedicated && isNil("life_market_prices")) then
 };
 call compile preprocessFile "UI\HUD.sqf";
 [] spawn ICE_HUD;
+[] execVM "scripts\IgiLoad\IgiLoadInit.sqf"; // ADAC HEMMT
 
 if(isDedicated && isNil("life_market_prices")) then
 {

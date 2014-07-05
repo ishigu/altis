@@ -32,6 +32,9 @@ life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
 life_removeWanted = false;
+life_action_mining_hotkey_inuse = false; // Fix pressing actionkey + q to mine/gather faster
+life_delay_pickaxe = false; // Try to fix Q spam
+life_request_timer = false;
 
 //Revive constant variables.
 __CONST__(life_revive_cops,false); //Set to false if you don't want cops to be able to revive downed players.
@@ -225,7 +228,7 @@ life_licenses =
 
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
-life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000]];
+life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000],["meth",6000]];
 
 
 /*

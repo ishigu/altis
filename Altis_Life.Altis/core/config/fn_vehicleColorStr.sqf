@@ -273,6 +273,13 @@ switch (_vehicle) do
 		};
 	};
 
+	case "B_Truck_01_mover_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "ADAC"};
+		};
+	};
 };
 
 _color;

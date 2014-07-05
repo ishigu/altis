@@ -56,7 +56,7 @@ if((player call life_fnc_isMedic)) then {
 if(!(player call life_fnc_isMedic) && (side player == independent)) then {
 	switch(_type) do {
 		case "U_I_CombatUniform" : {
-			_path = "textures\uniform\adac.jpg";
+			_path = "textures\uniform\adac.paa";
 			_unit setObjectTextureGlobal [0,_path];
 		};
 	};
