@@ -39,5 +39,4 @@ _pylon allowDamage false;
     };
 };
 */
-life_action_pylonPickup = player addAction["Pylon einpacken",life_fnc_packuppylon,"",0,false,false,"",
-' _pylon = nearestObjects[getPos player,["RoadCone_F"],2] select 0; !isNil "_pylon" && !isNil {(_pylon getVariable "item")} && side player != civilian'];
+_pylon addAction["Pylon einpacken",life_fnc_packuppylon,"",0,false,false,""];

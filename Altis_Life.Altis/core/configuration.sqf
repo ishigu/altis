@@ -171,7 +171,8 @@ life_inv_items =
 	"life_inv_defib",
 	"life_inv_paint",
 	"life_inv_pylon",
-	"life_inv_barrier"
+	"life_inv_barrier",
+	"life_inv_radartrap"
 	
 	/*
 	"life_inv_cocoa",
@@ -272,7 +273,8 @@ sell_array =
 	["defib",150],
 	["paint",300],
 	["pylon",50],
-	["barrier",200]
+	["barrier",200],
+	["radartrap",1500]
 	/*
 	["cocoa",100],
 	["milk",300],
@@ -311,7 +313,8 @@ buy_array =
 	["defib",300],
 	["paint",750],
 	["pylon",50],
-	["barrier",200]
+	["barrier",200],
+	["radartrap",3000]
 ];
 __CONST__(buy_array,buy_array);
 

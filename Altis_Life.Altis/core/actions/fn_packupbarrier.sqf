@@ -7,13 +7,12 @@
 	Hebt eine Straßensperre auf.
 */
 private["_barrier"];
-_barrier = nearestObjects[getPos player,["RoadBarrier_F"],2] select 0;
+_barrier = _this select 0;
 if(isNil "_barrier") exitWith {};
+if( (side _caller == civilian) || ( _caller call life_fnc_isMedic) ) exitWith {hint "Du kannst das nicht aufheben!";};
 
 if(([true,"barrier",1] call life_fnc_handleInv)) then
 {
     titleText["Du hast die Straßensperre aufgehoben.","PLAIN"];
-    player removeAction life_action_barrierPickup;
-    life_action_barrierPickup = nil;
     deleteVehicle _barrier;
 };

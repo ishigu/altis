@@ -69,6 +69,7 @@ switch (_var) do
 	case "life_inv_paint":{"Farbeimer"};
 	case "life_inv_pylon": {"Pylon"};
 	case "life_inv_barrier": {"Strassensperre"};
+	case "life_inv_radartrap": {"Blitzer"};
 	
 	//License Block
 	case "license_civ_driver": {"Fuehrerschein"};

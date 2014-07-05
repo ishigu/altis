@@ -25,6 +25,8 @@
 
 
 #include "wanted_list.hpp"
+#include "wantedadd2.hpp"
+
 #include "ticket.hpp"
 #include "clothing.hpp"
 #include "trunk.hpp"

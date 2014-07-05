@@ -10,7 +10,7 @@ class life_wanted_menu {
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
-			w = 0.6;
+			w = 0.8;
 			h = (1 / 25);
 		};
 		
@@ -19,7 +19,7 @@ class life_wanted_menu {
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
-			w = 0.6;
+			w = 0.8;
 			h = 0.6 - (22 / 250);
 		};
 	};
@@ -33,7 +33,7 @@ class life_wanted_menu {
 			text = "$STR_Wanted_Title";
 			x = 0.1;
 			y = 0.2;
-			w = 0.6;
+			w = 0.8;
 			h = (1 / 25);
 		};
 		
@@ -63,7 +63,7 @@ class life_wanted_menu {
 			
 			x = 0.34;
 			y = 0.35;
-			w = 0.36;
+			w = 0.46;
 			h = 0.32;
 		};
 		
@@ -92,6 +92,17 @@ class life_wanted_menu {
 			text = "$STR_Wanted_Pardon";
 			onButtonClick = "[] call life_fnc_pardon; closeDialog 0;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.8 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		
+		class ButtonWantedAdd : Life_RscButtonMenu {
+			idc = 9800;
+			//shortcuts[] = {0x00050000 + 2};
+			text = "Wanted +";
+			onButtonClick = "createDialog ""life_wantedadd2"";";
+			x = 0.14 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);

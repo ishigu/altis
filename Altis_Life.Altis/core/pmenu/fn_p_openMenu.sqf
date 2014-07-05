@@ -23,6 +23,7 @@ switch(playerSide) do
 	};
 };
 if(!(player call life_fnc_isADAC)) then { ctrlShow[2030,false];};
+if(playerSide != west) then { ctrlShow[9800,false];};
 
 if(__GETC__(life_adminlevel) < 1) then
 {

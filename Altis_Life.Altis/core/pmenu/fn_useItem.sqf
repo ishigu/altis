@@ -75,6 +75,15 @@ switch (true) do
 		};
 	};
 	
+	case (_item == "radartrap"):
+	{
+		if(!isNull life_pylon) exitWith {hint "Du stellst schon einen Blitzer auf!"};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_radartrap;
+		};
+	};
+	
 	case (_item == "heroinp"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then

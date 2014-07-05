@@ -18,5 +18,4 @@ if(!isNil "life_action_barrierDeploy") then {player removeAction life_action_bar
 if(isNull _barrier) exitWith {life_barrier = ObjNull;};
 _barrier setPos [(getPos _barrier select 0),(getPos _barrier select 1),0];
 _barrier allowDamage false;
-life_action_barrierPickup = player addAction["Straßensperre einpacken",life_fnc_packupbarrier,"",0,false,false,"",
-' _barrier = nearestObjects[getPos player,["RoadBarrier_F"],2] select 0; !isNil "_barrier" && !isNil {(_barrier getVariable "item")} && side player != civilian'];
+_barrier addAction["Straßensperre einpacken",life_fnc_packupbarrier,"",0,false,false,""];
