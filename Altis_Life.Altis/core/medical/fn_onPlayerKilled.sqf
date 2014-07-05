@@ -42,7 +42,15 @@ _unit spawn
 	_maxTime = time + (life_respawn_timer * 60);
 	_RespawnBtn ctrlEnable false;
 	waitUntil {_Timer ctrlSetText format["Respawn moeglich in: %1",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
-	round(_maxTime - time) <= 0 OR isNull _this};
+	round(_maxTime - time) <= 0 OR isNull _this OR life_request_timer};
+	
+	if (life_request_timer) then {
+		_maxTime = time + life_respawn_timer; // add whole respawn timer
+		waitUntil {_Timer ctrlSetText format["Respawn Available in: %1",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
+		round(_maxTime - time) <= 0 || isNull _this};
+	};
+	life_request_timer = false; //resets increased respawn timer
+	
 	_RespawnBtn ctrlEnable true;
 	_Timer ctrlSetText "Du kannst jetzt respawnen";
 };
