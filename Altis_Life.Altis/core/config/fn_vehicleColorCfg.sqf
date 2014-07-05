@@ -284,6 +284,13 @@ switch (_vehicle) do
 		];
 	};
 
+	case "B_Truck_01_mover_F":
+	{
+		_ret = 
+		[
+			["textures\vehicles\adac_hemett_01.paa","adac","textures\vehicles\adac_hemett_02.paa"]
+		];
+	};
 };
 
 _ret;
