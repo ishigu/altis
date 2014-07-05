@@ -25,7 +25,7 @@ if(vehicle player != player) exitWith {hint "Du kannst nicht innerhalb eines Fah
 
 _diff = [_mine,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith {hint "Your inventory is full."};
-life_action_inUse = true;
+life_action_mining_hotkey_inuse = true;
 for "_i" from 0 to 2 do
 {
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
@@ -39,4 +39,5 @@ if(([true,_mine,_diff] call life_fnc_handleInv)) then
 	titleText[format["Du hast %2 %1 abgebaut",_itemName,_diff],"PLAIN"];
 };
 
-life_action_inUse = false;
+life_action_mining_hotkey_inuse = false;
+life_delay_pickaxe = false;

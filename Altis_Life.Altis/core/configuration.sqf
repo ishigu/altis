@@ -32,6 +32,8 @@ life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
 life_removeWanted = false;
+life_action_mining_hotkey_inuse = false; // Fix pressing actionkey + q to mine/gather faster
+life_delay_pickaxe = false; // Try to fix Q spam
 
 //Revive constant variables.
 __CONST__(life_revive_cops,false); //Set to false if you don't want cops to be able to revive downed players.
