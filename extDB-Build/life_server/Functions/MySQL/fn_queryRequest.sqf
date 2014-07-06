@@ -30,18 +30,7 @@ _query = switch(_side) do {
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
-
-private["_exitLoop"];
-_exitLoop = false;
-while {true} do {
-	waitUntil{!DB_Async_Active}; //Wait again to make SURE the caller is ready.
-	_queryResult = [_query,true,_uid] call DB_fnc_asyncCall;
-	if(typeName _queryResult == "STRING" && {_queryResult == format["_NO_ENTRY_CQ_%1",_uid]}) exitWith {}; //Bad
-	if(count _queryResult == _returnCount) then {
-		if((_queryResult select 0) == _uid) exitWith {_exitLoop = true;}; //The data matched so send it back.
-	};
-	if(_exitLoop) exitWith {};
-};
+_queryResult = [_query,2] call DB_fnc_asyncCall;
 
 diag_log "------------- Client Query Request -------------";
 diag_log format["QUERY: %1",_query];
@@ -52,6 +41,17 @@ diag_log "------------------------------------------------";
 if(typeName _queryResult == "STRING") exitWith {
 	[[],"SOCK_fnc_insertPlayerInfo",_ownerID,false,true] spawn life_fnc_MP;
 };
+
+if(count _queryResult == 0) exitWith {
+	[[],"SOCK_fnc_insertPlayerInfo",_ownerID,false,true] spawn life_fnc_MP;
+};
+
+//Blah conversion thing from a2net->extdb
+private["_tmp"];
+_tmp = _queryResult select 2;
+_queryResult set[2,[_tmp] call DB_fnc_numberSafe];
+_tmp = _queryResult select 3;
+_queryResult set[3,[_tmp] call DB_fnc_numberSafe];
 
 //Parse licenses (Always index 6)
 _new = [(_queryResult select 6)] call DB_fnc_mresToArray;

@@ -21,29 +21,13 @@ if(_vid == -1 OR _pid == "") exitWith {};
 if(_vid in serv_sv_use) exitWith {};
 serv_sv_use set[count serv_sv_use,_vid];
 
-_query = format["SELECT * FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
-private["_handler","_queryResult","_thread"];
-_handler = {
-	private["_thread"];
-	_thread = [_this select 0,true,_this select 1,true] spawn DB_fnc_asyncCall;
-	waitUntil {scriptDone _thread};
-};
+_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
-private["_exitLoop"];
-_exitLoop = false;
-while {true} do {
-	waitUntil{!DB_Async_Active}; //Wait again to make SURE the caller is ready.
-	_queryResult = [_query,true,_pid,true] call DB_fnc_asyncCall;
-	if(typeName _queryResult == "STRING") exitWith {}; //Bad
-	if(count _queryResult == 10) then {
-		if((_queryResult select 4) == _pid) exitWith {_exitLoop = true;};
-	};
-	if(_exitLoop) exitWith {};
-};
+_queryResult = [_query,2] call DB_fnc_asyncCall;
 
-diag_log "------------- Get Vehicles Request -------------";
+diag_log "------------- Client Query Request -------------";
 diag_log format["QUERY: %1",_query];
 diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
 diag_log format["Result: %1",_queryResult];
@@ -55,13 +39,13 @@ _vInfo = _queryResult;
 if(isNil "_vInfo") exitWith {serv_sv_use = serv_sv_use - [_vid];};
 if(count _vInfo == 0) exitWith {serv_sv_use = serv_sv_use - [_vid];};
 
-if((_vInfo select 5) == "False") exitWith
+if((_vInfo select 5) == 0) exitWith
 {
 	serv_sv_use = serv_sv_use - [_vid];
 	[[1,format[(localize "STR_Garage_SQLError_Destroyed"),_vInfo select 2]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
 };
 
-if((_vInfo select 6) == "True") exitWith
+if((_vInfo select 6) == 1) exitWith
 {
 	serv_sv_use = serv_sv_use - [_vid];
 	[[1,format[(localize "STR_Garage_SQLError_Active"),_vInfo select 2]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
@@ -105,14 +89,14 @@ if(typeName _sp == "STRING") then {
 [[_vehicle],"life_fnc_addVehicle2Chain",_unit,false] spawn life_fnc_MP;
 _vehicle lock 2;
 //Reskin the vehicle 
-[[_vehicle,parseNumber(_vInfo select 8)],"life_fnc_colorVehicle",nil,false] spawn life_fnc_MP;
+[[_vehicle,_vInfo select 8],"life_fnc_colorVehicle",nil,false] spawn life_fnc_MP;
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
-_vehicle setVariable["dbInfo",[(_vInfo select 4),(call compile format["%1", _vInfo select 7])]];
+_vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
 //_vehicle addEventHandler["Killed","_this spawn TON_fnc_vehicleDead"]; //Obsolete function?
 [_vehicle] call life_fnc_clearVehicleAmmo;
 
 //Sets of animations
-if((_vInfo select 1) == "civ" && (_vInfo select 2) == "B_Heli_Light_01_F" && (parseNumber(_vInfo select 8)) != 13) then
+if((_vInfo select 1) == "civ" && (_vInfo select 2) == "B_Heli_Light_01_F" && _vInfo select 8 != 13) then
 {
 	[[_vehicle,"civ_littlebird",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
@@ -127,13 +111,4 @@ if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_Offroad_01_F") then
 	[[_vehicle,"med_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
 [[1,"Your vehicle is ready!"],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
-if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_SUV_01_F") then
-{
-	_vehicle setVariable["lights",false,true];
-};
-
-if((_vInfo select 1) == "cop") then { //(_vInfo select 2) in ["B_MRAP_01_F","C_SUV_01_F"]
-	_vehicle setVariable["lights",false,true];
-};
-
 serv_sv_use = serv_sv_use - [_vid];

@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "E:\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Server-Side Cleanup">*/
+/*%FSM<COMPILE "D:\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Server-Side Cleanup">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"init",0,250,-65.004578,-391.651611,24.995417,-341.651672,0.000000,"init"};
@@ -18,7 +18,7 @@ link5[] = {5,3};
 link6[] = {6,7};
 link7[] = {7,2};
 globals[] = {0.000000,0,0,0,0,640,480,1,46,6316128,1,-629.444153,611.207214,293.309357,-434.050568,1243,911,1};
-window[] = {2,-1,-1,-1,-1,960,200,1843,200,3,1261};
+window[] = {2,-1,-1,-32000,-32000,910,150,1793,150,3,1261};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -86,9 +86,8 @@ class FSM
        "			_query = format[""UPDATE vehicles SET alive='0' WHERE pid='%1' AND plate='%2'"",_uid,_plate];" \n
        "			_query spawn {" \n
        "				waitUntil {!DB_Async_Active};" \n
-       "				_thread = [_this,false] spawn DB_fnc_asyncCall;" \n
+       "				_thread = [_this,1] spawn DB_fnc_asyncCall;" \n
        "			};" \n
-       "			//_sql = ""Arma2Net.Unmanaged"" callExtension format [""Arma2NETMySQLCommand ['%2', '%1']"", _query,(call LIFE_SCHEMA_NAME)];" \n
        "		};" \n
        "		if(!isNil ""_x"" && {!isNull _x}) then {" \n
        "			deleteVehicle _x;" \n
@@ -108,10 +107,8 @@ class FSM
        "			_query = format[""UPDATE vehicles SET alive='0' WHERE pid='%1' AND plate='%2'"",_uid,_plate];" \n
        "			_query spawn {" \n
        "				waitUntil {!DB_Async_Active};" \n
-       "				_thread = [_this,false] spawn DB_fnc_asyncCall;" \n
+       "				_thread = [_this,1] spawn DB_fnc_asyncCall;" \n
        "			};" \n
-       "	" \n
-       "			//_sql = ""Arma2Net.Unmanaged"" callExtension format [""Arma2NETMySQLCommand ['%2', '%1']"", _query,(call LIFE_SCHEMA_NAME)];" \n
        "		};" \n
        "		if(!isNil ""_x"" && {!isNull _x}) then {" \n
        "			deleteVehicle _x;" \n

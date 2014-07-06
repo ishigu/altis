@@ -38,4 +38,4 @@ switch (_side) do {
 };
 
 waitUntil {sleep (random 0.3); !DB_Async_Active};
-_thread = [_query,false] call DB_fnc_asyncCall;
+_queryResult = [_query,1] call DB_fnc_asyncCall;
