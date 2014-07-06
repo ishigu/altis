@@ -146,6 +146,19 @@ if(count (handGunItems player) > 0) then
 	["life_inv_beer",life_inv_beer],["life_inv_blackbeer",life_inv_blackbeer],["life_inv_vodca",life_inv_vodca],["life_inv_wine",life_inv_wine],["life_inv_sekt",life_inv_sekt]
 	];
 
+/*
+// Tempfix for weapons in backpack
+if(count (weaponsItems player) > 0) then
+{
+	{
+		if((_x select 0) != (primaryWeapon player)) then {
+			if ((_x select 1) != "") { _bItems = _bItems + [(_x select 1)]; }; // schalldaempfer
+			if ((_x select 2) != "") { _bItems = _bItems + [(_x select 2)]; }; // laser pointer o.ae.
+			if ((_x select 3) != "") { _bItems = _bItems + [(_x select 3)]; }; // visier
+		};
+	} forEach (weaponsItems player);
+};*/
+	
 _ret set[count _ret,_uItems];
 _ret set[count _ret,_uMags];
 _ret set[count _ret,_bItems];

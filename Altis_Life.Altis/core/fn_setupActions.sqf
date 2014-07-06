@@ -15,6 +15,17 @@ switch (playerSide) do
 		life_actions = life_actions + [player addAction["Rob Person",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && (animationState cursorTarget == "Incapacitated" || !(cursorTarget getVariable["Revive",true])) && !(cursorTarget getVariable["robbed",FALSE]) ']];
 	};
+	case west:
+	{
+		// Blaulicht
+		life_actions = [player addAction["Blaulicht an",{[[vehicle player,0.22],"life_fnc_copLights",true,false] spawn life_fnc_MP; vehicle player setVariable["lights",true,true];},"",0,false,false,"",' vehicle player != player && !isNil {vehicle player getVariable "lights"} && ((driver vehicle player) == player) && !(vehicle player getVariable "lights")']];
+		life_actions = life_actions + [player addAction["Blaulicht aus",{vehicle player setVariable["lights",false,true];},"",0,false,false,"", 'vehicle player != player && !isNil {vehicle player getVariable "lights"} && ((driver vehicle player) == player) && (vehicle player getVariable "lights") ']];
+
+	};
+	case independent:
+	{
+		
+	}
 };
 //Use Chemlights in hand
 life_actions = life_actions + [player addAction["Knicklicht (Rot) in die Hand nehmen",life_fnc_chemlightUse,"red",-1,false,false,"",
