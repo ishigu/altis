@@ -21,7 +21,7 @@ lbClear _list;
 	if (side _x == civilian) then { _side = "Civ";};
 	if (_x call life_fnc_isADAC) then { _side = "ADAC";};
 	if (_x call life_fnc_isMedic) then { _side = "Medic";};
-	_list lbAdd format["%1 - %2", name _x,_side];
+	_list lbAdd format["%1 - %2", _x getVariable["realname",name _x],_side];
 	_list lbSetdata [(lbSize _list)-1,str(_x)];
 } foreach playableUnits;
 if(__GETC__(life_adminlevel) < 1) exitWith {closeDialog 0;};

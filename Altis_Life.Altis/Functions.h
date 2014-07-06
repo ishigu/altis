@@ -97,7 +97,6 @@ class Life_Client_Core
 		class getDPMission {};
 		class postBail {};
 		class processAction {};
-		class robBankAction {};
 		class sellOil {};
 		class suicideBomb {};
 		class arrestAction {};
@@ -117,10 +116,10 @@ class Life_Client_Core
 		class gatherCocaine {};
 		class pumpRepair {};
 		class packupSpikes {};
-		class robFederal {};
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
+		class sellGoldBars {};
 		class gatherChemical{};
 		class surrender {};
 		class packuppylon {};
@@ -216,8 +215,6 @@ class Life_Client_Core
 		class numberText {};
 		class handleItem {};
 		class accType {};
-		class onDeath {};
-		class onRespawn {};
 		class receiveItem {};
 		class giveDiff {};
 		class receiveMoney {};
@@ -225,7 +222,6 @@ class Life_Client_Core
 		class clearVehicleAmmo {};
 		class pulloutVeh {};
 		class nearUnits {};
-		class fedSuccess {};
 		class actionKeyHandler {};
 		class playerCount {};
 		class fetchDeadGear {};
@@ -235,6 +231,8 @@ class Life_Client_Core
 		class onTakeItem {};
 		class fetchVehInfo {};
 		class pushObject {};
+		class onFired {};
+		class revealObjects {};
 		class randomRound {};
 		class setUniform {};
 		class keyRestore {};
@@ -262,13 +260,13 @@ class Life_Client_Core
 		class tazed {};
 		class civFetchGear {};
 		class civLoadGear {};
-		class robReserve {};
 		class knockedOut {};
 		class knockoutAction {};
 		class robReceive {};
 		class robPerson {};
 		class removeLicenses {};
 		class zoneCreator {};
+		class demoChargeTimer {};
 	};
 	
 	class Vehicle
@@ -310,6 +308,9 @@ class Life_Client_Core
 		class sirenLights {};
 		class licenseCheck {};
 		class licensesRead {};
+		class repairDoor {};
+		class doorAnimate {};
+		class fedCamDisplay {};
 	};
 	
 	class Gangs
@@ -358,6 +359,10 @@ class Life_Client_Core
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};
+		class flashbang {};
+		class boltcutter {};
+		class blastingCharge {};
+		class defuseKit {};
 		class weed {};
 		class pylon {};
 		class barrier {};
@@ -381,6 +386,10 @@ class Life_Client_Core
 		class bankWithdraw {};
 		class bankTransfer {};
 		class garageLBChange {};
+		class safeInventory {};
+		class safeOpen {};
+		class safeTake {};
+		class safeFix {};
 	};
 
 	class market

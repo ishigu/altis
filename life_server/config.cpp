@@ -79,10 +79,6 @@ class CfgFunctions
 		class Client_Code
 		{
 			file = "\life_server\Functions\Client";
-			class safeOpen {};
-			class safeInventory {};
-			class safeTake {};
-			class safeStore {};
 		};
 	};
 	

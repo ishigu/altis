@@ -15,4 +15,4 @@ if(life_atmcash < life_bail_amount) exitWith {hint format["Du hast nicht genuege
 
 life_atmcash = life_atmcash - life_bail_amount;
 life_bail_paid = true;
-[[0,format["%1 hat seine Kaution bezahlt!", name _unit]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[0,format["%1 hat seine Kaution bezahlt!", _unit getVariable ["realname",name _unit]]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;

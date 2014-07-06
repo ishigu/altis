@@ -5,7 +5,7 @@
 	Description:
 	Sends a request to query the database information and returns vehicles.
 */
-private["_pid","_side","_type","_unit","_ret"];
+private["_pid","_side","_type","_unit","_ret","_tickTime","_loops"];
 _pid = [_this,0,"",[""]] call BIS_fnc_param;
 _side = [_this,1,sideUnknown,[west]] call BIS_fnc_param;
 _type = [_this,2,"",[""]] call BIS_fnc_param;
@@ -42,17 +42,15 @@ _handler = {
 
 _query = format["SELECT * FROM vehicles WHERE pid='%1' AND alive='1' AND active='0' AND side='%2' AND type='%3'",_pid,_side,_type];
 
-waitUntil{!DB_Async_Active};
+waitUntil{sleep (random 0.3); !DB_Async_Active};
+_tickTime = diag_tickTime;
+_queryResult = [_query,true,_pid,false] call DB_fnc_asyncCall;
 
-while {true} do {
-	_thread = [_query,_pid] spawn _handler;
-	waitUntil {scriptDone _thread};
-	sleep 0.2;
-	_queryResult = missionNamespace getVariable format["QUERY_%1",_pid];
-	if(!isNil "_queryResult") exitWith {};
-};
-
-missionNamespace setVariable[format["QUERY_%1",_pid],nil]; //Unset the variable.
+diag_log "------------- Get Vehicles Request -------------";
+diag_log format["QUERY: %1",_query];
+diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
+diag_log format["Result: %1",_queryResult];
+diag_log "------------------------------------------------";
 
 if(typeName _queryResult == "STRING") exitWith {
 	[[[]],"life_fnc_impoundMenu",(owner _unit),false] spawn life_fnc_MP;

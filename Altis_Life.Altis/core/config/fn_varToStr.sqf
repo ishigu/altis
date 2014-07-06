@@ -61,6 +61,9 @@ switch (_var) do
 	case "life_inv_rock": {"Stein"};
 	case "life_inv_cement": {"Zement"};
 	case "life_inv_goldbar": {"Goldbarren"};
+	case "life_inv_blastingcharge": {"Sprengladung"};
+	case "life_inv_boltcutter": {"Bolzenschneider"};
+	case "life_inv_defusekit": {"Entschaerfungskit"};
 	case "life_inv_chemical": {"Chemikalien"};
 	case "life_inv_benzin": {"Benzin"};
 	case "life_inv_medical": {"Medikamente"};

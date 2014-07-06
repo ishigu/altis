@@ -20,9 +20,7 @@ if((_val + _tax) > life_atmcash) exitWith {hint format["Du hast nicht genuegend 
 
 life_atmcash = life_atmcash - (_val + _tax);
 
-bank_addfunds = _tax;
-publicVariableServer "bank_addfunds";
-[[_val,name player],"clientWireTransfer",_unit,false] spawn life_fnc_MP;
+[[_val,player getVariable["realname",name player]],"clientWireTransfer",_unit,false] spawn life_fnc_MP;
 [] call life_fnc_atmMenu;
-hint format["Du hast $%1 fuer %2.\n\nEine Gebuehr von $%3 wurde für die Überweisung genommen.",[_val] call life_fnc_numberText,name _unit,[_tax] call life_fnc_numberText];
+hint format["Du hast $%1 fuer %2.\n\nEine Gebuehr von $%3 wurde dir fuer die Bearbeitung abgezogen.",[_val] call life_fnc_numberText,_unit getVariable["realname",name _unit],[_tax] call life_fnc_numberText];
 [] call SOCK_fnc_updateRequest; //Silent Sync

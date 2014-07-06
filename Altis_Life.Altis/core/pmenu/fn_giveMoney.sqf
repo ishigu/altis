@@ -22,7 +22,7 @@ if(parseNumber(_amount) <= 0) exitWith {hint "Ungueltige Menge.";ctrlShow[2001,t
 if(parseNumber(_amount) > life_cash) exitWith {hint "Du hast nicht genug Geld!";ctrlShow[2001,true];};
 if(isNull _unit) exitWith {ctrlShow[2001,true];};
 if(isNil "_unit") exitWith {ctrlShow[2001,true]; hint "Spieler ist ausser Reichweite";};
-hint format["Du hast $%1 an %2 gegeben",[(parseNumber(_amount))] call life_fnc_numberText,name _unit];
+hint format["Du hast $%1 an %2 gegeben",[(parseNumber(_amount))] call life_fnc_numberText,_unit getVariable["realname",name _unit]];
 life_cash = life_cash - (parseNumber(_amount));
 [] call SOCK_fnc_updateRequest;
 [[_unit,_amount,player],"life_fnc_receiveMoney",_unit,false] spawn life_fnc_MP;

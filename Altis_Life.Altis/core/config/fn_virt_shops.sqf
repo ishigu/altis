@@ -10,7 +10,8 @@ _shop = _this select 0;
 
 switch (_shop) do
 {
-	case "market": {["Altis Markt",["beer","blackbeer","vodca","wine","sekt","water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach"]]};
+	case "market": {["Altis Markt",["beer","blackbeer","vodca","wine","sekt","water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter"]]};
+	case "rebel": {["Rebellenmarkt",["beer","blackbeer","vodca","wine","sekt","water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge"]]};
 	case "wongs": {["Wong's Essen auf Raedern",["turtlesoup","turtle"]]};
 	case "coffee": {["Stratis Kaffee",["coffee","donuts"]]};
 	case "heroin": {["Drogendealer",["cocainep","heroinp","marijuana","meth"]]};
@@ -20,7 +21,7 @@ switch (_shop) do
 	case "iron": {["Altis Industriehaendler",["iron_r","copper_r"]]};
 	case "diamond": {["Diamantenhaendler",["diamond","diamondc"]]};
 	case "salt": {["Salzhaendler",["salt_r"]]};
-	case "cop": {["Polizeikantine",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","barrier","pylon","radartrap"]]};
+	case "cop": {["Polizeikantine",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit","barrier","pylon","radartrap"]]};
 	case "cement": {["Zementhaendler",["cement"]]};
 	case "benzin": {["Benzinhaendler",["benzin"]]};
 	case "medical": {["Medikamentenhaendler",["medical"]]};

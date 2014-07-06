@@ -3,6 +3,10 @@ DB_Async_Active = false;
 __CONST__(LIFE_SCHEMA_NAME,"'arma3life'");//CHANGE THIS IF YOUR DATABASE IS NOT CALLED ARMA3LIFE KEEP THE ' '
 publicVariable "LIFE_SCHEMA_NAME";
 
+life_adminlevel = 0;
+life_medicLevel = 0;
+life_coplevel = 0;
+
 //Null out harmful things for the server.
 __CONST__(JxMxE_PublishVehicle,"No");
 
@@ -15,14 +19,12 @@ life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT
 server_query_running = false;
 life_DB_queue = [];
 serv_sv_use = [];
-fed_bank setVariable["fed_rob_ip",false,true];
-fed_bank setVariable["fed_locked",false,true];
 
 //Run procedures for SQL cleanup on mission start.
 "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", "CALL resetLifeVehicles();",(call LIFE_SCHEMA_NAME)]; //Reset vehicles active state to false.
 "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", "CALL deleteDeadVehicles();",(call LIFE_SCHEMA_NAME)]; //Delete dead / non-usable vehicles for cleanup.
 
-life_federal_funds = (count playableUnits) * 750; //Amount the federal reserve is funded.
+fed_bank setVariable["safe",(count playableUnits),true];
 life_animals_spawned = false;
 life_animals_array = [];
 
@@ -58,10 +60,6 @@ publicVariable "robbery_success";
 	};
 };
 
-//Server-side functions that need to be sent out.
-publicVariable "TON_fnc_addVehicle2Chain";
-publicVariable "life_fnc_fedSuccess";
-
 [] spawn TON_fnc_federalUpdate;
 
 [] spawn
@@ -86,3 +84,13 @@ publicVariable "life_fnc_fedSuccess";
 		} foreach [primaryWeapon _npc,secondaryWeapon _npc,handgunWeapon _npc];
 	};
 } foreach allUnits;
+
+//Lockup the dome
+private["_dome","_rsb"];
+_dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
+_rsb = nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"];
+
+for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,true]; _dome animate [format["Door_%1_rot",_i],0];};
+_rsb setVariable["bis_disabled_Door_1",1,true];
+_rsb allowDamage false;
+_dome allowDamage false;

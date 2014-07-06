@@ -1,5 +1,5 @@
 author = "Lasdios & Felix";
-onLoadName = "Westerland v3.1.3";
+onLoadName = "Altis Life RPG v3.1.3.5";
 onLoadMission = "A RPG game mode developed by Tonic";
 joinUnassigned = 1;
 respawn = BASE;
@@ -39,43 +39,49 @@ class CfgFunctions
 
 class CfgSounds
 {
-  sounds[] = {};
-  class SirenLong
-  {
-    name = "SirenLong";
-    sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
-    titles[] = {};
-  };
-  class SirenMedic
-  {
-    name = "SirenMedic";
-    sound[] = {"\sounds\Siren_Medic.ogg", 1.0, 1};
-    titles[] = {};
-  };
-    class tazersound
-  {
-    name = "Tazersound";
-    sound[] = {"\sounds\tazer.ogg", 0.25, 1};
-    titles[] = {};
-  };
-  class Carlock
-  {
-    name = "carlock";
-    sound[] = {"\sounds\car_lock.ogg", 1.0, 1};
-    titles[] = {};
-  };
-  class Carunlock
-  {
-  name     = "carunlock";
-  sound[]  = {"\sounds\car_unlock.ogg", 1.0, 1};
-  titles[] = {};
-  };
-  class Handcuffs
-  {
-  name     = "handcuffs";
-  sound[]  = {"\sounds\handcuffs.ogg", 1.0, 1};
-  titles[] = {};
-  };
+	sounds[] = {};
+	class SirenLong
+	{
+		name = "SirenLong";
+		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class SirenMedic
+	{
+		name = "SirenMedic";
+		sound[] = {"\sounds\Siren_Medic.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class tazersound
+	{
+		name = "Tazersound";
+		sound[] = {"\sounds\tazer.ogg", 0.25, 1};
+		titles[] = {};
+	};
+	class flashbang
+	{
+		name = "flashbang";
+		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class Carlock
+	{
+		name = "carlock";
+		sound[] = {"\sounds\car_lock.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class Carunlock
+	{
+		name     = "carunlock";
+		sound[]  = {"\sounds\car_unlock.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class Handcuffs
+	{
+		name     = "handcuffs";
+		sound[]  = {"\sounds\handcuffs.ogg", 1.0, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing

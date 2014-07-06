@@ -27,8 +27,23 @@ switch (true) do
 		{
 			life_thirst = 100;
 			player setFatigue 1;
-			titleText["Du hast getrunken und fühlst dich nicht so gut.","PLAIN"];
+			titleText["Du hast getrunken und fuehlst dich nicht so gut.","PLAIN"];
 		};
+	};
+	
+	case (_item == "boltcutter"): {
+		[cursorTarget] spawn life_fnc_boltcutter;
+		closeDialog 0;
+	};
+	
+	case (_item == "blastingcharge"): {
+		player reveal fed_bank;
+		(group player) reveal fed_bank;
+		[cursorTarget] spawn life_fnc_blastingCharge;
+	};
+	
+	case (_item == "defusekit"): {
+		[cursorTarget] spawn life_fnc_defuseKit;
 	};
 	
 	case (_item == "redgull"):
@@ -84,14 +99,6 @@ switch (true) do
 		};
 	};
 	
-	case (_item == "heroinp"):
-	{
-		if(([false,_item,1] call life_fnc_handleInv)) then
-		{
-			[] spawn fnc_drug_use;
-		};
-	};
-	
 	case (_item == "fuelF"):
 	{
 		if(vehicle player != player) exitWith {hint "Du kannst das Fahrzeug nicht von innen betanken!"};
@@ -115,12 +122,7 @@ switch (true) do
 	{
 		[_item] call life_fnc_eatFood;
 	};
-	
-	case "fishing":
-	{
-		[] spawn fnc_fishing;
-	};
-	
+
 	case (_item == "pickaxe"):
 	{
 		[] spawn life_fnc_pickAxeUse;

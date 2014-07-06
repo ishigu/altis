@@ -19,13 +19,13 @@ if(_bool) then
 {
 	if(([true,_item,(parseNumber _val)] call life_fnc_handleInv)) then
 	{
-		hint format["Du hast versucht %1 %2 %3 zu geben, aber das Inventar war voll.",name _from,_val,_type];
+		hint format["Du hast versucht %1 %2 %3 zu geben, aber das Inventar war voll.",_from getVariable["realname",name _from],_val,_type];
 	};
 }
 	else
 {
 	if(([true,_item,(parseNumber _val)] call life_fnc_handleInv)) then
 	{
-		hint format["%1 gab %2 %3 zurueck, weil er dafuer keinen Platz hatte.",name _from,_val,_type];
+		hint format["%1 gab %2 %3 zurueck, weil er dafuer keinen Platz hatte.",_from getVariable["realname",name _from],_val,_type];
 	};
 };

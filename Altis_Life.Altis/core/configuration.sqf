@@ -162,6 +162,9 @@ life_inv_items =
 	"life_inv_rock",
 	"life_inv_cement",
 	"life_inv_goldbar",
+	"life_inv_blastingcharge",
+	"life_inv_boltcutter",
+	"life_inv_defusekit",
 	"life_inv_chemical",
 	"life_inv_meth",
 	"life_inv_medical",
@@ -228,7 +231,7 @@ life_licenses =
 
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
-life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000],["meth",6000]];
+life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000],["meth",6000],["blastingcharge",10000],["boltcutter",500]];
 
 
 /*
@@ -269,6 +272,7 @@ sell_array =
 	["spikeStrip",1200],
 	["cement",1000],
 	["chemical",1000],
+	["goldbar",95000],
 	["oilp",1950],
 	["benzin",2000],
 	["medical",3900],
@@ -308,6 +312,9 @@ buy_array =
 	["fuelF",850],
 	["peach",68],
 	["spikeStrip",2500],
+	["blastingcharge",35000],
+	["boltcutter",7500],
+	["defusekit",2500],
 	["beer",150],
 	["blackbeer",150],
 	["vodca",150],

@@ -11,7 +11,7 @@ switch(_type) do
 	case "187V": {_type = ["Toeten mit Fahrzeug",6500];};
 	case "187": {_type = ["Mord",200000];};
 	case "901": {_type = ["Gefaengnisausbruch",4500];};
-	case "261": {_type = ["Vergewaltigung",5000];};
+	case "261": {_type = ["Vergewaltigung",5000];}; //What type of sick bastard would add this?
 	case "261A": {_type = ["Versuchte Vergewaltigung",3000];};
 	case "215": {_type = ["Versuchter Autodiebstahl",5000];};
 	case "213": {_type = ["Illegale Verwendung von Sprengstoff",10000];};
@@ -24,7 +24,8 @@ switch(_type) do
 	case "481": {_type = ["Drogenbesitz",25000];};
 	case "482": {_type = ["Versuchter Drogenhandel",25000];};
 	case "483": {_type = ["Drogenhandel",50000];};
-	case "503": {_type = ["Handel mit exotischen Gütern",25000];};
+	case "459": {_type = ["Einbruchsdiebstahl",6500]};
+	case "503": {_type = ["Handel mit exotischen Guetern",25000];};
 	
     case "1": {_type = ["versuchter Fahrzeugdiebstahl",5000];};
     case "2": {_type = ["Fahrzeugdiebstahl",3500];};
