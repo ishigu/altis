@@ -21,17 +21,27 @@ _query = format["SELECT playerid, name FROM players WHERE playerid='%1'",_uid];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
-_queryResult = [_query,2] call DB_fnc_asyncCall;
 
-diag_log "------------- Insert Query Request -------------";
+private["_exitLoop"];
+_exitLoop = false;
+while {true} do {
+	waitUntil{!DB_Async_Active}; //Wait again to make SURE the caller is ready.
+	_queryResult = [_query,true,_uid] call DB_fnc_asyncCall;
+	if(typeName _queryResult == "STRING" && {_queryResult == format["_NO_ENTRY_CQ_%1",_uid]}) exitWith {}; //Bad
+	if(count _queryResult == _returnCount) then {
+		if((_queryResult select 0) == _uid) exitWith {_exitLoop = true;}; //The data matched so send it back.
+	};
+	if(_exitLoop) exitWith {};
+};
+
+diag_log "------------- Client Query Request -------------";
 diag_log format["QUERY: %1",_query];
 diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
 diag_log format["Result: %1",_queryResult];
 diag_log "------------------------------------------------";
 
 //Double check to make sure the client isn't in the database...
-if(typeName _queryResult == "STRING") exitWith {[[],"SOCK_fnc_dataQuery",(owner _returnToSender),false] spawn life_fnc_MP;}; //There was an entry!
-if(count _queryResult != 0) exitWith {[[],"SOCK_fnc_dataQuery",(owner _returnToSender),false] spawn life_fnc_MP;};
+if(typeName _queryResult != "STRING") exitWith {[[],"SOCK_fnc_dataQuery",(owner _returnToSender),false] spawn life_fnc_MP;}; //There was an entry!
 
 //Clense and prepare some information.
 _name = [_name] call DB_fnc_mresString; //Clense the name of bad chars.
@@ -49,5 +59,5 @@ _query = format["INSERT INTO players (playerid, name, cash, bankacc, aliases, co
 ];
 
 waitUntil {!DB_Async_Active};
-[_query,1] call DB_fnc_asyncCall;
+_thread = [_query,false] call DB_fnc_asyncCall;
 [[],"SOCK_fnc_dataQuery",(owner _returnToSender),false] spawn life_fnc_MP;

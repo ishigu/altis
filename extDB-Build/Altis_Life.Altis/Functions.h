@@ -70,6 +70,9 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
+		class isMedic {};
+		class medicRequestRecieve {};
+		class countMedic {};
 	};
 	
 	class Actions
@@ -117,6 +120,27 @@ class Life_Client_Core
 		class robAction {};
 		class sellTurtle {};
 		class sellGoldBars {};
+		class gatherChemical{};
+		class surrender {};
+		class packuppylon {};
+		class packupbarrier {};
+		class packupRadarTrap {};
+		class radartrapSwitch {};
+	};
+	
+	class ADAC
+	{
+		file = "core\adac";
+		class adacLoadout {};
+		class notifyADAC {};
+		class countADAC {};
+		class isADAC {};
+		class adacRepaintMenu {};
+		class adacRepaintVehicle {};
+		class distressAdd {};
+		class distressRemove {};
+		class adacMarkers {};
+		class distressMenu {};
 	};
 	
 	class Config
@@ -169,6 +193,8 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
+		class wantedadd2 {};
+		class wanted2{};
 	};
 	
 	class Functions
@@ -207,6 +233,10 @@ class Life_Client_Core
 		class pushObject {};
 		class onFired {};
 		class revealObjects {};
+		class randomRound {};
+		class setUniform {};
+		class keyRestore {};
+		class renewUniform {};
 	};
 	
 	class Network
@@ -333,6 +363,10 @@ class Life_Client_Core
 		class boltcutter {};
 		class blastingCharge {};
 		class defuseKit {};
+		class weed {};
+		class pylon {};
+		class barrier {};
+		class radartrap {};
 	};
 	
 	class Dialog_Controls
@@ -357,4 +391,33 @@ class Life_Client_Core
 		class safeTake {};
 		class safeFix {};
 	};
+
+	class market
+	{
+		file = "core\market";
+		class refreshMarketView {};
+		class openMarketView {};
+		class MarketShortView {};
+		class marketSetPriceRow {};
+		class marketSell {};
+		class marketReset {};
+		class marketGetSellPrice {};
+		class marketGetRow {};
+		class marketGetPriceRow {};
+		class marketGetBuyPrice {};
+		class marketconfiguration {};
+		class marketChange {};
+		class marketBuy {};
+		
+	}
+		
+	class Cellphone_Extended
+	{
+		file = "core\cellphoneextended";
+		
+		class cellex_open;
+		class cellex_sendClick;
+	};
+
+		
 };

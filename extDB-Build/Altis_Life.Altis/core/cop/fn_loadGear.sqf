@@ -63,3 +63,5 @@ if(primaryWeapon player != "") then
 {
 	player selectWeapon (primaryWeapon player);
 };
+
+[player, uniform player] call life_fnc_setUniform;

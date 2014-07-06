@@ -6,7 +6,7 @@
 	Buys the current set of clothes and closes out of the shop interface.
 */
 private["_price"];
-if((lbCurSel 3101) == -1) exitWith {titleText["You didn't choose the clothes you wanted to buy.","PLAIN"];};
+if((lbCurSel 3101) == -1) exitWith {titleText["Du musst etwas auswaehlen.","PLAIN"];};
 
 _price = 0;
 {
@@ -16,8 +16,9 @@ _price = 0;
 	};
 } foreach life_clothing_purchase;
 
-if(_price > life_cash) exitWith {titleText["Sorry sir, you don't have enough money to buy those clothes.","PLAIN"];};
+if(_price > life_cash) exitWith {titleText["Du hast nicht genug Geld.","PLAIN"];[player, uniform player] call life_fnc_setUniform;};
 life_cash = life_cash - _price;
 
 life_clothesPurchased = true;
+[player, uniform player] call life_fnc_setUniform;
 closeDialog 0;

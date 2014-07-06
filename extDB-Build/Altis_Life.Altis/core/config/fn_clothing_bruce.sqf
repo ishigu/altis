@@ -18,6 +18,7 @@ switch (_filter) do
 	case 0:
 	{
 		[
+		["U_NikosAgedBody","Anzug",250],
 		["U_C_Poloshirt_blue","Poloshirt Blue",250],
 		["U_C_Poloshirt_burgundy","Poloshirt Burgundy",275],
 		["U_C_Poloshirt_redwhite","Poloshirt Red/White",150],
@@ -72,6 +73,7 @@ switch (_filter) do
 			["G_Sport_Checkered",nil,20],
 			["G_Sport_Blackyellow",nil,20],
 			["G_Sport_BlackWhite",nil,20],
+			["G_Spectacles_Tinted",nil,20],
 			["G_Squares",nil,10],
 			["G_Aviator",nil,100],
 			["G_Lady_Mirror",nil,150],

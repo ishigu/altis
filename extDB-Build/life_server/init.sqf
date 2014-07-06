@@ -1,27 +1,7 @@
 #define __CONST__(var1,var2) var1 = compileFinal (if(typeName var2 == "STRING") then {var2} else {str(var2)})
 DB_Async_Active = false;
-DB_Async_ExtraLock = false;
-
-//__CONST__(LIFE_SCHEMA_NAME,"'arma3life'");//CHANGE THIS IF YOUR DATABASE IS NOT CALLED ARMA3LIFE KEEP THE ' '
-
-//I am aiming to confuse people including myself, ignore the ui checks it's because I test locally.
-if(isNil {uiNamespace getVariable "life_sql_id"}) then {
-	life_sql_id = round(random(9999));
-	__CONST__(life_sql_id,life_sql_id);
-	uiNamespace setVariable ["life_sql_id",life_sql_id];
-} else {
-	life_sql_id = uiNamespace getVariable "life_sql_id";
-	__CONST__(life_sql_id,life_sql_id);
-};
-
-//Initialize the database
-"extDB" callExtension "9:DATABASE:Database2";
-"extDB" callExtension format["9:ADD:DB_RAW:%1",(call life_sql_id)];
-"extDB" callExtension "9:LOCK";
-
-//Run procedures for SQL cleanup on mission start.
-["CALL resetLifeVehicles",1] spawn DB_fnc_asyncCall;
-["CALL deleteDeadVehicles",1] spawn DB_fnc_asyncCall;
+__CONST__(LIFE_SCHEMA_NAME,"'arma3life'");//CHANGE THIS IF YOUR DATABASE IS NOT CALLED ARMA3LIFE KEEP THE ' '
+publicVariable "LIFE_SCHEMA_NAME";
 
 life_adminlevel = 0;
 life_medicLevel = 0;
@@ -30,18 +10,27 @@ life_coplevel = 0;
 //Null out harmful things for the server.
 __CONST__(JxMxE_PublishVehicle,"No");
 
-//[] execVM "\life_server\fn_initHC.sqf";
+[] execVM "\life_server\fn_initHC.sqf";
 
 life_radio_west = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 
+server_query_running = false;
+life_DB_queue = [];
 serv_sv_use = [];
 
+//Run procedures for SQL cleanup on mission start.
+"Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", "CALL resetLifeVehicles();",(call LIFE_SCHEMA_NAME)]; //Reset vehicles active state to false.
+"Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", "CALL deleteDeadVehicles();",(call LIFE_SCHEMA_NAME)]; //Delete dead / non-usable vehicles for cleanup.
+
 fed_bank setVariable["safe",(count playableUnits),true];
+life_animals_spawned = false;
+life_animals_array = [];
 
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
+//[] call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf"; Not currently used
 
 //Double the cleanup for connecting clients and disconnecting clients.
 _onDisconnect = ["SERV_onClientDisconnect","onPlayerDisconnected","TON_fnc_clientDisconnect"] call BIS_fnc_addStackedEventHandler;
@@ -52,6 +41,10 @@ life_gang_list = [];
 publicVariable "life_gang_list";
 life_wanted_list = [];
 client_session_list = [];
+
+bank_obj setVariable["rob_in_sess",false,true];
+robbery_success = 0;
+publicVariable "robbery_success";
 
 [] execFSM "\life_server\cleanup.fsm";
 

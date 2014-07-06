@@ -17,9 +17,11 @@ if(_veh == "B_Quadbike_01_F") exitWith {true}; //ATV's don't need to require a l
 
 switch (life_veh_shop select 0) do
 {
+	case "adac_shop": {_ret = true;};
+	case "adac_air_hs": {_ret = true;};
 	case "med_shop": {_ret = true;};
 	case "kart_shop": {_ret = license_civ_driver;};
-	case "med_air_hs": {_ret = license_med_air;};
+	case "med_air_hs": {_ret = true;};
 	case "civ_car": {_ret = license_civ_driver;};
 	case "civ_ship": {_ret = license_civ_boat;};
 	case "civ_air": {_ret = license_civ_air;};
@@ -30,6 +32,7 @@ switch (life_veh_shop select 0) do
 	case "cop_car": {_ret = true;};
 	case "cop_ship": 
 	{
+		hint format["%1", _veh];
 		if(_veh == "B_Boat_Armed_01_minigun_F") then
 		{
 			_ret = license_cop_cg;
@@ -39,6 +42,10 @@ switch (life_veh_shop select 0) do
 			_ret = true;
 		};
 	};
+	case "donator": {_ret = true;};
+	case "donator_airport": {_ret = true;};
+	case "donator_heli": {_ret = true;};
+	case "donator_car": {_ret = true;};
 };
 
 _ret;

@@ -9,24 +9,24 @@
 */
 private["_ctrl","_num","_index","_data","_old","_value","_weight","_diff"];
 disableSerialization;
-if(isNull life_trunk_vehicle OR !alive life_trunk_vehicle) exitWith {hint "The vehicle either doesn't exist or is destroyed."};
+if(isNull life_trunk_vehicle OR !alive life_trunk_vehicle) exitWith {hint "Entweder wurde das Fahrzeug zerstoert oder existiert nicht"};
 if(!alive player) exitwith {closeDialog 0;};
 
-if((lbCurSel 3502) == -1) exitWith {hint "You need to select an item!";};
+if((lbCurSel 3502) == -1) exitWith {hint "Du musst etwas auswaehlen!";};
 _ctrl = ctrlSelData(3502);
 _num = ctrlText 3505;
-if(!([_num] call fnc_isnumber)) exitWith {hint "Invalid Number format";};
+if(!([_num] call fnc_isnumber)) exitWith {hint "Ungueltige Eingabe";};
 _num = parseNumber(_num);
-if(_num < 1) exitWith {hint "You can't enter anything below 1!";};
+if(_num < 1) exitWith {hint "Du kannst keinen Wert kleiner 1 eingeben!";};
 
 _index = [_ctrl,((life_trunk_vehicle getVariable "Trunk") select 0)] call fnc_index;
 _data = (life_trunk_vehicle getVariable "Trunk") select 0;
 _old = life_trunk_vehicle getVariable "Trunk";
 if(_index == -1) exitWith {};
 _value = _data select _index select 1;
-if(_num > _value) exitWith {hint "The vehicle doesn't have that many of that item."};
+if(_num > _value) exitWith {hint "Soviel hat das Fahrzeug davon nicht im Kofferraum."};
 _num = [_ctrl,_num,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if(_num == 0) exitWith {hint "Your inventory is full."};
+if(_num == 0) exitWith {hint "Dein Inventar ist voll."};
 _weight = ([_ctrl] call life_fnc_itemWeight) * _num;
 if(_ctrl == "money") then
 {
@@ -62,6 +62,6 @@ if(_ctrl == "money") then
 	}
 		else
 	{
-		hint "Couldn't add to your inventory, are you full?";
+		hint "Konnte deinem Inventar nicht hinzugefuegt werden, ist dein Inventar voll?";
 	};
 };

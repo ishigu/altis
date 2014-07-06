@@ -14,7 +14,7 @@ _sel = lbCurSel _gangs;
 _data = _gangs lbData _sel;
 
 _index = [_data,life_gang_list] call fnc_index;
-if(_index == -1) exitWith {hint "Couldn't find that gang."};
+if(_index == -1) exitWith {hint "Konnte diese Gang nicht finden."};
 _gang = life_gang_list select _index;
 _group = _gang select 1;
 _locked = _gang select 2;
@@ -31,10 +31,10 @@ if(!isNull _group) then
 	}
 		else
 	{
-		hint "This gang is currently locked and is not allowing players to join.";
+		hint "Diese Gang ist aktuell geschlossen.";
 	};
 }
 	else
 {
-	hint "Gang is not valid";
+	hint "Ungueltige Gang";
 };

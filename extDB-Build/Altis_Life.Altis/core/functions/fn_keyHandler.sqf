@@ -15,6 +15,7 @@ _speed = speed cursorTarget;
 _handled = false;
 
 _interactionKey = if(count (actionKeys "User10") == 0) then {219} else {(actionKeys "User10") select 0};
+_adminKey = if(count (actionKeys "User15") == 0) then {18} else {(actionKeys "User15") select 0};
 _mapKey = actionKeys "ShowMap" select 0;
 //hint str _code;
 _interruptionKeys = [17,30,31,32]; //A,S,W,D
@@ -46,28 +47,33 @@ switch (_code) do
 	//Map Key
 	case _mapKey:
 	{
-		switch (playerSide) do 
-		{
-			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
-			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
-		};
+		
+			if(playerSide == west) then {if(!visibleMap) then {
+				[] spawn life_fnc_copMarkers;};}
+				else{
+					if(player call life_fnc_isMedic) then {if(!visibleMap) then {
+						[] spawn life_fnc_medicMarkers;};}
+				else {
+					if(player call life_fnc_isADAC) then {
+						if(!visibleMap) then {
+						[] spawn life_fnc_adacMarkers;};};};};
 	};
 	
 	//Holster / recall weapon.
-	case 35:
-	{
-		if(_shift && !_ctrlKey && currentWeapon player != "") then {
-			life_curWep_h = currentWeapon player;
-			player action ["SwitchWeapon", player, player, 100];
-			player switchcamera cameraView;
-		};
+	// case 35:
+	// {
+		// if(_shift && !_ctrlKey && currentWeapon player != "") then {
+			// life_curWep_h = currentWeapon player;
+			// player action ["SwitchWeapon", player, player, 100];
+			// player switchcamera cameraView;
+		// };
 		
-		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(life_curWep_h != "")}) then {
-			if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
-				player selectWeapon life_curWep_h;
-			};
-		};
-	};
+		// if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(life_curWep_h != "")}) then {
+			// if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
+				// player selectWeapon life_curWep_h;
+			// };
+		// };
+	// };
 	
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	case _interactionKey:
@@ -135,12 +141,14 @@ switch (_code) do
 	{
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
+			if(vehicle player != player) then {
 				if(!isNil {vehicle player getVariable "lights"}) then {
 					if(playerSide == west) then {
 						[vehicle player] call life_fnc_sirenLights;
 					} else {
-						[vehicle player] call life_fnc_medicSirenLights;
+						if((player call life_fnc_isMedic)) then {
+							[vehicle player] call life_fnc_medicSirenLights;
+						};
 					};
 					_handled = true;
 				};
@@ -148,6 +156,23 @@ switch (_code) do
 		};
 		
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
+	};
+	// V Key (Surrender)
+	case 47:
+	{
+		if (_shift) then
+		{
+			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
+			{
+				if (player getVariable ["surrender", false]) then
+				{
+					player setVariable ["surrender", false, true];
+				} else
+				{
+					[] spawn life_fnc_surrender;
+				};
+			};
+		};
 	};
 	//Y Player Menu
 	case 21:
@@ -161,7 +186,7 @@ switch (_code) do
 	//F Key
 	case 33:
 	{
-		if(playerSide in [west,independent] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
+		if(((playerSide == west) || ((playerSide == independent) && (player call life_fnc_isMedic))) && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
 			[] spawn
 			{
@@ -173,22 +198,41 @@ switch (_code) do
 			if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
 			if((_veh getVariable "siren")) then
 			{
-				titleText ["Sirens Off","PLAIN"];
+				titleText ["Sirene Aus","PLAIN"];
 				_veh setVariable["siren",false,true];
 			}
 				else
 			{
-				titleText ["Sirens On","PLAIN"];
+				titleText ["Sirene An","PLAIN"];
 				_veh setVariable["siren",true,true];
 				if(playerSide == west) then {
 					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 				} else {
 					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
-					//[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
 			};
 		};
 	};
+	//Q Key
+    case 16:
+    {    
+        if((!life_action_inUse) && (vehicle player == player) && (!life_action_mining_hotkey_inuse) && (!life_delay_pickaxe)) then
+        {
+            {
+                _str = [_x] call life_fnc_varToStr;
+                _val = missionNameSpace getVariable _x;
+                if(_val > 0 ) then
+                {
+                    if( _str == "Spitzhacke" || _str == "pickaxe" ) then
+                    {
+						delay_pickaxe = true;
+                        [] spawn life_fnc_pickAxeUse;
+                    };
+                };
+            } foreach life_inv_items;
+        }
+    };
 	//U Key
 	case 22:
 	{
@@ -217,7 +261,12 @@ switch (_code) do
 					{
 						[[_veh,0], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 					};
-					systemChat "You have unlocked your vehicle.";
+					systemChat "Du hast dein Fahrzeug AUFgeschlossen.";
+					playSound "carunlock";
+					if((typeOf _veh) == "B_Heli_Transport_01_F") then 
+					{
+						[_veh] call life_fnc_clearVehicleAmmo;
+					};
 				}
 					else
 				{
@@ -229,9 +278,24 @@ switch (_code) do
 					{
 						[[_veh,2], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 					};
-					systemChat "You have locked your vehicle.";
+					systemChat "Du hast dein Fahrzeug ABgeschlossen.";
+					playSound "carlock";
 				};
 			};
+		};
+	};
+	// Admin Menü, Aktionstaste 15
+	case _adminKey: {
+		if (_adminKey != 18 || (_adminKey == 18 && !_alt && _shift)) then {
+			[] execVM "fusionsmenu\admin\tools.sqf";
+		};
+	};
+	//1 Key
+	case 2:
+	{
+		if(playerSide == west) then
+		{
+			[] call life_fnc_wantedMenu;
 		};
 	};
 };

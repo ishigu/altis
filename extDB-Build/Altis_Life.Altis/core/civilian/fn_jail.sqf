@@ -16,8 +16,8 @@ player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
 player setVariable["transporting",false,true];
 
-titleText["You have been arrested, wait your time out. If you attempt to respawn or reconnect your time will increase!","PLAIN"];
-hint "For being arrested you have lost the following licenses if you own them\n\nFirearms License\nRebel License";
+titleText["Du wurdest Verhaftet. Warte bis du deine Strafe abgesessen hast. Solltest du respawn oder disconnecten, wird das schlimme Folgen haben!","PLAIN"];
+hint "Folgende lizenzen wurden dir enzogen: \n\nWaffenlizenz\nRebellenausbildung";
 player setPos (getMarkerPos "jail_marker");
 
 if(_bad) then
@@ -40,6 +40,7 @@ if(life_inv_cokep > 0) then {[false,"cocainep",life_inv_cokep] call life_fnc_han
 if(life_inv_turtle > 0) then {[false,"turtle",life_inv_turtle] call life_fnc_handleInv;};
 if(life_inv_cannabis > 0) then {[false,"cannabis",life_inv_cannabis] call life_fnc_handleInv;};
 if(life_inv_marijuana > 0) then {[false,"marijuana",life_inv_marijuana] call life_fnc_handleInv;};
+if(life_inv_meth > 0) then {[false,"meth",life_inv_meth] call life_fnc_handleInv;};
 life_is_arrested = true;
 
 removeAllWeapons player;

@@ -27,6 +27,14 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 	if(_index != -1) then
 	{
 		_price = (__GETC__(buy_array) select _index) select 1;
+		////Marktsystem Anfang////
+		_marketprice = [_x] call life_fnc_marketGetBuyPrice;
+		if(_marketprice != -1) then
+		{
+			_price = _marketprice;
+		};
+		////Marktsystem Ende////
+		if(side player == independent && !(player call life_fnc_isMedic) && _x == "fuelF") then { _price = 50; }; // ADAC Benzinkanister billiger
 		_item_list lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
 		_item_list lbSetData [(lbSize _item_list)-1,_x];
 		_item_list lbSetValue [(lbSize _item_list)-1,_price];
@@ -44,3 +52,5 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 		_gear_list lbSetData [(lbSize _gear_list)-1,_x];
 	};
 } foreach (_shop_data select 1);
+//Call short view here
+[_shop_data select 1] spawn life_fnc_marketShortView;
