@@ -17,3 +17,5 @@
 		deleteVehicle _x; //Get rid of the corpse.
 	};
 } foreach allDeadMen;
+
+_uid spawn TON_fnc_houseCleanup;

@@ -64,6 +64,8 @@ switch (_var) do
 	case "life_inv_blastingcharge": {"Sprengladung"};
 	case "life_inv_boltcutter": {"Bolzenschneider"};
 	case "life_inv_defusekit": {"Entschaerfungskit"};
+	case "life_inv_storagesmall": {"Kleine Kiste"};
+	case "life_inv_storagebig": {"Riesige Koste"};
 	case "life_inv_chemical": {"Chemikalien"};
 	case "life_inv_benzin": {"Benzin"};
 	case "life_inv_medical": {"Medikamente"};
@@ -97,6 +99,7 @@ switch (_var) do
 	case "license_civ_marijuana": {"Marijuanaverarbeitung"};
 	case "license_civ_cement": {"Zementmischlizenz"};
 	case "license_civ_chemical": {"Chemikalienlizenz"};
+	case "license_civ_home": {"Grundstueckslizenz"};
 	case "license_civ_benzin": {"Benzinlizenz"};
 	case "license_civ_medical": {"Medizinlizenz"};
 	case "license_civ_meth": {"Methlizenz"};

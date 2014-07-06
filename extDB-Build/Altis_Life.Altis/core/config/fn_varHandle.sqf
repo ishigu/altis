@@ -68,6 +68,8 @@ switch (_mode) do
 			case "blastingcharge": {"life_inv_blastingcharge"};
 			case "boltcutter": {"life_inv_boltcutter"};
 			case "defusekit": {"life_inv_defusekit"};
+			case "storagesmall": {"life_inv_storagesmall"};
+			case "storagebig": {"life_inv_storagebig"};
 			case "chemical": {"life_inv_chemical"};
 			case "benzin": {"life_inv_benzin"};
 			case "medical": {"life_inv_medical"};
@@ -132,6 +134,8 @@ switch (_mode) do
 			case "life_inv_blastingcharge": {"blastingcharge"};
 			case "life_inv_boltcutter": {"boltcutter"};
 			case "life_inv_defusekit": {"defusekit"};
+			case "life_inv_storagesmall": {"storagesmall"};
+			case "life_inv_storagebig": {"storagebig"};
 			case "life_inv_chemical": {"chemical"};
 			case "life_inv_benzin": {"benzin"};
 			case "life_inv_medical": {"medical"};

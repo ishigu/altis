@@ -32,9 +32,8 @@ life_animals_array = [];
 [] execVM "\life_server\eventhandlers.sqf";
 //[] call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf"; Not currently used
 
-//Double the cleanup for connecting clients and disconnecting clients.
+//General cleanup for clients disconnecting.
 _onDisconnect = ["SERV_onClientDisconnect","onPlayerDisconnected","TON_fnc_clientDisconnect"] call BIS_fnc_addStackedEventHandler;
-_onConnect = ["SERV_onClientConnected","onPlayerConnected","TON_fnc_clientDisconnect"] call BIS_fnc_addStackedEventHandler;
 
 [] spawn TON_fnc_cleanup;
 life_gang_list = [];
@@ -84,6 +83,8 @@ publicVariable "robbery_success";
 		} foreach [primaryWeapon _npc,secondaryWeapon _npc,handgunWeapon _npc];
 	};
 } foreach allUnits;
+
+[] spawn TON_fnc_initHouses;
 
 //Lockup the dome
 private["_dome","_rsb"];

@@ -40,16 +40,23 @@ switch(playerSide) do {
 		__CONST__(life_coplevel,parseNumber(_this select 7));
 		cop_gear = _this select 8;
 		[] spawn life_fnc_loadGear;
-		life_blacklisted = call compile format["%1",_this select 9];
+		life_blacklisted = _this select 9;
 		__CONST__(life_medicLevel,0);
 	};
 	
 	case civilian: {
-		life_is_arrested = call compile format["%1", _this select 7];
+		life_is_arrested = _this select 7;
+		//life_is_arrested = call compile format["%1", _this select 7];
 		civ_gear = _this select 8;
 		__CONST__(life_coplevel,0);
 		__CONST__(life_medicLevel,0);
 		[] spawn life_fnc_civLoadGear;
+		life_houses = _this select 9;
+		{
+			_house = nearestBuilding (call compile format["%1", _x select 0]);
+			life_vehicles set[count life_vehicles,_house];
+		} foreach life_houses;
+		[] spawn life_fnc_initHouses;
 	};
 	
 	case independent: {

@@ -40,6 +40,9 @@ life_request_timer = false;
 __CONST__(life_revive_cops,false); //Set to false if you don't want cops to be able to revive downed players.
 __CONST__(life_revive_fee,5000); //Fee for players to pay when revived.
 
+//House Limit
+__CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
+
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 /*
@@ -165,8 +168,8 @@ life_inv_items =
 	"life_inv_blastingcharge",
 	"life_inv_boltcutter",
 	"life_inv_defusekit",
-	"life_inv_chemical",
-	"life_inv_meth",
+	"life_inv_storagesmall",
+	"life_inv_storagebig",
 	"life_inv_medical",
 	"life_inv_beer",
 	"life_inv_blackbeer",
@@ -213,8 +216,7 @@ life_licenses =
 	["license_civ_sand","civ"],
 	["license_civ_salt","civ"],
 	["license_civ_cement","civ"],
-	["license_civ_benzin","civ"],
-	["license_civ_chemical","civ"],
+	["license_civ_home","civ"],
 	["license_civ_medical","civ"],
 	["license_civ_meth","civ"],
 	["license_med_air","med"],
@@ -315,8 +317,8 @@ buy_array =
 	["blastingcharge",35000],
 	["boltcutter",7500],
 	["defusekit",2500],
-	["beer",150],
-	["blackbeer",150],
+	["storagesmall",75000],
+	["storagebig",150000],
 	["vodca",150],
 	["wine",150],
 	["sekt",150],

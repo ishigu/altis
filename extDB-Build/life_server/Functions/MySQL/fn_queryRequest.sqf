@@ -73,12 +73,17 @@ switch (_side) do {
 		_new = [(_queryResult select 8)] call DB_fnc_mresToArray;
 		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
 		_queryResult set[8,_new];
+		_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
 	};
 	
 	case civilian: {
 		_new = [(_queryResult select 8)] call DB_fnc_mresToArray;
 		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
 		_queryResult set[8,_new];
+		_queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
+		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
+		waitUntil {scriptDone _houseData};
+		_queryResult set[count _queryResult,(missionNamespace getVariable[format["houses_%1",_uid],[]])];
 	};
 };
 

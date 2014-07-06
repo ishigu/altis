@@ -143,6 +143,24 @@ class Life_Client_Core
 		class distressMenu {};
 	};
 	
+	class Housing
+	{
+		file = "core\housing";
+		class buyHouse {};
+		class getBuildingPositions {};
+		class houseMenu {};
+		class isBuildingPosTaken {};
+		class lightHouse {};
+		class lightHouseAction {};
+		class sellHouse {};
+		class initHouses {};
+		class copBreakDoor {};
+		class raidHouse {};
+		class lockupHouse {};
+		class copHouseOwner {};
+		class lockHouse {};
+	};
+	
 	class Config
 	{
 		file = "core\config";
@@ -163,6 +181,7 @@ class Life_Client_Core
 		class vehicleAnimate {};
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
+		class houseConfig {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -233,6 +252,10 @@ class Life_Client_Core
 		class pushObject {};
 		class onFired {};
 		class revealObjects {};
+		class nearestDoor {};
+		class inventoryClosed {};
+		class inventoryOpened {};
+		class isUIDActive {};
 		class randomRound {};
 		class setUniform {};
 		class keyRestore {};
@@ -363,6 +386,7 @@ class Life_Client_Core
 		class boltcutter {};
 		class blastingCharge {};
 		class defuseKit {};
+		class storageBox {};
 		class weed {};
 		class pylon {};
 		class barrier {};
@@ -390,6 +414,7 @@ class Life_Client_Core
 		class safeOpen {};
 		class safeTake {};
 		class safeFix {};
+		class vehicleGarage {};
 	};
 
 	class market
