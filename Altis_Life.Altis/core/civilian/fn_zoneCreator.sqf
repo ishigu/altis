@@ -53,7 +53,7 @@ _weedZones = ["weed_1"];
 //Create cocaine zones
 {
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
-	_zone setTriggerArea[50,50,0,false];
+	_zone setTriggerArea[150,150,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_Coke = player addAction['Rohes Kokain sammeln',life_fnc_gatherCocaine,'',0,false,false,'','!life_action_mining_hotkey_inuse'];","player removeAction LIFE_Action_Coke;"];
 } foreach _cocaineZones;
