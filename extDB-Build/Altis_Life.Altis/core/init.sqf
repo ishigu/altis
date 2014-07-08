@@ -3,6 +3,7 @@
 	Master client initialization file
 */
 life_firstSpawn = true;
+life_session_completed = false;
 private["_handle","_timeStamp"];
 0 cutText["Setting up client, please wait...","BLACK FADED"];
 0 cutFadeOut 9999999;
@@ -12,22 +13,28 @@ diag_log "--------------------------------- Starting Altis Life Client Init ----
 diag_log "------------------------------------------------------------------------------------------------------";
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
 //Setup initial client core functions
-_handle = [] spawn compile PreprocessFileLineNumbers "core\configuration.sqf";
 diag_log "::Life Client:: Initialization Variables";
-waitUntil {scriptDone _handle};
+[] call compile PreprocessFileLineNumbers "core\configuration.sqf";
 diag_log "::Life Client:: Variables initialized";
-//[player] execVM "core\client\disable_respawn.sqf";
-_handle = [] spawn life_fnc_setupEVH;
 diag_log "::Life Client:: Setting up Eventhandlers";
-waitUntil {scriptDone _handle};
+[] call life_fnc_setupEVH;
 diag_log "::Life Client:: Eventhandlers completed";
-//_handle = [] spawn life_fnc_setupActions;
-//diag_log "::Life Client:: Setting up user actions";
-//waitUntil {scriptDone _handle};
+diag_log "::Life Client:: Setting up user actions";
+[] call life_fnc_setupActions;
 diag_log "::Life Client:: User actions completed";
 diag_log "::Life Client:: Waiting for server functions to transfer..";
 waitUntil {(!isNil {clientGangLeader})};
 diag_log "::Life Client:: Received server functions.";
+0 cutText ["Waiting for the server to be ready...","BLACK FADED"];
+0 cutFadeOut 99999999;
+diag_log "::Life Client:: Waiting for the server to be ready..";
+waitUntil{!isNil "life_server_isReady"};
+waitUntil{(life_server_isReady OR !isNil "life_server_extDB_notLoaded")};
+if(!isNil "life_server_extDB_notLoaded") exitWith {
+	diag_log "::Life Client:: Server did not load extDB";
+	999999 cutText ["The server-side extension extDB was not loaded into the engine, report this to the server admin.","BLACK FADED"];
+	999999 cutFadeOut 99999999;
+};
 [] call SOCK_fnc_dataQuery;
 waitUntil {life_session_completed};
 0 cutText["Finishing client setup procedure","BLACK FADED"];
@@ -95,7 +102,6 @@ life_fnc_moveIn = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
-[] call life_fnc_setupActions;
 
 [] spawn life_fnc_keyRestore;
 [[],"life_fnc_renewUniform",true,false] spawn life_fnc_MP;
