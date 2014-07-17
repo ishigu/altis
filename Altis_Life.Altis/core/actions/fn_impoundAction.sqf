@@ -9,7 +9,7 @@ private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progre
 _vehicle = cursorTarget;
 if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship"))) exitWith {};
 if(player distance cursorTarget > 10) exitWith {};
-if((playerSide == west) && ( (call life_fnc_countADAC) > 0 )) exitWith{hint "Es sind Mitglieder des AADAC im Dienst!"};
+if((playerSide == west) && ( (call life_fnc_countADAC) > 0 )) exitWith{hint "Es sind Mitglieder des ADAC im Dienst!"};
 if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship")) then
 {
 	_vehicleData = _vehicle getVariable["vehicle_info_owners",[]];

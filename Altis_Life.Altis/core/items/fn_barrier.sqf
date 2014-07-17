@@ -18,4 +18,3 @@ if(!isNil "life_action_barrierDeploy") then {player removeAction life_action_bar
 if(isNull _barrier) exitWith {life_barrier = ObjNull;};
 _barrier setPos [(getPos _barrier select 0),(getPos _barrier select 1),0];
 _barrier allowDamage false;
-_barrier addAction["Straßensperre einpacken",life_fnc_packupbarrier,"",0,false,false,""];

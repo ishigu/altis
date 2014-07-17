@@ -12,7 +12,5 @@ if(isNil "_spikes") exitWith {};
 if(([true,"spikeStrip",1] call life_fnc_handleInv)) then
 {
 	titleText["Du hast das Nagelband eingepackt.","PLAIN"];
-	player removeAction life_action_spikeStripPickup;
-	life_action_spikeStripPickup = nil;
 	deleteVehicle _spikes;
 };

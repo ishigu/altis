@@ -127,6 +127,7 @@ class Life_Client_Core
 		class packupbarrier {};
 		class packupRadarTrap {};
 		class radartrapSwitch {};
+		class radartrapFlash {};
 	};
 	
 	class ADAC

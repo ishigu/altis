@@ -6,8 +6,7 @@
 	Baut einen Blitzer ab
 */
 private["_radarTrap"];
-if(side (_this select 1) != west) exitWith{hint "Du bist kein Polizist!";};
-_radarTrap = _this select 0;
+_radarTrap = nearestObjects[getPos player,["Land_PortableLight_single_F"],2] select 0;
 if((isNil "_radarTrap")) exitWith {};
 
 if(([true,"radartrap",1] call life_fnc_handleInv)) then

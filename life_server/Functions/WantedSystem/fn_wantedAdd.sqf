@@ -8,23 +8,31 @@ if(_uid == "" OR _type == "" OR _name == "") exitWith {}; //Bad data passed.
 //What is the crime?
 switch(_type) do
 {
-	case "187V": {_type = ["Toeten mit Fahrzeug",6500];};
-	case "187": {_type = ["Mord",200000];};
-	case "901": {_type = ["Gefaengnisausbruch",4500];};
-	case "261": {_type = ["Vergewaltigung",5000];};
-	case "261A": {_type = ["Versuchte Vergewaltigung",3000];};
-	case "215": {_type = ["Versuchter Autodiebstahl",5000];};
-	case "213": {_type = ["Illegale Verwendung von Sprengstoff",10000];};
-	case "211": {_type = ["Raubueberfall",40000];};
-	case "207": {_type = ["Entfuehrung",100000];};
+	case "187V": {_type = ["Toeten mit Fahrzeug (A)",6500];};
+	case "187": {_type = ["Mord (A)",200000];};
+	case "901": {_type = ["Gefaengnisausbruch (A)",4500];};
+	case "261": {_type = ["Vergewaltigung (A)",5000];};
+	case "261A": {_type = ["Versuchte Vergewaltigung (A)",3000];};
+	case "215": {_type = ["Versuchter Autodiebstahl (A)",5000];};
+	case "213": {_type = ["Illegale Verwendung von Sprengstoff (A)",10000];};
+	case "211": {_type = ["Raubueberfall (A)",40000];};
+	case "207": {_type = ["Entfuehrung (A)",100000];};
 	case "207A": {_type = ["Versuchte Entfuehrung",30000];};
-	case "487": {_type = ["Autodiebstahl",20000];};
-	case "488": {_type = ["Diebstahl",2000];};
-	case "480": {_type = ["Fahrerflucht",5000];};
-	case "481": {_type = ["Drogenbesitz",25000];};
-	case "482": {_type = ["Versuchter Drogenhandel",25000];};
-	case "483": {_type = ["Drogenhandel",50000];};
-	case "503": {_type = ["Handel mit exotischen Gütern",25000];};
+	case "487": {_type = ["Autodiebstahl(A)",20000];};
+	case "488": {_type = ["Diebstahl(A)",2000];};
+	case "480": {_type = ["Fahrerflucht(A)",5000];};
+	case "481": {_type = ["Drogenbesitz(A)",25000];};
+	case "482": {_type = ["Versuchter Drogenhandel(A)",25000];};
+	case "483": {_type = ["Drogenhandel(A)",50000];};
+	case "503": {_type = ["Handel mit exotischen Gütern(A)",25000];};
+	case "44B": {_type = ["Innerorts über 50km/h (A)",750];};
+	case "45B": {_type = ["Innerorts über 60km/h (A)",1500];};
+	case "46B": {_type = ["Innerorts über 85km/h (A)",5000];};
+	case "47B": {_type = ["Innerorts über 110km/h (A)",20000];};
+	case "48B": {_type = ["Innerorts über 200km/h (A)",50000];};
+	case "49B": {_type = ["Außerorts über 130km/h (A)",5000];};
+	case "50B": {_type = ["Außerorts über 180km/h (A)",10000];};
+	case "51B": {_type = ["Außerorts über 230km/h+ (A)",20000];};
 	
     case "1": {_type = ["versuchter Fahrzeugdiebstahl",5000];};
     case "2": {_type = ["Fahrzeugdiebstahl",3500];};

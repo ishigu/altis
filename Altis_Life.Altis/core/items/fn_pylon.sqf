@@ -39,4 +39,3 @@ _pylon allowDamage false;
     };
 };
 */
-_pylon addAction["Pylon einpacken",life_fnc_packuppylon,"",0,false,false,""];
