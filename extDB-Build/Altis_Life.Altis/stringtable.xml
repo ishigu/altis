@@ -107,11 +107,8 @@
 		<Key ID="STR_Gang_Leave">
 			<Original>Verlassen</Original>
 		</Key>
-		<Key ID="STR_Gang_Lock">
-			<Original>Sperren</Original>
-		</Key>
-		<Key ID="STR_Gang_Unlock">
-			<Original>oeffnen</Original>
+		<Key ID="STR_Gang_UpgradeSlots">
+			<Original>Upgrade Slots</Original>
 		</Key>
 		<Key ID="STR_Gang_Kick">
 			<Original>Kick</Original>
@@ -120,7 +117,7 @@
 			<Original>Leitung geben</Original>
 		</Key>
 		<Key ID="STR_Gang_PriceTxt">
-			<Original>Das Erstellen einer Gang kostet $5000</Original>
+			<Original>Es kostet $%1 eine Gang zu erstellen</Original>
 		</Key>
 		<Key ID="STR_Gang_Create">
 			<Original>Erstellen</Original>
@@ -133,6 +130,12 @@
 		</Key>
 		<Key ID="STR_Gang_Browse">
 			<Original>Suchen</Original>
+		</Key>
+		<Key ID="STR_Invite_Player">
+			<Original>Invite Player</Original>
+		</Key>
+		<Key ID="STR_Disband_Gang">
+			<Original>Disband Gang</Original>
 		</Key>
 	</Package>
 	<Package name="Garage_Menu">

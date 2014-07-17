@@ -66,8 +66,8 @@ switch (true) do
 	{
 		life_is_arrested = false;
 		hint "Du bist aus dem Gefaengnis ausgebrochen, daher wirst du zusaezlich wegen Ausbruch gesucht.";
-		[[0,format["%1 ist aus dem Gefaengnis ausgebrochen!",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-		[[getPlayerUID player,player getVariable["realname",name player],"901"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+		[[0,format["%1 ist aus dem Gefaengnis ausgebrochen!",profileName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+		[[getPlayerUID player,profileName,"901"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	};
 	
 	case (alive player && !_esc && !_bail) :

@@ -76,10 +76,10 @@ if(!_isVehicle) then {
 	if(_dice < 30) then {
 		titleText["Du hast jetzt einen Schluessel fuer dieses Fahrzeug.","PLAIN"];
 		life_vehicles set[count life_vehicles,_curTarget];
-		[[getPlayerUID player,player getVariable["realname",name player],"487"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+		[[getPlayerUID player,profileName,"487"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	} else {
-		[[getPlayerUID player,player getVariable["realname",name player],"215"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-		[[0,format["%1 wurde dabei beobachtet, wie er ein Fahrzeug aufbrechen wollte.",player getVariable["realname",name player]]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+		[[getPlayerUID player,profileName,"215"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+		[[0,format["%1 wurde dabei beobachtet, wie er ein Fahrzeug aufbrechen wollte.",profileName]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 		titleText["Der Dietrich ist abgebrochen.","PLAIN"];
 	};
 };
