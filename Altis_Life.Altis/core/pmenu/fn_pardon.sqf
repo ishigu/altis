@@ -7,7 +7,6 @@
 */
 private["_display","_list","_uid"];
 disableSerialization;
-
 _display = findDisplay 2400;
 _list = _display displayCtrl 2402;
 _data = lbData[2401,(lbCurSel 2401)];

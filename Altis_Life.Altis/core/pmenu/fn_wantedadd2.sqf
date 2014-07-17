@@ -3,7 +3,6 @@ disableSerialization;
 waitUntil {!isNull (findDisplay 9900)};
 _display = findDisplay 9900;
 _list = _display displayCtrl 9902;
-
 //Purge List
 lbClear _list;
 
@@ -51,16 +50,18 @@ _data = "5";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
+/*
 _text = "Mord $200.000";
 _data = "6";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
+
 _text = "Ausbruch aus dem Gefängnis-Inhaftierung";
 _data = "7";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
-
+*/
 _text = "Beihilfe beim Gefängisausbruch $25.000";
 _data = "8";
 _list2 lbAdd format["%1 (%2)",_text,_data];
@@ -87,10 +88,12 @@ _data = "12";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
+/*
 _text = "Schmuggel mit verbotenen Tieren $50.000";
 _data = "13";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
+*/
 
 _text = "Platzverweis Missachtung $20.000";
 _data = "14";

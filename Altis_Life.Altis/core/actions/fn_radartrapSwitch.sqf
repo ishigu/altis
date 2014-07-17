@@ -4,19 +4,15 @@ Author: Shentoza
 
 */
 private ["_radarTrap","_mode"];
-if(side (_this select 1) != west) exitWith{hint "Du bist kein Polizist!";};
-_radarTrap = _this select 0;
-_id = _this select 2;
+_radarTrap = nearestObjects[getPos player,["Land_PortableLight_single_F"],2] select 0;
 if((isNil "_radarTrap")) exitWith {};
 
-_mode = _radarTrap getVariable["mode",true];
-if (_mode) then{
-_radarTrap setVariable ["mode",false];
-_radarTrap setUserActionText [_id,"Blitzer auf <t color='#00FF00'>'Innerorts'</t> einstellen"];
+_mode = _radarTrap getVariable["mode","innerorts"];
+if (_mode == "innerorts") then{
+_radarTrap setVariable ["mode","ausserorts",true];
 titleText["Du hast den Blitzer auf 'Ausserorts' eingestellt","PLAIN"];
 }
 else{
-_radarTrap setVariable ["mode",true];
-_radarTrap setUserActionText [_id,"Blitzer auf <t color='#00FF00'>'Ausserorts'</t> einstellen"];
+_radarTrap setVariable ["mode","innerorts",true];
 titleText["Du hast den Blitzer auf 'Innerorts' eingestellt","PLAIN"];
 };

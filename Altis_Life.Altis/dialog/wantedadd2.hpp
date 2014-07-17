@@ -70,7 +70,7 @@ class life_wantedadd2 {
 		class CloseButtonKey : Life_RscButtonMenu {
 			idc = -1;
 			text = "Schliessen";
-			onButtonClick = "closeDialog 0; lbClear ((findDisplay 2400) displayCtrl 2401);lbClear((findDisplay 2400) displayCtrl 2402);ctrlSetText[2403,""];[[player],""life_fnc_wantedFetch"",false,false] spawn life_fnc_MP;";
+			onButtonClick = "closeDialog 0; lbClear ((findDisplay 2400) displayCtrl 2401);lbClear((findDisplay 2400) displayCtrl 2402);ctrlSetText[2403,""""];[[player],""life_fnc_wantedFetch"",false,false] spawn life_fnc_MP;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.88 - (1 / 25);
 			w = 0.18;
