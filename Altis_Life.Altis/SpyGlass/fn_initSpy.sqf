@@ -86,7 +86,11 @@ SPY_cfg_patchList =
 "A3_Weapons_F_EPB_Rifles_MX_Black","A3_Weapons_F_EPC","A3_Weapons_F_Explosives","A3_weapons_F_FIA","A3_Weapons_F_gamma","A3_Weapons_F_gamma_Acc","A3_Weapons_F_Gamma_Ammoboxes","A3_Weapons_F_gamma_Items","A3_Weapons_F_Headgear","A3_Weapons_F_ItemHolders","A3_Weapons_F_Items",
 "A3_Weapons_F_Kart","A3_Weapons_F_Kart_Pistols_Pistol_Signal_F","A3_Weapons_F_Launchers_LAW","A3_Weapons_F_Launchers_NLAW","A3_Weapons_F_Launchers_Titan","A3_Weapons_F_LongRangeRifles_GM6","A3_Weapons_F_LongRangeRifles_M320","A3_Weapons_F_Machineguns_M200","A3_Weapons_F_Machineguns_Zafir",
 "A3_Weapons_F_NATO","A3_Weapons_F_Pistols_ACPC2","A3_Weapons_F_Pistols_P07","A3_Weapons_F_Pistols_PDW2000","A3_Weapons_F_Pistols_Pistol_heavy_01","A3_Weapons_F_Pistols_Pistol_heavy_02","A3_Weapons_F_Pistols_Rook40","A3_Weapons_F_Rifles_Khaybar","A3_Weapons_F_Rifles_Mk20",
-"A3_Weapons_F_Rifles_MX","A3_Weapons_F_Rifles_SDAR","a3_weapons_f_rifles_SMG_02","A3_Weapons_F_Rifles_TRG20","A3_Weapons_F_Rifles_Vector","A3_Weapons_F_Uniforms","A3_Weapons_F_Vests","CAData","life_server"];
+"A3_Weapons_F_Rifles_MX","A3_Weapons_F_Rifles_SDAR","a3_weapons_f_rifles_SMG_02","A3_Weapons_F_Rifles_TRG20","A3_Weapons_F_Rifles_Vector","A3_Weapons_F_Uniforms","A3_Weapons_F_Vests","CAData","life_server","A3_Soft_F_Bootcamp_Truck","A3_Soft_F_Bootcamp_Quadbike",
+"A3_Soft_F_Bootcamp_Offroad_01","A3_Weapons_F_Bootcamp","A3_Modules_F_Bootcamp_Misc","A3_Modules_F_Bootcamp","A3_Characters_F_Bootcamp_Common","A3_Weapons_F_Bootcamp_Ammoboxes","A3_UI_F_Bootcamp","A3_Characters_F_Bootcamp","A3_Weapons_F_Bootcamp_LongRangeRifles_M320",
+"A3_Weapons_F_Bootcamp_LongRangeRifles_GM6","A3_Structures_F_Bootcamp_Items_Food","A3_Structures_F_Bootcamp_Items_Electronics","A3_Structures_F_Bootcamp_Civ_SportsGrounds","A3_Structures_F_Bootcamp_Civ_Camping","A3_Language_F_Bootcamp","A3_Functions_F_Bootcamp",
+"A3_Structures_F_Bootcamp_VR_Helpers","A3_Structures_F_Bootcamp_VR_CoverObjects","A3_Structures_F_Bootcamp_VR_Blocks","A3_Structures_F_Bootcamp_Training","A3_Structures_F_Bootcamp_System","A3_Structures_F_Bootcamp_Items_Sport","A3_Structures_F_Bootcamp_Ind_Cargo",
+"A3_Sounds_F_Bootcamp","A3_Data_F_Bootcamp","A3_Map_VR_Scenes","A3_Missions_F_Bootcamp","A3_Music_F_Bootcamp","Map_VR"];
 
 __CONST__(SPY_cfg_patchList,SPY_cfg_patchList); //Make the array static / constant.
 uiNamespace setVariable["RscDisplayRemoteMissions",displayNull]; //For Spy-Glass..
