@@ -21,7 +21,7 @@ if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg
 
 _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
-
+/*
 if((life_veh_shop select 0) == "med_air_hs") then {
 	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
 } else {
@@ -33,7 +33,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
 	};
 };
-
+*/
 if((life_veh_shop select 0) == "adac_air_hs") then {
 	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
 } else {
@@ -52,6 +52,7 @@ life_cash = life_cash - _basePrice;
 hint format["Du hast ein %1 fuer $%2 gekauft",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.
+/*
 if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
@@ -64,7 +65,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle setVariable["vehicle_info_owners",[[getPlayerUID player,name player]],true];
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 	detach _vehicle;
-} else {
+} else {*/
 	_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false; //Temp disable damage handling..
@@ -78,7 +79,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle setVariable["trunk_in_use",false,true];
 	_vehicle setVariable["vehicle_info_owners",[[getPlayerUID player,name player]],true];
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
-};
+//};
 
 //Side Specific actions.
 switch(playerSide) do {
