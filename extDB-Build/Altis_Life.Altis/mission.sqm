@@ -91,7 +91,7 @@ class Mission
 		"A3_Structures_F_Wrecks",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
 		"A3_Structures_F_Ind_FuelStation",
-		"a3_weapons_f_ammoboxes",
+		"A3_Weapons_F_Ammoboxes",
 		"A3_Structures_F_Mil_Flags",
 		"A3_Structures_F_Civ_Camping",
 		"A3_Signs_F_AD",
@@ -16404,7 +16404,7 @@ class Mission
 		};
 		class Item1189
 		{
-			position[]={3277.3,3.38745,12970.5}; 
+			position[]={3277.3,3.38745,12970.5};
 			azimut=358.327;
 			offsetY=0.2;
 			id=1479;
@@ -16417,7 +16417,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=285;
+		items=287;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -16427,7 +16427,7 @@ class Mission
 		class Item1
 		{
 			position[]={8301.9658,76.704063,25059.033};
-			name="Respawn_west";
+			name="respawn_west";
 			type="Empty";
 		};
 		class Item2
@@ -17926,7 +17926,7 @@ class Mission
 		};
 		class Item190
 		{
-			position[]={14664.1,17.91,16745.1};
+			position[]={8509.2354,106.55865,25152.984};
 			name="respawn_west_1";
 			type="Empty";
 		};
@@ -18649,6 +18649,18 @@ class Mission
 			text="Goldhaendler";
 			type="loc_ViewTower";
 			colorName="ColorYellow";
+		};
+		class Item285
+		{
+			position[]={8425.7148,109.9242,25102.758};
+			name="respawn_east";
+			type="Empty";
+		};
+		class Item286
+		{
+			position[]={8461.1367,107.22147,25084.428};
+			name="respawn_guerrila";
+			type="Empty";
 		};
 	};
 	class Sensors
