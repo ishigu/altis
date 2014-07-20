@@ -263,7 +263,7 @@ switch (_code) do
 					};
 					systemChat "Du hast dein Fahrzeug AUFgeschlossen.";
 					playSound "carunlock";
-					if((typeOf _veh) == "B_Heli_Transport_01_F") then 
+					if(((typeOf _veh) == "B_Heli_Transport_01_F") || ((typeOf _veh) == "B_Boat_Armed_01_minigun_F")) then 
 					{
 						[_veh] call life_fnc_clearVehicleAmmo;
 					};

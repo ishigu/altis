@@ -103,15 +103,17 @@ switch (_shop) do
 		};
 		if(__GETC__(life_coplevel) > 2) then
 		{
-			_return set[count _return,["B_MRAP_01_F",30000]];
+			_return set[count _return,["C_Offroad_01_F",5000]];
+			
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
-			_return set[count _return,["I_MRAP_03_F",80000]];
+			_return set[count _return,["B_MRAP_01_F",30000]];
+			
 		};
-		if(__GETC__(life_coplevel) > 4) then
+		if(license_cop_sniper) then
 		{
-			_return set[count _return,["C_Offroad_01_F",5000]];
+			_return set[count _return,["I_MRAP_03_F",80000]];
 		};
 	};
 	
@@ -135,9 +137,6 @@ switch (_shop) do
 		{
 			_return set[count _return,["B_Heli_Transport_01_F",200000]];
 		};
-		if(__GETC__(life_coplevel) > 5) then
-		{
-		};
 	};
 	
 	case "cop_airhq":
@@ -149,9 +148,6 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 3) then
 		{
 			_return set[count _return,["B_Heli_Transport_01_F",200000]];
-		};
-		if(__GETC__(life_coplevel) > 5) then
-		{
 		};
 	};
 	
@@ -168,17 +164,17 @@ switch (_shop) do
 
 	case "cop_ship":
 	{
+		_return set[count _return,["C_Rubberboat",3000]];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_return set[count _return,["B_Boat_Transport_01_F",3000]];
+			_return set[count _return,["B_Boat_Transport_01_F",10000]];
 		};
-		if(__GETC__(life_coplevel) > 2) then
-		{
-			_return set[count _return,["C_Boat_Civil_01_police_F",20000]];
-		};
-		if(__GETC__(life_coplevel) > 5) then
+		if(__GETC__(life_coplevel) > 3) then
 		{
 			_return set[count _return,["B_Boat_Armed_01_minigun_F",75000]];
+		};
+		if(license_cop_sniper) then // Präzis.
+		{
 			_return set[count _return,["B_SDV_01_F",100000]];
 		};
 	};

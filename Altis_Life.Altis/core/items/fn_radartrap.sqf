@@ -22,6 +22,7 @@ waitUntil {isNull life_radarTrap};
 if(!isNil "life_action_radarTrap") then {player removeAction life_action_radarTrapDeploy;};
 if(isNull _radarTrap) exitWith {life_radarTrap = ObjNull;};
 _radarTrap setPos [(getPos _radarTrap select 0),(getPos _radarTrap select 1),0];
+_radarTrap setDamage 0.91; //Turn the lamp off. Ugly method but switchLight doesn't work
 _radarTrap allowDamage false;
 _radarTrap enableSimulationGlobal false;
 _cam allowDamage false;

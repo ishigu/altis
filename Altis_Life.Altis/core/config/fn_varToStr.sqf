@@ -70,6 +70,7 @@ switch (_var) do
 	case "life_inv_pylon": {"Pylon"};
 	case "life_inv_barrier": {"Strassensperre"};
 	case "life_inv_radartrap": {"Blitzer"};
+	case "life_inv_ghilliepack": {"Ghillie Paket"};
 	
 	//License Block
 	case "license_civ_driver": {"Fuehrerschein"};
@@ -101,5 +102,6 @@ switch (_var) do
 	case "license_med_air": {"Pilotenlizenz Sani"};
 	case "license_med_car": {"Fuehrerschein Sani"};
 	case "license_civ_lawyer": {"Anwaltslizenz"};
+	case "license_cop_sniper": {"Praezisionsschuetze"};
 
 };

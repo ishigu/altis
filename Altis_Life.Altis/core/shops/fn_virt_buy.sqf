@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_virt_buy.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -5,13 +6,21 @@
 	Description:
 	Buy a virtual item from the store.
 */
-private["_type","_price","_amount","_diff","_name"];
+private["_type","_price","_amount","_diff","_name","_restriction"];
 if((lbCurSel 2401) == -1) exitWith {hint "Du musst etwas Auswaehlem zum Kaufen."};
 _type = lbData[2401,(lbCurSel 2401)];
 _price = lbValue[2401,(lbCurSel 2401)];
 _amount = ctrlText 2404;
+_restriction = 0;
+switch (_type) do {
+	case "radartrap": { _restriction = 4;};
+	default {};
+};
 ////Marktsystem Anfang////
 _marketprice = [_type] call life_fnc_marketGetBuyPrice;
+if(__GETC__(life_coplevel) < _restriction) exitWith {hint "Du hast nicht den benötigten Rang!";};
+if(!(license_cop_sniper)) exitWith {hint "Du hast nicht die benötigte Ausbildung!"};
+
 if(_marketprice != -1) then
 {
 	_price = _marketprice;

@@ -19,6 +19,6 @@ if(player != vehicle player) exitWith {titleText["Du kannst nicht wegwerfen waer
 if(!([false,_data,(parseNumber _value)] call life_fnc_handleInv)) exitWith {hint "Du hast nicht genug von diesem Item."};
 _type = [_data,0] call life_fnc_varHandle;
 _type = [_type] call life_fnc_varToStr;
-hint format["Du hast %1 %2 aus deinemInventar geloescht.",(parseNumber _value), _type];
+hint format["Du hast %1 %2 aus deinem Inventar geloescht.",(parseNumber _value), _type];
 	
 [] call life_fnc_p_updateMenu;

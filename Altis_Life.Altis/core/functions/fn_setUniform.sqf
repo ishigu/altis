@@ -6,7 +6,7 @@ _type = [_this,1,"",[""]] call BIS_fnc_param;
 if(playerSide == west) then {
 	switch(_type) do {
 		case "U_Rangemaster" : {
-			_path = "textures\uniform\police_shirt.paa";
+			_path = "textures\uniform\polizei_rang1.paa";
 			_unit setObjectTextureGlobal [0,_path];
 		};
 		case "V_TacVest_blk" : { //Polizei Weste
@@ -14,18 +14,8 @@ if(playerSide == west) then {
 			_unit setObjectTextureGlobal [0,_path];
 		};
 		
-		case "U_B_CombatUniform_mcam" : { //GSG9 Uniform
-			_path = "textures\uniform\swat_shirt.paa";
-			_unit setObjectTextureGlobal [0,_path];
-		};
-		
-		case "H_HelmetB_plain_mcamo" : { //GSG9 Helm
-			_path = "textures\uniform\swat_helmet.paa";
-			_unit setObjectTextureGlobal [0,_path];
-		};
-		
-		case "V_PlateCarrier1_blk" : { //GSG9 Weste
-			_path = "textures\uniform\swat_s_vest.paa";
+		case "U_B_CombatUniform_mcam" : { 
+			_path = "textures\uniform\polizei_rang3.paa";
 			_unit setObjectTextureGlobal [0,_path];
 		};
 		

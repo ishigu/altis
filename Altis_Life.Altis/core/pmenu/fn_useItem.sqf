@@ -84,6 +84,16 @@ switch (true) do
 		};
 	};
 	
+	case (_item == "ghilliepack"):
+	{
+		if(uniform player == "U_B_GhillieSuit") then {
+			[false,""] spawn life_fnc_ghilliepack;
+		}
+		else {
+			[true,""] spawn life_fnc_ghilliepack;
+		};	
+	};
+	
 	case (_item == "heroinp"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then

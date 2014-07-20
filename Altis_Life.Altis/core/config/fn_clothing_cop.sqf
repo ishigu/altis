@@ -19,15 +19,16 @@ switch (_filter) do
 	//Uniforms
 	case 0:
 	{	
-		_ret set[count _ret,["U_Rangemaster","Rekruten Uniform",nil,25]];
+		_ret set[count _ret,["U_Rangemaster","Beamten Uniform",25]];
 		if(__GETC__(life_coplevel) > 2) then
 		{
-			_ret set[count _ret,["U_O_Wetsuit","Taucher Anzug",nil,2500]];
+			_ret set[count _ret,["U_B_CombatUniform_mcam","Polizei Uniform",2000]];
+			_ret set[count _ret,["U_B_Wetsuit","Taucher Anzug",2500]];
 		};
-		if(__GETC__(life_coplevel) > 4) then
+		/*if(__GETC__(life_coplevel) > 4) then
 		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam","GSG9 Uniform",nil,2000]];
-		};
+			_ret set[count _ret,["U_B_CombatUniform_mcam","GSG9 Uniform",2000]];
+		};*/
 	};
 	
 	//Hats
@@ -41,10 +42,6 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 3) then
 		{
 			_ret set[count _ret,["H_Beret_blk_POLICE",nil,800]];
-		};
-		if(__GETC__(life_coplevel) > 4) then
-		{
-			_ret set[count _ret,["H_HelmetB_plain_mcamo",nil,1000]]; 
 		};
 	};
 	
@@ -78,10 +75,10 @@ switch (_filter) do
 		{  	
 			_ret set[count _ret,["V_RebreatherIA","Taucher Weste",1500]];
 		};
-		if(__GETC__(life_coplevel) > 4) then
+		/*if(__GETC__(life_coplevel) > 4) then
 		{
 			_ret set[count _ret,["V_PlateCarrier1_blk","GSG9 Weste",2000]];
-		};
+		};*/
 	};
 	
 	//Backpacks

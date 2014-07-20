@@ -363,6 +363,7 @@ class Life_Client_Core
 		class pylon {};
 		class barrier {};
 		class radartrap {};
+		class ghilliepack {};
 	};
 	
 	class Dialog_Controls

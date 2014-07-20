@@ -65,6 +65,7 @@ switch (_item) do
 	case "pylon":{2};
 	case "barrier":{15};
 	case "radartrap":{5};
+	case "ghilliepack":{20};
 	/*
 	case "cocoa": {2};
 	case "milk": {2};

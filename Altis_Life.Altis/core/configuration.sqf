@@ -175,7 +175,8 @@ life_inv_items =
 	"life_inv_paint",
 	"life_inv_pylon",
 	"life_inv_barrier",
-	"life_inv_radartrap"
+	"life_inv_radartrap",
+	"life_inv_ghilliepack"
 	
 	/*
 	"life_inv_cocoa",
@@ -216,7 +217,8 @@ life_licenses =
 	["license_civ_meth","civ"],
 	["license_med_air","med"],
 	["license_med_car","med"],
-	["license_civ_lawyer","civ"]
+	["license_civ_lawyer","civ"],
+	["license_cop_sniper","cop"]
 
 	/*
 	["license_civ_chocolate","civ"],
@@ -277,7 +279,9 @@ sell_array =
 	["paint",300],
 	["pylon",50],
 	["barrier",200],
-	["radartrap",1500]
+	["radartrap",1500],
+	["ghilliepack",1000]
+	
 	/*
 	["cocoa",100],
 	["milk",300],
@@ -317,7 +321,8 @@ buy_array =
 	["paint",750],
 	["pylon",50],
 	["barrier",200],
-	["radartrap",3000]
+	["radartrap",3000],
+	["ghilliepack",2000]
 ];
 __CONST__(buy_array,buy_array);
 
@@ -447,3 +452,4 @@ __CONST__(life_garage_sell,life_garage_sell);
 life_medic_slots = ["medic_1","medic_2","medic_3","medic_4","medic_5","medic_6","medic_7","medic_8","medic_9","medic_10"];
 life_adac_slots = ["adac_1","adac_2","adac_3","adac_4"];
 life_adac_distress =[];
+life_cop_olduniform = "";

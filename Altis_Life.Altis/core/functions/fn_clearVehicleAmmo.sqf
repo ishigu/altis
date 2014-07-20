@@ -13,6 +13,7 @@ _veh = typeOf _vehicle;
 if(_veh == "B_Boat_Armed_01_minigun_F") then
 {
 	_vehicle removeMagazinesTurret ["200Rnd_40mm_G_belt",[0]];
+	_vehicle removeMagazinesTurret["2000Rnd_65x39_Belt_Tracer_Red",[1]];
 };
 if(_veh == "B_APC_Wheeled_01_cannon_F") then 
 {

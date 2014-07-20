@@ -75,6 +75,7 @@ switch (_mode) do
 			case "pylon": {"life_inv_pylon"};
 			case "barrier": {"life_inv_barrier"};
 			case "radartrap":{"life_inv_radartrap"};
+			case "ghilliepack":{"life_inv_ghilliepack"};
 		};
 	};
 	
@@ -141,6 +142,7 @@ switch (_mode) do
 			case "life_inv_pylon": {"pylon"};
 			case "life_inv_barrier": {"barrier"};
 			case "life_inv_radartrap": {"radartrap"};
+			case "life_inv_ghilliepack": {"ghilliepack"};
 		};
 	};
 };

@@ -11,7 +11,8 @@ private["_primary","_handgun","_magazines","_uniform","_vest","_backpack","_item
 _primary = primaryWeapon player;
 _handgun = handGunWeapon player;
 _magazines = [];
-_uniform = uniform player;
+if(uniform player == "U_B_GhillieSuit") then { _uniform = life_cop_olduniform;}
+else {_uniform = uniform player;};
 _vest = vest player;
 _backpack = backpack player;
 _items = assignedItems player;
