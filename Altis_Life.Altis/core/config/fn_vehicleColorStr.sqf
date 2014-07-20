@@ -23,6 +23,7 @@ switch (_vehicle) do
 			case 4: {_color = "Dunkel Rot";};
 			case 5: {_color = "Blau / Weiss"};
 			/*case 6: {_color = "Schwarz"};*/
+			case 6: {_color = "Polizei"};
 			case 7: {_color = "Taxi"};
 			case 8: {_color = "Polizei"};
 			case 9: {_color = "Greenfoot"};
@@ -154,6 +155,7 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "Polizei"};
 			/*case 1: {_color = "Black"};*/
+			case 1: {_color = "Polizei"};
 			case 2: {_color = "Civ Blue"};
 			case 3: {_color = "Civ Red"};
 			case 4: {_color = "Digi Green"};
