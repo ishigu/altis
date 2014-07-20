@@ -75,10 +75,10 @@ switch (_filter) do
 		{  	
 			_ret set[count _ret,["V_RebreatherIA","Taucher Weste",1500]];
 		};
-		/*if(__GETC__(life_coplevel) > 4) then
+		if(__GETC__(life_coplevel) > 4) then
 		{
-			_ret set[count _ret,["V_PlateCarrier1_blk","GSG9 Weste",2000]];
-		};*/
+			_ret set[count _ret,["V_PlateCarrier1_blk",nil,2000]];
+		};
 	};
 	
 	//Backpacks

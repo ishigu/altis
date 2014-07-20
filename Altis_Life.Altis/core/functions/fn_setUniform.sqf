@@ -23,6 +23,11 @@ if(playerSide == west) then {
 			_path = "textures\uniform\swat_s_cap.paa";
 			_unit setObjectTextureGlobal [0,_path];
 		};
+		
+		case "V_PlateCarrier1_blk" :{
+			_path = "textures\uniform\swat_s_vest.paa";
+			_unit setObjectTextureGlobal [0,_path];
+		};
 	};
 	
 	// Hide backpack
