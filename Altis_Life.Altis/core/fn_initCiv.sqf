@@ -28,6 +28,7 @@ if(life_is_arrested) then
 player addRating 9999999;
 
 [] call life_fnc_zoneCreator;
+[] spawn life_fnc_gangCash;
 [] execVM "welcome.sqf";
 player addItem "ItemMap"; 
 player assignItem "ItemMap";

@@ -6,7 +6,7 @@
 */
 
 _l1 = parseText "Du bist auf dem Server von Westerland.<br />    Unsere Ts3-IP: ts3.westerland-altislife.de";
-_l2 = parseText "!!!Marktplatz Kavala ist eine Savezone!!!<br />Troller werden direkt gebannt!";
+_l2 = parseText "In Ganggebieten (nicht die Rebellenzone!) gelten keine Regeln und es wird niemand wiederbelebt!<br /><br />Marktplatz Kavala ist eine Savezone!!!<br />Troller werden direkt gebannt!";
 _l3 = parseText "Falls weitere Fragen bestehen kannst du gerne einen<br />    Admin kontaktieren!<br />";
 _l4 = parseText "Wir wünschen euch viel Spaß auf dem Server euer Westerland Team<br />";
 

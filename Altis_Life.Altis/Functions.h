@@ -326,6 +326,8 @@ class Life_Client_Core
 		class setGangLeader {};
 		class lockGang {};
 		class unlockGang {};
+		class gangCapture {};
+		class gangCash {};
 	};
 	
 	class Shops

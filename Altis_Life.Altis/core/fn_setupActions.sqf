@@ -14,6 +14,8 @@ switch (playerSide) do
 		//Rob person_revivable = cursorTarget getVariable["Revive",FALSE];
 		life_actions = life_actions + [player addAction["Rob Person",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && (animationState cursorTarget == "Incapacitated" || !(cursorTarget getVariable["Revive",true])) && !(cursorTarget getVariable["robbed",FALSE]) ']];
+
+		life_actions = life_actions + [player addAction["<t color='#FF0000'>Nehme Gebiet ein</t>",life_fnc_gangCapture,"",0,false,false,"",'  ((typeOf cursorTarget) == "Flag_Red_F")  ']];
 	};
 	case west:
 	{
@@ -30,6 +32,7 @@ switch (playerSide) do
 		life_actions = life_actions + [player addAction["Pylon einpacken",life_fnc_packuppylon,"",0,false,false,"",' _pylon = nearestObjects[getPos player,["RoadCone_F"],2] select 0; !isNil "_pylon" && (_pylon getVariable "item" == "pylonDeployed")']];
 		life_actions = life_actions + [player addAction["Strassensperre einpacken",life_fnc_packupbarrier,"",0,false,false,"",' _barrier = nearestObjects[getPos player,["RoadBarrier_F"],2] select 0;!isNil "_barrier" && (_barrier getVariable "item" == "barrierDeployed")']];
 
+		life_actions = life_actions + [player addAction["<t color='#FF0000'>Nehme Gebiet ein</t>",life_fnc_gangCapture,"",0,false,false,"",'  ((typeOf cursorTarget) == "Flag_Red_F")  ']];
 	};
 	case independent:
 	{
