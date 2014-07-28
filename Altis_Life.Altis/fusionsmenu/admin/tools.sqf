@@ -5,11 +5,9 @@ _EXECscript1 = 'player execVM "'+_pathtotools+'%1"';
 if ((getPlayerUID player) in ["76561197989320695", // Lasdios
                             "76561198030241549",   // ishi
                             "76561198068609909",   // oVo
-                            "76561198058535830",   // Malu
                             "76561198076320576",   // Felix
                             "76561197985341100",   // graVediga
                             "76561197985458229",   // Shentoza
-                            "76561198011512873",   // Harbinger
                             "76561197970641091"]   // NeoX
 							) then { //all admins
 	adminmenu =
