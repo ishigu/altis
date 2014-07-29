@@ -12,8 +12,8 @@ if(_item == "") exitWith {};
 switch (_item) do
 {
 	case "oilu": {7};
-	case "oilp": {6};
-	case "heroinu": {6};
+	case "oilp": {5};
+	case "heroinu": {5};
 	case "heroinp": {4};
 	case "cannabis": {4};
 	case "marijuana": {3};
@@ -31,19 +31,24 @@ switch (_item) do
 	case "turtlesoup": {2};
 	case "donuts": {1};
 	case "coffee": {1};
+	case "beer": {1};
+	case "sekt": {1};
+	case "blackbeer": {1};
+	case "vodca": {1};
+	case "wine": {1};
 	case "fuelE": {2};
 	case "fuelF": {5};
 	case "money": {0};
 	case "pickaxe": {2};
 	case "copperore": {4};
-	case "ironore": {5};
+	case "ironore": {6};
 	case "copper_r": {3};
-	case "iron_r": {3};
-	case "sand": {3};
-	case "salt": {3};
-	case "salt_r": {1};
-	case "glass": {1};
-	case "diamond": {4};
+	case "iron_r": {4};
+	case "sand": {4};
+	case "salt": {4};
+	case "salt_r": {2};
+	case "glass": {2};
+	case "diamond": {5};
 	case "diamondc": {2};
 	case "cocaine": {6};
 	case "cocainep": {4};
@@ -56,5 +61,20 @@ switch (_item) do
 	case "defusekit": {2};
 	case "storagesmall": {5};
 	case "storagebig": {10};
+	case "chemical": {5};
+	case "benzin": {6};
+	case "meth": {2};
+	case "medical": {3};
+	case "defib":{5};
+	case "paint":{4};
+	case "pylon":{2};
+	case "barrier":{15};
+	case "radartrap":{5};
+	case "ghilliepack":{20};
+	/*
+	case "cocoa": {2};
+	case "milk": {2};
+	case "chocolate": {1};
+	*/
 	default {1};
 };

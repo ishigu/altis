@@ -26,19 +26,20 @@ if(_zone == "") exitWith {
 };
 
 //Get the resource that will be gathered from the zone name...
-_item = switch(true) do {
-	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {"apple"};
-	case (_zone in ["peaches_1","peaches_2","peaches_3","peaches_4"]): {"peach"};
-	case (_zone in ["heroin_1"]): {"heroinu"};
-	case (_zone in ["cocaine_1"]): {"cocaine"};
-	case (_zone in ["weed_1"]): {"cannabis"};
-	case (_zone in ["lead_1"]): {"copperore"};
-	case (_zone in ["iron_1"]): {"ironore"};
-	case (_zone in ["salt_1"]): {"salt"};
-	case (_zone in ["sand_1"]): {"sand"};
-	case (_zone in ["diamond_1"]): {"diamond"};
-	case (_zone in ["oil_1","oil_2"]): {"oilu"};
-	case (_zone in ["rock_1"]): {"rock"};
+_amount = 0;
+switch(true) do { // 27 secs per interval = ~5 times slower than normal mining/gathering
+	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {_item ="apple"; _amount = 15;};
+	case (_zone in ["peaches_1","peaches_2","peaches_3","peaches_4"]): {_item="peach"; _amount = 15;};
+	case (_zone in ["heroin_1"]): {_item = "heroinu"; _amount = 5;};
+	case (_zone in ["cocaine_1"]): {_item = "cocaine"; _amount = 5;};
+	case (_zone in ["weed_1"]): {_item = "cannabis"; _amount = 5;};
+	case (_zone in ["lead_1"]): {_item = "copperore"; _amount = 10;};
+	case (_zone in ["iron_1"]): {_item = "ironore"; _amount = 10;};
+	case (_zone in ["salt_1"]): {_item = "salt"; _amount = 20;};
+	case (_zone in ["sand_1"]): {_item = "sand"; _amount = 25;};
+	case (_zone in ["diamond_1"]): {_item = "diamond"; _amount = 5;};
+	case (_zone in ["oil_1","oil_2"]): {_item = "oilu"; _amount = 5;};
+	case (_zone in ["rock_1"]): {_item = "rock"; _amount = 10;};
 	default {""};
 };
 
@@ -49,6 +50,7 @@ _vehicle setVariable ["mining",true,true]; //Lock the device
 life_action_inUse = false; //Unlock it since it's going to do it's own thing...
 
 while {true} do {
+	if(!(_vehicle in life_vehicles)) exitWith {};
 	if(!alive _vehicle OR isNull _vehicle) exitWith {};
 	if(isEngineOn _vehicle) exitWith {titleText[localize "STR_NOTF_MiningStopped","PLAIN"];};
 	titleText[localize "STR_NOTF_DeviceMining","PLAIN"];
@@ -67,7 +69,7 @@ while {true} do {
 	_space = _vInv select 1;
 	_itemIndex = [_item,_items] call fnc_index;
 	_weight = [_vehicle] call life_fnc_vehicleWeight;
-	_sum = [_item,15,_weight select 1,_weight select 0] call life_fnc_calWeightDiff; //Get a sum base of the remaining weight.. 
+	_sum = [_item,_amount,_weight select 1,_weight select 0] call life_fnc_calWeightDiff; //Get a sum base of the remaining weight.. 
 	if(_sum < 1) exitWith {titleText[localize "STR_NOTF_DeviceFull","PLAIN"];};
 	_itemWeight = ([_item] call life_fnc_itemWeight) * _sum;
 	if(_itemIndex == -1) then {

@@ -70,6 +70,9 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
+		class isMedic {};
+		class medicRequestRecieve {};
+		class countMedic {};
 	};
 	
 	class Actions
@@ -115,6 +118,14 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class captureHideout {};
+		class sellTurtle {};
+		class gatherChemical{};
+		class surrender {};
+		class packuppylon {};
+		class packupbarrier {};
+		class packupRadarTrap {};
+		class radartrapSwitch {};
+		class radartrapFlash {};
 	};
 	
 	class Housing
@@ -132,6 +143,21 @@ class Life_Client_Core
 		class lockupHouse {};
 		class copHouseOwner {};
 		class lockHouse {};
+	};
+	
+	class ADAC
+	{
+		file = "core\adac";
+		class adacLoadout {};
+		class notifyADAC {};
+		class countADAC {};
+		class isADAC {};
+		class adacRepaintMenu {};
+		class adacRepaintVehicle {};
+		class distressAdd {};
+		class distressRemove {};
+		class adacMarkers {};
+		class distressMenu {};
 	};
 	
 	class Config
@@ -185,6 +211,8 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
+		class wantedadd2 {};
+		class wanted2{};
 	};
 	
 	class Functions
@@ -227,6 +255,10 @@ class Life_Client_Core
 		class inventoryClosed {};
 		class inventoryOpened {};
 		class isUIDActive {};
+		class randomRound {};
+		class setUniform {};
+		class keyRestore {};
+		class renewUniform {};
 	};
 	
 	class Network
@@ -358,6 +390,11 @@ class Life_Client_Core
 		class blastingCharge {};
 		class defuseKit {};
 		class storageBox {};
+		class weed {};
+		class pylon {};
+		class barrier {};
+		class radartrap {};
+		class ghilliepack {};
 	};
 	
 	class Dialog_Controls
@@ -384,4 +421,33 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 	};
+
+	class market
+	{
+		file = "core\market";
+		class refreshMarketView {};
+		class openMarketView {};
+		class MarketShortView {};
+		class marketSetPriceRow {};
+		class marketSell {};
+		class marketReset {};
+		class marketGetSellPrice {};
+		class marketGetRow {};
+		class marketGetPriceRow {};
+		class marketGetBuyPrice {};
+		class marketconfiguration {};
+		class marketChange {};
+		class marketBuy {};
+		
+	}
+		
+	class Cellphone_Extended
+	{
+		file = "core\cellphoneextended";
+		
+		class cellex_open;
+		class cellex_sendClick;
+	};
+
+		
 };

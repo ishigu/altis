@@ -5,6 +5,9 @@
 	Description:
 	Sets the player up if he/she used the respawn option.
 */
+if(!isNull life_corpse) then {
+	_handle = [life_corpse] spawn life_fnc_dropItems;
+};
 
 //Reset our weight and other stuff
 life_use_atm = TRUE;

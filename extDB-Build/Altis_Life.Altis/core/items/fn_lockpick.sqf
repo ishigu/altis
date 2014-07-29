@@ -11,8 +11,9 @@ life_interrupted = false;
 if(life_action_inUse) exitWith {};
 if(isNull _curTarget) exitWith {}; //Bad type
 _distance = ((boundingBox _curTarget select 1) select 0) + 2;
-if(player distance _curTarget > _distance) exitWith {}; //Too far
-_isVehicle = if((_curTarget isKindOf "LandVehicle") OR (_curTarget isKindOf "Ship") OR (_curTarget isKindOf "Air")) then {true} else {false};
+if(player distance _curTarget > _distance) exitWith {hint "Du bist zu weit weg."}; //Too far
+if(!(_car isKindOf "LandVehicle") OR !(_car isKindOf "Air")) exitWith {hint "Du kannst nur Fahrzeuge aufbrechen!"};
+_isVehicle = if((_curTarget isKindOf "LandVehicle")) then {true} else {false};
 if(_isVehicle && _curTarget in life_vehicles) exitWith {hint localize "STR_ISTR_Lock_AlreadyHave"};
 
 //More error checks

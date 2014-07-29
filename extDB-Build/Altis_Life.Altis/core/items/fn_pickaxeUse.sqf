@@ -39,4 +39,5 @@ if(([true,_mine,_diff] call life_fnc_handleInv)) then
 	titleText[format[localize "STR_ISTR_Pick_Success",_itemName,_diff],"PLAIN"];
 };
 
-life_action_inUse = false;
+life_action_mining_hotkey_inuse = false;
+life_delay_pickaxe = false;

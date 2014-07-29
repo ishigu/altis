@@ -13,6 +13,7 @@ _veh = typeOf _vehicle;
 if(_veh == "B_Boat_Armed_01_minigun_F") then
 {
 	_vehicle removeMagazinesTurret ["200Rnd_40mm_G_belt",[0]];
+	_vehicle removeMagazinesTurret["2000Rnd_65x39_Belt_Tracer_Red",[1]];
 };
 if(_veh == "B_APC_Wheeled_01_cannon_F") then 
 {
@@ -31,6 +32,15 @@ if(_veh == "B_Heli_Transport_01_F") then
 {
 	_vehicle removeMagazinesTurret ["2000Rnd_65x39_Belt_Tracer_Red",[1]];
 	_vehicle removeMagazinesTurret ["2000Rnd_65x39_Belt_Tracer_Red",[2]];
+};
+
+
+if(_veh == "I_Plane_Fighter_03_CAS_F") then 
+{	
+	_vehicle removeMagazinesTurret ["300Rnd_20mm_shells",[0]];
+	_vehicle removeMagazinesTurret ["2Rnd_LG_scalpel",[0]];
+	_vehicle removeMagazinesTurret ["2Rnd_AAA_missiles",[0]];
+	_vehicle removeMagazinesTurret ["2Rnd_GBU12_LGB_MI10",[0]];
 };
 
 clearWeaponCargoGlobal _vehicle;

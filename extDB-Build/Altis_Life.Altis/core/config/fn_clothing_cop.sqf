@@ -18,31 +18,30 @@ switch (_filter) do
 {
 	//Uniforms
 	case 0:
-	{
-		_ret set[count _ret,["U_Rangemaster","Cop Uniform",25]];
-		if(__GETC__(life_coplevel) > 1) then
-		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam_tshirt",nil,350]];
-			_ret set[count _ret,["U_B_survival_uniform",nil,1250]];
-		};
+	{	
+		_ret set[count _ret,["U_Rangemaster","Beamten Uniform",25]];
 		if(__GETC__(life_coplevel) > 2) then
 		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam_worn",nil,550]];
+			_ret set[count _ret,["U_B_CombatUniform_mcam","Polizei Uniform",2000]];
+			_ret set[count _ret,["U_B_Wetsuit","Taucher Anzug",2500]];
 		};
+		/*if(__GETC__(life_coplevel) > 4) then
+		{
+			_ret set[count _ret,["U_B_CombatUniform_mcam","GSG9 Uniform",2000]];
+		};*/
 	};
 	
 	//Hats
 	case 1:
 	{
-		if(__GETC__(life_coplevel) > 1) then
-		{
-			_ret set[count _ret,["H_HelmetB_plain_mcamo",nil,75]];
-			_ret set[count _ret,["H_Booniehat_mcamo",nil,120]];
-		};
-		
 		if(__GETC__(life_coplevel) > 2) then
 		{
-			_ret set[count _ret,["H_MilCap_mcamo",nil,100]];
+			_ret set[count _ret,["H_Cap_blk",nil,150]];
+			_ret set[count _ret,["H_Cap_tan_specops_US",nil,150]];
+		};
+		if(__GETC__(life_coplevel) > 3) then
+		{
+			_ret set[count _ret,["H_Beret_blk_POLICE",nil,800]];
 		};
 	};
 	
@@ -51,6 +50,7 @@ switch (_filter) do
 	{
 		_ret = 
 		[
+			["G_Diving",nil,500],
 			["G_Shades_Black",nil,25],
 			["G_Shades_Blue",nil,20],
 			["G_Sport_Blackred",nil,20],
@@ -67,10 +67,17 @@ switch (_filter) do
 	//Vest
 	case 3:
 	{
-		_ret set[count _ret,["V_Rangemaster_belt",nil,800]];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret set[count _ret,["V_PlateCarrier2_rgr",nil,1500]];
+			_ret set[count _ret,["V_TacVest_blk","Polizei Weste",1500]];
+		};
+		if(__GETC__(life_coplevel) > 2) then
+		{  	
+			_ret set[count _ret,["V_RebreatherIA","Taucher Weste",1500]];
+		};
+		if(__GETC__(life_coplevel) > 4) then
+		{
+			_ret set[count _ret,["V_PlateCarrier1_blk",nil,2000]];
 		};
 	};
 	
@@ -80,10 +87,11 @@ switch (_filter) do
 		_ret =
 		[
 			["B_Kitbag_cbr",nil,800],
-			["B_FieldPack_cbr",nil,500],
-			["B_AssaultPack_cbr",nil,700],
+			["B_FieldPack_blk",nil,500],
+			["B_AssaultPack_blk",nil,700],
 			["B_Bergen_sgg",nil,2500],
-			["B_Carryall_cbr",nil,3500]
+			["B_Carryall_cbr",nil,3500],
+			["B_Parachute",nil,500]
 		];
 	};
 };

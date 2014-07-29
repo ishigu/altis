@@ -38,6 +38,14 @@ switch (true) do
 	
 	case (_item in ["storagesmall","storagebig"]): {
 		[_item] call life_fnc_storageBox;
+	case (_item == "sekt" or _item == "wine" or _item == "vodca" or _item == "blackbeer" or _item == "beer"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 100;
+			player setFatigue 1;
+			titleText["Du hast getrunken und fühlst dich nicht so gut.","PLAIN"];
+		};
 	};
 	
 	case (_item == "redgull"):
@@ -66,10 +74,63 @@ switch (true) do
 		};
 	};
 	
+	case (_item == "pylon"):
+	{
+		if(!isNull life_pylon) exitWith {hint "Du stellst schon einen Pylon auf!"};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_pylon;
+		};
+	};
+	
+	case (_item == "barrier"):
+	{
+		if(!isNull life_barrier) exitWith {hint "Du stellst schon eine Straßensperre auf!"};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_barrier;
+		};
+	};
+	
+	case (_item == "radartrap"):
+	{
+		if(!isNull life_pylon) exitWith {hint "Du stellst schon einen Blitzer auf!"};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_radartrap;
+		};
+	};
+	
+	case (_item == "ghilliepack"):
+	{
+		if(uniform player == "U_B_GhillieSuit") then {
+			[false,""] spawn life_fnc_ghilliepack;
+		}
+		else {
+			[true,""] spawn life_fnc_ghilliepack;
+		};	
+	};
+	
+	case (_item == "heroinp"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn fnc_drug_use;
+		};
+	};
+	
 	case (_item == "fuelF"):
 	{
 		if(vehicle player != player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
 		[] spawn life_fnc_jerryRefuel;
+	};
+	
+	case (_item == "marijuana"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_weed;
+		};
 	};
 	
 	case (_item == "lockpick"):
@@ -82,6 +143,11 @@ switch (true) do
 		[_item] call life_fnc_eatFood;
 	};
 
+	case "fishing":
+	{
+		[] spawn fnc_fishing;
+	};
+	
 	case (_item == "pickaxe"):
 	{
 		[] spawn life_fnc_pickAxeUse;

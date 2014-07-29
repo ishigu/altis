@@ -61,7 +61,22 @@ switch (_var) do
 	case "life_inv_defusekit": {(localize "STR_Item_DefuseKit")};
 	case "life_inv_storagesmall": {(localize "STR_Item_StorageBS")};
 	case "life_inv_storagebig": {(localize "STR_Item_StorageBL")};
-	
+	case "life_inv_beer": {"Bier"};
+	case "life_inv_blackbeer": {"Schwarzbier"};
+	case "life_inv_vodca": {"Wodka"};
+	case "life_inv_wine": {"Wein"};
+	case "life_inv_sekt": {"Sekt"};
+	case "life_inv_chemical": {"Chemikalien"};
+	case "life_inv_benzin": {"Benzin"};
+	case "life_inv_medical": {"Medikamente"};
+	case "life_inv_meth": {"Meth"};
+	case "life_inv_defib":{"Defibrillator"};
+	case "life_inv_paint":{"Farbeimer"};
+	case "life_inv_pylon": {"Pylon"};
+	case "life_inv_barrier": {"Strassensperre"};
+	case "life_inv_radartrap": {"Blitzer"};
+	case "life_inv_ghilliepack": {"Ghillie Paket"};
+
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};
 	case "license_civ_air": {(localize "STR_License_Pilot")};
@@ -85,4 +100,11 @@ switch (_var) do
 	case "license_civ_cement": {(localize "STR_License_Cement")};
 	case "license_med_air": {(localize "STR_License_Pilot")};
 	case "license_civ_home": {(localize "STR_License_Home")};
+	case "license_civ_benzin": {"Benzinlizenz"};
+	case "license_civ_medical": {"Medizinlizenz"};
+	case "license_civ_meth": {"Methlizenz"};
+	case "license_civ_dangerousgoods": {"Gefahrengutlizenz"};
+	case "license_med_car": {"Fuehrerschein Sani"};
+	case "license_civ_lawyer": {"Anwaltslizenz"};
+	case "license_cop_sniper": {"Praezisionsschuetze"};
 };

@@ -49,5 +49,9 @@ if(!isNull _source) then {
 	};
 };
 
+if(player getVariable["restrained",false]) then {
+	_damage = false;
+};
+
 [] call life_fnc_hudUpdate;
 _damage;

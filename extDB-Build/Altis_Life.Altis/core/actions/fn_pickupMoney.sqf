@@ -6,7 +6,7 @@
 	Picks up money
 */
 if((time - life_action_delay) < 1.5) exitWith {
-	hint "You can't rapidly use action keys!";
+	hint "Du kannst Actions Keys nicht so oft benutzen!";
 	if(!isNil {(_this select 0) getVariable "inUse"}) then {
 		_this select 0 setVariable["inUse",false,true];
 	};

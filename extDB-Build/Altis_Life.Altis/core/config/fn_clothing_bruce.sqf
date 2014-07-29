@@ -31,7 +31,7 @@ switch (_filter) do
 		["U_C_HunterBody_grn","The Hunters Look",1500],
 		["U_C_WorkerCoveralls","Mechanic Coveralls",2500],
 		["U_OrestesBody","Surfing On Land",1100],
-		["U_NikosAgedBody","Casual Wears",5000]
+		["U_NikosAgedBody","Anzug",5000]
 		];
 	};
 	
@@ -73,6 +73,7 @@ switch (_filter) do
 			["G_Sport_Checkered",nil,20],
 			["G_Sport_Blackyellow",nil,20],
 			["G_Sport_BlackWhite",nil,20],
+			["G_Spectacles_Tinted",nil,20],
 			["G_Squares",nil,10],
 			["G_Aviator",nil,100],
 			["G_Lady_Mirror",nil,150],

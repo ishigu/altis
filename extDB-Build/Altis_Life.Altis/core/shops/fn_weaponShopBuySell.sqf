@@ -72,3 +72,4 @@ if(playerSide == west) then
 {
 	[] call life_fnc_saveGear;
 };
+[player, uniform player] call life_fnc_setUniform;

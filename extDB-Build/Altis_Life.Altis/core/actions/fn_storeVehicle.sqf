@@ -13,6 +13,7 @@ if(vehicle player != player) then
 	else
 {
 	_nearVehicles = nearestObjects[getPos (_this select 0),["Car","Air","Ship"],30]; //Fetch vehicles within 30m.
+	if(count _nearVehicles == 0) then { _nearVehicles = nearestObjects[getPos (_this select 0),["Ship"],80]; };
 	if(count _nearVehicles > 0) then
 	{
 		{

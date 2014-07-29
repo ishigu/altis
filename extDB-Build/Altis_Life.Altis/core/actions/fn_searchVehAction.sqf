@@ -18,7 +18,7 @@ if((_vehicle isKindOf "Car") || !(_vehicle isKindOf "Air") || !(_vehicle isKindO
 	
 	if(_owners == "any<br/>") then
 	{
-		_owners = "No owners, impound it<br/>";
+		_owners = "Kein Besitzer,besser beschlagnahmen<br/>";
 	};
-	hint parseText format["<t color='#FF0000'><t size='2'>Vehicle Info</t></t><br/><t color='#FFD700'><t size='1.5'>Owners</t></t><br/> %1",_owners];
+	hint parseText format["<t color='#FF0000'><t size='2'>Fahrzeug Info</t></t><br/><t color='#FFD700'><t size='1.5'>Besitzer</t></t><br/> %1",_owners];
 };

@@ -33,6 +33,17 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
 	};
 };
+if((life_veh_shop select 0) == "adac_air_hs") then {
+	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
+} else {
+	//Check if there is multiple spawn points and find a suitable spawnpoint.
+	if(typeName _spawnPoints == typeName []) then {
+		//Find an available spawn point.
+		{if(count(nearestObjects[(getMarkerPos _x),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _x};} foreach _spawnPoints;
+	} else {
+		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
+	};
+};
 
 
 if(_spawnPoint == "") exitWith {hint localize "STR_Shop_Veh_Block";};
@@ -80,7 +91,10 @@ switch(playerSide) do {
 	};
 	
 	case independent: {
-		[_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
+		if ((player call life_fnc_isMedic)) then {
+			[_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
+			_vehicle setVariable["lights",false,true];
+		};
 	};
 };
 

@@ -10,7 +10,7 @@ _sum = ["heroinu",1,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff
 
 if(_sum > 0) then
 {
-	life_action_inUse = true;
+	life_action_mining_hotkey_inuse = true;
 	titleText[format[localize "STR_NOTF_Gathering",localize "STR_Item_Heroin"],"PLAIN"];
 	titleFadeOut 5;
 	sleep 5;
@@ -24,4 +24,4 @@ else
 	hint localize "STR_NOTF_InvFull";
 };
 
-life_action_inUse = false;
+life_action_mining_hotkey_inuse = false;

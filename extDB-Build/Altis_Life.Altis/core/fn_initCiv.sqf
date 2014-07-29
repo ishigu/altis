@@ -26,3 +26,9 @@ if(life_is_arrested) then
 player addRating 9999999;
 
 [] call life_fnc_zoneCreator;
+[] execVM "welcome.sqf";
+player addItem "ItemMap"; 
+player assignItem "ItemMap";
+sleep 10;
+hint "Du hast eine Karte erhalten.";
+//[] call life_fnc_civSaveGear; //save gear into file
