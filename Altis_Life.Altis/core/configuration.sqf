@@ -72,7 +72,6 @@ life_eat_donuts = 30;
 ****** Life Variables *******
 *****************************
 */
-life_my_gang = ObjNull;
 life_net_dropped = false;
 life_hit_explosive = false;
 life_siren_active = false;
@@ -89,6 +88,7 @@ __CONST__(life_impound_car,2500);
 __CONST__(life_impound_boat,2500);
 __CONST__(life_impound_air,10000);
 life_istazed = false;
+life_my_gang = ObjNull;
 
 life_vehicles = [];
 bank_robber = [];
