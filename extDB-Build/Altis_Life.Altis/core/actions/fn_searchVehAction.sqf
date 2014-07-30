@@ -20,5 +20,5 @@ if((_vehicle isKindOf "Car") || !(_vehicle isKindOf "Air") || !(_vehicle isKindO
 	{
 		_owners = "Kein Besitzer,besser beschlagnahmen<br/>";
 	};
-	hint parseText format["<t color='#FF0000'><t size='2'>Fahrzeug Info</t></t><br/><t color='#FFD700'><t size='1.5'>Besitzer</t></t><br/> %1",_owners];
+	hint parseText format[localize "STR_NOTF_SearchVeh",_owners];
 };

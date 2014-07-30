@@ -15,7 +15,7 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 	{
 		life_action_inUse = true;
 		_displayName = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
-		_upp = format["Repariere %1",_displayName];
+		_upp = format[localize "STR_NOTF_Repairing",_displayName];
 		//Setup our progress bar.
 		disableSerialization;
 		5 cutRsc ["life_progress","PLAIN"];
@@ -45,13 +45,13 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		life_action_inUse = false;
 		5 cutText ["","PLAIN"];
 		player playActionNow "stop";
-		if(life_interrupted) exitWith {life_interrupted = false; titleText["Aktion abgebrochen!","PLAIN"]; life_action_inUse = false;};
-		if(player != vehicle player) exitWith {titleText["Du darfst nicht im Fahrzeug sein.","PLAIN"];};
+		if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
+		if(player != vehicle player) exitWith {titleText[localize "STR_NOTF_RepairingInVehicle","PLAIN"];};
 		if(!(!(player call life_fnc_isMedic) && (side player == independent))) then
 		{
-		player removeItem "ToolKit";
+			player removeItem "ToolKit";
 		};
 		_veh setDamage 0;
-		titleText["Du hast das Fahrzeug repariert.","PLAIN"];
+		titleText[localize "STR_NOTF_RepairedVehicle","PLAIN"];
 	};
 };
