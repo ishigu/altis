@@ -118,7 +118,6 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class captureHideout {};
-		class sellTurtle {};
 		class gatherChemical{};
 		class surrender {};
 		class packuppylon {};

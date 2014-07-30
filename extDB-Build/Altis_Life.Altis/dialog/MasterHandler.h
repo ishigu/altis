@@ -8,7 +8,6 @@
 
 #include "shop_items.hpp"
 #include "player_inv.hpp"
-#include "settings.hpp"
 #include "gang.hpp"
 #include "key_chain.hpp"
 #include "impound.hpp"
