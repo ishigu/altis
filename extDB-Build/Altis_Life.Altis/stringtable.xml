@@ -363,7 +363,7 @@
 		<Key ID="STR_CELL_EMSRequest">
 			<Original>Request EMS</Original>
 			<English>Request EMS</English>
-			<German>An die Sanitäter</German>
+			<German>An die Sanis</German>
 			<French>Requête Medecin</French>
 			<Italian>Msg medici</Italian>
 			<Portuguese>Chamar SAMU</Portuguese>
@@ -1343,6 +1343,17 @@
 			<French>Excuser</French>
 			<Italian>Perdona</Italian>
 			<Portuguese>Perdão</Portuguese>
+		</Key>
+	</Package>
+	<Package name="Distress_Menu">
+		<Key ID="STR_Distress_Title">
+			<Original>Notrufliste</Original>
+		</Key>
+		<Key ID="STR_Distress_Remove">
+			<Original>Entfernen</Original>
+		</Key>
+		<Key ID="STR_Distress_Menu">
+			<Original>ADAC</Original>
 		</Key>
 	</Package>
 	<Package name="Animals">
@@ -4488,6 +4499,11 @@
 			<French>Dispositif de minage</French>
 			<Italian>Piazza mine dal veicolo</Italian>
 			<Portuguese>Minerar</Portuguese>
+		</Key>
+		<Key ID="STR_vInAct_Repaint">
+			<Original>Repaint</Original>
+			<English>Repaint</English>
+			<German>Umlackieren</German>
 		</Key>
 	</Package>
 	<Package name="Session_Strings">

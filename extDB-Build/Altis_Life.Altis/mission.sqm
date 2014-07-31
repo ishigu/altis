@@ -19203,10 +19203,10 @@ class Mission
 		};
 		class Item146
 		{
-			position[]={25716.904,18.13162,21271.055};
+			position[]={25713.709,18.148113,21266.309};
 			name="car_g_2";
 			type="Empty";
-			angle=220.388;
+			angle=90;
 		};
 		class Item147
 		{
