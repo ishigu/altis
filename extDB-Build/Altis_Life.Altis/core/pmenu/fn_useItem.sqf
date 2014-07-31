@@ -38,6 +38,8 @@ switch (true) do
 	
 	case (_item in ["storagesmall","storagebig"]): {
 		[_item] call life_fnc_storageBox;
+	};
+	
 	case (_item == "sekt" or _item == "wine" or _item == "vodca" or _item == "blackbeer" or _item == "beer"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
