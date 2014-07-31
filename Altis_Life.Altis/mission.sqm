@@ -4831,7 +4831,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1188;
+		items=1189;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -16406,6 +16406,17 @@ class Mission
 			vehicle="Land_Camping_Light_F";
 			skill=0.60000002;
 			init="this allowDamage false;";
+		};
+		class Item1188
+		{
+			position[]={3608.6531,9.9778795,13115.87};
+			azimut=276;
+			offsetY=-1;
+			id=1479;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this setObjectTexture [0, ""ovo.jpg""]";
 		};
 	};
 	class Markers
