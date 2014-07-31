@@ -35,7 +35,7 @@ switch(_type) do
 	case "51B": {_type = ["Außerorts über 230km/h+ (A)",20000];};
 	
     case "1": {_type = ["versuchter Fahrzeugdiebstahl",5000];};
-    case "2": {_type = ["Fahrzeugdiebstahl",3500];};
+    case "2": {_type = ["Fahrzeugdiebstahl",20000];};
     case "3": {_type = ["Fahrzeugbeschädigung",5000];};
     case "4": {_type = ["Versuchter Raubüberfall",20000];};
     case "5": {_type = ["Raubüberfall",40000];};

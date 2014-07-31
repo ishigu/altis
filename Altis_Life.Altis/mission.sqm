@@ -3038,7 +3038,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_4""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_4""]; this addAction[""Fahrzeug Schwarzmarkt"",life_fnc_impoundPlusInit];";
 				};
 				class Item99
 				{
@@ -3049,7 +3049,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_2""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_2""]; this addAction[""Fahrzeug Schwarzmarkt"",life_fnc_impoundPlusInit];";
 				};
 				class Item100
 				{
@@ -3060,7 +3060,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_3""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_3""]; this addAction[""Fahrzeug Schwarzmarkt"",life_fnc_impoundPlusInit];";
 				};
 			};
 		};

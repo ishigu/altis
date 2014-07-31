@@ -143,6 +143,7 @@ class Life_Client_Core
 		class distressRemove {};
 		class adacMarkers {};
 		class distressMenu {};
+		class impoundPlusAction {};
 	};
 	
 	class Config
@@ -383,6 +384,10 @@ class Life_Client_Core
 		class bankWithdraw {};
 		class bankTransfer {};
 		class garageLBChange {};
+		class impoundPlusInit {};
+		class impoundPlusLBChange {};
+		class impoundPlusMenu {};
+		class unimpoundPlus {};
 	};
 
 	class market

@@ -163,6 +163,9 @@
 		<Key ID="STR_Garage_SpawningVeh">
 			<Original>Parke Fahrzeug aus, einen Moment bitte...</Original>
 		</Key>
+		<Key ID="STR_Garage_RetrievingVeh">
+			<Original>Du hast dein %1 wieder zurückgekauft.</Original>
+		</Key>
 		<Key ID="STR_Garage_SQLError_Destroyed">
 			<Original>Es tut mir leid, aber %1 wurde zum Schrott geschickt.</Original>
 		</Key>
@@ -375,7 +378,7 @@
 			<Original>%1 wurde von %2 verhaftet!</Original>
 		</Key>
 		<Key ID="STR_NOTF_Fishing">
-			<Original>Du hast einen %1 gefangen.</Original>
+			<Original>Du hast eine/n %1 gefangen.</Original>
 		</Key>
 		<Key ID="STR_NOTF_CaughtTurtle">
 			<Original>Du hast Schildkroetenfleisch gesammelt</Original>
@@ -441,10 +444,25 @@
 			<Original>Beschlagnahmung abgebrochen.</Original>
 		</Key>
 		<Key ID="STR_NOTF_Impounded">
-			<Original>Du hast einen %1 beschlagnahmt.\n\nDu erhaelst $%2 fuer das Sauberhalten unserer Insel!</Original>
+			<Original>Du hast einen %1 beschlagnahmt.</Original>
 		</Key>
 		<Key ID="STR_NOTF_HasImpounded">
 			<Original>%1 hat %2s %3 beschlagnahmt</Original>
+		</Key>
+		<Key ID="STR_NOTF_BeingTowed">
+			<Original>%1 dein %2 wird abgeschleppt.</Original>
+		</Key>
+		<Key ID="STR_NOTF_Towing">
+			<Original>Schleppe Fahrzeug ab</Original>
+		</Key>
+		<Key ID="STR_NOTF_TowingCancelled">
+			<Original>Abschleppen abgebrochen.</Original>
+		</Key>
+		<Key ID="STR_NOTF_Towed">
+			<Original>Du hast einen %1 abgeschleppt.\n\nDu erhaelst $%2 fuer das Sauberhalten unserer Insel!</Original>
+		</Key>
+		<Key ID="STR_NOTF_HasTowed">
+			<Original>%1 hat %2s %3 abgeschleppt</Original>
 		</Key>
 		<Key ID="STR_NOTF_AbortESC">
 			<Original>Abbruch in %1</Original>
@@ -572,13 +590,16 @@
 			<Original>Rausziehen</Original>
 		</Key>
 		<Key ID="STR_vInAct_Impound">
-			<Original>Beschlagnahmen</Original>
+			<Original>Abschleppen</Original>
 		</Key>
 		<Key ID="STR_vInAct_DeviceMine">
 			<Original>Mit Geraet</Original>
 		</Key>
 		<Key ID="STR_vInAct_Repaint">
 			<Original>Umlackieren</Original>
+		</Key>
+		<Key ID="STR_vInAct_ImpoundPlus">
+			<Original>Beschlagnahmen</Original>
 		</Key>
 	</Package>
 </Project>

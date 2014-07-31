@@ -42,10 +42,10 @@ _mode = _radarTrap getVariable["mode","innerorts"];
 	
 	while {alive _radarTrap} do
     {
-		_copPresent = true;
-		/*{
+		_copPresent = false;
+		{
 			if( side _x == west && isPlayer _x) exitWith{ _copPresent = true;};  //Cops around?
-		}forEach ((getPos _cam) nearEntities["Man",25]);*/
+		}forEach ((getPos _cam) nearEntities["Man",25]);
 		
 		
 		if(_copPresent) then {

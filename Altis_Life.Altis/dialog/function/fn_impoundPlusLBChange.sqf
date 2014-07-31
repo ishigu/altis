@@ -1,13 +1,12 @@
 #include <macro.h>
 /*
-	File: fn_garageLBChange.sqf
-	Author: Bryan "Tonic" Boardwine
+	File: fn_impoundPlusLBChange.sqf
+	Author: Shentoza
 	
 	Description:
-	Can't be bothered to answer it.. Already deleted it by accident..
 */
 disableSerialization;
-private["_control","_index","_className","_dataArr","_vehicleColor","_vehicleInfo","_trunkSpace","_sellPrice","_retrievePrice"];
+private["_control","_index","_className","_dataArr","_vehicleColor","_vehicleInfo","_trunkSpace","_retrievePrice"];
 _control = _this select 0;
 _index = _this select 1;
 
@@ -19,22 +18,19 @@ _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 
 _retrievePrice = [_className,__GETC__(life_garage_prices)] call fnc_index;
-_sellPrice = [_className,__GETC__(life_garage_sell)] call fnc_index;
 _retrievePrice = if(_retrievePrice == -1) then {1000} else {(__GETC__(life_garage_prices) select _retrievePrice) select 1;};
-_sellPrice = if(_sellPrice == -1) then {1000} else {(__GETC__(life_garage_sell) select _sellPrice) select 1;};
+_retrievePrice = _retrievePrice * 2;
 
-(getControl(2800,2803)) ctrlSetStructuredText parseText format["
-	Rausholpreis: <t color='#8cff9b'>$%1</t><br/>
-	Verkaufspreis: <t color='#8cff9b'>$%2</t><br/>
-	Farbe: %8<br/>
-	Max Geschwindigkeit: %3 km/h<br/>
-	PS: %4<br/>
-	Passagiersitze: %5<br/>
-	Kofferraum: %6<br/>
-	Tankinhalt: %7
+(getControl(28500,28503)) ctrlSetStructuredText parseText format["
+	Kaufpreis: <t color='#8cff9b'>$%1</t><br/>
+	Farbe: %7<br/>
+	Max Geschwindigkeit: %2 km/h<br/>
+	PS: %3<br/>
+	Passagiersitze: %4<br/>
+	Kofferraum: %5<br/>
+	Tankinhalt: %6
 	",
 [_retrievePrice] call life_fnc_numberText,
-[_sellPrice] call life_fnc_numberText,
 _vehicleInfo select 8,
 _vehicleInfo select 11,
 _vehicleInfo select 10,
@@ -43,5 +39,5 @@ _vehicleInfo select 12,
 _vehicleColor
 ];
 
-ctrlShow [2803,true];
-ctrlShow [2830,true];
+ctrlShow [28503,true];
+ctrlShow [28530,true];

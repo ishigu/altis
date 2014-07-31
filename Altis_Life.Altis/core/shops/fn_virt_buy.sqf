@@ -13,7 +13,7 @@ _price = lbValue[2401,(lbCurSel 2401)];
 _amount = ctrlText 2404;
 _restriction = 0;
 switch (_type) do {
-	case "radartrap": { _restriction = 4;};
+	case "radartrap": { _restriction = 2;};
 	default {};
 };
 ////Marktsystem Anfang////

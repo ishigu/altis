@@ -1,24 +1,20 @@
 /*
-	File: fn_impoundAction.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Impounds the vehicle
+ADAC Impounding (sends vehicle to "impoundPlus" and has to bought back into garage)
+
 */
-private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP"];
+private["_vehicle","_type","_time","_vehicleData","_upp","_ui","_progress","_pgText","_cP"];
 _vehicle = cursorTarget;
 if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship"))) exitWith {};
 if(player distance cursorTarget > 10) exitWith {};
-if((playerSide == west) && ( (call life_fnc_countADAC) > 0 )) exitWith{hint "Es sind Mitglieder des ADAC im Dienst!"};
 if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship")) then
 {
 	_vehicleData = _vehicle getVariable["vehicle_info_owners",[]];
 	if(count _vehicleData == 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
 	_vehicleName = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
-	[[0,format[localize "STR_NOTF_BeingTowed",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format[localize "STR_NOTF_BeingImpounded",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	life_action_inUse = true;
 	
-	_upp = localize "STR_NOTF_Towing";
+	_upp = localize "STR_NOTF_Impounding";
 	//Setup our progress bar.
 	disableSerialization;
 	5 cutRsc ["life_progress","PLAIN"];
@@ -40,7 +36,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	};
 	5 cutText ["","PLAIN"];
 	
-	if(player distance _vehicle > 10) exitWith {hint localize "STR_NOTF_TowingCancelled"; life_action_inUse = false;};
+	if(player distance _vehicle > 10) exitWith {hint localize "STR_NOTF_ImpoundingCancelled"; life_action_inUse = false;};
 	if(!alive player) exitWith {life_action_inUse = false;};
 	//_time = _vehicle getVariable "time";
 	//if(isNil {_time}) exitWith {deleteVehicle _vehicle; hint "This vehicle was hacked in"};
@@ -49,23 +45,16 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	{
 		if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship"))) exitWith {life_action_inUse = false;};
 		_type = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
-		switch (true) do
-		{
-			case (_vehicle isKindOf "Car"): {_price = (call life_impound_car);};
-			case (_vehicle isKindOf "Ship"): {_price = (call life_impound_boat);};
-			case (_vehicle isKindOf "Air"): {_price = (call life_impound_air);};
-		};
 		
 		life_impound_inuse = true;
-		[[_vehicle,true,player],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
+		[[_vehicle,true,player],"DB_fnc_impoundVehiclePlus",false,false] spawn life_fnc_MP;
 		waitUntil {!life_impound_inuse};
-		hint format[localize "STR_NOTF_Towed",_type,_price];
-		[[0,format[localize "STR_NOTF_HasTowed",name player,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-		life_atmcash = life_atmcash + _price;
+		hint format[localize "STR_NOTF_Impounded",_type];
+		[[0,format[localize "STR_NOTF_HasImpounded",name player,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	}
 		else
 	{
-		hint localize "STR_NOTF_TowingCancelled";
+		hint localize "STR_NOTF_ImpoundingCancelled";
 	};
 };
 life_action_inUse = false;
