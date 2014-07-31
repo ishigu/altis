@@ -15,17 +15,23 @@ _causedByDeath = _this select 2;
 if(_causedByDeath) then {
 	_msg = "Helft mir, ich bin schwer verletzt, und halte nicht mehr lange durch!";};
 if(player == _sender) then
-{
+{	
 	if(_msg == "") exitWith{hint "Du musst eine Nachricht eingeben!";};
-	hint "Du hast einen Notruf abgesetzt!";
 	if(_causedByDeath) then {
+		if((call life_fnc_countMedic) < 1) exitWith{systemChat "Keine Medics online!";};
+		systemChat "Du hast einen Notruf abgesetzt!";
 		[] spawn 
 		{
+			life_request_timer = true;
 			((findDisplay 7300) displayCtrl 7303) ctrlEnable false;
 			sleep (2 * 60);
 			((findDisplay 7300) displayCtrl 7303) ctrlEnable true;
 			if(true) exitWith{};
 		};
+	}
+	else{
+		if((call life_fnc_countMedic) < 1) exitWith{hint "Keine Medics online!";};
+		hint "Du hast einen Notruf abgesetzt!";
 	};
 	[] call life_fnc_cellphone;
 };

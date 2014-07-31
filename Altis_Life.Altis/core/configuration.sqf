@@ -27,6 +27,7 @@ life_spikestrip = ObjNull;
 life_pylon = ObjNull;
 life_barrier = ObjNull;
 life_respawn_timer = 4; //Scaled in minutes
+life_increased_respawn_timer = 15;
 life_has_insurance = false;
 life_knockout = false;
 life_interrupted = false;

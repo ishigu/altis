@@ -30,7 +30,7 @@ _cam enableSimulationGlobal false;
 
 _toleranceLower = 0;
 _toleranceUpper =(getDir _cam+30) mod 360;
-_conversion = false;_speed = 0;_dirveh = 0;_distance = 0;_triggered = false;_data = "";_unit = objNull;_vehicle = objNull;
+_conversion = false;_speedRaw = 0;_speedTol = 0;_dirveh = 0;_distance = 0;_triggered = false;_data = "";_unit = objNull;_vehicle = objNull;
 _copPresent = false;
 _mode = _radarTrap getVariable["mode","innerorts"];
 		
@@ -38,14 +38,14 @@ _mode = _radarTrap getVariable["mode","innerorts"];
 	_toleranceLower = getDir _cam - 30;
 	} else { _toleranceLower = 360 - ( abs (getDir _cam - 30));};
 	
-	if ( _toleranceLower >= 330) then {_conversion = true;};
+	if ( _toleranceLower > 300) then {_conversion = true;};
 	
 	while {alive _radarTrap} do
     {
-		_copPresent = false;
-		{
+		_copPresent = true;
+		/*{
 			if( side _x == west && isPlayer _x) exitWith{ _copPresent = true;};  //Cops around?
-		}forEach ((getPos _cam) nearEntities["Man",25]);
+		}forEach ((getPos _cam) nearEntities["Man",25]);*/
 		
 		
 		if(_copPresent) then {
@@ -56,7 +56,8 @@ _mode = _radarTrap getVariable["mode","innerorts"];
 				_vehicle = _x;
 				if(alive _vehicle ) then {
 					_rightDir = false;
-					_speed = round speed _vehicle;
+					_speedRaw = round (speed _vehicle);
+					_speedTol = round (_speedRaw * 0.9);
 					_dirveh = getDir _vehicle;
 					_distance = _cam distance _vehicle;
 					_triggered = false;
@@ -74,11 +75,11 @@ _mode = _radarTrap getVariable["mode","innerorts"];
 					{	
 						switch (true) do
 						{
-							case((_speed >= 50 && _speed <= 60)) : { _triggered = true; _data = "44B";};
-							case((_speed > 60 && _speed <= 85)) : { _triggered = true; _data =  "45B";};
-							case((_speed > 85 && _speed <= 110)) : { _triggered = true; _data =  "46B";};
-							case((_speed > 110 && _speed <= 200)) : { _triggered = true; _data =  "47B";};
-							case((_speed > 200 )) : { _triggered = true; _data =  "48B";};
+							case((_speedTol > 50 && _speedTol <= 60)) : { _triggered = true; _data = "44B";};
+							case((_speedTol > 60 && _speedTol <= 85)) : { _triggered = true; _data =  "45B";};
+							case((_speedTol > 85 && _speedTol <= 110)) : { _triggered = true; _data =  "46B";};
+							case((_speedTol > 110 && _speedTol <= 200)) : { _triggered = true; _data =  "47B";};
+							case((_speedTol > 200 )) : { _triggered = true; _data =  "48B";};
 							default {};
 						};
 					};
@@ -87,19 +88,20 @@ _mode = _radarTrap getVariable["mode","innerorts"];
 					{	
 						switch (true) do
 						{
-							case((_speed >= 130 && _speed <= 180)) : { _triggered = true; _data = "49B";};
-							case((_speed > 180 && _speed <= 230)) : { _triggered = true; _data =  "50B";};
-							case((_speed > 230)) : { _triggered = true; _data =  "51B";};
+							case((_speedTol > 130 && _speedTol <= 180)) : { _triggered = true; _data = "49B";};
+							case((_speedTol > 180 && _speedTol <= 230)) : { _triggered = true; _data =  "50B";};
+							case((_speedTol > 230)) : { _triggered = true; _data =  "51B";};
 							default {};
 						};
 					};
 				
 					if( _triggered) then {
-						[[1,format["%1 wurde %2 mit %3km/h geblitzt. Nach ihm wird nun gefahndet.",name _unit,_mode,_speed]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-						[[1,format["Du wurdest %1 mit %2km/h geblitzt.",_mode,_speed]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+						_timer = round(time) + 10;
+						[[1,format["%1 wurde %2 mit %3km/h geblitzt. Nach Abzug der Toleranz sind das noch %4km/h. Nach ihm wird nun gefahndet.",name _unit,_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+						[[1,format["Du wurdest %1 mit %2km/h geblitzt. Nach Abzug der Toleranz sind das noch %3km/h.",_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
 						[[getPlayerUID _unit,name _unit,_data],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 						[[_radarTrap,0,300],"life_fnc_radartrapFlash",true,false] spawn life_fnc_MP;
-						waitUntil {(( _cam distance _vehicle > 50) || (!alive _radarTrap) ) };
+						waitUntil {(( _cam distance _vehicle > 50) || (!alive _radarTrap) || (round(time) == _timer) ) };
 					};
 				};	
 			}forEach ((getPos _cam) nearEntities["Car",60]);

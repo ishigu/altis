@@ -34,8 +34,9 @@ life_deathCamera camCommit 0;
 //Create a thread for something?
 _unit spawn
 {
-	private["_maxTime","_RespawnBtn","_Timer"];
+	private["_maxTime","_RespawnBtn","_Timer","_needed"];
 	disableSerialization;
+	_needed = 1;
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
 	_Timer = ((findDisplay 7300) displayCtrl 7301);
 	
@@ -45,9 +46,15 @@ _unit spawn
 	round(_maxTime - time) <= 0 OR isNull _this OR life_request_timer};
 	
 	if (life_request_timer) then {
-		_maxTime = time + life_respawn_timer; // add whole respawn timer
-		waitUntil {_Timer ctrlSetText format["Respawn Available in: %1",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
-		round(_maxTime - time) <= 0 || isNull _this};
+		if(_unit call life_fnc_isMedic) then {_needed = 2;};
+		_maxTime = _maxTime + ((life_increased_respawn_timer - life_respawn_timer) * 60); // set Timer to 15 minutes total when calling a medic
+		waitUntil {_Timer ctrlSetText format["Respawn moeglich in: %1",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
+		round(_maxTime - time) <= 0 || isNull _this || ((call life_fnc_countMedic) < _needed) };
+	};
+	if ((call life_fnc_countMedic) < _needed) then {
+		_maxTime = _maxTime - ((life_increased_respawn_timer - life_respawn_timer) * 60); //when last medics loggs out, reset Time to normal
+		waitUntil {_Timer ctrlSetText format["Respawn moeglich in: %1",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
+		round(_maxTime - time) <= 0 || isNull _this };
 	};
 	life_request_timer = false; //resets increased respawn timer
 	
