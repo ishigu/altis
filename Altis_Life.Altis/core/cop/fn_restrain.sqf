@@ -49,7 +49,7 @@ while {player getVariable "restrained"} do
 		detach _player;
 	};
 	
-	if(!alive _cop) exitWith {
+	if(!alive _cop) then {
 		player setVariable ["Escorting",false,true];
 		detach player;
 	};
