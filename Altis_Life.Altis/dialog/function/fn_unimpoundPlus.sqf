@@ -27,5 +27,5 @@ _vehicle = [_vehicle] call life_fnc_fetchVehInfo;
 _vehicle = _vehicle select 3;
 hint format[(localize "STR_Garage_RetrievingVeh"),_vehicle];
 lbDelete [28502,(lbCurSel 28502)];
-
+playSound "cashregister";
 life_atmcash = life_atmcash - _price;

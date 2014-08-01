@@ -18,6 +18,7 @@ _price = 0;
 
 if(_price > life_cash) exitWith {titleText["Du hast nicht genug Geld.","PLAIN"];[player, uniform player] call life_fnc_setUniform;};
 life_cash = life_cash - _price;
+playSound "cashregister";
 
 life_clothesPurchased = true;
 [player, uniform player] call life_fnc_setUniform;

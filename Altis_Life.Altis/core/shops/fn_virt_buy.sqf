@@ -39,6 +39,7 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 {
 	hint format["Du hast %1 %2 fuer $%3 gekauft",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 	life_cash = life_cash - (_price * _amount);
+	playSound "cashregister";
 	if(_marketprice != -1) then 
 		{ 
 			//##94

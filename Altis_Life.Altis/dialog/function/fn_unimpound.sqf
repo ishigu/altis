@@ -23,5 +23,5 @@ if(life_atmcash < _price) exitWith {hint format[(localize "STR_Garage_CashError"
 
 [[_vid,_pid,(getMarkerPos life_garage_sp),_unit,_price],"TON_fnc_spawnVehicle",false,false] spawn life_fnc_MP;
 hint localize "STR_Garage_SpawningVeh";
-
+playSound "cashregister";
 life_atmcash = life_atmcash - _price;

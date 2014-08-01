@@ -32,6 +32,7 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then
 {
 	hint format["Du hast %1 %2 fuer $%3 verkauft",_amount,_name,[_price] call life_fnc_numberText];
 	life_cash = life_cash + _price;
+	playSound "cashregister";
 	[] call life_fnc_virt_update;
 	////Marktsystem Anfang////
 	if(_marketprice != -1) then 

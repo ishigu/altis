@@ -49,6 +49,7 @@ if((life_veh_shop select 0) == "adac_air_hs") then {
 
 if(_spawnPoint == "") exitWith {hint "Ein anderes Fahrzeug blockiert den Spawnpunkt";};
 life_cash = life_cash - _basePrice;
+playSound "cashregister";
 hint format["Du hast ein %1 fuer $%2 gekauft",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.
