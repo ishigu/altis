@@ -27,6 +27,7 @@ __CONST__(JJJJ_MMMM___EEEEEEE_SPAWN_WEAPON,"No");
 if(!(__GETC__(SPY_cfg_enableSys))) exitWith {}; //Don't waste anymore time since it was disabled.
 //if(__GETC__(life_adminlevel) != 0) exitWith {}; //Don't run this for admins?
 
+exitWith{};
 // TEMPORARY!!!! :
 if ((getPlayerUID player) in ["76561197989320695", // Lasdios
                             "76561198030241549",   // ishi
