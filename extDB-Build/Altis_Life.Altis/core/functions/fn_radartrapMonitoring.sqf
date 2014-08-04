@@ -22,7 +22,7 @@ while{true} do
 			_unit = player;
 			if( (vehicle _unit != _unit) && (vehicle _unit isKindOf "Car") && (driver (vehicle _unit) == _unit)) then //viable Vehicle&driver check 
 			{ 
-				_copPresent = true;
+				_copPresent = false;
 				{
 					if( side _x == west && isPlayer _x) exitWith{ _copPresent = true;};  //Cops around?
 				}forEach ((getPos _radarTrap) nearEntities["Man",25]);
