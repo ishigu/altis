@@ -6,7 +6,7 @@
 	Retrains the target.
 */
 private["_unit"];
-_unit = cursorTarget;
+_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {}; //Not valid
 if((_unit getVariable "restrained")) exitWith {};
 if(side _unit == west) exitWith {};

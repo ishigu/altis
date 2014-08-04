@@ -95,7 +95,15 @@ switch (_code) do
 		if(_shift) then {_handled = true;};
 		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 		{
-			[] call life_fnc_restrainAction;
+			[cursorTarget] call life_fnc_restrainAction;
+		}
+		else
+		{
+			_target = getPos player nearEntities["Man",3.5];
+			if (_shift && playerSide == west && !isNull _target && (isPlayer _target) && (side _target in [civilian,independent]) && alive _target && _target distance player < 3.5 && !(_target getVariable "Escorting") && !(_target getVariable "restrained") && speed _target < 1) then
+			{
+				[_target] call life_fnc_restrainAction;
+			};
 		};
 	};
 	
