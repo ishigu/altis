@@ -258,6 +258,7 @@ class Life_Client_Core
 		class setUniform {};
 		class keyRestore {};
 		class renewUniform {};
+		class radartrapMonitoring {};
 	};
 	
 	class Network
