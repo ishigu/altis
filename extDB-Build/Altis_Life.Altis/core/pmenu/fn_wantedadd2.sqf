@@ -31,7 +31,7 @@ _data = "1";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Fahrzeugdiebstahl $3.500";
+_text = "Fahrzeugdiebstahl $20.000";
 _data = "2";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];

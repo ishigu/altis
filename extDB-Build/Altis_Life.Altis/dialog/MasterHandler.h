@@ -16,6 +16,7 @@
 #include "shops.hpp"
 #include "ui.hpp"
 #include "admin_menu.hpp"
+#include "compensate.hpp"
 
 #include "cell_phone.hpp"
 #include "cellphone_extended.hpp"
