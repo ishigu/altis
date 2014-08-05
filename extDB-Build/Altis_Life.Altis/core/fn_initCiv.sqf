@@ -29,6 +29,4 @@ player addRating 9999999;
 [] execVM "welcome.sqf";
 player addItem "ItemMap"; 
 player assignItem "ItemMap";
-sleep 10;
-hint "Du hast eine Karte erhalten.";
 //[] call life_fnc_civSaveGear; //save gear into file

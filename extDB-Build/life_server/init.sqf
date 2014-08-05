@@ -35,6 +35,7 @@ if(_version == "") exitWith {life_server_extDB_notLoaded = true; publicVariable 
 life_adminlevel = 0;
 life_medicLevel = 0;
 life_coplevel = 0;
+life_reblevel = 0;
 
 //Null out harmful things for the server.
 __CONST__(JxMxE_PublishVehicle,"No");

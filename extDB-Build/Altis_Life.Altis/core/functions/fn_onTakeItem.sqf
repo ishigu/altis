@@ -22,4 +22,5 @@ switch(playerSide) do
 		};
 	};
 	case independent: {};
+	case east: {};
 };

@@ -19,6 +19,7 @@ lbClear _list;
 {
 	if (side _x == west) then { _side = "Cop";};
 	if (side _x == civilian) then { _side = "Civ";};
+	if (side _x == east) then { _side = "Reb";};
 	if (_x call life_fnc_isADAC) then { _side = "ADAC";};
 	if (_x call life_fnc_isMedic) then { _side = "Medic";};
 	_list lbAdd format["%1 - %2", _x getVariable["realname",name _x],_side];

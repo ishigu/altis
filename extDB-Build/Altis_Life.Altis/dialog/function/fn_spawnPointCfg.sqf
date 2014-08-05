@@ -32,8 +32,7 @@ switch (_side) do
 			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_5","Flughafen","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_6","Rebellen Dorf","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["civ_spawn_5","Flughafen","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 		
 		if(count life_houses > 0) then {
@@ -54,6 +53,22 @@ switch (_side) do
 			["adac_spawn_2","ADAC Basis","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
 			["adac_spawn_1","ADAC Flughafen","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
 		];
+	};
+	
+	case east: {
+		_return = [
+			["reb_spawn_1","Rebellendorf","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+		];
+		
+		if(count life_houses > 0) then {
+			{
+				_pos = call compile format["%1",_x select 0];
+				_house = nearestBuilding _pos;
+				_houseName = getText(configFile >> "CfgVehicles" >> (typeOf _house) >> "displayName");
+				
+				_return set[count _return,[format["house_%1",_house getVariable "uid"],_houseName,"\a3\ui_f\data\map\MapControl\lighthouse_ca.paa"]];
+			} foreach life_houses;
+		};	
 	};
 };
 

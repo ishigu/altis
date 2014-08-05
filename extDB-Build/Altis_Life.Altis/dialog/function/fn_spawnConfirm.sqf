@@ -14,7 +14,7 @@ if(count life_spawn_point == 0) then
 	_spCfg = [playerSide] call life_fnc_spawnPointCfg;
 	_sp = _spCfg select 0;
 	
-	if(playerSide == civilian) then
+	if(playerSide in [civilian,east]) then
 	{
 		if(isNil {(call compile format["%1", _sp select 0])}) then {
 			player setPos (getMarkerPos (_sp select 0));
@@ -32,7 +32,7 @@ if(count life_spawn_point == 0) then
 }
 	else
 {
-	if(playerSide == civilian) then
+	if(playerSide in [civilian,east]) then
 	{
 		if(isNil {(call compile format["%1",life_spawn_point select 0])}) then {
 			if((["house",life_spawn_point select 0] call BIS_fnc_inString)) then {

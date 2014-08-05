@@ -49,4 +49,16 @@ switch (_side) do
 			life_radio_civ radioChannelRemove [_unit];
 		};
 	};
+	
+	case east:
+	{
+		if(_bool) then
+		{
+			life_radio_civ radioChannelAdd [_unit];  // Use SideChat together with civilians
+		}
+		else
+		{
+			life_radio_civ radioChannelRemove [_unit];
+		};
+	};
 };

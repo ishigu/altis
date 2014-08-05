@@ -187,6 +187,7 @@ class Life_Client_Core
 		class clothing_reb {};
 		class clothing_dive {};
 		class clothing_kart {};
+		class clothing_criminal {};
 	};
 
 	class Player_Menu
@@ -448,5 +449,10 @@ class Life_Client_Core
 		class cellex_sendClick;
 	};
 
-		
+	class Rebel
+	{
+		file = "core\rebel";
+		class rebLoadGear{};
+		class rebFetchGear{};
+	};
 };

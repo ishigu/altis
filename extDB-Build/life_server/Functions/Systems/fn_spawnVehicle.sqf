@@ -122,6 +122,11 @@ if((_vInfo select 1) == "cop") then { //(_vInfo select 2) in ["B_MRAP_01_F","C_S
 	_vehicle setVariable["lights",false,true];
 };
 
+if((_vInfo select 1) == "reb" && (_vInfo select 2) == "B_Heli_Light_01_F" && _vInfo select 8 != 13) then
+{
+	[[_vehicle,"civ_littlebird",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
+};
+
 [[_vehicle],"life_fnc_clearVehicleAmmo",_unit,false] spawn life_fnc_MP;
 
 serv_sv_use = serv_sv_use - [_vid];

@@ -20,7 +20,7 @@ switch (_shop) do
 {
 	case "reb":
 	{
-		ctrlSetText[2505,"Altis Rebel Shop"];
+		ctrlSetText[2505,"Altis Blackmarket"];
 		ctrlShow[2503,false];
 		ctrlShow[2513,false];
 		ctrlShow[2514,false];

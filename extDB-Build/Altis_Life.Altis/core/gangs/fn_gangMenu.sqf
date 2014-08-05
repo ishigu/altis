@@ -45,7 +45,7 @@ _grpMembers = units grpPlayer;
 _allUnits = playableUnits;
 //Clear out the list..
 {
-	if(_x in _grpMembers OR side _x != civilian && isNil {(group _x) getVariable "gang_id"}) then {
+	if(_x in _grpMembers OR !(side _x in [civilian,east]) && isNil {(group _x) getVariable "gang_id"}) then {
 		_allUnits set[_forEachIndex,-1];
 	};
 } foreach _allUnits;

@@ -13,7 +13,7 @@ if(isNull _unit) exitWith {};
 cutText["Warte auf Respawn....","BLACK FADED"];
 0 cutFadeOut 9999999;
 
-if(playerSide == civilian) then
+if(playerSide in [civilian,east]) then
 {
 	removeAllContainers _unit;
 };
@@ -45,7 +45,7 @@ if(side _source == west && !life_use_atm) then
 };
 
 //New addition for idiots.
-if(side _source == civilian && _source != _unit && !local _source) then
+if(side _source in [civilian,east] && _source != _unit && !local _source) then
 {
 	if(vehicle _source isKindOf "LandVehicle") then {
 		[[2],"life_fnc_removeLicenses",_source,false] spawn life_fnc_MP;
@@ -54,7 +54,7 @@ if(side _source == civilian && _source != _unit && !local _source) then
 	};
 };
 
-if(side _source == west && vehicle _source == _source && playerSide == civilian) then
+if(side _source == west && vehicle _source == _source && playerSide in [civilian,east]) then
 {
 	[[player,_source,true],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
 	[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
@@ -62,7 +62,7 @@ if(side _source == west && vehicle _source == _source && playerSide == civilian)
 }
 	else
 {
-	if(playerSide == civilian) then
+	if(playerSide in [civilian,east]) then
 	{
 		[[getPlayerUID _unit],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
 	};

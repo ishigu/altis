@@ -26,7 +26,7 @@ if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery
 life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
-__CONST__(life_donator,0);
+__CONST__(life_donator,parseNumber(_this select 5));
 
 //Loop through licenses
 if(count (_this select 6) > 0) then {
@@ -43,6 +43,7 @@ switch(playerSide) do {
 		[] spawn life_fnc_loadGear;
 		life_blacklisted = _this select 9;
 		__CONST__(life_medicLevel,0);
+		__CONST__(life_rebellevel,0);
 	};
 	
 	case civilian: {
@@ -51,6 +52,7 @@ switch(playerSide) do {
 		civ_gear = _this select 8;
 		__CONST__(life_coplevel,0);
 		__CONST__(life_medicLevel,0);
+		__CONST__(life_rebellevel,0);
 		[] spawn life_fnc_civLoadGear;
 		life_houses = _this select 9;
 		{
@@ -68,6 +70,15 @@ switch(playerSide) do {
 	case independent: {
 		__CONST__(life_medicLevel,parseNumber(_this select 7));
 		__CONST__(life_copLevel,0);
+		__CONST__(life_rebellevel,0);
+	};
+	
+	case east: {
+		__CONST__(life_rebellevel,parseNumber(_this select 9));
+		reb_gear = _this select 8;
+		[] spawn life_fnc_rebLoadGear;
+		__CONST__(life_copLevel,0);
+		__CONST__(life_medicLevel,0);
 	};
 };
 

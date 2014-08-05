@@ -37,7 +37,7 @@ _units = _units - [player];
 		_distance = _pos distance player;
 		if(count _sPos > 1 && {_distance < 15}) then {
 			_text = switch (true) do {
-				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
+				case (_x in (units grpPlayer) && playerSide in [civilian,east]): {format["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
 				case (!isNil {(_x getVariable "rank")}): {format["<img image='%1' size='1'></img> %2",switch ((_x getVariable "rank")) do {
 					case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"}; 
 					case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};

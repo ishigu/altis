@@ -15,7 +15,7 @@ if(__GETC__(life_adminlevel) < 1) then
 	ctrlShow[2021,false];
 };
 
-_side = switch(playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
+_side = switch(playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"}; case east:{"reb"};};
 
 _dialog = findDisplay 2001;
 _inv = _dialog displayCtrl 2005;
@@ -54,7 +54,7 @@ ctrlSetText[2009,format["Gewicht: %1 / %2", life_carryWeight, life_maxWeight]];
 	};
 } foreach life_inv_items;
 {
-	if((_x select 1) == _side) then
+	if((_x select 1) == _side || ((_x select 1) == "civ" && _side = "rev")) then
 	{
 		_str = [_x select 0] call life_fnc_varToStr;
 		_val = missionNamespace getVariable (_x select 0);

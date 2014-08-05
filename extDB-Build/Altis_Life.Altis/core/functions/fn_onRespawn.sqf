@@ -31,6 +31,15 @@ switch(playerSide) do
 		if(headGear player != "") then {removeHeadgear player;};
 		if(goggles player != "") then {removeGoggles player;};
 	};
+	
+	case east:
+	{
+		_unit setVariable["restrained",false,true];
+		_unit setVariable["Escorting",false,true];
+		_unit setVariable["transporting",false,true];
+		if(headGear player != "") then {removeHeadgear player;};
+		if(goggles player != "") then {removeGoggles player;};
+	};
 };
 
 if(life_is_arrested) then
@@ -54,6 +63,7 @@ _unit addRating 100000;
 cutText ["","BLACK IN"];
 
 [] call life_fnc_civFetchGear;
+[] call life_fnc_rebFetchGear;
 [] call SOCK_fnc_updateRequest;
 
 [_unit] spawn {

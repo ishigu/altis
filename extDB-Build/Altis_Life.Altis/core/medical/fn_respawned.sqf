@@ -35,6 +35,7 @@ switch(playerSide) do
 	case independent: {
 		[] call life_fnc_medicLoadout;
 	};
+	case east: {[] spawn life_fnc_rebFetchGear;};
 };
 
 //Cleanup of weapon containers near the body & hide it.

@@ -321,7 +321,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"Du bist kein Zivilist!"};
+			case (playerSide != east): {"Du bist kein Rebell!"};
 			case (!license_civ_rebel): {"You don't have a Rebel training license!"};
 			default
 			{
@@ -346,6 +346,32 @@ switch(_shop) do
 						["optic_ACO_grn",nil,3500],
 						["optic_Holosight",nil,3600],
 						["optic_SOS",nil,3600],
+						["acc_flashlight",nil,1000],
+						["optic_Hamr",nil,7500],
+						["30Rnd_9x21_Mag",nil,200]
+					]
+				];
+			};
+		};
+	};
+	
+	case "criminal":
+	{
+		switch(true) do
+		{
+			case (!(playerSide in [civilian,east])): {"Du bist kein Zivilist!"};
+			case (!license_civ_rebel): {"Du hast keine Schwarzmarktlizenz!"};
+			default
+			{
+				["Schwarzmarkt Waffen",
+					[
+						["arifle_SDAR_F",nil,35000],
+                        ["20Rnd_556x45_UW_mag",nil,500],
+						["30Rnd_556x45_Stanag",nil,1000],
+						["SMG_01_F",nil,28000],
+                        ["30Rnd_45ACP_Mag_SMG_01",nil,500],
+						["optic_ACO_grn",nil,3500],
+						["optic_Holosight",nil,3600],
 						["acc_flashlight",nil,1000],
 						["optic_Hamr",nil,7500],
 						["30Rnd_9x21_Mag",nil,200]
@@ -383,160 +409,71 @@ switch(_shop) do
 
 	case "donator":
 	{
-		switch(true) do
+		if ((__GETC__(life_donator) == 0 && __GETC__(life_adminlevel) == 0)) exitWith {"Du bist kein Donator!"};
+
+		_return =
+		[
+			["ToolKit",nil,250],
+			["itemgps",nil,50],
+			["NVGoggles",nil,350],
+			["FirstAidKit",nil,25]
+		];
+		if (side player == east) then
 		{
-			case (__GETC__(life_donator) == 0 && __GETC__(life_adminlevel) == 0): {"Du bist kein Donator!"};
-			case (__GETC__(life_donator) == 1 && __GETC__(life_adminlevel) == 0):
-			{
-				["Donator Shop Tier 1",
-					[
-						["hgun_Rook40_F",nil,750],
-						["hgun_PDW2000_F",nil,6500],
-						["optic_ACO_grn_smg",nil,750],
-						["ToolKit",nil,250],
-						["itemgps",nil,50],
-						["16Rnd_9x21_Mag",nil,25],
-						["30Rnd_9x21_Mag",nil,75],
-						["H_PilotHelmetHeli_O",nil,1000],
-						["U_B_PilotCoveralls",nil,1000],
-						["V_PlateCarrierH_CTRG",nil,1000],
-						["V_PlateCarrierIA2_dgtl",nil,1000],
-						["H_Cap_blk_CMMG",nil,1000],
-						["U_C_Journalist",nil,1000],
-						["V_Press_F",nil,1000],
-						["H_Shemag_tan",nil,1000],
-						["H_Cap_press",nil,1000],
-						["U_C_Scientist",nil,1000],
-						["U_NikosBody",nil,1000]
-					]
-				];
-			};
-
-			case (__GETC__(life_donator) == 2 && __GETC__(life_adminlevel) == 0):
-			{
-				["Donator Shop Tier 2",
-					[
-						["hgun_Rook40_F",nil,750],
-						["hgun_PDW2000_F",nil,6500],
-						["optic_ACO_grn_smg",nil,750],
-						["NVGoggles",nil,350],
-						["ToolKit",nil,250],
-						["itemgps",nil,50],
-						["16Rnd_9x21_Mag",nil,25],
-						["30Rnd_9x21_Mag",nil,75],
-						["30Rnd_556x45_Stanag",nil,125],
-						["H_PilotHelmetHeli_O",nil,1000],
-						["U_B_PilotCoveralls",nil,1000],
-						["V_PlateCarrierH_CTRG",nil,1000],
-						["V_PlateCarrierIA2_dgtl",nil,1000],
-						["H_Cap_blk_CMMG",nil,1000],
-						["U_C_Journalist",nil,1000],
-						["V_Press_F",nil,1000],
-						["H_Shemag_tan",nil,1000],
-						["H_Cap_press",nil,1000],
-						["U_C_Scientist",nil,1000],
-						["U_NikosBody",nil,1000]
-					]
-				];
-			};
-
-			case (__GETC__(life_donator) >= 3 && __GETC__(life_adminlevel) == 0):
-			{
-				["Donator Shop Tier 3",
-					[
-						["hgun_Rook40_F",nil,500],
-						["hgun_PDW2000_F",nil,6500],
-						["hgun_pistol_heavy_01_F",nil,5850],
-						["arifle_Mk20C_plain_F",nil,25000],
-						["LMG_Mk200_F",nil,35000],
-						["optic_ACO_grn_smg",nil,750],
-						["optic_MRCO",nil,5000],
-						["NVGoggles",nil,350],
-						["ToolKit",nil,250],
-						["itemgps",nil,50],
-						["FirstAidKit",nil,25],
-						["16Rnd_9x21_Mag",nil,25],
-						["30Rnd_9x21_Mag",nil,75],
-						["11Rnd_45ACP_Mag",nil,85],
-						["200Rnd_65x39_cased_Box",nil,125],
-						["200Rnd_65x39_cased_Box_Tracer",nil,125],
-						["30Rnd_556x45_Stanag",nil,125],
-						["H_PilotHelmetHeli_O",nil,1000],
-						["U_B_PilotCoveralls",nil,1000],
-						["V_PlateCarrierH_CTRG",nil,1000],
-						["V_PlateCarrierIA2_dgtl",nil,1000],
-						["H_Cap_blk_CMMG",nil,1000],
-						["U_C_Journalist",nil,1000],
-						["V_Press_F",nil,1000],
-						["H_Shemag_tan",nil,1000],
-						["H_Cap_press",nil,1000],
-						["U_C_Scientist",nil,1000],
-						["U_NikosBody",nil,1000],
-						["U_C_Driver_1",nil,1000],
-						["H_RacingHelmet_1_F",nil,1000],
-						["U_C_Driver_2",nil,1000],
-						["H_RacingHelmet_2_F",nil,1000],
-						["U_C_Driver_3",nil,1000],
-						["H_RacingHelmet_3_F",nil,1000],
-						["U_C_Driver_4",nil,1000],
-						["H_RacingHelmet_4_F",nil,1000]
-					]
-				];
-			};
-            
-            case (__GETC__(life_adminlevel) > 0):
-			{
-				["Admin Shop",
-					[
-						["hgun_Rook40_F",nil,500],
-						["hgun_PDW2000_F",nil,6500],
-						["hgun_pistol_heavy_01_F",nil,5850],
-						["arifle_Mk20C_plain_F",nil,25000],
-						["LMG_Mk200_F",nil,35000],
-						["optic_ACO_grn_smg",nil,750],
-						["optic_MRCO",nil,5000],
-                        ["optic_Nightstalker",nil,100],
-                        ["optic_tws_mg",nil,100],
-						["NVGoggles",nil,350],
-						["ToolKit",nil,50],
-						["itemgps",nil,50],
-						["FirstAidKit",nil,25],
-						["16Rnd_9x21_Mag",nil,25],
-						["30Rnd_9x21_Mag",nil,75],
-						["11Rnd_45ACP_Mag",nil,85],
-						["200Rnd_65x39_cased_Box",nil,125],
-						["200Rnd_65x39_cased_Box_Tracer",nil,125],
-						["30Rnd_556x45_Stanag",nil,125],
-						["H_PilotHelmetHeli_O",nil,1000],
-						["U_B_PilotCoveralls",nil,1000],
-						["V_PlateCarrierH_CTRG",nil,1000],
-						["V_PlateCarrierIA2_dgtl",nil,1000],
-						["H_Cap_blk_CMMG",nil,1000],
-						["U_C_Journalist",nil,1000],
-						["V_Press_F",nil,1000],
-						["H_Shemag_tan",nil,1000],
-						["H_Cap_press",nil,1000],
-						["U_C_Scientist",nil,1000],
-						["U_NikosBody",nil,1000],
-						["U_C_Driver_1",nil,1000],
-						["H_RacingHelmet_1_F",nil,1000],
-						["U_C_Driver_2",nil,1000],
-						["H_RacingHelmet_2_F",nil,1000],
-						["U_C_Driver_3",nil,1000],
-						["H_RacingHelmet_3_F",nil,1000],
-						["U_C_Driver_4",nil,1000],
-						["H_RacingHelmet_4_F",nil,1000]
-					]
-				];
+			if (__GETC__(life_donator) >= 3) then {
+				_return set[count _return,["arifle_Mk20C_plain_F",nil,25000]];
+				_return set[count _return,["30Rnd_556x45_Stanag",nil,125]];
+				_return set[count _return,["LMG_Mk200_F",nil,35000]];
+				_return set[count _return,["200Rnd_65x39_cased_Box",nil,125]];
+				_return set[count _return,["200Rnd_65x39_cased_Box_Tracer",nil,125]];
 			};
 		};
+		if (side player in [civilian,east]) then
+		{
+			if (__GETC__(life_donator) >= 3) then {
+				_return set[count _return,["hgun_pistol_heavy_01_F",nil,5850]];
+				_return set[count _return,["11Rnd_45ACP_Mag",nil,85]];
+				_return set[count _return,["optic_MRCO",nil,5000]];
+				_return set[count _return,["U_C_Driver_1",nil,1000]];
+				_return set[count _return,["H_RacingHelmet_1_F",nil,1000]];
+				_return set[count _return,["U_C_Driver_2",nil,1000]];
+				_return set[count _return,["H_RacingHelmet_2_F",nil,1000]];
+				_return set[count _return,["U_C_Driver_3",nil,1000]];
+				_return set[count _return,["H_RacingHelmet_3_F",nil,1000]];
+				_return set[count _return,["U_C_Driver_4",nil,1000]];
+				_return set[count _return,["H_RacingHelmet_4_F",nil,1000]];
+			};
+			_return set[count _return,["hgun_Rook40_F",nil,750]];
+			_return set[count _return,["hgun_PDW2000_F",nil,6500]];
+			_return set[count _return,["optic_ACO_grn_smg",nil,750]];
+			_return set[count _return,["16Rnd_9x21_Mag",nil,25]];
+			_return set[count _return,["30Rnd_9x21_Mag",nil,75]];
+			_return set[count _return,["H_PilotHelmetHeli_O",nil,1000]];
+			_return set[count _return,["U_B_PilotCoveralls",nil,1000]];
+			_return set[count _return,["V_PlateCarrierH_CTRG",nil,1000]];
+			_return set[count _return,["V_PlateCarrierIA2_dgtl",nil,1000]];
+			_return set[count _return,["H_Cap_blk_CMMG",nil,1000]];
+			_return set[count _return,["U_C_Journalist",nil,1000]];
+			_return set[count _return,["V_Press_F",nil,1000]];
+			_return set[count _return,["H_Shemag_tan",nil,1000]];
+			_return set[count _return,["H_Cap_press",nil,1000]];
+			_return set[count _return,["U_C_Scientist",nil,1000]];
+			_return set[count _return,["U_NikosBody",nil,1000]];
+		};
+
+		if (__GETC__(life_adminlevel) > 0) then
+		{
+			_return set[count _return,["optic_Nightstalker",nil,100]];
+			_return set[count _return,["optic_tws_mg",nil,100]];
+		};
+		exitWith{[format ["Donator Shop %1", __GETC__(life_donator)],_return]}
 	};
 	
 	case "gang":
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"You are not a civilian!"};
+			case (!(playerSide in [civilian,east])): {"You are not a civilian/rebel!"};
 			default
 			{
 				["Hideout Armament",

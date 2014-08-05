@@ -264,8 +264,8 @@ switch (_vehicle) do
 			["textures\vehicles\ifrit_black.jpg","reb","textures\vehicles\ifrit_black.jpg"],
 			["textures\vehicles\ifrit_death1.jpg","reb","textures\vehicles\ifrit_death2.jpg","textures\vehicles\ifrit_death3.jpg"],
 			["textures\vehicles\ifrit_sand0.paa","reb","textures\vehicles\ifrit_sand1.paa","textures\vehicles\ifrit_sand0.paa"],
-			["textures\vehicles\ifrit_gold.jpg","civ","textures\vehicles\ifrit_gold.jpg"],
-			["textures\vehicles\ifrit_pixel.jpg","civ","textures\vehicles\ifrit_pixel.jpg"]
+			["textures\vehicles\ifrit_gold.jpg","reb","textures\vehicles\ifrit_gold.jpg"],
+			["textures\vehicles\ifrit_pixel.jpg","reb","textures\vehicles\ifrit_pixel.jpg"]
 		];
 	};
 	
