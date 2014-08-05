@@ -123,6 +123,54 @@
 			<Italian>Vedi ID</Italian>
 			<Portuguese>Menu do Admin</Portuguese>
 		</Key>
+			<Key ID="STR_Admin_Spectate">
+			<Original>Spectate</Original>
+			<English>Spectate</English>
+			<German>Zuschauen</German>
+			<French>Regardez</French>
+		</Key>
+		<Key ID="STR_Admin_Teleport">
+			<Original>Teleport</Original>
+			<English>Teleport</English>
+			<German>Teleport</German>
+			<French>Teleport</French>
+		</Key>
+		<Key ID="STR_Admin_TpHere">
+			<Original>TP Here</Original>
+			<English>TP Here</English>
+			<German>Spieler holen</German>
+			<French>TP Ici</French>
+		</Key>
+		<Key ID="STR_Admin_Debug">
+			<Original>Debug</Original>
+			<English>Debug</English>
+			<German>Debug</German>
+			<French>Debug</French>
+		</Key>
+		<Key ID="STR_Admin_Compensate">
+			<Original>Comp</Original>
+			<English>Comp</English>
+			<German>Erstatten</German>
+			<French>Comp</French>
+		</Key>
+		<Key ID="STR_Admin_God">
+			<Original>GodMode</Original>
+			<English>GodMode</English>
+			<German>GodMode</German>
+			<French>Dieu</French>
+		</Key>
+		<Key ID="STR_Admin_Freeze">
+			<Original>Freeze</Original>
+			<English>Freeze</English>
+			<German>Freeze</German>
+			<French>Geler</French>
+		</Key>
+		<Key ID="STR_Admin_Markers">
+			<Original>Markers</Original>
+			<English>Markers</English>
+			<German>Markers</German>
+			<French>Markers</French>
+		</Key>
 	</Package>
 	<Package name="Admin_Notifications">
 		<Key ID="STR_ANOTF_Query">
@@ -156,6 +204,66 @@
 			<French>Le joueur ne semble pas exister</French>
 			<Italian>Il giocatore non esiste più</Italian>
 			<Portuguese>Jogador não existe mais?</Portuguese>
+		</Key>
+		<Key ID="STR_ANOTF_CompWarn">
+			<Original>You are about to give yourself $%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</Original>
+			<English>You are about to give yourself $%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</English>
+			<German>Di versuchst dir $%1 zu geben, um es jemandem zurückzugeben.&lt;br/&gt;&lt;br/&gt; Du musst das Geld der Person von Hand geben.</German>
+			<French>Vous êtes sur le point de vous donner $%1 pour compenser à un autre joueur &lt;br/&gt;&lt;br/&gt; S'il vous plaît donner à cette à la personne vous compensez manuellement</French>
+		</Key>
+		<Key ID="STR_ANOTF_Success">
+			<Original>You have added $%1 to your account.</Original>
+			<English>You have added $%1 to your account.</English>
+			<German>Du hast deinem Konto $%1 hinzugefügt.</German>
+			<French>Vous avez ajouté $%1 à votre compte</French>
+		</Key>
+		<Key ID="STR_ANOTF_Fail">
+			<Original>You can not go above 999999.</Original>
+			<English>You can not go above 999999.</English>
+			<German>Du kannst nicht über 999999 gehen.</German>
+			<French>Vous ne pouvez pas aller au-dessus $999999</French>
+		</Key>
+		<Key ID="STR_ANOTF_Amount">
+			<Original>Please type in the amount to compensate.</Original>
+			<English>Please type in the amount to compensate.</English>
+			<German>Bitte gebe den Betrag ein, der erstattet werden soll.</German>
+			<French>S'il vous plaît entrer la quantité pour compenser</French>
+		</Key>
+		<Key ID="STR_ANOTF_Frozen">
+			<Original>You have disabled %1's input.</Original>
+			<English>You have disabled %1's input.</English>
+			<German>Du hast %1s Steuerung deaktiviert.</German>
+			<French>Vous avez désactivé %1's contrôles</French>
+		</Key>
+		<Key ID="STR_ANOTF_Unfrozen">
+			<Original>You have enabled %1's input.</Original>
+			<English>You have enabled %1's input.</English>
+			<German>Du hast %1s Steuerung reaktiviert.</German>
+			<French>Vous avez permis %1's contrôles</French>
+		</Key>
+		<Key ID="STR_ANOTF_Error">
+			<Original>You can't do that dumbass.</Original>
+			<English>You can't do that dumbass.</English>
+			<German>Du kannst das nicht tun.</German>
+			<French>Vous ne pouvez pas le faire sur vous-même</French>
+		</Key>
+		<Key ID="STR_ANOTF_ErrorLevel">
+			<Original>Your Admin Level is not high enough.</Original>
+			<English>Your Admin Level is not high enough.</English>
+			<German>Dein Admin Level reicht nicht aus.</German>
+			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
+		</Key>
+		<Key ID="STR_ANOTF_MDisabled">
+			<Original>Player Markers Disabled.</Original>
+			<English>Player Markers Disabled.</English>
+			<German>Player Markers deaktiviert.</German>
+			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
+		</Key>
+		<Key ID="STR_ANOTF_MEnabled">
+			<Original>Player Markers Enabled.</Original>
+			<English>Player Markers Enabled.</English>
+			<German>Player Markers aktiviert.</German>
+			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
 		</Key>
 	</Package>
 	<Package name="ATM_Strings">
@@ -2046,6 +2154,16 @@
 			<Italian>You have repaired that vehicle.</Italian>
 			<Portuguese>You have repaired that vehicle.</Portuguese>
  		</Key>
+		<Key ID="STR_NOTF_Frozen">
+			<Original>You have been frozen by an administrator</Original>
+			<English>You have been frozen by an administrator</English>
+			<German>Du wurdest von einem Administrator eingefroren</German>
+		</Key>
+		<Key ID="STR_NOTF_Unfrozen">
+			<Original>You have been unfrozen by an administrator</Original>
+			<English>You have been unfrozen by an administrator</English>
+			<German>Du wurdest von einem Administrator aufgetaut</German>
+		</Key>
 	</Package>
 	<Package name="Jail_Strings">
 		<Key ID="STR_Jail_Warn">

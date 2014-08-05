@@ -167,7 +167,7 @@ switch (_shop) do
 		_return set[count _return,["C_Rubberboat",3000]];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_return set[count _return,["B_Boat_Transport_01_F",10000]];
+			_return set[count _return,["C_Boat_Civil_01_police_F",10000]];
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
