@@ -99,7 +99,7 @@ switch (_code) do
 		}
 		else
 		{
-			_target = getPos player nearEntities["Man",3.5];
+			_target = ((getPos player) nearEntities["Man",3.5]) select 0;
 			if (_shift && playerSide == west && !isNull _target && (isPlayer _target) && (side _target in [civilian,independent]) && alive _target && _target distance player < 3.5 && !(_target getVariable "Escorting") && !(_target getVariable "restrained") && speed _target < 1) then
 			{
 				[_target] call life_fnc_restrainAction;
