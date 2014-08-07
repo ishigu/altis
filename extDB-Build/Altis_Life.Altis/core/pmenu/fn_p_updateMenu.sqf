@@ -54,7 +54,7 @@ ctrlSetText[2009,format["Gewicht: %1 / %2", life_carryWeight, life_maxWeight]];
 	};
 } foreach life_inv_items;
 {
-	if((_x select 1) == _side || ((_x select 1) == "civ" && _side = "rev")) then
+	if((_x select 1) == _side || ((_x select 1) == "civ" && _side = "reb")) then
 	{
 		_str = [_x select 0] call life_fnc_varToStr;
 		_val = missionNamespace getVariable (_x select 0);
