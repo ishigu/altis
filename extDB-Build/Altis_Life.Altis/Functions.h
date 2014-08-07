@@ -165,6 +165,7 @@ class Life_Client_Core
 		class distressRemove {};
 		class adacMarkers {};
 		class distressMenu {};
+		class impoundPlusAction {};
 	};
 	
 	class Config
@@ -429,6 +430,10 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
+		class impoundPlusInit {};
+		class impoundPlusLBChange {};
+		class impoundPlusMenu {};
+		class unimpoundPlus {};
 	};
 
 	class market

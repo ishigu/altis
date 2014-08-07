@@ -59,10 +59,6 @@ if(playerSide == west) then {
 			_Btn6 ctrlSetText localize "STR_vInAct_GetInKart";
 			_Btn6 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
-		} else {
-			_Btn6 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn6 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
 		};
 	};
 	
@@ -78,7 +74,7 @@ if(playerSide == west) then {
 			_Btn2 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
 		} else {
-			if (!(player call life_fnc_isMedic) && (side player == independent)) then {
+			if (player call life_fnc_isADAC) then {
 				_Btn2 ctrlSetText localize "STR_vInAct_Unflip";
 				_Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
 				if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
@@ -88,11 +84,14 @@ if(playerSide == west) then {
 				
 				_Btn4 ctrlSetText localize "STR_vInAct_Repaint";
 				_Btn4 buttonSetAction "closeDialog 0; [] spawn life_fnc_adacRepaintMenu;";
+				
+				_Btn5 ctrlSetText localize "STR_vInAct_ImpoundPlus";
+				_Btn5 buttonSetAction "closeDialog 0; [life_vInact_curTarget] spawn life_fnc_impoundPlusAction;";
 			};
 		};
 	};
 	//Tempest Device non ADAC
-	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (!(!(player call life_fnc_isMedic) && (side player == independent)))) then {
+	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (!(player call life_fnc_isADAC))) then {
 		_Btn3 ctrlSetText localize "STR_vInAct_DeviceMine";
 		_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
 		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
@@ -101,26 +100,26 @@ if(playerSide == west) then {
 			_Btn3 ctrlEnable true;
 		};
 	} else {
-		if(!(!(player call life_fnc_isMedic) && (side player == independent))) then {
+		if(!(player call life_fnc_isADAC)) then {
 		_Btn3 ctrlShow false;
 		};
 	};
 	//Tempest Device als ADAC
-	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (!(player call life_fnc_isMedic) && (side player == independent))) then {
-		_Btn5 ctrlSetText localize "STR_vInAct_DeviceMine";
-		_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
+	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (player call life_fnc_isADAC) ) then {
+		_Btn6 ctrlSetText localize "STR_vInAct_DeviceMine";
+		_Btn6 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
 		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
-			_Btn5 ctrlEnable false;
+			_Btn6 ctrlEnable false;
 		} else {
-			_Btn5 ctrlEnable true;
+			_Btn6 ctrlEnable true;
 		};
 	} else {
-		_Btn5 ctrlShow false;
+		_Btn6 ctrlShow false;
 	};
 
-	if (!(!(player call life_fnc_isMedic) && (side player == independent))) then {
+	if (!(player call life_fnc_isADAC)) then {
 		_Btn4 ctrlShow false; 
 		_Btn5 ctrlShow false;
+		_Btn6 ctrlShow false;
 	};
-	_Btn6 ctrlShow false;
 };

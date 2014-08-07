@@ -48,6 +48,7 @@ if((life_veh_shop select 0) == "adac_air_hs") then {
 
 if(_spawnPoint == "") exitWith {hint localize "STR_Shop_Veh_Block";};
 life_cash = life_cash - _basePrice;
+playSound "cashregister";
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.

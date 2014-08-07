@@ -73,9 +73,15 @@ class CfgSounds
   };
   class Handcuffs
   {
-  name     = "handcuffs";
-  sound[]  = {"\sounds\handcuffs.ogg", 1.0, 1};
-  titles[] = {};
+	name     = "handcuffs";
+	sound[]  = {"\sounds\handcuffs.ogg", 1.0, 1};
+	titles[] = {};
+  }; 
+  class Cashregister
+  {
+	name     = "cashregister";
+	sound[]  = {"\sounds\cash_register.ogg", 1.0, 1};
+	titles[] = {};
   };
 };
 
