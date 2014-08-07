@@ -39,6 +39,7 @@ switch (_filter) do
 	case 1:
 	{
 		[
+			["H_Watchcap_blk",nil,800],
 			["H_Bandanna_camo","Camo Bandanna",120],
 			["H_Bandanna_surfer","Surfer Bandanna",130],
 			["H_Bandanna_gry","Grey Bandanna",150],

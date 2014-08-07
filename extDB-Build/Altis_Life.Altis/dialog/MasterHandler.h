@@ -10,7 +10,10 @@
 #include "player_inv.hpp"
 #include "gang.hpp"
 #include "key_chain.hpp"
+
 #include "impound.hpp"
+#include "impound_plus.hpp"
+
 #include "bank.hpp"
 #include "veh_shop.hpp"
 #include "shops.hpp"

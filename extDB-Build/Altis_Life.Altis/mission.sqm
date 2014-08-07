@@ -3055,7 +3055,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_4""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_4""]; this addAction[""Fahrzeug Schwarzmarkt"",life_fnc_impoundPlusInit];";
 				};
 				class Item99
 				{
@@ -3066,7 +3066,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_2""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_2""]; this addAction[""Fahrzeug Schwarzmarkt"",life_fnc_impoundPlusInit];";
 				};
 				class Item100
 				{
@@ -3077,7 +3077,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_3""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Chop Shop"",life_fnc_chopShopMenu,""chop_shop_3""]; this addAction[""Fahrzeug Schwarzmarkt"",life_fnc_impoundPlusInit];";
 				};
 			};
 		};
@@ -3302,6 +3302,7 @@ class Mission
 					skill=0.60000002;
 					text="adac_2";
 					description="ADAC";
+					init="removeBackpack this; removeAllWeapons this;";
 				};
 				class Item2
 				{
@@ -3315,6 +3316,7 @@ class Mission
 					skill=0.60000002;
 					text="adac_3";
 					description="ADAC";
+					init="removeBackpack this; removeAllWeapons this;";
 				};
 				class Item3
 				{
@@ -3328,6 +3330,7 @@ class Mission
 					skill=0.60000002;
 					text="adac_4";
 					description="ADAC";
+					init="removeBackpack this; removeAllWeapons this;";
 				};
 			};
 		};
@@ -4003,6 +4006,7 @@ class Mission
 					rank="MAJOR";
 					skill=0.60000002;
 					text="medic_2";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Stellv. OrgL Rettungsdienst";
 				};
 				class Item2
@@ -4016,6 +4020,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_4";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Rettungsdienst";
 				};
 				class Item3
@@ -4029,6 +4034,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_3";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Rettungsdienst";
 				};
 				class Item4
@@ -4042,6 +4048,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_5";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Rettungsdienst";
 				};
 				class Item5
@@ -4055,6 +4062,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_6";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Rettungsdienst";
 				};
 				class Item6
@@ -4068,6 +4076,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_7";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Rettungsdienst";
 				};
 				class Item7
@@ -4081,6 +4090,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_8";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Rettungsdienst";
 				};
 				class Item8
@@ -4094,6 +4104,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_9";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Rettungsdienst";
 				};
 				class Item9
@@ -4107,6 +4118,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_10";
+					init="removeBackpack this; removeAllWeapons this;";
 					description="Rettungsdienst";
 				};
 			};
@@ -20410,6 +20422,7 @@ class Mission
 			text="ADAC";
 			type="mil_dot";
 			colorName="ColorYellow";
+			init="removeBackpack this; removeAllWeapons this;";
 		};
 		class Item278
 		{

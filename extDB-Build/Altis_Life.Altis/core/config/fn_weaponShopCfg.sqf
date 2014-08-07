@@ -385,7 +385,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"Du bist kein Zivilist!"};
+			case (!(playerSide in [civilian,east])): {"Du bist kein Zivilist!"};
 			case (!license_civ_gun): {"You don't have a Firearms license!"};
 			default
 			{
@@ -466,7 +466,7 @@ switch(_shop) do
 			_return set[count _return,["optic_Nightstalker",nil,100]];
 			_return set[count _return,["optic_tws_mg",nil,100]];
 		};
-		exitWith{[format ["Donator Shop %1", __GETC__(life_donator)],_return]}
+		if(true) exitWith{[format ["Donator Shop %1", __GETC__(life_donator)],_return]};
 	};
 	
 	case "gang":

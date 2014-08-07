@@ -51,6 +51,8 @@ class CfgFunctions
 			class mresString {};
 			class updatePartial {};
 			class repaintVehicle {};
+			class impoundVehiclePlus {};
+			class unimpoundVehiclePlus {};
 		};
 	};
 	
@@ -105,6 +107,7 @@ class CfgFunctions
 			class clientDisconnect {};
 			class cleanupRequest {};
 			class vehicleRepaint {};
+			class getImpoundedVehiclesPlus {};
 		};
 		
 		class Housing

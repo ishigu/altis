@@ -1068,6 +1068,9 @@
 			<Italian>Il veicolo è stato depositato nel tuo garage.</Italian>
 			<Portuguese>O veíclo foi guardado na garagem</Portuguese>
 		</Key>
+		<Key ID="STR_Garage_RetrievingVeh">
+			<Original>Du hast dein %1 wieder zurückgekauft.</Original>
+		</Key>
 		<Key ID="STR_Garage_Store_Server">
 			<Original>The server is trying to store the vehicle...</Original>
 			<English>The server is trying to store the vehicle...</English>
@@ -1692,12 +1695,11 @@
 			<Portuguese>Sua saude está perfeita</Portuguese>
 		</Key>
 		<Key ID="STR_NOTF_BeingImpounded">
-			<Original>%1 your %2 is being impounded by the police.</Original>
-			<English>%1 your %2 is being impounded by the police.</English>
-			<German>%1 dein %2 wird von der Polizei beschlagnahmt.</German>
-			<French>%1 votre %2 est envoyé a la fourrière par la police.</French>
-			<Italian>%1 il tuo %2 sta per essere sequestrato dalla Polizia.</Italian>
-			<Portuguese>%1 seu %2 está sendo apreendido pela Polícia</Portuguese>
+			<Original>%1 your %2 is being impounded.</Original>
+			<English>%1 your %2 is being impounded.</English>
+			<German>%1 dein %2 wird beschlagnahmt.</German>
+			<French>%1 votre %2 est envoyé a la fourrière.</French>
+			<Italian>%1 il tuo %2 sta per essere sequestrato.</Italian>
 		</Key>
 		<Key ID="STR_NOTF_Impounding">
 			<Original>Impounding Vehicle</Original>
@@ -1716,12 +1718,12 @@
 			<Portuguese>Ação de apreender foi cancelada</Portuguese>
 		</Key>
 		<Key ID="STR_NOTF_Impounded">
-			<Original>You have impounded a %1\n\nYou have received $%2 for cleaning up the streets!</Original>
-			<English>You have impounded a %1\n\nYou have received $%2 for cleaning up the streets!</English>
-			<German>Du hast einen %1 beschlagnahmt\n\nDu hast $%2 für das Aufräumen der Straßen bekommen!</German>
-			<French>Vous avez mis en fourrière un(e) %1\n\nVous avez reçus $%2 pour avoir nettoyé les rues!</French>
-			<Italian>Hai sequestrato un %1\n\nHai ricevuto €%2 per aver mantenuto l'ordine nelle strade!</Italian>
-			<Portuguese>Você apreendeu %1\n\nVocê recebeu R$%2 por deixar as ruas mais seguras!</Portuguese>
+			<Original>You have impounded a %1.</Original>
+			<English>You have impounded a %1.</English>
+			<German>Du hast einen %1 beschlagnahmt.</German>
+			<French>Vous avez mis en fourrière un(e) %1.</French>
+			<Italian>Hai sequestrato un %1.</Italian>
+			<Portuguese>Você apreendeu %1.</Portuguese>
 		</Key>
 		<Key ID="STR_NOTF_HasImpounded">
 			<Original>%1 has impounded %2's %3</Original>
@@ -1730,6 +1732,21 @@
 			<French>%1 a mis en fourrière le %3 de %2.</French>
 			<Italian>%1 ha sequestrato il %2 di %3</Italian>
 			<Portuguese>%1 apreendeu %3 de %2</Portuguese>
+		</Key>
+		<Key ID="STR_NOTF_BeingTowed">
+			<Original>%1 dein %2 wird abgeschleppt.</Original>
+		</Key>
+		<Key ID="STR_NOTF_Towing">
+			<Original>Schleppe Fahrzeug ab</Original>
+		</Key>
+		<Key ID="STR_NOTF_TowingCancelled">
+			<Original>Abschleppen abgebrochen.</Original>
+		</Key>
+		<Key ID="STR_NOTF_Towed">
+			<Original>Du hast einen %1 abgeschleppt.\n\nDu erhaelst $%2 fuer das Sauberhalten unserer Insel!</Original>
+		</Key>
+		<Key ID="STR_NOTF_HasTowed">
+			<Original>%1 hat %2s %3 abgeschleppt</Original>
 		</Key>
 		<Key ID="STR_NOTF_AbortESC">
 			<Original>Abort available in %1</Original>
@@ -4603,12 +4620,17 @@
 			<Portuguese>Retirar Jogadores</Portuguese>
 		</Key>
 		<Key ID="STR_vInAct_Impound">
-			<Original>Impound Vehicle</Original>
-			<English>Impound Vehicle</English>
-			<German>Fahrzeug beschlagnahmen</German>
-			<French>Mise en fourrière</French>
-			<Italian>Sequestra Veicolo</Italian>
-			<Portuguese>Apreender Veículo</Portuguese>
+			<Original>Tow Vehicle</Original>
+			<English>Tow Vehicle</English>
+			<German>Abschleppen</German>
+			<French>Tow Vehicle</French>
+			<Italian>Tow Vehicle</Italian>
+			<Portuguese>Tow Vehicle</Portuguese>
+		</Key>
+		<Key ID="STR_vInAct_ImpoundPlus">
+			<Original>Beschlagnahmen</Original>
+			<English>Impound vehicle</Original>
+			<German>Beschlagnahmen</Original>
 		</Key>
 		<Key ID="STR_vInAct_DeviceMine">
 			<Original>Mine from device</Original>

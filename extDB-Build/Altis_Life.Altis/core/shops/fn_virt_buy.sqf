@@ -14,7 +14,7 @@ _amount = ctrlText 2404;
 if(!([_amount] call fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
 _restriction = 0;
 switch (_type) do {
-	case "radartrap": { _restriction = 4;};
+	case "radartrap": { _restriction = 2;};
 	default {};
 };
 ////Marktsystem Anfang////
@@ -68,11 +68,13 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 			if((_price * _amount) > life_cash) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
 			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 			__SUB__(life_cash,_price);
+			playSound "cashregister";
 		};
 	} else {
 		if((_price * _amount) > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};
 		hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 		__SUB__(life_cash,(_price * _amount));
+		playSound "cashregister";
 	};
 	[] call life_fnc_virt_update;
 };
