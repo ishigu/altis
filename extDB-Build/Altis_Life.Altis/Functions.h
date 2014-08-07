@@ -455,14 +455,6 @@ class Life_Client_Core
 		class marketBuy {};
 		
 	}
-		
-	class Cellphone_Extended
-	{
-		file = "core\cellphoneextended";
-		
-		class cellex_open;
-		class cellex_sendClick;
-	};
 
 	class Rebel
 	{
