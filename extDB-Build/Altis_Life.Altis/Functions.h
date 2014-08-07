@@ -273,6 +273,7 @@ class Life_Client_Core
 		class keyRestore {};
 		class renewUniform {};
 		class radartrapMonitoring {};
+		class emptyFuel {};
 	};
 	
 	class Network
