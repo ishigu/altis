@@ -22,6 +22,7 @@
 #include "compensate.hpp"
 
 #include "cell_phone.hpp"
+#include "smartphone.hpp"
 
 #include "market.hpp"
 

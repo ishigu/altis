@@ -131,6 +131,18 @@ class CfgFunctions
 			class updateGang {};
 		};
 	};
+	
+	class GHBSystem
+	{
+		tag = "GHB";
+		class Smartphone
+		{
+			file = "\life_server\Functions\Smartphone";
+			class handleMessages {};
+			class msgRequest {};
+			class cleanupMessages {};
+		};	
+	};
 };
 
 class CfgVehicles

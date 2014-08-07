@@ -223,6 +223,9 @@ class Life_Client_Core
 		class settingsInit {};
 		class wantedadd2 {};
 		class wanted2{};
+		class smartphone {};
+		class newMsg {};
+		class showMsg {};
 	};
 	
 	class Functions
