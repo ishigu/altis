@@ -53,4 +53,5 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 	};
 } foreach (_shop_data select 1);
 //Call short view here
-[_shop_data select 1] spawn life_fnc_marketShortView;
+//[_shop_data select 1] spawn life_fnc_marketShortView;
+// don't show shortview for now..
