@@ -8,7 +8,7 @@
 private["_allVeh","_pUID"];
 
 // Wait a bit for World to become in Sync
-sleep 2;
+sleep 5;
 
 // Setup Variables
 _allVeh = allMissionObjects "Car" + allMissionObjects "Air" + allMissionObjects "Ship";

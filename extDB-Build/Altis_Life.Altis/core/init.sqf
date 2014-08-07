@@ -101,7 +101,7 @@ life_fnc_moveIn = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
-[] spawn life_fnc_keyRestore;
+[] execVM "core\functions\fn_keyRestore.sqf";
 [[],"life_fnc_renewUniform",true,false] spawn life_fnc_MP;
 [] spawn life_fnc_radartrapMonitoring;
 
