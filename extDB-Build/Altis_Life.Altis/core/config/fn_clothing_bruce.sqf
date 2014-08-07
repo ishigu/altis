@@ -18,20 +18,21 @@ switch (_filter) do
 	case 0:
 	{
 		[
-		["U_C_Poloshirt_blue","Poloshirt Blue",250],
-		["U_C_Poloshirt_burgundy","Poloshirt Burgundy",275],
-		["U_C_Poloshirt_redwhite","Poloshirt Red/White",150],
-		["U_C_Poloshirt_salmon","Poloshirt Salmon",175],
-		["U_C_Poloshirt_stripped","Poloshirt stripped",125],
-		["U_C_Poloshirt_tricolour","Poloshirt Tricolor",350],
-		["U_C_Poor_2","Rag tagged clothes",250],
-		["U_IG_Guerilla2_2","Green stripped shirt & Pants",650],
-		["U_IG_Guerilla3_1","Brown Jacket & Pants",735],
-		["U_IG_Guerilla2_3","The Outback Rangler",1200],
-		["U_C_HunterBody_grn","The Hunters Look",1500],
-		["U_C_WorkerCoveralls","Mechanic Coveralls",2500],
-		["U_OrestesBody","Surfing On Land",1100],
-		["U_NikosAgedBody","Anzug",5000]
+			["U_C_Poloshirt_blue","Poloshirt Blue",250],
+			["U_C_Poloshirt_burgundy","Poloshirt Burgundy",275],
+			["U_C_Poloshirt_redwhite","Poloshirt Red/White",150],
+			["U_C_Poloshirt_salmon","Poloshirt Salmon",175],
+			["U_C_Poloshirt_stripped","Poloshirt stripped",125],
+			["U_C_Poloshirt_tricolour","Poloshirt Tricolor",350],
+			["U_C_Poor_2","Rag tagged clothes",250],
+			["U_IG_Guerilla2_2","Green stripped shirt & Pants",650],
+			["U_IG_Guerilla3_1","Brown Jacket & Pants",735],
+			["U_IG_Guerilla2_3","The Outback Rangler",1200],
+			["U_C_HunterBody_grn","The Hunters Look",1500],
+			["U_C_WorkerCoveralls","Mechanic Coveralls",2500],
+			["U_OrestesBody","Surfing On Land",1100],
+			["U_C_Journalist",nil,1000]
+			["U_NikosAgedBody","Anzug",5000]
 		];
 	};
 	
@@ -40,6 +41,7 @@ switch (_filter) do
 	{
 		[
 			["H_Watchcap_blk",nil,800],
+			["H_Watchcap_khk",nil,800],
 			["H_Bandanna_camo","Camo Bandanna",120],
 			["H_Bandanna_surfer","Surfer Bandanna",130],
 			["H_Bandanna_gry","Grey Bandanna",150],
@@ -60,7 +62,8 @@ switch (_filter) do
 			["H_Cap_grn_BI",nil,150],
 			["H_Cap_oli",nil,150],
 			["H_Cap_red",nil,150],
-			["H_Cap_tan",nil,150]
+			["H_Cap_tan",nil,150],
+			["H_Cap_usblack",nil,150]
 		];
 	};
 	
@@ -76,6 +79,7 @@ switch (_filter) do
 			["G_Sport_BlackWhite",nil,20],
 			["G_Spectacles_Tinted",nil,20],
 			["G_Squares",nil,10],
+			["G_Goggles_VR",nil,50],
 			["G_Aviator",nil,100],
 			["G_Lady_Mirror",nil,150],
 			["G_Lady_Dark",nil,150],

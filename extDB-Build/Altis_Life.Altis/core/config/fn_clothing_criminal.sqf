@@ -31,7 +31,8 @@ switch (_filter) do
 			["H_Shemag_olive",nil,850],
 			["H_ShemagOpen_khk",nil,800],
 			["H_MilCap_oucamo",nil,1200],
-			["H_Bandanna_camo",nil,650]
+			["H_Bandanna_camo",nil,650],
+			["H_Hat_camo",nil,650]
 		];
 	};
 	
@@ -49,7 +50,6 @@ switch (_filter) do
 			["G_Lowprofile",nil,30],
 			["G_Bandanna_tan",nil,1200],
 			["G_Balaclava_blk",nil,1200],
-			["G_Balaclava_combat",nil,1200],
 			["G_Balaclava_lowprofile",nil,1200],
 			["G_Balaclava_oli",nil,1200],
 			["G_Bandanna_aviator",nil,1200],

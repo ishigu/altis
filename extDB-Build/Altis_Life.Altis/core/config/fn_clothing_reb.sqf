@@ -20,6 +20,8 @@ switch (_filter) do
 		[
 			["U_IG_Guerilla1_1",nil,5000],
 			["U_I_G_Story_Protagonist_F",nil,7500],
+			["U_I_OfficerUniform",10000],
+			["U_O_OfficerUniform_ocamo",15000],
 			["U_I_G_resistanceLeader_F",nil,11500],
 			["U_O_CombatUniform_oucamo",nil,11500],
 			["U_O_SpecopsUniform_ocamo",nil,17500],
@@ -33,6 +35,14 @@ switch (_filter) do
 	case 1:
 	{
 		[
+			["H_Hat_camo",nil,650],
+			["H_Cap_usblack",nil,250],
+			["H_Cap_tan_specops_US",nil,250],
+			["H_Cap_blk_Raven",nil,250],
+			["H_Cap_brn_SPECOPS",nil,250],
+			["H_MilCap_ocamo",nil,250],
+			["H_MilCap_mcamo",nil,250],
+			["H_MilCap_dgtl",nil,250],
 			["H_ShemagOpen_tan",nil,850],
 			["H_Shemag_olive",nil,850],
 			["H_ShemagOpen_khk",nil,800],
