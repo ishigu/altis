@@ -5002,7 +5002,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_1";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5025,7 +5025,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_2";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5048,7 +5048,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_3";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5071,7 +5071,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_4";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5094,7 +5094,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_5";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5117,7 +5117,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_6";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5140,7 +5140,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_7";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5163,7 +5163,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_8";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5186,7 +5186,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_9";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5209,7 +5209,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_10";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5232,7 +5232,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_11";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5255,7 +5255,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_12";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5278,7 +5278,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_13";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5301,7 +5301,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_14";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5324,7 +5324,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_15";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5347,7 +5347,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_16";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5370,7 +5370,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_17";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5393,7 +5393,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_18";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5416,7 +5416,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_19";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5439,7 +5439,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_20";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5462,7 +5462,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_21";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5485,7 +5485,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_22";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5508,7 +5508,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_23";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5531,7 +5531,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_24";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5554,7 +5554,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_25";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5577,7 +5577,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_26";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5600,7 +5600,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_27";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5623,7 +5623,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_28";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5646,7 +5646,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_29";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5669,7 +5669,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_30";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5692,7 +5692,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_31";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5715,7 +5715,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_32";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5738,7 +5738,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_33";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5761,7 +5761,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_34";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5784,7 +5784,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_35";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5807,7 +5807,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_36";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5830,7 +5830,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_37";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5853,7 +5853,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_38";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5876,7 +5876,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_39";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5899,7 +5899,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_40";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5922,7 +5922,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_41";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5945,7 +5945,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_42";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5968,7 +5968,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_43";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -5991,7 +5991,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_44";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -6014,7 +6014,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_45";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -6037,7 +6037,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_46";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -6060,7 +6060,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_47";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -6083,7 +6083,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_48";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -6106,7 +6106,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_49";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -6129,7 +6129,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="rebel_50";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this; removeAllWeapons this;this unassignItem ""NVGoggles_OPFOR"";  this removeItem ""NVGoggles_OPFOR"";";
 					description="Rebell";
 				};
 			};
@@ -21197,7 +21197,7 @@ class Mission
 		class Item228
 		{
 			position[]={9197.5029,47.084389,8119.9097};
-			name="civ_spawn_6";
+			name="reb_spawn_1";
 			type="Empty";
 			angle=160;
 		};

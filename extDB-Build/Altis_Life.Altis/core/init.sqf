@@ -67,6 +67,7 @@ switch (playerSide) do
 	
 	case east:
 	{
+		//Initialize Rebel Settings
 		_handle = [] spawn life_fnc_initReb;
 		waitUntil {scriptDone _handle};
 	};

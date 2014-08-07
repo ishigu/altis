@@ -8,10 +8,16 @@
 private["_itemArray","_uniform","_vest","_backpack","_goggles","_headgear","_items","_prim","_seco","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_bMags","_vMags","_handle"];
 _itemArray = reb_gear;
 waitUntil {!(isNull (findDisplay 46))};
+_goggles = goggles player;
 if(count _itemArray == 0) exitWith
 {
     if(headGear player != "") then {removeHeadgear player;};
-    if(goggles player != "") then {removeGoggles player;};
+    {
+		player unassignItem _x;
+		player removeItem _x;
+	} foreach (assignedItems player);
+	if(uniform player != "") then {removeUniform player;};
+	if(vest player != "") then {removeVest player;};
 };
 
 //Strip the unit down
