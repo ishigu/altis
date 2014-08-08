@@ -89,24 +89,17 @@ class Life_Client_Core
 		file = "core\actions";
 		class buyLicense {};
 		class chemlightUse {};
-		class heal {};
 		class healHospital {};
 		class pushVehicle {};
 		class repairTruck {};
 		class serviceChopper {};
-		class serviceTruck {};
 		class catchFish {};
 		class catchTurtle {};
 		class dpFinish {};
 		class dropFishingNet {};
-		class gatherApples {};
-		class gatherCannabis {};
-		class gatherHeroin {};
-		class gatherOil {};
 		class getDPMission {};
 		class postBail {};
 		class processAction {};
-		class suicideBomb {};
 		class arrestAction {};
 		class escortAction {};
 		class impoundAction {};
@@ -120,13 +113,11 @@ class Life_Client_Core
 		class pickupItem {};
 		class pickupMoney {};
 		class ticketAction {};
-		class gatherPeaches {};
-		class gatherCocaine {};
-		class pumpRepair {};
 		class packupSpikes {};
 		class storeVehicle {};
 		class robAction {};
 		class captureHideout {};
+		class gather {};
 		class gatherChemical{};
 		class surrender {};
 		class packuppylon {};
@@ -180,7 +171,6 @@ class Life_Client_Core
 		class eatFood {};
 		class varHandle {};
 		class varToStr {};
-		class copDefault {};
 		class impoundPrice {};
 		class itemWeight {};
 		class taxRate {};
@@ -236,7 +226,6 @@ class Life_Client_Core
 		class handleInv {};
 		class hudSetup {};
 		class hudUpdate {};
-		class fetchGear{};
 		class tazeSound {};
 		class animSync {};
 		class simDisable {};
@@ -268,6 +257,9 @@ class Life_Client_Core
 		class inventoryClosed {};
 		class inventoryOpened {};
 		class isUIDActive {};
+		class saveGear {};
+		class loadGear {};
+		class stripDownPlayer {};
 		class randomRound {};
 		class setUniform {};
 		class keyRestore {};
@@ -297,8 +289,6 @@ class Life_Client_Core
 		class jailMe {};
 		class jail {};
 		class tazed {};
-		class civFetchGear {};
-		class civLoadGear {};
 		class knockedOut {};
 		class knockoutAction {};
 		class robReceive {};
@@ -306,6 +296,7 @@ class Life_Client_Core
 		class removeLicenses {};
 		class zoneCreator {};
 		class demoChargeTimer {};
+		class civLoadout {};
 	};
 	
 	class Vehicle
@@ -329,8 +320,6 @@ class Life_Client_Core
 		file = "core\cop";
 		class copMarkers {};
 		class copLights {};
-		class loadGear {};
-		class saveGear {};
 		class vehInvSearch {};
 		class copSearch {};
 		class bountyReceive {};
@@ -350,6 +339,7 @@ class Life_Client_Core
 		class repairDoor {};
 		class doorAnimate {};
 		class fedCamDisplay {};
+		class copLoadout {};
 	};
 	
 	class Gangs
