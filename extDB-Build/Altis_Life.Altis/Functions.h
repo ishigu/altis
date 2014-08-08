@@ -455,5 +455,6 @@ class Life_Client_Core
 		file = "core\rebel";
 		class rebLoadGear{};
 		class rebFetchGear{};
+		class rebLoadout{};
 	};
 };
