@@ -69,10 +69,6 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 		[_item,true] spawn life_fnc_handleItem;
 	};
 };
+[] call life_fnc_saveGear;
 
-//Hotfix in for cop gear
-if(playerSide == west) then
-{
-	[] call life_fnc_saveGear;
-};
 [player, uniform player] call life_fnc_setUniform;

@@ -5,6 +5,7 @@
 	Description:
 	Sets the player up if he/she used the respawn option.
 */
+private["_handle"];
 //if(!isNull life_corpse) then {
 //	_handle = [life_corpse] spawn life_fnc_dropItems;
 //};
@@ -29,19 +30,21 @@ player setVariable["Reviving",nil,TRUE];
 //Load gear for a 'new life'
 switch(playerSide) do
 {
-	case west: {[] spawn life_fnc_loadGear;};
-	
+	case west: {
+		_handle = [] spawn life_fnc_copLoadout;
+	};
 	case civilian: {
-		[] call life_fnc_civFetchGear;
+		_handle = [] spawn life_fnc_civLoadout;
 	};
 	
 	case independent: {
-		if ( player call life_fnc_isADAC ) then { [] call life_fnc_adacLoadout;}
-		else {[] call life_fnc_medicLoadout;};
+		if(player call life_fnc_isADAC) then {_handle = [] call life_fnc_adacLoadout;}
+		else {_handle = [] call life_fnc_medicLoadout;};
+	};	
+	case east: {
+		_handle = [] spawn life_fnc_rebLoadout;
 	};
-	
-	case east: {[] spawn life_fnc_rebFetchGear;
-	};
+	waitUntil {scriptDone _handle};
 };
 
 //Cleanup of weapon containers near the body & hide it.

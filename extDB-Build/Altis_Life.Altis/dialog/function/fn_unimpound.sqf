@@ -34,4 +34,3 @@ if(typeName life_garage_sp == "ARRAY") then {
 hint localize "STR_Garage_SpawningVeh";
 
 life_atmcash = life_atmcash - _price;
-playSound "cashregister";
