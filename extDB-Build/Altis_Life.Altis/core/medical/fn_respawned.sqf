@@ -38,8 +38,8 @@ switch(playerSide) do
 	};
 	
 	case independent: {
-		if(player call life_fnc_isADAC) then {_handle = [] call life_fnc_adacLoadout;}
-		else {_handle = [] call life_fnc_medicLoadout;};
+		if(player call life_fnc_isADAC) then {_handle = [] spawn life_fnc_adacLoadout;}
+		else {_handle = [] spawn life_fnc_medicLoadout;};
 	};	
 	case east: {
 		_handle = [] spawn life_fnc_rebLoadout;
