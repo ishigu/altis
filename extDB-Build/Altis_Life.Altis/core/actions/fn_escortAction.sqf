@@ -9,3 +9,7 @@ _unit attachTo [player,[0.1,1.1,0]];
 _unit setVariable["transporting",false,true];
 _unit setVariable["Escorting",true,true];
 player reveal _unit;
+[] spawn {
+waitUntil {(!_unit getVariable["Escorting",true]) || !alive player};
+if(!alive player && _unit getVariable["Escorting",false]) exitWith{[_unit] call life_fnc_stopEscorting;};
+};

@@ -49,11 +49,6 @@ while {player getVariable "restrained"} do
 		detach _player;
 	};
 	
-	if(!alive _cop) exitWith {
-		player setVariable ["Escorting",false,true];
-		detach player;
-	};
-	
 	if(vehicle player != player) then
 	{
 		//disableUserInput true;

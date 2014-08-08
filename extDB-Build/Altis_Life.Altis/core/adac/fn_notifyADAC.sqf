@@ -5,19 +5,15 @@
 	Checks if player is ADAC and notifies them
 */
 private["_sender","_from","_msg","_message2","_pos"];
+_sender = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+_msg = [_this,1,"",[""]] call BIS_fnc_param;
 if(isServer) exitWith{};
-if(isNil "_this") exitWith{};
+if(_msg == "" || isNull _sender ) exitWith{};
+if (!(player call life_fnc_isADAC) || _msg == "") exitWith {}; // Kein ADAC oder leere Nachricht
 _sender = _this select 0;
 _from = name _sender;
 _pos = mapGridPosition _sender;
 _msg = _this select 1;
-if(player == _sender) then
-{
-	if(_msg == "") exitWith{hint "Du musst eine Nachricht eingeben!";};
-	hint "Du hast eine Nachricht an den ADAC geschickt!";
-	[] call life_fnc_cellphone;
-};
-if ((!(!(player call life_fnc_isMedic) && (side player == independent))) || _msg == "") exitWith {};  // Kein ADAC oder leere Nachricht
 ["ADACDispatch",[format["Notruf von %1",_from]]] call bis_fnc_showNotification;
 _message = format[">>>ADAC Notruf von %1 bei (%2) : %3",_from,_pos,_msg];
 systemChat _message;

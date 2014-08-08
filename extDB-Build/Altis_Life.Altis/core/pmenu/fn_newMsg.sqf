@@ -65,10 +65,11 @@ switch(_type) do
 	//emsrequest
 	case 4:
 	{
-		if((call life_fnc_countMedics) == 0) exitWith {hint format["Zurzeit ist kein Arzt im Dienst. Bitte probiere es später nochmal."];};
+		if((call life_fnc_countMedic) == 0) exitWith {hint format["Zurzeit ist kein Arzt im Dienst. Bitte probiere es später nochmal."];};
 		ctrlShow[888899,false];
 		if(_msg == "") exitWith {hint "Du musst eine Nachricht eingeben!";ctrlShow[888899,true];};
-		[[ObjNull,_msg,player,3],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
+		//[[ObjNull,_msg,player,3],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
+		[[player,_msg],"life_fnc_medicRequestRecieve",true,false] spawn life_fnc_MP;
 		hint format["Du hast einen Notruf abgesetzt!",_msg];
 		ctrlShow[888899,true];
 		closeDialog 887890;
@@ -76,7 +77,7 @@ switch(_type) do
 	//adminToPerson
 	case 5:
 	{
-		if((call life_adminlevel) < 1) exitWith {hint "You are not an admin!";};
+		if((call life_adminlevel) < 1) exitWith {hint "Du bist kein Admin!";};
 		if(isNULL life_smartphoneTarget) exitWith {hint format["Keine Person ausgwählt!"];};
 		if(_msg == "") exitWith {hint "You must enter a message to send!";};
 		[[life_smartphoneTarget,_msg,player,4],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
@@ -109,7 +110,8 @@ switch(_type) do
 	{
 		if((call life_fnc_countADAC) == 0) exitWith {hint format["Der ADAC ist derzeit nicht zu erreichen. Bitte versuchen Sie es später nochmal."];};
 		if(_msg == "") exitWith {hint "Du musst eine Nachricht eingeben!";};
-		[[ObjNull,_msg,player,6],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
+		[[player,_msg],"life_fnc_notifyADAC",true,false] spawn life_fnc_MP;
+		//[[ObjNull,_msg,player,6],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
 		hint "Du hast eine Nachricht an den ADAC geschickt!";
 		closeDialog 887890;
 	};

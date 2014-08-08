@@ -12,10 +12,7 @@ _goggles = goggles player;
 if(count _itemArray == 0) exitWith
 {
     if(headGear player != "") then {removeHeadgear player;};
-    {
-		player unassignItem _x;
-		player removeItem _x;
-	} foreach (assignedItems player);
+	if(goggles player != "") then {_goggles = goggles player; player unassignItem _goggles; player removeItem _goggles;};
 	if(uniform player != "") then {removeUniform player;};
 	if(vest player != "") then {removeVest player;};
 };

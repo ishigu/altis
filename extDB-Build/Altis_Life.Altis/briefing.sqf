@@ -242,17 +242,17 @@ player createDiarySubject ["Steuerung","Steuerung"];
 	
 	player createDiaryRecord ["Team",
 		[
-			"Admin",
+			"Team",
 				"
 				Projektleiter  Lasdios<br/><br/>
 				Projektleiter  Felix<br/><br/>
 				Admin [BFC]graVediga<br/><br/>
-				Admin Harbinger<br/><br/>
 				Admin oVo<br/><br/>
-				Admin Malu<br/><br/>
 				Admin ishi<br/><br/>
 				Admin Shentoza<br/><br/>
 				Admin NeoX<br/><br/>
+				Supporterin Elly<br/><br/>
+				Supporter K3V1N<br/><br/>
 				"
 		]
 	];
@@ -582,6 +582,7 @@ player createDiarySubject ["Steuerung","Steuerung"];
 				Left Shift + L: Blaulicht (Nur Polizisten)<br/>
 				Left Shift + G: Niederschlagen (Nur Zivilisten)<br/>
 				Left Shift + V: Ergeben<br/>
+				Left Shift + H: Waffe (ent-)holstern<br/>
 				"
 		]
 	];
