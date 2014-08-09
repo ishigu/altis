@@ -66,7 +66,7 @@ class life_admin_menu {
 			x= 0.12;
 			y= 0.70;
 			w = 0.30;
-			h = 0.15;
+			h = 0.115;
 			//onLBSelChanged = "copyToClipboard (lbText [29030, lbCurSel 29030]);";
 		};
 

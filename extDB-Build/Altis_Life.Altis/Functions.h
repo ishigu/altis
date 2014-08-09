@@ -266,6 +266,7 @@ class Life_Client_Core
 		class renewUniform {};
 		class radartrapMonitoring {};
 		class emptyFuel {};
+		class lockedCar {};
 	};
 	
 	class Network
