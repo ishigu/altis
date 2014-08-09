@@ -6,7 +6,7 @@
 	Description:
 	Teleport to chosen position.
 */
-if(__GETC__(life_adminlevel) == 0) exitWith {closeDialog 0;};
+if(__GETC__(life_adminlevel) < 1) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 
 [] spawn {
   while {dialog} do {

@@ -3589,8 +3589,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={20059.09,101.10339,6738.311};
-					azimut=95;
+					position[]={20066.16,101.10815,6743.0444};
+					azimut=175;
 					special="NONE";
 					id=207;
 					side="CIV";
@@ -6142,8 +6142,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={20064.189,101.12706,6742.8643};
-					azimut=145;
+					position[]={20059.6,101.10749,6738.8467};
+					azimut=110;
 					special="NONE";
 					id=347;
 					side="CIV";

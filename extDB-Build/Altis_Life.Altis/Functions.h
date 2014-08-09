@@ -61,6 +61,7 @@ class Life_Client_Core
 		class adminGodMode {};
 		class adminFreeze {};
 		class adminMarkers {};
+		class adminCarKey {};
 	};
 	
 	class Medical_System

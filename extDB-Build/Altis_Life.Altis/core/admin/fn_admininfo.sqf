@@ -5,7 +5,7 @@
 	Description:
 	Output information received to admin menu.
 */
-private["_display","_ret","_text","_unit","_prim","_sec","_vest","_uni","_bp","_attach","_tmp"];
+private["_display","_ret","_text","_unit","_prim","_sec","_vest","_uni","_bp","_attach","_tmp","_aliases"];
 _ret = _this;
 disableSerialization;
 _display = findDisplay 2900;
@@ -28,6 +28,13 @@ if(primaryWeapon _unit != "") then
 		};
 	} foreach (primaryWeaponItems _unit);
 };
+_aliasControl = (_display displayCtrl 29030);
+_aliases ="";
+_aliasesArray = _unit getVariable ["aliases",[]];
+lbClear _aliasArray;
+{
+	_aliasControl lbAdd format["%1",_x];
+}forEach _aliasesArray;
 
 if(count _attach == 0) then {_attach = "None"};
 _text ctrlSetStructuredText parseText format["Name: %1<br/>Bank: %2<br/>Money: %3<br/>Uniform: %4<br/>Vest: %5<br/>Backpack: %6<br/>Primary: %7<br/>Handgun: %8<br/><t align='center'>Primary Attachments</t><br/>%9",

@@ -6,6 +6,6 @@
 	Description:
 	Opens the Debug Console.
 */
-if(__GETC__(life_adminlevel) < 3) exitWith {closeDialog 0; hint "You have no business using this";};
+if(__GETC__(life_adminlevel) < 4) exitWith {closeDialog 0; hint "You have no business using this";};
 
 createDialog "RscDisplayDebugPublic";

@@ -56,8 +56,18 @@ class life_admin_menu {
 			text = "";
 			x = 0.42;
 			y = 0.25;
-			w = 0.35;
-			h = 0.6;
+			w = 0.5;
+			h = 0.8;
+		};
+		class PlayerAliases : Life_RscListBox
+		{
+			idc = 29030;
+			sizeEx = 0.035;
+			x= 0.12;
+			y= 0.70;
+			w = 0.30;
+			h = 0.15;
+			//onLBSelChanged = "copyToClipboard (lbText [29030, lbCurSel 29030]);";
 		};
 
 		class CloseButtonKey : Life_RscButtonMenu {
@@ -116,10 +126,10 @@ class life_admin_menu {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
-		class God : Life_RscButtonMenu {
+		class Keys : Life_RscButtonMenu {
 			idc = 2908;
-			text = "$STR_Admin_God";
-			onButtonClick = "[] call life_fnc_adminGodMode;";
+			text = "$STR_Admin_GetKeys";
+			onButtonClick = "[] call life_fnc_adminCarKey;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.885;
 			w = (6.25 / 40);

@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_keyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -309,8 +310,15 @@ switch (_code) do
 	};
 	// Admin Menü, Aktionstaste 15
 	case _adminKey: {
-		if (_adminKey != 18 || (_adminKey == 18 && !_alt && _shift)) then {
-			createDialog "life_admin_menu";
+		if ((_adminKey != 18 || (_adminKey == 18 && !_alt && _shift))&& (__GETC__(life_adminlevel) > 0)) then {
+			if(!isNull (findDisplay 2900)) then
+			{
+				closeDialog 0;
+			}
+			else
+			{
+				createDialog "life_admin_menu";
+			};
 		};
 	};
 	//1 Key
