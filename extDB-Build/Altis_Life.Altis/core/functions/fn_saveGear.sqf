@@ -16,7 +16,7 @@ _return set[count _return,backpack player];
 _return set[count _return,goggles player];
 _return set[count _return,headgear player];
 _return set[count _return,assignedITems player];
-if(playerSide == west || playerSide == civilian && {(call life_save_civ)}) then {
+if(playerSide in [west,civilian,east] && {(call life_save_civ)}) then {
     _return set[count _return,primaryWeapon player];
     _return set[count _return,handgunWeapon player];
 } else {

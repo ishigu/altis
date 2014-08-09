@@ -33,7 +33,7 @@ _vehOwnerUID = (_vehData select 0) select 0;
 
 _unit = objNull;
 {if(str(getPlayerUID _x) == str(_vehOwnerUID)) then {_unit = _x;}; } forEach playableUnits;
-_side = switch(side _unit) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"}; case rebel:{"reb"}};
+_side = switch(side _unit) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"}; case east:{"reb"}};
 if(_side == "med" && !(_unit call life_fnc_isMedic)) then {_side = "adac";};
 if(_side == "") exitWith{hint format["Konnte den Fahrzeugeigentuemer %1 nicht finden",(_vehData select 0) select 1];};
 
