@@ -21,8 +21,6 @@ switch (playerSide) do {
 		_packet set[count _packet,life_is_arrested];
 	};
 	case east: {
-		[] call life_fnc_rebFetchGear;
-		_packet set[count _packet,reb_gear];
 		_packet set[count _packet,life_is_arrested];
 	};
 };

@@ -119,7 +119,6 @@ class Life_Client_Core
 		class robAction {};
 		class captureHideout {};
 		class gather {};
-		class gatherChemical{};
 		class surrender {};
 		class packuppylon {};
 		class packupbarrier {};
@@ -454,8 +453,6 @@ class Life_Client_Core
 	class Rebel
 	{
 		file = "core\rebel";
-		class rebLoadGear{};
-		class rebFetchGear{};
-		class rebLoadout{};
+		class rebLoadout {};
 	};
 };
