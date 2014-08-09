@@ -6,9 +6,10 @@
 	Sets the player up if he/she used the respawn option.
 */
 private["_handle"];
-if(!isNull life_corpse) then {
-	_handle = [life_corpse] spawn life_fnc_dropItems;
-};
+//if(!isNull life_corpse) then {
+//	_handle = [life_corpse] spawn life_fnc_dropItems;
+//};
+
 //Reset our weight and other stuff
 life_use_atm = TRUE;
 life_hunger = 100;
@@ -35,9 +36,11 @@ switch(playerSide) do
 	case civilian: {
 		_handle = [] spawn life_fnc_civLoadout;
 	};
+	
 	case independent: {
-		_handle = [] spawn life_fnc_medicLoadout;
-	};
+		if(player call life_fnc_isADAC) then {_handle = [] spawn life_fnc_adacLoadout;}
+		else {_handle = [] spawn life_fnc_medicLoadout;};
+	};	
 	case east: {
 		_handle = [] spawn life_fnc_rebLoadout;
 	};

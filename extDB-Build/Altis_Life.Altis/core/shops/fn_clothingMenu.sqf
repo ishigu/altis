@@ -65,7 +65,7 @@ life_clothing_filter = 0;
 if(isNil "life_clothesPurchased") exitWith
 {
 	life_clothing_purchase = [-1,-1,-1,-1,-1];
-	if(life_oldClothes != "") then {player addUniform life_oldClothes;} else {removeUniform player};
+	if(life_oldClothes != "") then {player forceAddUniform life_oldClothes;} else {removeUniform player};
 	if(life_oldHat != "") then {player addHeadgear life_oldHat} else {removeHeadgear player;};
 	if(life_oldGlasses != "") then {player addGoggles life_oldGlasses;} else {removeGoggles player};
 	if(backpack player != "") then
@@ -114,7 +114,7 @@ life_clothesPurchased = nil;
 //Check uniform purchase.
 if((life_clothing_purchase select 0) == -1) then
 {
-	if(life_oldClothes != uniform player) then {player addUniform life_oldClothes;};
+	if(life_oldClothes != uniform player) then {player forceAddUniform life_oldClothes;};
 };
 //Check hat
 if((life_clothing_purchase select 1) == -1) then

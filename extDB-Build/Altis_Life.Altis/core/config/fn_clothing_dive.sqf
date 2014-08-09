@@ -17,9 +17,16 @@ switch (_filter) do
 	//Uniforms
 	case 0:
 	{
-		[
-			["U_O_Wetsuit",nil,2000]
-		];
+		if(playerSide == east) then {
+			[
+				["U_I_Wetsuit",nil,2000]
+			];
+		}
+		else{
+			[
+				["U_O_Wetsuit",nil,2000]
+			];
+		};
 	};
 	
 	//Hats

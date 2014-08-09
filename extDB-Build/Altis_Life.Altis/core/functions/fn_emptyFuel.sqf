@@ -10,14 +10,15 @@ private["_vehicleToFuel","_velocityOfVehicle","_fuelConsumption"];
 while{true} do 
 {
 	_vehicleToFuel = (vehicle player);
-	if(isEngineOn _vehicleToFuel && ((driver _vehicleToFuel) == player) && !(_vehicleToFuel isKindOf "Air") && (_vehicleToFuel != player) ) then
+	if(isEngineOn _vehicleToFuel && ((driver _vehicleToFuel) == player) && (_vehicleToFuel != player) ) then
 	{
 		_velocityOfVehicle = sqrt(((velocity _vehicleToFuel select 0)^2)+((velocity _vehicleToFuel select 1)^2))*3.6;
 		
 		switch (typeOf (_vehicleToFuel)) do {
             case "C_Hatchback_01_sport_F":{_fuelConsumption = _velocityOfVehicle/100000 + 0.0001;}; //Here you can add some other vehicles.
+			case "B_Heli_Light_01_F":{_fuelConsumption = 0;};//Hummingbird already consumes enough fuel
             default {_fuelConsumption = _velocityOfVehicle/100000 + 0.0001;}
-        }
+        };
 		
 		if(_fuelConsumption > 0.002) then
 		{

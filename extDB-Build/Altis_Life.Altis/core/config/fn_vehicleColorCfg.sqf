@@ -243,7 +243,8 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-			["textures\vehicles\hellcat_angry.jpg","civ"]
+			["textures\vehicles\hellcat_angry.jpg","civ"],
+			["textures\vehicles\hellcat_angry.jpg","reb"]
 		];
 	};
 	

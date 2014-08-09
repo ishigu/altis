@@ -31,7 +31,7 @@ switch (_filter) do
 			["U_C_HunterBody_grn","The Hunters Look",1500],
 			["U_C_WorkerCoveralls","Mechanic Coveralls",2500],
 			["U_OrestesBody","Surfing On Land",1100],
-			["U_C_Journalist",nil,1000]
+			["U_C_Journalist",nil,1000],
 			["U_NikosAgedBody","Anzug",5000]
 		];
 	};
