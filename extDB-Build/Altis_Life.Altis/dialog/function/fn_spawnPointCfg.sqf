@@ -57,7 +57,10 @@ switch (_side) do
 	
 	case east: {
 		_return = [
-			["reb_spawn_1","Rebellendorf","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["reb_spawn_1","Rebellendorf","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["reb_spawn_2","Östliches Camp","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["reb_spawn_3","Südliches Camp","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["reb_spawn_4","Nördliches Camp","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 		
 		if(count life_houses > 0) then {

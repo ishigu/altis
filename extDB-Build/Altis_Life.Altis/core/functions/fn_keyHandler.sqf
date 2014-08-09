@@ -310,7 +310,7 @@ switch (_code) do
 	// Admin Menü, Aktionstaste 15
 	case _adminKey: {
 		if (_adminKey != 18 || (_adminKey == 18 && !_alt && _shift)) then {
-			[] execVM "fusionsmenu\admin\tools.sqf";
+			createDialog "life_admin_menu";
 		};
 	};
 	//1 Key
