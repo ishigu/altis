@@ -12,6 +12,6 @@ while{true} do
 	!isNull _vehicle && (player distance _vehicle < 5) && locked _vehicle == 2 &&!(_vehicle in life_vehicles)};
 	showHUD false;
 	waitUntil{_vehicle = cursorTarget;
-	isNull _vehicle || locked _vehicle == 0 || (player distance _vehicle >= 5) || (_vehicle in life_vehicles)};
+	isNull _vehicle || locked _vehicle != 2 || (player distance _vehicle >= 5) || (_vehicle in life_vehicles)};
 	showHUD true;
 };

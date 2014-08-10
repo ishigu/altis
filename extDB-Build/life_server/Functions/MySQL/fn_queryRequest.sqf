@@ -16,6 +16,7 @@ _side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
 _ownerID = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 if(isNull _ownerID) exitWith {};
+_playerName = name _ownerID;
 _ownerID = owner _ownerID;
 
 /*
@@ -54,9 +55,23 @@ _queryResult set[2,[_tmp] call DB_fnc_numberSafe];
 _tmp = _queryResult select 3;
 _queryResult set[3,[_tmp] call DB_fnc_numberSafe];
 
+//ALIASES
 _new = [(_queryResult select 6)] call DB_fnc_mresToArray;
 if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
 _queryResult set [6,_new];
+if(!(_playerName in _new)) then 
+{
+	_new = _new + [_playerName];
+	_value = [_playerName,_new];
+	[_uid,_side,_value,6] call DB_fnc_updatePartial;
+}
+else
+{
+	if((_queryResult select 1) != _playerName) then
+	{
+		[_uid,_side,_playerName,7] call DB_fnc_updatePartial;
+	};
+};
 
 //Parse licenses (Always index 7)
 _new = [(_queryResult select 7)] call DB_fnc_mresToArray;

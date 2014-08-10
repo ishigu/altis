@@ -22,5 +22,7 @@ tele={
 	openMap [false, false];
 	hint "You have teleported to your selected position";
 };
-openMap [true, false];
+if !(visibleMap) then{
+	openMap [true, false];
+};
 onMapSingleClick "[_pos select 0, _pos select 1, _pos select 2] call tele";

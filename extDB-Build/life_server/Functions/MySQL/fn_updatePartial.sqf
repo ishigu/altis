@@ -59,6 +59,19 @@ switch(_mode) do {
 		_value = [_value] call DB_fnc_bool;
 		_query = format["UPDATE players SET arrested='%1' WHERE playerid='%2'",_value,_uid];
 	};
+	
+	case 6: {
+		_valueAliases = [(_this select 2),1,[],[[]]] call BIS_fnc_param;
+		_valueAliases = [_valueAliases] call DB_fnc_mresArray;
+		_valueName = [(_this select 2),0,"",[""]] call BIS_fnc_param;
+		_valueName = [_valueName] call DB_fnc_mresString;
+		_query = format["UPDATE players SET name='%1', aliases='%2' WHERE playerid='%3'",_valueName,_valueAliases,_uid];
+	};
+	case 7: {
+		_value = [_this,2,"",[""]] call BIS_fnc_param;
+		_value = [_value] call DB_fnc_mresString;
+		_query = format["UPDATE players SET name='%1' WHERE playerid='%2'",_value,_uid];
+	};
 };
 
 if(_query == "") exitWith {};
