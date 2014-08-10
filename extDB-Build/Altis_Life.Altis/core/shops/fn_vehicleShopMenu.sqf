@@ -17,8 +17,21 @@ disableSerialization;
 if(dialog) exitWith {};
 if(_shop == "") exitWith {};
 if(_sideCheck != sideUnknown && {playerSide != _sideCheck}) exitWith {hint localize "STR_Shop_Veh_NotAllowed"};
+if(_shop == "civ_ship" && playerSide in [west,independent]) exitWith {hint localize "STR_Shop_Veh_NotAllowed"};
 
 if(!createDialog "Life_Vehicle_Shop_v2") exitWith {};
+if(_shop == "donator") then {
+	switch(playerSide) do
+	{
+		case east: {_shopFlag = "reb";};
+		case civilian: {_shopFlag = "civ";};
+		case west: {_shopFlag = "cop";};
+		case independent: {
+			if(player call life_fnc_isMedic) then{_shopFlag = "med";};
+			if(player call life_fnc_isADAC) then {_shopFlag = "adac";};
+		};
+	};
+};
 
 life_veh_shop = [_shop,_spawnpoints,_shopFlag,_disableBuy]; //Store it so so other parts of the system can access it.
 

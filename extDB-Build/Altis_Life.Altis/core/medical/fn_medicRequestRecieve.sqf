@@ -18,14 +18,8 @@ if(player == _sender && _causedByDeath) then
 {	
 	if((call life_fnc_countMedic) < 1) exitWith{systemChat "Keine Medics online!";};
 	systemChat "Du hast einen Notruf abgesetzt!";
-	[] spawn 
-	{
-		life_request_timer = true;
-		((findDisplay 7300) displayCtrl 7303) ctrlEnable false;
-		sleep (2 * 60);
-		((findDisplay 7300) displayCtrl 7303) ctrlEnable true;
-		if(true) exitWith{};
-	};
+	life_request_timer = true;
+	((findDisplay 7300) displayCtrl 7303) ctrlEnable false;
 };
 if((!(player call life_fnc_isMedic)) || _msg == "") exitWith {};
 ["MedicalRequestEmerg",[format["Notruf von %1",_from]]] call bis_fnc_showNotification;

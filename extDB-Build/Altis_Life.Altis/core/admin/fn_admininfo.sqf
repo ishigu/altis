@@ -31,7 +31,7 @@ if(primaryWeapon _unit != "") then
 _aliasControl = (_display displayCtrl 29030);
 _aliases ="";
 _aliasesArray = _unit getVariable ["aliases",[]];
-lbClear _aliasArray;
+lbClear _aliasControl;
 {
 	_aliasControl lbAdd format["%1",_x];
 }forEach _aliasesArray;
