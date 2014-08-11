@@ -34,5 +34,6 @@ if(!isNil {_val}) then
 	player playmove "AinvPknlMstpSlayWrflDnon";
 	titleText[format[localize "STR_NOTF_PickedMoney",[_val] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash + _val;
+	[getPlayerUID player,side player,life_cash,0] call DB_fnc_updatePartial;
 	life_action_delay = time;
 };

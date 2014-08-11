@@ -19,3 +19,4 @@ if(_val == _total) then
 };
 
 life_atmcash = life_atmcash + _val;
+[getPlayerUID player,side player,life_atmcash,1] call DB_fnc_updatePartial;

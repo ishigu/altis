@@ -16,3 +16,4 @@ if(life_cash < _price) exitWith {hint format[localize "STR_NOTF_NE_1",[_price] c
 life_cash = life_cash - _price;
 titleText[format[localize "STR_NOTF_B_1", _license select 1,[_price] call life_fnc_numberText],"PLAIN"];
 missionNamespace setVariable[(_license select 0),true];
+[] call SOCK_fnc_updateRequest;

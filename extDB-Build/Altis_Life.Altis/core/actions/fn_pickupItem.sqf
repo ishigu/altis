@@ -18,6 +18,7 @@ if(playerSide == west && _illegal != -1) exitWith
 {
 	titleText[format[localize "STR_NOTF_PickedEvidence",_itemName,[(life_illegal_items select _illegal) select 1] call life_fnc_numberText],"PLAIN"];
 	life_atmcash = life_atmcash + ((life_illegal_items select _illegal) select 1);
+	[getPlayerUID player,side player,life_atmcash,1] call DB_fnc_updatePartial;
 	deleteVehicle _obj;
 	//waitUntil {isNull _obj};
 	life_action_delay = time;
