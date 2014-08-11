@@ -72,6 +72,7 @@ if(_value > 0) then {
 	life_atmcash = life_atmcash + _value;
 	_house setVariable["Trunk",[_houseInvData,_houseInvVal],true];
 	[[_house],"TON_fnc_updateHouseTrunk",false,false] spawn life_fnc_MP;
+	[getPlayerUID player,side player,life_atmcash,1] call DB_fnc_updatePartial;
 } else {
 	hint localize "STR_House_Raid_NoIllegal";
 };

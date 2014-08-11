@@ -35,6 +35,7 @@ if(_value > 0) then
 	[[0,format[localize "STR_NOTF_VehContraband",[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	life_atmcash = life_atmcash + _value;
 	_vehicle setVariable["Trunk",[],true];
+	[getPlayerUID player,side player,life_atmcash,1] call DB_fnc_updatePartial;
 }
 	else
 {

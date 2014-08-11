@@ -43,6 +43,7 @@ if(_ctrl == "money") then
 	life_cash = life_cash + _num;
 	life_trunk_vehicle setVariable["Trunk",[_data,(_old select 1) - _weight],true];
 	[life_trunk_vehicle] call life_fnc_vehInventory;
+	[getPlayerUID player,side player,life_cash,0] call DB_fnc_updatePartial;
 }
 	else
 {
