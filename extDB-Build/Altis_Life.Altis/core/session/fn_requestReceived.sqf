@@ -27,8 +27,8 @@ life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
 __CONST__(life_donator,parseNumber(_this select 5));
-_aliases = (_this select 6) - [name player];
-player setVariable["aliases",_aliases,TRUE];
+player setVariable["aliases",(_this select 6),TRUE];
+player setVariable["dbName",(_this select 1),TRUE];
 
 //Loop through licenses
 if(count (_this select 7) > 0) then {

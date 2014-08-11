@@ -6,6 +6,7 @@ private["_vehicle","_type","_time","_vehicleData","_upp","_ui","_progress","_pgT
 _vehicle = cursorTarget;
 if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship"))) exitWith {};
 if(player distance cursorTarget > 10) exitWith {};
+if(_vehicle getVariable["side","civ"] in ["cop","med","adac"]) exitWith {hint "Du kannst kein Dienstfahrzeug beschlagnahmen!";};
 if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship")) then
 {
 	_vehicleData = _vehicle getVariable["vehicle_info_owners",[]];

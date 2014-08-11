@@ -267,6 +267,7 @@ class Life_Client_Core
 		class radartrapMonitoring {};
 		class emptyFuel {};
 		class lockedCar {};
+		class getRole {};
 	};
 	
 	class Network

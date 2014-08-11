@@ -166,22 +166,25 @@ switch (_code) do
 	//L Key?
 	case 38: 
 	{
-		//If cop run checks for turning lights on.
-		if(_shift && playerSide in [west,independent]) then {
+		//If cop run checks for turning lights on. + checks if its a cop/medic car, and allows it for civs/rebels
+		if(vehicle player == player) exitWith {};
+		_vehSide = vehicle player getVariable ["side","civ"];
+		if(_shift && (playerSide in [west,independent] || _vehSide in ["cop","med","adac"]) ) then {
 			if(vehicle player != player) then {
-				if(!isNil {vehicle player getVariable "lights"}) then {
-					if(playerSide == west) then {
+				if(!isNil {vehicle player getVariable "lights"}) then
+				{
+					if(playerSide == west || _vehSide == "cop") then {
 						[vehicle player] call life_fnc_sirenLights;
-					} else {
-						if((player call life_fnc_isMedic)) then {
-							[vehicle player] call life_fnc_medicSirenLights;
-						};
 					};
-					_handled = true;
+					if(player call life_fnc_isMedic || _vehSide == "med") then{
+						[vehicle player] call life_fnc_medicSirenLights;
+					};
+					if(player call life_fnc_isADAC || _vehSide == "adac") then{
+					};
 				};
+					_handled = true;
 			};
 		};
-		
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
 	// V Key (Surrender)
@@ -213,7 +216,9 @@ switch (_code) do
 	//F Key
 	case 33:
 	{
-		if(((playerSide == west) || ((playerSide == independent) && (player call life_fnc_isMedic))) && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
+		if(vehicle player == player) exitWith {};
+		_vehSide = vehicle player getVariable ["side","civ"];
+		if(((playerSide == west) || (player call life_fnc_isMedic) || (_vehSide in ["cop","med"]) ) && !life_siren_active && ((driver vehicle player) == player)) then
 		{
 			[] spawn
 			{
@@ -232,9 +237,12 @@ switch (_code) do
 			{
 				titleText [localize "STR_MISC_SirensON","PLAIN"];
 				_veh setVariable["siren",true,true];
-				if(playerSide == west) then {
+				if(playerSide == west || _vehSide == "cop") then
+				{
 					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
-				} else {
+				};
+				if(player call life_fnc_isMedic || _vehSide == "med") then
+				{
 					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
 					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};

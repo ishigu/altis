@@ -211,7 +211,8 @@ switch (_vehicle) do
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","cop"],
 			["textures\vehicles\zamak_blue.paa","civ","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"],
 			["textures\vehicles\zamak_green.paa","civ","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"],
-			["textures\vehicles\zamak_orange.paa","civ","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"]
+			["textures\vehicles\zamak_orange.paa","civ","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"],
+			["\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_indp_co.paa","reb","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_indp_co.paa"]
 		];
 	};
 	

@@ -95,6 +95,25 @@ LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObje
 [] call life_fnc_settingsInit;
 player setVariable["steam64ID",getPlayerUID player];
 player setVariable["realname",profileName,true];
+
+//Aliases updating / preparing for admin menu
+_aliases = player getVariable ["aliases",[]];
+if(!(profileName in _aliases)) then 
+{
+	_aliases = _aliases + [profileName];
+	_value = [profileName,_aliases];
+	[[(getPlayerUID player),playerSide,_value,6],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
+}
+else
+{
+	if((player getVariable ["dbName",profileName]) != profileName) then
+	{
+		[[(getPlayerUID player),playerSide,profileName,7],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
+	};
+};
+player setVariable ["dbName",nil];
+player setVariable ["aliases",(_aliases - [profileName]),true];
+
 life_fnc_moveIn = compileFinal
 "
 	player moveInCargo (_this select 0);

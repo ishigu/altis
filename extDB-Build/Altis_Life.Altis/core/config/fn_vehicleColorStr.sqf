@@ -245,6 +245,7 @@ switch (_vehicle) do
 			case 2: {_color = "Blau"};
 			case 3: {_color = "Gruen"};
 			case 4: {_color = "Orange"};
+			case 5: {_color = "Rebellen Digital"};
 		};
 	};
 	
