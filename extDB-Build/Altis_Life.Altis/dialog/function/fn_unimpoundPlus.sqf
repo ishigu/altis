@@ -29,4 +29,4 @@ hint format[(localize "STR_Garage_RetrievingVeh"),_vehicle];
 lbDelete [28502,(lbCurSel 28502)];
 playSound "cashregister";
 life_atmcash = life_atmcash - _price;
-[getPlayerUID player,side player,life_atmcash,1] call DB_fnc_updatePartial;
+[[getPlayerUID player,side player,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;

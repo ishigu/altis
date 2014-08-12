@@ -8,4 +8,4 @@ if(_cash == 0) exitWith {titleText[localize "STR_Civ_RobFail","PLAIN"]};
 
 life_cash = life_cash + _cash;
 titleText[format[localize "STR_Civ_Robbed",[_cash] call life_fnc_numberText],"PLAIN"];
-[getPlayerUID player,side player,life_cash,0] call DB_fnc_updatePartial;
+[[getPlayerUID player,side player,life_cash,0],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;

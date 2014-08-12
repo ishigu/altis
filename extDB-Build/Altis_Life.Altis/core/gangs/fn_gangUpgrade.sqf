@@ -29,7 +29,7 @@ if(_action) then {
 	grpPlayer setVariable["gang_maxMembers",_slotUpgrade,true];
 	hint parseText format[localize "STR_GNOTF_UpgradeSuccess",_maxMembers,_slotUpgrade,[_upgradePrice] call life_fnc_numberText];
 	[[2,grpPlayer],"TON_fnc_updateGang",false,false] spawn life_fnc_MP;
-	[getPlayerUID player,side player,life_atmcash,1] call DB_fnc_updatePartial;
+	[[getPlayerUID player,side player,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
 } else {
 	hint localize "STR_GNOTF_UpgradeCancel";
 };
