@@ -55,7 +55,7 @@ switch (_item) do
 	case "spikeStrip": {15};
 	case "rock": {6};
 	case "cement": {5};
-	case "goldbar": {12};
+	case "goldbar": {25};
 	case "blastingcharge": {15};
 	case "boltcutter": {5};
 	case "defusekit": {2};

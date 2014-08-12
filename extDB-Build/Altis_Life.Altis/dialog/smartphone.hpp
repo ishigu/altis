@@ -260,7 +260,7 @@ class Life_smartphone_schreiben
 			idc = -1;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
 			x = 0.11;
 			y = 0.3 + (1 / 25)  - 0.048;
 			w = (6.25 / 40);
