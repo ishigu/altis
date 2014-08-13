@@ -68,7 +68,7 @@ class Life_my_smartphone {
 		class RandomTitle : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 88890;
-			text = "$STR_SMARTPHONE_RANDOMTITLE";
+			text = "$STR_Smartphone_RandomTitle";
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
 			x = 0.325;
 			y = 0.25 + 0.3 + (1 / 25);
@@ -126,7 +126,7 @@ class Life_my_smartphone {
 		
 		class Schreiben : Life_RscButtonMenu {
 			idc = 887892;
-			text = "$STR_SMARTPHONE_SCHREIBEN";
+			text = "$STR_Smartphone_Schreiben";
 			onButtonClick = "[4] call life_fnc_smartphone;";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
 			x = 0.11;
@@ -138,7 +138,7 @@ class Life_my_smartphone {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "$STR_SMARTPHONE_TITLE";
+			text = "$STR_Smartphone_Title";
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			x = 0.1;
 			y = 0.2;
@@ -149,7 +149,7 @@ class Life_my_smartphone {
 		class PlayerListTitle : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "$STR_SMARTPHONE_PLAYERLISTTITLE";
+			text = "$STR_Smartphone_PlayerlistTitle";
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
 			x = 0.11;
 			y = 0.25;
@@ -169,7 +169,7 @@ class Life_my_smartphone {
 		
 		class Notruf : Life_RscButtonMenu {
 			idc = -1;
-			text = "$STR_SMARTPHONE_NOTRUF";
+			text = "$STR_Smartphone_Notruf";
 			onButtonClick = "createDialog ""Life_smartphone_notruf"";";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			x = 0.325 + 0.7 - (6.25 / 40);
@@ -180,7 +180,7 @@ class Life_my_smartphone {
 		
 		class ClearMessages : Life_RscButtonMenu {
 			idc = -1;
-			text = "$STR_SMARTPHONE_Clear";
+			text = "$STR_Smartphone_Clear";
 			onButtonClick = "[3] call life_fnc_smartphone;";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			x = 0.325;
@@ -225,7 +225,7 @@ class Life_smartphone_schreiben
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 88886;
-			text = "$STR_SMARTPHONE_NACHRICHTTITLE";
+			text = "$STR_Smartphone_NachrichtTitle";
 			x = 0.1;
 			y = 0.2;
 			w = 0.95;
@@ -234,7 +234,7 @@ class Life_smartphone_schreiben
 		
 		class Absenden : Life_RscButtonMenu {
 			idc = 88885;
-			text = "$STR_SMARTPHONE_ABSENDEN";
+			text = "$STR_Smartphone_Absenden";
 			onButtonClick = "[1,-1,(ctrlText 88884)] call life_fnc_newMsg;";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
 			x = 0.6 - (6.25 / 40) + 0.088;
@@ -312,7 +312,7 @@ class Life_smartphone_notruf {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 888892;
-			text = "$STR_SMARTPHONE_Notruftitle";
+			text = "$STR_Smartphone_NotrufTitle";
 			x = 0.1;
 			y = 0.2;
 			w = 0.6;

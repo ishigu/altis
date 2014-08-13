@@ -5225,35 +5225,38 @@
 		<Key ID="STR_PM_Smartphone">
 			<Original>Smartphone</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_TITLE">
+		<Key ID="STR_Smartphone_Title">
 			<Original>Smartphone Menü</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_PLAYERLISTTITLE">
+		<Key ID="STR_Smartphone_PlayerlistTitle">
 			<Original>Spielerliste</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_MESSAGETITLE">
+		<Key ID="STR_Smartphone_MessageTitle">
 			<Original>Nachrichten  | VON | WANN</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_RANDOMTITLE">
+		<Key ID="STR_Smartphone_RandomTitle">
 			<Original>Nachricht auswählen</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_SCHREIBEN">
+		<Key ID="STR_Smartphone_Schreiben">
 			<Original>Schreiben</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_NOTRUF">
+		<Key ID="STR_Smartphone_Notruf">
 			<Original>Notruf</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_Absenden">
+		<Key ID="STR_Smartphone_Absenden">
 			<Original>Absenden</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_NACHRICHTTITLE">
+		<Key ID="STR_Smartphone_NachrichtTitle">
 			<Original>Nachricht an:</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_Notruftitle">
+		<Key ID="STR_Smartphone_NotrufTitle">
 			<Original>NOTRUFE</Original>
 		</Key>
-		<Key ID="STR_SMARTPHONE_Clear">
+		<Key ID="STR_Smartphone_Clear">
 			<Original>Leeren</Original>
+		</Key>
+		<Key ID="STR_Smartphone_Antworten">
+			<Original>Antworten</Original>
 		</Key>
 	</Package>
 </Project>
