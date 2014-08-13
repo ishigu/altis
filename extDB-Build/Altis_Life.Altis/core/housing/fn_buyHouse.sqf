@@ -21,10 +21,13 @@ _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;
 if(count _houseCfg == 0) exitWith {};
 if(life_atmcash < (_houseCfg select 0)) exitWith {hint localize "STR_House_NotEnough"};
 
+_purchaseText = localize "STR_House_Purchase";
+if ((typeOf _house) in ["Land_i_Garage_V1_F","Land_i_Garage_V2_F"]) then { _purchaseText = localize "STR_Garage_Purchase"; };
+
 _action = [
 	format[localize "STR_House_BuyMSG",
 	[(_houseCfg select 0)] call life_fnc_numberText,
-	(_houseCfg select 1)],localize "STR_House_Purchase",localize "STR_Global_Buy",localize "STR_Global_Cancel"
+	(_houseCfg select 1)],_purchaseText,localize "STR_Global_Buy",localize "STR_Global_Cancel"
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {

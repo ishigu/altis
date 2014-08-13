@@ -2989,6 +2989,11 @@
 			<Italian>Compra Casa</Italian>
 			<Portuguese>Comprar Casa</Portuguese>
 		</Key>
+		<Key ID="STR_Garage_Purchase">
+			<Original>Purchase Garage</Original>
+			<English>Purchase Garage</English>
+			<German>Garage kaufen</German>
+		</Key>
 		<Key ID="STR_House_Raid_NoOwner">
 			<Original>This house doesn't belong to anyone.</Original>
 			<English>This house doesn't belong to anyone.</English>
