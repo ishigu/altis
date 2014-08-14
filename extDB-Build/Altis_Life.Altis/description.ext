@@ -1,4 +1,4 @@
-author = "Lasdios & Felix";
+author = "Felix";
 onLoadName = "Westerland v3.1.4.5";
 onLoadMission = "A RPG game mode developed by Tonic";
 joinUnassigned = 1;
@@ -81,6 +81,12 @@ class CfgSounds
   {
 	name     = "cashregister";
 	sound[]  = {"\sounds\cash_register.ogg", 1.0, 1};
+	titles[] = {};
+  };
+  class OpenBackpack
+  {
+	name     = "openbackpack";
+	sound[]  = {"\sounds\backpack_open.ogg", 1.0, 1};
 	titles[] = {};
   };
 };

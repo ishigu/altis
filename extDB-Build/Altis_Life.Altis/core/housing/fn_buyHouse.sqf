@@ -19,7 +19,7 @@ closeDialog 0;
 
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;
 if(count _houseCfg == 0) exitWith {};
-if(life_atmcash < (_houseCfg select 0)) exitWith {hint localize "STR_House_NotEnough"};
+if(life_atmcash < (_houseCfg select 0)) exitWith {hint format["%1 Dieses Haus kostet %2$.",localize "STR_House_NotEnough", _houseCfg select 0]};
 
 _purchaseText = localize "STR_House_Purchase";
 if ((typeOf _house) in ["Land_i_Garage_V1_F","Land_i_Garage_V2_F"]) then { _purchaseText = localize "STR_Garage_Purchase"; };

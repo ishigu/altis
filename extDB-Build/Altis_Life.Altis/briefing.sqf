@@ -244,7 +244,6 @@ player createDiarySubject ["Steuerung","Steuerung"];
 		[
 			"Team",
 				"
-				Projektleiter  Lasdios<br/><br/>
 				Projektleiter  Felix<br/><br/>
 				Admin [BFC]graVediga<br/><br/>
 				Admin oVo<br/><br/>
