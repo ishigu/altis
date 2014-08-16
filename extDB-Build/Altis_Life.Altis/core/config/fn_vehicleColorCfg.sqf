@@ -14,14 +14,15 @@ switch (_vehicle) do
 {
 	case "I_Heli_Transport_02_F":
 	{
-		_path = "\a3\air_f_beta\Heli_Transport_02\Data\Skins\";
+		_path = "\a3\air_f_beta\Heli_Transport_02\Data\";
 		_ret =
 		[
-			[_path + "heli_transport_02_1_ion_co.paa","civ",_path + "heli_transport_02_2_ion_co.paa",_path + "heli_transport_02_3_ion_co.paa"],
-			[_path + "heli_transport_02_1_dahoman_co.paa","civ",_path + "heli_transport_02_2_dahoman_co.paa",_path + "heli_transport_02_3_dahoman_co.paa"],
-			["textures\vehicles\heli_transport_braun.paa","civ",_path + "heli_transport_02_2_dahoman_co.paa",_path + "heli_transport_02_3_dahoman_co.paa"],
+			[_path + "Skins\heli_transport_02_1_ion_co.paa","civ",_path + "Skins\heli_transport_02_2_ion_co.paa",_path + "Skins\heli_transport_02_3_ion_co.paa"],
+			[_path + "Skins\heli_transport_02_1_dahoman_co.paa","civ",_path + "Skins\heli_transport_02_2_dahoman_co.paa",_path + "Skins\heli_transport_02_3_dahoman_co.paa"],
+			["textures\vehicles\heli_transport_braun.paa","civ",_path + "Skins\heli_transport_02_2_dahoman_co.paa",_path + "Skins\heli_transport_02_3_dahoman_co.paa"],
 			["textures\vehicles\mohawk_ragecore_1.jpg","civ","textures\vehicles\mohawk_ragecore_2.jpg","textures\vehicles\mohawk_ragecore_3.jpg"],
-			["textures\vehicles\mohawk_camo_1.jpg","civ","textures\vehicles\mohawk_camo_2.jpg","textures\vehicles\mohawk_camo_3.jpg"]
+			["textures\vehicles\mohawk_camo_1.jpg","civ","textures\vehicles\mohawk_camo_2.jpg","textures\vehicles\mohawk_camo_3.jpg"],
+			[_path + "heli_transport_02_1_indp_co.paa","reb",_path + "heli_transport_02_2_indp_co.paa",_path + "heli_transport_02_3_indp_co.paa"]
 		];
 	};
 	
@@ -37,7 +38,8 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
-			[_path + "hatchback_01_ext_base09_co.paa","cop"]
+			[_path + "hatchback_01_ext_base09_co.paa","cop"],
+			["textures\vehicles\hatchback_police.jpg","cop"]
 		];
 	};
 		
@@ -167,7 +169,7 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa","cop"],
+			["textures\vehicles\orca_polizei.paa","cop"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","reb"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"],
@@ -245,7 +247,9 @@ switch (_vehicle) do
 		_ret =
 		[
 			["textures\vehicles\hellcat_angry.jpg","civ"],
-			["textures\vehicles\hellcat_angry.jpg","reb"]
+			["textures\vehicles\hellcat_angry.jpg","reb"],
+			["textures\vehicles\hellcat_polizei.paa","cop"],
+			["\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co","reb"]
 		];
 	};
 	

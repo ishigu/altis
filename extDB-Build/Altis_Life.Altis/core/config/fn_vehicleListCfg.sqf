@@ -255,14 +255,11 @@ switch (_shop) do
 				_return set[count _return,["C_Kart_01_Blu_F",10000]];
 				_return set[count _return,["C_Kart_01_Red_F",10000]];
 				_return set[count _return,["I_Heli_light_03_unarmed_F",1000000]];
-			};
-			if(playerSide == civilian) then
-			{
+				_return set[count _return,["I_Heli_Transport_02_F",1200000]];
 				_return set[count _return,["O_Truck_03_device_F",500000]];
 				_return set[count _return,["O_Truck_03_covered_F",500000]];
 				_return set[count _return,["O_Truck_03_ammo_F",500000]];
 				_return set[count _return,["O_Truck_03_fuel_F",500000]];
-				_return set[count _return,["I_Heli_Transport_02_F",1200000]];
 			};
 			if(playerSide == west) then
 			{
