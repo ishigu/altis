@@ -16,7 +16,7 @@ if(_groupID == -1) exitWith {};
 switch (_mode) do {
 	case 0: {
 		_bank = [(_group getVariable ["gang_bank",0])] call DB_fnc_numberSafe;
-		_maxMembers = _group getVariable ["gang_maxMembers",8];
+		_maxMembers = _group getVariable ["gang_maxMembers",3];
 		_members = [(_group getVariable "gang_members")] call DB_fnc_mresArray;
 		_owner = _group getVariable ["gang_owner",""];
 		if(_owner == "") exitWith {};
@@ -40,7 +40,7 @@ switch (_mode) do {
 	
 	case 4: {
 		_members = _group getVariable "gang_members";
-		if(count _members > (_group getVariable ["gang_maxMembers",8])) then {
+		if(count _members > (_group getVariable ["gang_maxMembers",3])) then {
 			_membersFinal = [];
 			for "_i" from 0 to _maxMembers -1 do {
 				_membersFinal set[count _membersFinal,(_members select _i)];

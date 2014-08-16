@@ -108,7 +108,6 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_return set[count _return,["C_Offroad_01_F",5000]];
-			
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
@@ -136,6 +135,16 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 1) then
 		{
 			_return set[count _return,["B_Heli_Light_01_F",75000]];
+			
+			if(playerSide == west) then
+			{
+				_return set[count _return,["O_Heli_Light_02_unarmed_F",66666]];
+				_return set[count _return,["C_Hatchback_01_sport_F",10000]];
+			};
+		};
+		if(__GETC__(life_coplevel) > 2) then
+		{
+			_return set[count _return,["O_Heli_Light_02_unarmed_F",166666]];
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
@@ -148,6 +157,10 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 1) then
 		{
 			_return set[count _return,["B_Heli_Light_01_F",75000]];
+		};
+		if(__GETC__(life_coplevel) > 2) then
+		{
+			_return set[count _return,["O_Heli_Light_02_unarmed_F",166666]];
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
@@ -227,6 +240,11 @@ switch (_shop) do
 			{
 				_return set[count _return,["B_Truck_01_box_F",250000]];
 			};
+			if(playerSide == west) then
+			{
+				_return set[count _return,["O_Heli_Light_02_unarmed_F",66666]];
+				_return set[count _return,["C_Hatchback_01_sport_F",10000]];
+			};
 		};
 		if(__GETC__(life_donator) > 2) then
 		{
@@ -246,7 +264,10 @@ switch (_shop) do
 				_return set[count _return,["O_Truck_03_fuel_F",500000]];
 				_return set[count _return,["I_Heli_Transport_02_F",1200000]];
 			};
-	
+			if(playerSide == west) then
+			{
+				_return set[count _return,["I_Heli_light_03_unarmed_F",666666]];
+			};
 		};
 	};
 	

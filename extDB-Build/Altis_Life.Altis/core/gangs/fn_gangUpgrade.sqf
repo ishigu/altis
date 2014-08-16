@@ -5,10 +5,15 @@
 	Description:
 	Determinds the upgrade price and blah
 */
-private["_maxMembers","_slotUpgrade","_upgradePrice"];
-_maxMembers = grpPlayer getVariable ["gang_maxMembers",8];
-_slotUpgrade = _maxMembers + 4;
-_upgradePrice = round(_slotUpgrade * (__GETC__(life_gangUpgradeBase)) / (__GETC__(life_gangUpgradeMultipler)));
+private["_maxMembers","_slotUpgrade","_upgradePrice","_expo"];
+_maxMembers = grpPlayer getVariable ["gang_maxMembers",3];
+_slotUpgrade = _maxMembers + 1;
+_expo = _maxMembers - 3;
+_upgradePrice = (__GETC__(life_gangUpgradeBase));
+for [{_i = 0}, {_i < _expo}, {_i = _i + 1}] do
+{
+	_upgradePrice = _upgradePrice * (__GETC__(life_gangUpgradeMultipler));
+};
 
 _action = [
 	format[(localize "STR_GNOTF_MaxMemberMSG")+ "<br/><br/>" +(localize "STR_GNOTF_CurrentMax")+ "<br/>" +(localize "STR_GNOTF_UpgradeMax")+ "<br/>" +(localize "STR_GNOTF_Price")+ " <t color='#8cff9b'>$%3</t>",_maxMembers,_slotUpgrade,[_upgradePrice] call life_fnc_numberText],

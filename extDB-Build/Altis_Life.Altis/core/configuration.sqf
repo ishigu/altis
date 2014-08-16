@@ -47,12 +47,12 @@ __CONST__(life_revive_cops,false); //Set to false if you don't want cops to be a
 __CONST__(life_revive_fee,4000); //Fee for players to pay when revived.
 
 //House Limit
-__CONST__(life_houseLimit,1); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
+__CONST__(life_houseLimit,3); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
 
 //Gang related stuff?
 __CONST__(life_gangPrice,75000); //Price for creating a gang (They're all persistent so keep it high to avoid 345345345 gangs).
-__CONST__(life_gangUpgradeBase,10000); //MASDASDASD
-__CONST__(life_gangUpgradeMultipler,2.5); //BLAH
+__CONST__(life_gangUpgradeBase,100000); // life_gangUpgradeBase*life_gangUpgradeMultipler^(maxMembers - 3) = upgrade price
+__CONST__(life_gangUpgradeMultipler,2); //BLAH
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
@@ -324,10 +324,10 @@ buy_array =
 	["peach",68],
 	["spikeStrip",2500],
 	["blastingcharge",35000],
-	["boltcutter",7500],
+	["boltcutter",17500],
 	["defusekit",2500],
-	["storagesmall",75000],
-	["storagebig",150000],
+	["storagesmall",750000],
+	["storagebig",1500000],
 	["beer",150],
 	["blackbeer",150],
 	["vodca",150],

@@ -460,6 +460,14 @@ switch(_shop) do
 			_return set[count _return,["U_C_Scientist",nil,1000]];
 			_return set[count _return,["U_NikosBody",nil,1000]];
 		};
+		if (side player == west) then
+		{
+			if (__GETC__(life_donator) >= 3) then {
+				_return set[count _return,["optic_MRCO",nil,3500]];
+				_return set[count _return,["100Rnd_65x39_caseless_mag",nil,300]];
+				_return set[count _return,["100Rnd_65x39_caseless_mag_Tracer",nil,300]];
+			};
+		};
 
 		if (__GETC__(life_adminlevel) > 0) then
 		{
