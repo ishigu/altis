@@ -5819,7 +5819,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1324;
+		items=1334;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -17560,7 +17560,7 @@ class Mission
 		class Item1202
 		{
 			position[]={15592.117,18.560608,17182.73};
-			azimut=130.00000;
+			azimut=130;
 			id=1551;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
@@ -18865,6 +18865,103 @@ class Mission
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this setObjectTexture [0, ""ovo.jpg""]";
+		};
+		class Item1324
+		{
+			position[]={3172.4753,2.0342438,12905.072};
+			azimut=-139.702;
+			id=1673;
+			side="EMPTY";
+			vehicle="Land_HelipadRescue_F";
+			skill=0.60000002;
+			text="air_sp_1_1";
+		};
+		class Item1325
+		{
+			position[]={3197.6294,2,12898.08};
+			id=1674;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item1326
+		{
+			position[]={22202.379,3.3023536,14471.106};
+			azimut=175;
+			id=1675;
+			side="EMPTY";
+			vehicle="Land_HelipadRescue_F";
+			skill=0.60000002;
+			text="air_sp_1_2_2";
+		};
+		class Item1327
+		{
+			position[]={22199.512,2.5938034,14497.62};
+			azimut=175;
+			id=1676;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item1328
+		{
+			position[]={3649.9219,7.2152619,13363.846};
+			azimut=311.3345;
+			id=1677;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.40000001;
+			init="this allowDamage false;";
+		};
+		class Item1329
+		{
+			position[]={3632.3447,6.8762531,13379.147};
+			azimut=311.3345;
+			id=1678;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.40000001;
+			init="this allowDamage false;";
+		};
+		class Item1330
+		{
+			position[]={3648.033,7.044806,13395.97};
+			azimut=311.3345;
+			id=1679;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.40000001;
+			init="this allowDamage false;";
+		};
+		class Item1331
+		{
+			position[]={3662.9114,7.4443231,13412.545};
+			azimut=311.3345;
+			id=1680;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.40000001;
+			init="this allowDamage false;";
+		};
+		class Item1332
+		{
+			position[]={3680.3638,7.615231,13399.112};
+			azimut=311.3345;
+			id=1681;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.40000001;
+			init="this allowDamage false;";
+		};
+		class Item1333
+		{
+			position[]={3664.8398,7.4988008,13382.507};
+			azimut=311.3345;
+			id=1682;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.40000001;
+			init="this allowDamage false;";
 		};
 	};
 	class Markers
