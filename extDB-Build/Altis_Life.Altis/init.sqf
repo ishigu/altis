@@ -44,4 +44,5 @@ if (isDedicated) then {
 	null = [5, "scripts"] execVM "scripts\helipad_lights\helipad_light_auto.sqf";	
 };
 */
+[] execVM "scripts\zlt_fastrope.sqf";
 StartProgress = true;
