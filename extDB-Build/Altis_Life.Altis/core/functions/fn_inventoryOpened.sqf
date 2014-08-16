@@ -17,8 +17,10 @@ if(_isPack == 1) then {
 		closeDialog 0;
 	};*/
 	playSound "openbackpack";
-	[{playSound "openbackpack";},"BIS_fnc_spawn",_unit,false] spawn life_fnc_MP;
-	[[[0,1,2],format ["%1 hat deinen Rucksack geoeffnet!", player getVariable["realname",name player]]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+	if (_unit != player) then {
+		[{playSound "openbackpack";},"BIS_fnc_spawn",_unit,false] spawn life_fnc_MP;
+		[[[0,1,2],format ["%1 hat deinen Rucksack geoeffnet!", player getVariable["realname",name player]]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+	};
 };
 
 if((typeOf _container) in ["Box_IND_Grenades_F","B_supplyCrate_F"]) exitWith {

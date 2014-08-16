@@ -21,7 +21,8 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 //Check to see if the gang name already exists.
 if(count _queryResult != 0) exitWith {
 	[[1,"There is already a gang created with that name please pick another name."],"life_fnc_broadcast",_ownerID,false] spawn life_fnc_MP;
-	[["life_action_gangInUse",nil,missionNamespace],"life_fnc_netSetVar",_ownerID,false] spawn life_fnc_MP;
+	//[["life_action_gangInUse",nil,missionNamespace],"life_fnc_netSetVar",_ownerID,false] spawn life_fnc_MP;
+	[{missionNamespace setVariable["life_action_gangInUse",nil];},"BIS_fnc_Spawn",true,false] call BIS_fnc_MP;
 };
 
 _query = format["SELECT id FROM gangs WHERE members LIKE '%2%1%2' AND active='1'",_uid,"%"];
@@ -31,7 +32,8 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 //Check to see if this person already owns or belongs to a gang.
 if(count _queryResult != 0) exitWith {
 	[[1,"You are currently already active in a gang, please leave the gang first."],"life_fnc_broadcast",_ownerID,false] spawn life_fnc_MP;
-	[["life_action_gangInUse",nil,missionNamespace],"life_fnc_netSetVar",_ownerID,false] spawn life_fnc_MP;
+	//[["life_action_gangInUse",nil,missionNamespace],"life_fnc_netSetVar",_ownerID,false] spawn life_fnc_MP;
+	[{missionNamespace setVariable["life_action_gangInUse",nil];},"BIS_fnc_Spawn",true,false] call BIS_fnc_MP;
 };
 
 //Check to see if a gang with that name already exists but is inactive.

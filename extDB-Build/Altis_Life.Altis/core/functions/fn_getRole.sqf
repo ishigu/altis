@@ -9,14 +9,14 @@
 private["_return"];
 _unit = _this;
 
-_return = switch(playerSide) do
+switch(playerSide) do
 {
-	case civilian: {"civ"};
-	case west: {"cop"};
+	case civilian: {_return = "civ"};
+	case west: {_return = "cop"};
 	case independent: {
-		if(player call life_fnc_isMedic) then {"med"};
-		if(player call life_fnc_isADAC) then {"adac"};
+		_return = "adac";
+		if(player call life_fnc_isMedic) then {_return = "med"};
 	};
-	case east: {"reb"};
+	case east: {_return = "reb"};
 };
 _return 

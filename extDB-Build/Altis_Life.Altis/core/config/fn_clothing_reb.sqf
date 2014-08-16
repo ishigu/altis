@@ -20,8 +20,8 @@ switch (_filter) do
 		[
 			["U_IG_Guerilla1_1",nil,5000],
 			["U_I_G_Story_Protagonist_F",nil,7500],
-			["U_I_OfficerUniform",10000],
-			["U_O_OfficerUniform_ocamo",15000],
+			["U_I_OfficerUniform",nil,10000],
+			["U_O_OfficerUniform_ocamo",nil,15000],
 			["U_I_G_resistanceLeader_F",nil,11500],
 			["U_O_CombatUniform_oucamo",nil,11500],
 			["U_O_SpecopsUniform_ocamo",nil,17500],

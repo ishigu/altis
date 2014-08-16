@@ -23,9 +23,12 @@ switch (true) do
 if(_mine == "") exitWith {hint localize "STR_ISTR_Pick_NotNear"};
 if(vehicle player != player) exitWith {hint localize "STR_ISTR_Pick_MineVeh";};
 
+// Exploit check :)
+if(life_action_mining_hotkey_inuse) exitWith {hint localize "STR_NOTF_PickaxeAlready"};
+
 _diff = [_mine,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith {hint localize "STR_NOTF_InvFull"};
-life_action_inUse = true;
+life_action_mining_hotkey_inuse = true;
 for "_i" from 0 to 2 do
 {
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";

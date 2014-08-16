@@ -47,12 +47,17 @@ switch (_side) do
 	};
 	
 	case independent: {
-		_return = [
-			["medic_spawn_1","Kavala Krankenhaus","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["medic_spawn_2","Athira","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["adac_spawn_2","ADAC Basis","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["adac_spawn_1","ADAC Flughafen","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
-		];
+		if (player call life_fnc_isMedic) then {
+			_return = [
+				["medic_spawn_1","Kavala Krankenhaus","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
+				["medic_spawn_2","Flughafen Krankenhaus","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
+			];
+		} else {
+			_return = [
+				["adac_spawn_2","ADAC Basis","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
+				["adac_spawn_1","ADAC Flughafen","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
+			];
+		};
 	};
 	
 	case east: {

@@ -2196,6 +2196,11 @@
 			<English>You have been unfrozen by an administrator</English>
 			<German>Du wurdest von einem Administrator aufgetaut</German>
 		</Key>
+		<Key ID="STR_NOTF_PickaxeAlready">
+			<Original>You're already using a pickaxe.</Original>
+			<English>You're already using a pickaxe.</English>
+			<German>Du benutzt bereits eine Spitzhacke.</German>
+		</Key>
 	</Package>
 	<Package name="Jail_Strings">
 		<Key ID="STR_Jail_Warn">
