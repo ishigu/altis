@@ -138,7 +138,7 @@
 		<Key ID="STR_Admin_TpHere">
 			<Original>TP Here</Original>
 			<English>TP Here</English>
-			<German>Spieler holen</German>
+			<German>Herholen</German>
 			<French>TP Ici</French>
 		</Key>
 		<Key ID="STR_Admin_Debug">
@@ -1115,7 +1115,7 @@
 		<Key ID="STR_Keys_DropKey">
 			<Original>Drop Key</Original>
 			<English>Drop Key</English>
-			<German>Schlüssel wegwerfen</German>
+			<German>Wegwerfen</German>
 			<French>Jeter Clef</French>
 			<Italian>Abbandona Chiave</Italian>
 			<Portuguese>Remover Chave</Portuguese>
@@ -1123,7 +1123,7 @@
 		<Key ID="STR_Keys_GiveKey">
 			<Original>Give Key</Original>
 			<English>Give Key</English>
-			<German>Schlüssel geben</German>
+			<German>Geben</German>
 			<French>Donner Clef</French>
 			<Italian>Dai Chiave</Italian>
 			<Portuguese>Dar Chave</Portuguese>
@@ -1189,7 +1189,7 @@
 		<Key ID="STR_PM_KeyChain">
 			<Original>Key Chain</Original>
 			<English>Key Chain</English>
-			<German>Schlüsselbund</German>
+			<German>Schlüssel</German>
 			<French>Porte-clés</French>
 			<Italian>Portachiavi</Italian>
 			<Portuguese>Chaves</Portuguese>
@@ -1205,7 +1205,7 @@
 		<Key ID="STR_PM_SyncData">
 			<Original>Sync Data</Original>
 			<English>Sync Data</English>
-			<German>Daten speichern</German>
+			<German>Speichern</German>
 			<French>Sync Data</French>
 			<Italian>Salva Dati</Italian>
 			<Portuguese>Sincronizar Dados</Portuguese>
