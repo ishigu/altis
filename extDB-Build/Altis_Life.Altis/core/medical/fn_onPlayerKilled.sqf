@@ -41,7 +41,11 @@ _unit spawn
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
 	_Timer = ((findDisplay 7300) displayCtrl 7301);
 	
-	_maxTime = time + (life_respawn_timer * 60);
+	if ((call life_fnc_countMedic) < _needed) then {
+		_maxTime = time + (life_respawn_timer * 6);
+	} else {
+		_maxTime = time + (life_respawn_timer * 60);
+	};
 	_RespawnBtn ctrlEnable false;
 	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
 	round(_maxTime - time) <= 0 OR isNull _this OR life_request_timer};

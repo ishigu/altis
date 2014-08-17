@@ -12,7 +12,7 @@ _onScreenTime = 8;
 sleep 7; //Wait in seconds before the credits start after player is in-game
  
 _role1 = "Willkommen auf dem Altis Life Server von:";
-_role1names = ["westerland-altislife.de"];
+_role1names = ["westerland-altis.de"];
 _role2 = "Eure Projektleitung";
 _role2names = ["Felix"];
 _role3 = "Eure Admins";
@@ -22,9 +22,9 @@ _role4names = ["Elly","K3V1N"];
 _role5 = "Scripter";
 _role5names = ["ishi","Shentoza"];
 _role6 = "Website:";
-_role6names = ["www.westerland-altislife.de"];
+_role6names = ["www.westerland-altis.de"];
 _role7 = "Teamspeak:";
-_role7names = ["5.175.226.241:9987"];
+_role7names = ["ts.westerland-altis.de:9987"];
 _role8 = "";
 _role8names = [""];
 {

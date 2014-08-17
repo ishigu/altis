@@ -52,11 +52,19 @@
 //Debug Menu
 [] spawn {
 	waitUntil {!isNull (uiNamespace getVariable "RscDisplayDebugPublic")};
-	closeDialog 0;
-	[[profileName,getPlayerUID player,"MenuBasedHack_RscDisplayDebugPublic"],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
-	[[profileName,"Menu Hack: RscDisplayDebugPublic"],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
-	sleep 0.5;
-	["SpyGlass",false,false] call BIS_fnc_endMission;
+	if(!((getPlayerUID player) in ["76561198030241549",   // ishi
+                            "76561198068609909",   // oVo
+                            "76561198076320576",   // Felix
+                            "76561197985341100",   // graVediga
+                            "76561197985458229",   // Shentoza
+                            "76561197970641091"]   // NeoX
+							)) then {
+		closeDialog 0;
+		[[profileName,getPlayerUID player,"MenuBasedHack_RscDisplayDebugPublic"],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
+		[[profileName,"Menu Hack: RscDisplayDebugPublic"],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
+		sleep 0.5;
+		["SpyGlass",false,false] call BIS_fnc_endMission;
+	};
 };
 
 /*

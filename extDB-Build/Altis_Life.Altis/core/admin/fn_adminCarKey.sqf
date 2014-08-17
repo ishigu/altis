@@ -7,7 +7,7 @@
 	Gives a copy of the key for the selected vehicle you.
 */
 private["_vehicle"];
-if(__GETC__(life_adminlevel) < 2) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
+if(__GETC__(life_adminlevel) < 3) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 _vehicle = cursorTarget;
 if(isNull _vehicle) then {_vehicle = (position player) nearEntities [["Air", "Car", "Ship"], 5] select 0;};
 if(isNull _vehicle) exitWith{ hint "Kein Fahrzeug ausgewählt!";};

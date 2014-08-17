@@ -24,19 +24,8 @@ __CONST__(JJJJ_MMMM___EEEEEEE_LLYYSSTTIICCC_SHIT_RE,"No");
 __CONST__(JJJJ_MMMM___EEEEEEE_LLYYSSTTIICCC_SHIT_RE_OLD,"No");
 __CONST__(JJJJ_MMMM___EEEEEEE_SPAWN_VEH,"No");
 __CONST__(JJJJ_MMMM___EEEEEEE_SPAWN_WEAPON,"No");
-if(!(__GETC__(SPY_cfg_enableSys))) exitWith {}; //Don't waste anymore time since it was disabled.
+//if(!(__GETC__(SPY_cfg_enableSys))) exitWith {}; //Don't waste anymore time since it was disabled.
 //if(__GETC__(life_adminlevel) != 0) exitWith {}; //Don't run this for admins?
-
-if(true) exitWith{};
-// TEMPORARY!!!! :
-if ((getPlayerUID player) in ["76561197989320695", // Lasdios
-                            "76561198030241549",   // ishi
-                            "76561198068609909",   // oVo
-                            "76561198076320576",   // Felix
-                            "76561197985341100",   // graVediga
-                            "76561197985458229",   // Shentoza
-                            "76561197970641091"]   // NeoX
-							) exitWith {}; //Don't run this for admins?
 
 //Make sure all functions were offloaded to the client..
 waitUntil {!isNil "SPY_fnc_menuCheck" && !isNil "SPY_fnc_variablecheck" && !isNil "SPY_fnc_cmdMenuCheck"};
