@@ -105,6 +105,7 @@ switch(_type) do
 	case "62": {_type = ["Fahren in gesperrten Gebieten",30000];};
 	case "63": {_type = ["Verbotene Fahrzeuge",100000];};
 	case "64": {_type = ["Lärmbelästigung durch unnötiges Hupen",0];};
+	case "65": {_type = ["Einbruch",40000];};
 	
     default {_type = [];};
 };

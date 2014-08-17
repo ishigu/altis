@@ -350,3 +350,8 @@ _text = "Unnötiges Hupen $1.000-$5.000";
 _data = "64";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
+
+_text = "Einbruch $40.000";
+_data = "65";
+_list2 lbAdd format["%1 (%2)",_text,_data];
+_list2 lbSetData [(lbSize _list2)-1,_data];
