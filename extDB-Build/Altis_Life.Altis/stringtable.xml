@@ -3669,12 +3669,9 @@
 			<Portuguese>Licença de Guarda Costeira</Portuguese>
 		</Key>
 		<Key ID="STR_License_Rebel">
-			<Original>Rebel Training</Original>
-			<English>Rebel Training</English>
-			<German>Rebellenausbildung</German>
-			<French>Entrainement rebelle</French>
-			<Italian>Licenza da Ribelle</Italian>
-			<Portuguese>Treinamento Rebelde</Portuguese>
+			<Original>Blackmarket License</Original>
+			<English>Blackmarket License</English>
+			<German>Schwarzmarktlizenz</German>
 		</Key>
 		<Key ID="STR_License_Truck">
 			<Original>Truck License</Original>
