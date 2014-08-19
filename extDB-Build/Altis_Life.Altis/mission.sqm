@@ -5819,7 +5819,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1334;
+		items=1335;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -18963,6 +18963,17 @@ class Mission
 			skill=0.40000001;
 			init="this allowDamage false;";
 		};
+		class Item1334
+		{
+			position[]={16033.311,13.561616,16933.605};
+			azimut=325;
+			offsetY=0.00313091;
+			id=1683;
+			side="EMPTY";
+			vehicle="Land_CncWall4_F";
+			skill=0.60000002;
+			init="this allowDamage false; this enableSimulation false;";
+		};
 	};
 	class Markers
 	{
@@ -19100,7 +19111,7 @@ class Mission
 		{
 			position[]={9188.2607,14.383561,21670.799};
 			name="Rebelop";
-			text="Terroristenlager";
+			text="Schwarzmarkt";
 			type="mil_triangle";
 			colorName="Color1_FD_F";
 		};
@@ -19989,7 +20000,7 @@ class Mission
 		{
 			position[]={12290.406,123.8956,8899.7314};
 			name="Rebelop_1";
-			text="Terroristenlager";
+			text="Schwarzmarkt";
 			type="mil_triangle";
 			colorName="Color1_FD_F";
 		};
@@ -19997,7 +20008,7 @@ class Mission
 		{
 			position[]={20081.033,100.96766,6737.1904};
 			name="Rebelop_2";
-			text="Terroristenlager";
+			text="Schwarzmarkt";
 			type="mil_triangle";
 			colorName="Color1_FD_F";
 		};
@@ -20314,7 +20325,7 @@ class Mission
 		{
 			position[]={10246.375,5.3159304,11272.208};
 			name="turle_dealer";
-			text="Schildkroetendealer";
+			text="Schildkroetenhaendler";
 			type="mil_dot";
 			colorName="ColorRed";
 		};
@@ -20610,7 +20621,7 @@ class Mission
 		{
 			position[]={132.12535,-0.089471892,14819.055};
 			name="ts";
-			text="Ts ip: 5.175.226.241";
+			text="Ts ip: ishigure.de:9999";
 			type="hd_dot";
 			colorName="ColorRed";
 		};

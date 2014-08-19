@@ -235,7 +235,7 @@ player createDiarySubject ["Steuerung","Steuerung"];
 		[
 			"Forums",
 				"
-				www.westerland-altislife.de<br/>				
+				www.westerland-altis.de<br/>				
 				"
 		]
 	];
