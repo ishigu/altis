@@ -40,7 +40,7 @@ life_smartphoneTarget = ObjNull;
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
-__CONST__(life_save_yinv,FALSE); //Save Y-Inventory for civs and cops? (Medics excluded for now)
+__CONST__(life_save_yinv,TRUE); //Save Y-Inventory for civs and cops? (Medics excluded for now)
 
 //Revive constant variables.
 __CONST__(life_revive_cops,false); //Set to false if you don't want cops to be able to revive downed players.
