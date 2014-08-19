@@ -103,7 +103,7 @@ switch(_shop) do
 			{
 				["Polizeibeamter",
 					[
-						["SMG_02_F",nil,10000],
+						["SMG_02_F",nil,8000],
 						["30Rnd_9x21_Mag",nil,250],
 						["muzzle_snds_L",nil,650],
 						["optic_Aco",nil,1500],
@@ -133,7 +133,7 @@ switch(_shop) do
 			{
 				["Polizeimeister",
 					[
-						["arifle_MXC_Black_F",nil,20000],
+						["arifle_MXC_Black_F",nil,10000],
 						["30Rnd_65x39_caseless_mag",nil,300],
 						["muzzle_snds_H",nil,650],
 						["optic_Hamr",nil,3500],
@@ -163,8 +163,8 @@ switch(_shop) do
 			{
 				["Polizei Hauptmeister",
 					[
-						["arifle_MXC_Black_F",nil,20000],
-						["arifle_MX_SW_Black_F",nil,20000],
+						["arifle_MXC_Black_F",nil,10000],
+						["arifle_MX_SW_Black_F",nil,10000],
 						["30Rnd_65x39_caseless_mag",nil,300],
 						["muzzle_snds_H_SW",nil,2000],
 						["muzzle_snds_H",nil,2000],
@@ -195,12 +195,12 @@ switch(_shop) do
 			{
 				["Kommissar",
 					[	
-						["arifle_MXC_Black_F",nil,20000],
-						["arifle_MX_SW_Black_F",nil,20000],
+						["arifle_MXC_Black_F",nil,10000],
+						["arifle_MX_SW_Black_F",nil,10000],
 						["30Rnd_65x39_caseless_mag",nil,300],
 						["muzzle_snds_H_SW",nil,2000],
 						["muzzle_snds_H",nil,2000],
-						["srifle_EBR_F",nil,20000],
+						["srifle_EBR_F",nil,10000],
 						["20Rnd_762x51_Mag",nil,200],
 						["muzzle_snds_B",nil,2000],	
 						["optic_SOS",nil,200],
@@ -233,9 +233,9 @@ switch(_shop) do
 			{
 				["Präzisionsschütze",
 					[
-						["arifle_MXC_Black_F",nil,20000],
-						["arifle_MX_SW_Black_F",nil,20000],
-						["arifle_MX_GL_Black_F",nil,20000],
+						["arifle_MXC_Black_F",nil,10000],
+						["arifle_MX_SW_Black_F",nil,10000],
+						["arifle_MX_GL_Black_F",nil,10000],
 						["30Rnd_65x39_caseless_mag",nil,300],
 						["muzzle_snds_H_SW",nil,2000],
 						["muzzle_snds_H",nil,2000],
@@ -280,9 +280,9 @@ switch(_shop) do
 			{
 				["Altis Polizeipraesident",
 					[
-						["arifle_MXC_Black_F",nil,20000],
-						["arifle_MX_SW_Black_F",nil,20000],
-						["arifle_MX_GL_Black_F",nil,20000],
+						["arifle_MXC_Black_F",nil,10000],
+						["arifle_MX_SW_Black_F",nil,10000],
+						["arifle_MX_GL_Black_F",nil,10000],
 						["30Rnd_65x39_caseless_mag",nil,300],
 						["muzzle_snds_H_MG",nil,2000],
 						["muzzle_snds_H",nil,2000],
