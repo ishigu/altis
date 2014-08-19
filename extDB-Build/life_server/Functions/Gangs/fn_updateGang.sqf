@@ -29,7 +29,7 @@ switch (_mode) do {
 	};
 	
 	case 2: {
-		_query = format["UPDATE gangs SET maxmembers='%1' WHERE id='%2'",(_group getVariable ["gang_maxMembers",8]),_groupID];
+		_query = format["UPDATE gangs SET maxmembers='%1' WHERE id='%2'",(_group getVariable ["gang_maxMembers",3]),_groupID];
 	};
 	
 	case 3: {
