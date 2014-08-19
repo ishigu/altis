@@ -6,9 +6,9 @@
 	Sets the player up if he/she used the respawn option.
 */
 private["_handle"];
-//if(!isNull life_corpse) then {
-//	_handle = [life_corpse] spawn life_fnc_dropItems;
-//};
+if(!isNull life_corpse) then {
+	_handle = [life_corpse] spawn life_fnc_dropItems;
+};
 
 //Reset our weight and other stuff
 life_use_atm = TRUE;
@@ -31,7 +31,8 @@ player setVariable["Reviving",nil,TRUE];
 switch(playerSide) do
 {
 	case west: {
-		_handle = [] spawn life_fnc_copLoadout;
+		//_handle = [] spawn life_fnc_copLoadout;
+		_handle = [] spawn life_fnc_loadGear;
 	};
 	case civilian: {
 		_handle = [] spawn life_fnc_civLoadout;
@@ -45,6 +46,10 @@ switch(playerSide) do
 		_handle = [] spawn life_fnc_rebLoadout;
 	};
 	waitUntil {scriptDone _handle};
+};
+
+if (playerSide == west) then {
+	RemoveAllWeapons player; // Cop's kriegen ihr gesaved'es gear, wo auch waffen enthalten sind -> entfernen
 };
 
 //Cleanup of weapon containers near the body & hide it.
