@@ -471,8 +471,6 @@ switch(_shop) do
 
 		if (__GETC__(life_adminlevel) > 0) then
 		{
-			_return set[count _return,["optic_Nightstalker",nil,100]];
-			_return set[count _return,["optic_tws_mg",nil,100]];
 		};
 		if(true) exitWith{[format ["Donator Shop %1", __GETC__(life_donator)],_return]};
 	};
