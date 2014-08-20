@@ -17,7 +17,7 @@ if((player call life_fnc_isMedic)) then {
 	[] call life_fnc_medicLoadout;
 };
 
-if(!(player call life_fnc_isMedic) && (side player == independent)) then {
+if(!(player call life_fnc_isMedic) && (playerSide == independent)) then {
 	if(!((__GETC__(life_medicLevel)) == 2 ||(__GETC__(life_medicLevel)) == 3)) exitWith {
 		["Du bist kein Adac",FALSE,TRUE] call BIS_fnc_endMission;
 		sleep 35;

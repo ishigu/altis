@@ -48,5 +48,5 @@ if(_action) then {
 	for "_i" from 1 to _numOfDoors do {
 		_house setVariable[format["bis_disabled_Door_%1",_i],0,true];
 	};
-	[[getPlayerUID player,side player,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
+	[[getPlayerUID player,playerSide,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
 };

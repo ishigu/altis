@@ -418,7 +418,7 @@ switch(_shop) do
 			["NVGoggles",nil,350],
 			["FirstAidKit",nil,25]
 		];
-		if (side player == east) then
+		if (playerSide == east) then
 		{
 			if (__GETC__(life_donator) >= 3) then {
 				_return set[count _return,["arifle_Mk20C_plain_F",nil,25000]];
@@ -428,7 +428,7 @@ switch(_shop) do
 				_return set[count _return,["200Rnd_65x39_cased_Box_Tracer",nil,125]];
 			};
 		};
-		if (side player in [civilian,east]) then
+		if (playerSide in [civilian,east]) then
 		{
 			if (__GETC__(life_donator) >= 3) then {
 				_return set[count _return,["hgun_pistol_heavy_01_F",nil,5850]];
@@ -460,7 +460,7 @@ switch(_shop) do
 			_return set[count _return,["U_C_Scientist",nil,1000]];
 			_return set[count _return,["U_NikosBody",nil,1000]];
 		};
-		if (side player == west) then
+		if (playerSide == west) then
 		{
 			if (__GETC__(life_donator) >= 3) then {
 				_return set[count _return,["optic_MRCO",nil,3500]];

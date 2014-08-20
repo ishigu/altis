@@ -48,7 +48,7 @@ if((player call life_fnc_isMedic)) then {
 };
 
 //ADAC
-if(!(player call life_fnc_isMedic) && (side player == independent)) then {
+if(!(player call life_fnc_isMedic) && (playerSide == independent)) then {
 	switch(_type) do {
 		case "U_I_CombatUniform" : {
 			_path = "textures\uniform\adac.paa";

@@ -20,7 +20,7 @@ if(_marketprice != -1) then
 	_price = _marketprice;
 };
 ////Marktsystem Ende////
-if(side player == independent && !(player call life_fnc_isMedic) && _type == "fuelF") then { _price = 50; }; // ADAC Benzinkanister billiger
+if(playerSide == independent && !(player call life_fnc_isMedic) && _type == "fuelF") then { _price = 50; }; // ADAC Benzinkanister billiger
 _amount = ctrlText 2405;
 if(!([_amount] call fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
 _amount = parseNumber (_amount);

@@ -11,7 +11,7 @@ _pylon attachTo[player,[0,2.5,0.2]];
 _pylon setDir 90;
 _pylon setVariable["item","pylonDeployed",true];
 
-life_action_pylonDeploy = player addAction["<t color='#00FF00'>Pylon aufstellen</t>",{if(!isNull life_pylon) then {detach life_pylon; life_pylon = ObjNull;}; player removeAction life_action_pylonDeploy; life_action_pylonDeploy = nil;},"",999,false,false,"",'!isNull life_pylon && !(side player in [civilian,east])'];
+life_action_pylonDeploy = player addAction["<t color='#00FF00'>Pylon aufstellen</t>",{if(!isNull life_pylon) then {detach life_pylon; life_pylon = ObjNull;}; player removeAction life_action_pylonDeploy; life_action_pylonDeploy = nil;},"",999,false,false,"",'!isNull life_pylon && !(playerSide in [civilian,east])'];
 life_pylon = _pylon;
 waitUntil {isNull life_pylon};
 if(!isNil "life_action_pylonDeploy") then {player removeAction life_action_pylonDeploy;};

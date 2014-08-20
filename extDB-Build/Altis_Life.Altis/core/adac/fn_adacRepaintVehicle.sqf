@@ -6,7 +6,7 @@ private["_veh","_upp","_ui","_progress","_pgText","_cP","_displayName", "_damage
 _veh = cursorTarget;
 life_interrupted = false;
 if(isNull _veh) exitWith { hint "Kein Fahrzeug gefunden!"; };
-if((player call life_fnc_isMedic) || (side player != independent)) exitWith
+if((player call life_fnc_isMedic) || (playerSide != independent)) exitWith
 {
 	hint "Du bist kein ADAC-Mitglied!";
 };

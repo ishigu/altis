@@ -11,7 +11,7 @@ _barrier attachTo[player,[0,2.5,0.2]];
 _barrier setDir 90;
 _barrier setVariable["item","barrierDeployed",true];
 
-life_action_barrierDeploy = player addAction["<t color='#00FF00'>Straßensperre aufstellen</t>",{if(!isNull life_barrier) then {detach life_barrier; life_barrier = ObjNull;}; player removeAction life_action_barrierDeploy; life_action_barrierDeploy = nil;},"",999,false,false,"",'!isNull life_barrier && !(side player in [civilian,east])'];
+life_action_barrierDeploy = player addAction["<t color='#00FF00'>Straßensperre aufstellen</t>",{if(!isNull life_barrier) then {detach life_barrier; life_barrier = ObjNull;}; player removeAction life_action_barrierDeploy; life_action_barrierDeploy = nil;},"",999,false,false,"",'!isNull life_barrier && !(playerSide in [civilian,east])'];
 life_barrier = _barrier;
 waitUntil {isNull life_barrier};
 if(!isNil "life_action_barrierDeploy") then {player removeAction life_action_barrierDeploy;};

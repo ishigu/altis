@@ -16,4 +16,4 @@ if(life_atmcash < (__GETC__(life_gangPrice))) exitWith {
 __SUB__(life_atmcash,(__GETC__(life_gangPrice)));
 
 hint format[localize "STR_GNOTF_CreateSuccess",(group player) getVariable "gang_name",[(__GETC__(life_gangPrice))] call life_fnc_numberText];
-[[getPlayerUID player,side player,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
+[[getPlayerUID player,playerSide,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;

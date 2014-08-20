@@ -34,7 +34,7 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 			_price = _marketprice;
 		};
 		////Marktsystem Ende////
-		if(side player == independent && !(player call life_fnc_isMedic) && _x == "fuelF") then { _price = 50; }; // ADAC Benzinkanister billiger
+		if(playerSide == independent && !(player call life_fnc_isMedic) && _x == "fuelF") then { _price = 50; }; // ADAC Benzinkanister billiger
 		_item_list lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
 		_item_list lbSetData [(lbSize _item_list)-1,_x];
 		_item_list lbSetValue [(lbSize _item_list)-1,_price];

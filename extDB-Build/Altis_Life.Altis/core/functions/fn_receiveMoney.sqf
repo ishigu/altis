@@ -16,4 +16,4 @@ if(_unit == _from) exitWith {}; //Bad boy, trying to exploit his way to riches.
 
 hint format[localize "STR_NOTF_GivenMoney",_from getVariable["realname",name _from],[(parseNumber (_val))] call life_fnc_numberText];
 life_cash = life_cash + (parseNumber(_val));
-[[getPlayerUID player,side player,life_cash,0],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
+[[getPlayerUID player,playerSide,life_cash,0],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;

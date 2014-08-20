@@ -3,7 +3,7 @@ Author: Shentoza for Westerland
 
 */
 private["_inventory","_mode"];
-if(side player != west) exitWith {hint "Du bist kein Polizist!";};
+if(playerSide != west) exitWith {hint "Du bist kein Polizist!";};
 _mode = _this select 0;
 _inventory = uniformItems player;
 if(_mode) then 

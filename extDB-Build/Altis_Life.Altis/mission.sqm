@@ -3054,7 +3054,7 @@ class Mission
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
 					text="reb_1_3_1_2";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",east,""reb_v_2_1"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel && side player == east'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",east,""reb_v_2_1"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel && playerSide == east'];";
 				};
 				class Item107
 				{
@@ -3239,7 +3239,7 @@ class Mission
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
 					text="reb_1_3";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",east,[""reb_v_1"",""reb_v_1_1""],""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel && side player == east'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",east,[""reb_v_1"",""reb_v_1_1""],""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel && playerSide == east'];";
 				};
 				class Item123
 				{
@@ -3344,7 +3344,7 @@ class Mission
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
 					text="reb_1_3_1";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",east,""reb_v_2"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel && side player == east'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",east,""reb_v_2"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel && playerSide == east'];";
 				};
 				class Item132
 				{

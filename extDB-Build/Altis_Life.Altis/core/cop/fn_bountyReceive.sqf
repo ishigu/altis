@@ -19,4 +19,4 @@ if(_val == _total) then
 };
 
 life_atmcash = life_atmcash + _val;
-[[getPlayerUID player,side player,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
+[[getPlayerUID player,playerSide,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;

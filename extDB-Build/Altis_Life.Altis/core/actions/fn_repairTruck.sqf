@@ -11,7 +11,7 @@ life_interrupted = false;
 if(isNull _veh) exitwith {};
 if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) then
 {
-	if("ToolKit" in (items player) || (!(player call life_fnc_isMedic) && (side player == independent))) then
+	if("ToolKit" in (items player) || (!(player call life_fnc_isMedic) && (playerSide == independent))) then
 	{
 		life_action_inUse = true;
 		_displayName = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
@@ -47,7 +47,7 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		player playActionNow "stop";
 		if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
 		if(player != vehicle player) exitWith {titleText[localize "STR_NOTF_RepairingInVehicle","PLAIN"];};
-		if(!(!(player call life_fnc_isMedic) && (side player == independent))) then
+		if(!(!(player call life_fnc_isMedic) && (playerSide == independent))) then
 		{
 			player removeItem "ToolKit";
 		};

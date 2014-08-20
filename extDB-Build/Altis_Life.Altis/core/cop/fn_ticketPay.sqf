@@ -21,7 +21,7 @@ if(life_cash < life_ticket_val) exitWith
 	[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
 	[[[life_ticket_val],{life_atmcash = life_atmcash + (_this select 0);}],"BIS_fnc_call",life_ticket_cop,false] spawn life_fnc_MP;
 	[[1,format["%1 hat das Ticket bezahlt.",name player]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
-	[[getPlayerUID player,side player,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
+	[[getPlayerUID player,playerSide,life_atmcash,1],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
 	closeDialog 0;
 };
 
@@ -33,4 +33,4 @@ life_ticket_paid = true;
 closeDialog 0;
 [[1,format[localize "STR_Cop_Ticket_PaidNOTF_2",profileName]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
 [[[life_ticket_val],{life_atmcash = life_atmcash + (_this select 0);}],"BIS_fnc_call",life_ticket_cop,false] spawn life_fnc_MP;
-[[getPlayerUID player,side player,life_cash,0],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
+[[getPlayerUID player,playerSide,life_cash,0],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
