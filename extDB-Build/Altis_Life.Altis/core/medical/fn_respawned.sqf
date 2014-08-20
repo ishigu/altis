@@ -8,7 +8,16 @@
 private["_handle"];
 if(!isNull life_corpse) then {
 	_handle = [life_corpse] spawn life_fnc_dropItems;
+	waitUntil {scriptDone _handle};
 };
+{
+	_item = _x;
+	_value = missionNamespace getVariable _item;
+	
+	if(_value > 0) then {
+		missionNamespace setVariable[_x,0];
+	};
+} foreach (life_inv_items + ["life_cash"]);
 
 //Reset our weight and other stuff
 life_use_atm = TRUE;
@@ -50,6 +59,12 @@ switch(playerSide) do
 
 if (playerSide == west) then {
 	RemoveAllWeapons player; // Cop's kriegen ihr gesaved'es gear, wo auch waffen enthalten sind -> entfernen
+	player addWeapon "hgun_P07_snds_F";
+	player addMagazine "16Rnd_9x21_Mag";
+	player addMagazine "16Rnd_9x21_Mag";
+	player addMagazine "16Rnd_9x21_Mag";
+	player addMagazine "16Rnd_9x21_Mag";
+	player addMagazine "16Rnd_9x21_Mag";
 };
 
 //Cleanup of weapon containers near the body & hide it.
