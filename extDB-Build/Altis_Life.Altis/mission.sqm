@@ -20391,7 +20391,7 @@ class Mission
 		};
 		class Item175
 		{
-			position[]={3726.9517,18.870001,12974.429};
+			position[]={3727.1536,18.374067,13004.556};
 			name="medic_air_1";
 			type="Empty";
 		};
