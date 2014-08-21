@@ -11,7 +11,7 @@ class Life_my_smartphone {
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
-			w = 0.95;
+			w = 0.99;
 			h = (1 / 25);
 		};
 		
@@ -20,7 +20,7 @@ class Life_my_smartphone {
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
-			w = 0.95;
+			w = 0.99;
 			h = 0.7 - (22 / 250);
 		};
         
@@ -29,14 +29,14 @@ class Life_my_smartphone {
 			idc = -1;
 			x = 0.11;
 			y = 0.25;
-			w = 0.2;
+			w = 0.26;
 			h = (1 / 25);
 		};
 		
 	class MessageTitleBackground:Life_RscText {
 			colorBackground[] = {0.588, 0.424, 0.145, 1.0};
 			idc = -1;
-			x = 0.325;
+			x = 0.38;
 			y = 0.25;
 			w = 0.7;
 			h = (1 / 25);
@@ -45,7 +45,7 @@ class Life_my_smartphone {
 	class RandomTitleBackground:Life_RscText {
 			colorBackground[] = {0.588, 0.424, 0.145, 1.0};
 			idc = -1;
-			x = 0.325;
+			x = 0.38;
 			y = 0.25 + 0.3 + (1 / 25);
 			w = 0.7;
 			h = (1 / 25);
@@ -59,7 +59,7 @@ class Life_my_smartphone {
 			idc = 88886;
 			text = "";
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			x = 0.325;
+			x = 0.38;
 			y = 0.25;
 			w = 0.7;
 			h = (1 / 25);
@@ -70,7 +70,7 @@ class Life_my_smartphone {
 			idc = 88890;
 			text = "$STR_Smartphone_RandomTitle";
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			x = 0.325;
+			x = 0.38;
 			y = 0.25 + 0.3 + (1 / 25);
 			w = 0.7;
 			h = (1 / 25);
@@ -83,7 +83,7 @@ class Life_my_smartphone {
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			x = 0.11;
 			y = 0.25 + (1 / 25);
-			w = 0.2;
+			w = 0.26;
 			h = 0.5;
 		};
 		
@@ -95,14 +95,14 @@ class Life_my_smartphone {
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			colorBackground[] = {0, 0, 0, 0.0};
 			columns[] = {0,0.3};
-			x = 0.325;
+			x = 0.38;
 			y = 0.25 + (1 / 25);
 			w = 0.7;
 			h = 0.3;
 		};
 
 		class TextShow : Life_RscControlsGroup {
-			x = 0.325;
+			x = 0.38;
 			y =  0.25 + 0.3 + (1 / 25) + (1 / 25);
 			w =  0.7;
 			h =  0.15;
@@ -153,7 +153,7 @@ class Life_my_smartphone {
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
 			x = 0.11;
 			y = 0.25;
-			w = 0.2;
+			w = 0.26;
 			h = (1 / 25);
 		};
 		
@@ -172,7 +172,7 @@ class Life_my_smartphone {
 			text = "$STR_Smartphone_Notruf";
 			onButtonClick = "createDialog ""Life_smartphone_notruf"";";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			x = 0.325 + 0.7 - (6.25 / 40);
+			x = 0.38 + 0.7 - (6.25 / 40);
 			y = 0.25 + (1 / 25) + 0.51;
 			w = (6.25 / 40);
 			h = (1 / 25);
@@ -183,7 +183,7 @@ class Life_my_smartphone {
 			text = "$STR_Smartphone_Clear";
 			onButtonClick = "[3] call life_fnc_smartphone;";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			x = 0.325;
+			x = 0.38;
 			y = 0.25 + (1 / 25) + 0.51;
 			w = 0.2;
 			h = (1 / 25);
