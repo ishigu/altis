@@ -8,8 +8,8 @@
 private["_handle"];
 if(!isNull life_corpse) then {
 	_handle = [life_corpse] spawn life_fnc_dropItems;
-	waitUntil {scriptDone _handle};
 };
+
 {
 	_item = _x;
 	_value = missionNamespace getVariable _item;

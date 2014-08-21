@@ -5,8 +5,12 @@
 	Main initialization for gangs?
 */
 private["_exitLoop","_group","_wait"];
-if(!(playerSide in [civilian,east])) exitWith {}; //What in the hell?
-[player] join (createGroup civilian);
+switch (playerSide) {
+	case civilian: { [player] join (createGroup civilian); };
+	case east: { [player] join (createGroup east); };
+	default { exitWith {}; }; //What in the hell?
+};
+
 if(count life_gangData == 0) exitWith {}; //Dafuq?
 
 _wait = round(random(8));

@@ -37,6 +37,7 @@ _unit spawn
 {
 	private["_maxTime","_RespawnBtn","_Timer","_needed"];
 	disableSerialization;
+	_unit = _this;
 	_needed = 1;
 	if(_unit call life_fnc_isMedic) then {_needed = 2;};
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
