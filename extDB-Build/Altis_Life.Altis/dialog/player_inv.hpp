@@ -254,7 +254,7 @@ class playerSettings {
 					text = "";
 					x = 0;
 					y = 0;
-					w = 0.27; h = 0.65;
+					w = 0.27; h = 0.67;
 				};
 			};
 		};

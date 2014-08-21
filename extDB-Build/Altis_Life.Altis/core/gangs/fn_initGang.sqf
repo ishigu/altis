@@ -5,7 +5,7 @@
 	Main initialization for gangs?
 */
 private["_exitLoop","_group","_wait"];
-switch (playerSide) {
+switch (playerSide) do {
 	case civilian: { [player] join (createGroup civilian); };
 	case east: { [player] join (createGroup east); };
 	default { exitWith {}; }; //What in the hell?

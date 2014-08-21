@@ -12,7 +12,7 @@ _grp = grpPlayer;
 _grpMembers = grpPlayer getVariable "gang_members";
 _grpMembers = _grpMembers - [steamid];
 _grp setVariable["gang_members",_grpMembers,true];
-switch (playerSide) {
+switch (playerSide) do {
 	case civilian: { [player] joinSilent (createGroup civilian); };
 	case east: { [player] joinSilent (createGroup east); };
 };
