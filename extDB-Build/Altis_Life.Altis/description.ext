@@ -89,6 +89,42 @@ class CfgSounds
 	sound[]  = {"\sounds\backpack_open.ogg", 1.0, 1};
 	titles[] = {};
   };
+  class dog_whine
+  {
+	name = "dog_whine";
+	sound[] = {"\sounds\dog\dog_whine.ogg", 1, 1};
+	titles[] = {};
+  };
+  class dog_growl
+  {
+	name = "dog_growl";
+	sound[] = {"\sounds\dog\dog_growl.ogg", 1, 1};
+	titles[] = {};
+  };
+  class dog_ruff
+  {
+	name = "dog_ruff";
+	sound[] = {"\sounds\dog\dog_ruff.ogg", 1, 1};
+	titles[] = {};
+  };
+  class dog_whistle
+  {
+	name = "dog_whistle";
+	sound[] = {"\sounds\dog\dog_whistle.ogg", 1, 1};
+	titles[] = {};
+  };
+  class dog_close
+  {
+	name = "dog_close";
+	sound[] = {"\sounds\dog\dog_close.ogg", 1, 1};
+	titles[] = {};
+  };
+  class dog_one
+  {
+	name = "dog_one";
+	sound[] = {"\sounds\dog\dog_one.ogg", 1, 1};
+	titles[] = {};
+  };
 };
 
 class CfgDebriefing

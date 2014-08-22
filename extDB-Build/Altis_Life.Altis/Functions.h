@@ -457,4 +457,23 @@ class Life_Client_Core
 		file = "core\rebel";
 		class rebLoadout {};
 	};
+	
+	class Dog
+	{
+		file = "core\cop\dog";
+		class dogInit {};
+		class dogFollow {};
+		class dogGrowl {};
+		class dogHeel {};
+		class dogHide {};
+		class dogKilled {};
+		class dogPlaySound {};
+		class dogReturnIdle {};
+		class dogRevive {};
+		class dogSeek {};
+		class dogShotAt {};
+		class dogStop {};
+		class dogVehicle {};
+		class dogWhistle {};
+	};
 };
