@@ -25,7 +25,7 @@ switch (_shop) do
 	case "cop": {["Polizeibedarf",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","barrier","pylon","radartrap","ghilliepack","defusekit"]]};
 	case "cement": {["Zementhaendler",["cement"]]};
 	case "gold": {["Gold Buyer",["goldbar"]]};
-	
+	case "benzin": {["Benzinhaendler",["benzin"]]};
 	case "medical": {["Medikamentenhaendler",["medical"]]};
 	case "medic": {["Notarztitems",["water","tbacon","defib","pylon"]]};
 	case "adac": {["ADAC Shop",["water","tbacon","fuelF","paint","pylon","barrier"]]};

@@ -7,8 +7,18 @@
 */
 private["_medic","_dir"];
 _medic = [_this,0,"Unknown Medic",[""]] call BIS_fnc_param;
-_oldGear = [life_corpse] call life_fnc_fetchDeadGear;
-[_oldGear] spawn life_fnc_loadDeadGear;
+//_oldGear = [life_corpse] call life_fnc_fetchDeadGear;
+//[_oldGear] spawn life_fnc_loadDeadGear;
+{
+	_item = _x;
+	_value = missionNamespace getVariable _item;
+	
+	if(_value > 0) then {
+		missionNamespace setVariable[_x,0];
+	};
+} foreach (life_inv_items);
+life_carryWeight = 0;
+[] spawn life_fnc_loadGear;
 life_corpse setVariable["realname",nil,true]; //Should correct the double name sinking into the ground.
 [[life_corpse],"life_fnc_corpse",nil,FALSE] spawn life_fnc_MP;
 _dir = getDir life_corpse;

@@ -5,7 +5,7 @@
     Description:
     Loads saved civilian gear, this is limited for a reason and that's balance.
 */
-private["_itemArray","_uniform","_vest","_backpack","_goggles","_headgear","_items","_prim","_seco","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_bMags","_vMags","_handle"];
+private["_itemArray","_uniform","_vest","_backpack","_goggles","_headgear","_items","_prim","_seco","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_bMags","_vMags","_handle","_cfg"];
 _itemArray = life_gear;
 waitUntil {!(isNull (findDisplay 46))};
 
@@ -81,3 +81,9 @@ life_maxWeight = 100;
     [true,_item,1] call life_fnc_handleInv;
 } foreach (_yItems);
 life_maxWeight = 24;
+
+if (backpack player != "") then {
+	_cfg = getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload");
+	_cfg = round(_cfg / 8);
+	life_maxWeight = life_maxWeightT + _cfg;
+}
