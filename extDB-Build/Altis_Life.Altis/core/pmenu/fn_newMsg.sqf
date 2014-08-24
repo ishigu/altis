@@ -69,7 +69,7 @@ switch(_type) do
 		ctrlShow[888899,false];
 		if(_msg == "") exitWith {hint "Du musst eine Nachricht eingeben!";ctrlShow[888899,true];};
 		//[[ObjNull,_msg,player,3],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
-		[[player,_msg],"life_fnc_medicRequestRecieve",true,false] spawn life_fnc_MP;
+		[[player,_msg,false],"life_fnc_medicRequestRecieve",true,false] spawn life_fnc_MP;
 		hint format["Du hast einen Notruf abgesetzt!",_msg];
 		ctrlShow[888899,true];
 		closeDialog 887890;
