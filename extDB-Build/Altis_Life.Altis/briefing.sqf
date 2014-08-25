@@ -245,13 +245,15 @@ player createDiarySubject ["Steuerung","Steuerung"];
 			"Team",
 				"
 				Projektleiter  Felix<br/><br/>
+				Projektleiter Shentoza<br/><br/>
 				Admin [BFC]graVediga<br/><br/>
 				Admin oVo<br/><br/>
 				Admin ishi<br/><br/>
-				Admin Shentoza<br/><br/>
 				Admin NeoX<br/><br/>
-				Supporterin Elly<br/><br/>
-				Supporter K3V1N<br/><br/>
+				Admin Elly<br/><br/>
+				Admin K3V1N<br/><br/>
+				Supporter Harry Connor<br/><br/>
+				Supporter Amann <br/><br/>
 				"
 		]
 	];

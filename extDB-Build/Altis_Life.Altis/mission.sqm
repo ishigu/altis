@@ -17448,7 +17448,7 @@ class Mission
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
 			text="policegate_kavalla";
-			init="this allowDamage false;";
+			init="this allowDamage false;this setVariable[""opened"",false,true];";
 		};
 		class Item1192
 		{
@@ -21439,7 +21439,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=9;
+		items=8;
 		class Item0
 		{
 			position[]={3647.6174,10.209252,13112.035};
@@ -21567,24 +21567,6 @@ class Mission
 			};
 		};
 		class Item7
-		{
-			position[]={3352.6702,2.1476271,12966.837};
-			a=1;
-			b=1;
-			rectangular=1;
-			activationBy="WEST";
-			repeating=1;
-			interruptable=1;
-			type="SWITCH";
-			age="UNKNOWN";
-			expCond="false OR { {if ( (_x isKindOf ""Car"" && side (driver _x) == West && isPlayer (driver _x)) || (_x isKindOf ""Man"" && side _x == West && isPlayer _x ) ) exitWith{true} }forEach ([3352.72,12966.9,2.14] nearEntities [[""Car"",""Man""], 35]) } OR { {if (side _x == West && isPlayer _x) exitWith{true} }forEach ([3352.72,12966.9,2.14] nearEntities [""Man"", 5]) } ";
-			expActiv="policegate_kavalla animate [""Door_1_rot"", 1];";
-			expDesactiv="policegate_kavalla animate [""Door_1_rot"", 0];";
-			class Effects
-			{
-			};
-		};
-		class Item8
 		{
 			position[]={16020.614,13.642813,16951.449};
 			a=2;

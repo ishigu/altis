@@ -50,7 +50,7 @@ switch(_type) do
     case "7": {_type = ["Ausbruch aus dem Gefängnis",0];};
     case "8": {_type = ["Beihilfe beim Gefängisausbruch",25000];};
     case "9": {_type = ["Misslungener Banküberfall",50000];};
-    case "10": {_type = ["Geglückter Banküberfall",0];};
+    case "10": {_type = ["Geglückter Banküberfall",100000];};
     case "11": {_type = ["Diebstahl aus Rucksack",2000];};
     case "12": {_type = ["Drogenschmuggel/-handel",50000];};
     case "13": {_type = ["Schmuggel mit verbotenen Tieren",50000];};

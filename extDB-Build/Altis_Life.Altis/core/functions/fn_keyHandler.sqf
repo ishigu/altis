@@ -316,6 +316,20 @@ switch (_code) do
 				};
 			};
 		};
+		if (_ctrlKey && !_alt && (player distance policegate_kavalla < 30) ) then
+		{
+			_gate = policegate_kavalla;
+			if(_gate getVariable ["opened",false]) then {
+			_gate animate ["Door_1_rot", 0];
+			_gate setVariable ["opened",false,TRUE];
+			}else{
+				if ( !(_gate getVariable ["opened",false])) then
+				{
+					_gate animate ["Door_1_rot", 1];
+					_gate setVariable ["opened",true,TRUE];
+				};
+			};
+		};
 	};
 	// Admin Menü, Aktionstaste 15
 	case _adminKey: {

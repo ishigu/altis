@@ -14,11 +14,11 @@ sleep 7; //Wait in seconds before the credits start after player is in-game
 _role1 = "Willkommen auf dem Altis Life Server von:";
 _role1names = ["westerland-altis.de"];
 _role2 = "Eure Projektleitung";
-_role2names = ["Felix"];
+_role2names = ["Felix","Shentoza"];
 _role3 = "Eure Admins";
-_role3names = ["graVediga","oVo","ishi","Shentoza","NeoX"];
+_role3names = ["graVediga","oVo","ishi","NeoX","Elly","K3V1N"];
 _role4 = "Eure Supporter";
-_role4names = ["Elly","K3V1N"];
+_role4names = ["Harry Connor","Amann"];
 _role5 = "Scripter";
 _role5names = ["ishi","Shentoza"];
 _role6 = "Website:";
