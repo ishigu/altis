@@ -11,13 +11,13 @@ _container = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _item = [_this,2,"",[""]] call BIS_fnc_param;
 
 if(isNull _unit OR _item == "") exitWith {}; //Bad thingies?
-if(!(_container in life_vehicles) && {(locked _container) == 2}) exitWith{
+/*if(!(_container in life_vehicles) && {(locked _container) == 2}) exitWith{
 	if(typeName _item =="STRING") then{
 		[_item,false,false,false,false] call life_fnc_handleItem;
 		_container addItemCargoGlobal [_item,1];
 	};
 	hint localize "STR_MISC_VehInventory";
-};
+};*/
 
 switch(playerSide) do
 {
