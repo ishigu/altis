@@ -123,6 +123,6 @@ life_fnc_moveIn = compileFinal
 [] execVM "core\functions\fn_keyRestore.sqf";
 [[],"life_fnc_renewUniform",true,false] spawn life_fnc_MP;
 [] spawn life_fnc_radartrapMonitoring;
-[] spawn life_fnc_lockedCar;
+//[] spawn life_fnc_lockedCar;
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
