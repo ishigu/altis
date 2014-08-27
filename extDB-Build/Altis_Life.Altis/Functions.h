@@ -126,6 +126,7 @@ class Life_Client_Core
 		class radartrapSwitch {};
 		class radartrapFlash {};
 		class seizeWeaponAction {};
+		class extinguishJoint {};
 	};
 	
 	class Housing
@@ -269,6 +270,7 @@ class Life_Client_Core
 		class emptyFuel {};
 		class lockedCar {};
 		class getRole {};
+		class weedSmoke {};
 	};
 	
 	class Network

@@ -33,6 +33,10 @@ switch (playerSide) do
 		life_actions = life_actions + [player addAction["Pylon einpacken",life_fnc_packuppylon,"",0,false,false,"",' _pylon = nearestObjects[getPos player,["RoadCone_F"],2] select 0; !isNil "_pylon" && (_pylon getVariable "item" == "pylonDeployed")']];
 		life_actions = life_actions + [player addAction["Strassensperre einpacken",life_fnc_packupbarrier,"",0,false,false,"",' _barrier = nearestObjects[getPos player,["RoadBarrier_F"],2] select 0;!isNil "_barrier" && (_barrier getVariable "item" == "barrierDeployed")']];
 
+		// Joint ausmachen
+		life_actions = life_actions + [player addAction["<t color='#FF0000'>Joint ausmachen</t>",life_fnc_extinguishJoint,"",6, false, true, "", 
+		' !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && animationState cursorTarget == "AmovPercMstpSnonWnonDnon_Ease" && player distance cursorTarget < 3.5 && (cursorTarget getVariable ["smoke_weed",false]) && (cursorTarget getVariable ["restrained",false]) ']];
+
 	};
 	case independent:
 	{
