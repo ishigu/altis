@@ -2740,7 +2740,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Donator Waffen"",life_fnc_weaponShopMenu,""donator"",0,false,false,"""",' _target distance _this < 5 && !isNil ""life_donator"" &&  (call life_donator) > 0 && playerSide in [civilian,east,west]']; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Donator Waffen"",life_fnc_weaponShopMenu,""donator"",0,false,false,"""",' _target distance _this < 5 && !isNil ""life_donator"" &&  (call life_donator) > 0 && playerSide in [civilian,east,west]']; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Polizei Kleidung"",life_fnc_clothingMenu,""cop"",0,FALSE,FALSE,"""",'playerSide == west'];  this addAction[""Kleidung"",life_fnc_clothingMenu,""bruce"",0,FALSE,FALSE,"""",'playerSide == civilian'];  this addAction[""Kriminellenkleidung"",life_fnc_clothingMenu,""criminal"",0,false,false,"""",' license_civ_rebel && playerSide in [civilian,east]'];  this addAction[""Rebellenkleidung"",life_fnc_clothingMenu,""reb"",0,false,false,"""",' license_civ_rebel && playerSide == east'];";
 				};
 				class Item79
 				{
@@ -2751,7 +2751,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Donator Waffen"",life_fnc_weaponShopMenu,""donator"",0,false,false,"""",' !isNil ""life_donator"" && (call life_donator) > 0 && playerSide in [civilian,east,west]']; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Donator Waffen"",life_fnc_weaponShopMenu,""donator"",0,false,false,"""",' !isNil ""life_donator"" && (call life_donator) > 0 && playerSide in [civilian,east,west]']; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Polizei Kleidung"",life_fnc_clothingMenu,""cop"",0,FALSE,FALSE,"""",'playerSide == west'];  this addAction[""Kleidung"",life_fnc_clothingMenu,""bruce"",0,FALSE,FALSE,"""",'playerSide == civilian'];  this addAction[""Kriminellenkleidung"",life_fnc_clothingMenu,""criminal"",0,false,false,"""",' license_civ_rebel && playerSide in [civilian,east]'];  this addAction[""Rebellenkleidung"",life_fnc_clothingMenu,""reb"",0,false,false,"""",' license_civ_rebel && playerSide == east'];";
 				};
 				class Item80
 				{
