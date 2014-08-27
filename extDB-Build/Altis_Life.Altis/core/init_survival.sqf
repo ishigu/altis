@@ -9,9 +9,9 @@
 		[] call life_fnc_hudUpdate;
 		if(life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";};
 		switch(life_hunger) do {
-			case 30: {hint localize "STR_NOTF_EatMSG_1";};
-			case 20: {hint localize "STR_NOTF_EatMSG_2";};
-			case 10: {hint localize "STR_NOTF_EatMSG_3";player setFatigue 1;};
+			case 30: {hint localize "STR_NOTF_EatMSG_1"; playSound "hungry";};
+			case 20: {hint localize "STR_NOTF_EatMSG_2"; playSound "hungry";};
+			case 10: {hint localize "STR_NOTF_EatMSG_3"; playSound "hungry"; player setFatigue 1;};
 			};
 		};
 	};
@@ -26,18 +26,18 @@
 			if(life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
 			switch(life_thirst) do 
 			{
-				case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
-				case 20: {hint localize "STR_NOTF_DrinkMSG_2"; player setFatigue 1;};
-				case 10: {hint localize "STR_NOTF_DrinkMSG_3"; player setFatigue 1;};
+				case 30: {hint localize "STR_NOTF_DrinkMSG_1"; playSound "hungry";};
+				case 20: {hint localize "STR_NOTF_DrinkMSG_2"; playSound "hungry"; player setFatigue 1;};
+				case 10: {hint localize "STR_NOTF_DrinkMSG_3"; playSound "hungry"; player setFatigue 1;};
 			};
 		};
 	};
 	
 	while{true} do
 	{
-		sleep 600;
+		sleep 60;
 		[] call _fnc_water;
-		sleep 250;
+		sleep 25;
 		[] call _fnc_food;
 	};
 };

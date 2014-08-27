@@ -125,6 +125,12 @@ class CfgSounds
 	sound[] = {"\sounds\dog\dog_one.ogg", 1, 1};
 	titles[] = {};
   };
+  class hungry
+  {
+	name = "hungry";
+	sound[] = {"\sounds\hungry.ogg", 1, 1};
+	titles[] = {};
+  };
 };
 
 class CfgDebriefing
