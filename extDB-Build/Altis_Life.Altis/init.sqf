@@ -46,3 +46,7 @@ if (isDedicated) then {
 
 [] execVM "scripts\zlt_fastrope.sqf";
 StartProgress = true;
+west setFriend [east, 1]; 
+east setFriend [west, 1];
+independent setFriend [east, 1];
+east setFriend [independent, 1];
