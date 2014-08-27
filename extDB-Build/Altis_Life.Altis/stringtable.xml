@@ -2275,6 +2275,21 @@
 			<Italian>Hai pagato la cauzione e sei libero.</Italian>
 			<Portuguese>Você pagou fiança e agora está livre.</Portuguese>
 		</Key>
+		<Key ID="STR_NOTF_WeaponsSeized_Broadcast">
+			<Original>%1's weapons were seized by %2</Original>
+			<English>%1's weapons were seized by %2</English>
+			<German>%1 wurde von %2 entwaffnet</German>
+		</Key>
+		<Key ID="STR_NOTF_WeaponsSeized_Victim">
+			<Original>Your weapons were seized by %1</Original>
+			<English>Your weapons were seized by %1</English>
+			<German>%1 hat dir deine Waffen abgenommen</German>
+		</Key>
+		<Key ID="STR_NOTF_WeaponsSeized_Cop">
+			<Original>You have seized %1's weapons</Original>
+			<English>You have seized %1's weapons/English>
+			<German>Du hast %1 entwaffnet</German>
+		</Key>
 	</Package>
 	<Package name="Civ_Strings">
 		<Key ID="STR_Civ_KnockedOut">

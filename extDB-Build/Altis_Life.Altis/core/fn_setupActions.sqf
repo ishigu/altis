@@ -17,6 +17,9 @@ switch (playerSide) do
 	};
 	case west:
 	{
+		// Waffen Beschlagnahmen
+        life_actions = life_actions + [player addAction["<t color='#FFFF00'>Waffen beschlagnahmen</t>",life_fnc_seizeWeapon,cursorTarget,0,false,false,"",'!isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side (group cursorTarget) in [east,civilian]) && (cursorTarget getVariable "restrained") && ((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "cop_spawn_3") < 30) OR (player distance (getMarkerPos "cop_spawn_5") < 30))']];
+        
 		// Blaulicht
 		life_actions = [player addAction["Blaulicht an",{[[vehicle player,0.22],"life_fnc_copLights",true,false] spawn life_fnc_MP; vehicle player setVariable["lights",true,true];},"",0,false,false,"",' vehicle player != player && !isNil {vehicle player getVariable "lights"} && ((driver vehicle player) == player) && !(vehicle player getVariable "lights")']];
 		life_actions = life_actions + [player addAction["Blaulicht aus",{vehicle player setVariable["lights",false,true];},"",0,false,false,"", 'vehicle player != player && !isNil {vehicle player getVariable "lights"} && ((driver vehicle player) == player) && (vehicle player getVariable "lights") ']];

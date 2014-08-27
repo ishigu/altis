@@ -125,6 +125,7 @@ class Life_Client_Core
 		class packupRadarTrap {};
 		class radartrapSwitch {};
 		class radartrapFlash {};
+		class seizeWeaponAction {};
 	};
 	
 	class Housing
@@ -342,6 +343,7 @@ class Life_Client_Core
 		class doorAnimate {};
 		class fedCamDisplay {};
 		class copLoadout {};
+		class seizeWeapon {};
 	};
 	
 	class Gangs
