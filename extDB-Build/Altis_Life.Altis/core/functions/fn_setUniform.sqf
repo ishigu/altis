@@ -16,6 +16,7 @@ if(playerSide == west) then {
 		
 		case "U_B_CombatUniform_mcam" : { 
 			_path = "textures\uniform\polizei_rang3.paa";
+			if (license_cop_dea) then { _path = "textures\uniform\polizei_dea.paa"; };
 			_unit setObjectTextureGlobal [0,_path];
 		};
 		

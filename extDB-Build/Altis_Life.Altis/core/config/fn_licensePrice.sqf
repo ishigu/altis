@@ -42,4 +42,5 @@ switch (_type) do
 	case "home": {75000};
 	case "clawyer":{500000};
 	case "sniper":{0};
+	case "dea":{0};
 };

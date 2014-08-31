@@ -20,9 +20,14 @@ switch (_filter) do
 	case 0:
 	{	
 		_ret set[count _ret,["U_Rangemaster","Beamten Uniform",25]];
+		if(license_cop_dea) then {
+			_ret set[count _ret,["U_B_CombatUniform_mcam","DEA Uniform",2000]];
+		};
 		if(__GETC__(life_coplevel) > 2) then
 		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam","Polizei Uniform",2000]];
+			if(!license_cop_dea) then {
+				_ret set[count _ret,["U_B_CombatUniform_mcam","Polizei Uniform",2000]];
+			};
 			_ret set[count _ret,["U_B_Wetsuit","Taucher Anzug",2500]];
 		};
 		/*if(__GETC__(life_coplevel) > 4) then

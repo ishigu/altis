@@ -9,7 +9,7 @@
 private ["_unit","_dog","_nearestunits","_radius","_nearestunitsofside"];
 _unit = _this select 0;
 
-hint "Jessie, seek!";
+hint "Los Rex, such!";
 
 _unit setvariable ["follow",'false'];
 _unit setvariable ["seek","true"];
@@ -24,20 +24,20 @@ _nearestunitofside = [];
 
 if (civilian countSide _nearestunits > 0 || east countSide _nearestunits > 0) then
 {
-	["dog_one", _dog, 20] spawn life_fnc_dogPlaySound;
+	["dog_one", _dog] spawn life_fnc_dogPlaySound;
 	{
 		_unit = _x;
-		if (side (group _unit) in [civilian,east]) then 
+		if (side (group _unit) in [civilian,east] && isPlayer _unit) then 
 		{
 			_nearestunitofside = _nearestunitofside + [_unit]
 		};
 	} foreach _nearestunits;
 } else {
-	["dog_ruff", _dog, 20] spawn life_fnc_dogPlaySound;
+	["dog_ruff", _dog] spawn life_fnc_dogPlaySound;
 	_unit setvariable ["order","idle"];
 };
 
 _dog domove getpos (_nearestunitofside select 0);
 
 waituntil {(_dog distance (_nearestunitofside select 0))<10};
-["dog_ruff", _dog, 20] spawn life_fnc_dogPlaySound;
+["dog_ruff", _dog] spawn life_fnc_dogPlaySound;

@@ -10,8 +10,8 @@ private ["_unit","_dog"];
 _unit 	= _this select 0;
 _dog 	= _unit getvariable "dog";
 
-["dog_one", _dog, 20] spawn life_fnc_dogPlaySound;
-hint "Jessie, Heel!";
+["dog_one", _dog] spawn life_fnc_dogPlaySound;
+hint "Rex, Beifuß!";
 
 _unit setvariable ["follow",'false'];
 

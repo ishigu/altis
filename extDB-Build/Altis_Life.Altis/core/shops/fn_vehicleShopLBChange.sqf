@@ -39,8 +39,16 @@ _colorArray = [_className] call life_fnc_vehicleColorCfg;
 for "_i" from 0 to count(_colorArray)-1 do {
 	if((_colorArray select _i) select 1 == (life_veh_shop select 2)) then {
 		_temp = [_className,_i] call life_fnc_vehicleColorStr;
-		_ctrl lbAdd format["%1",_temp];
-		_ctrl lbSetValue [(lbSize _ctrl)-1,_i];
+		if ((_className == "C_Hatchback_01_sport_F") || (_className == "C_Hatchback_01_F") || (_className == "C_SUV_01_F") || (_className == "C_Offroad_01_F")) then {
+			if (((_temp != "Schwarz") && (_temp != "Schwarz Metallic")) || license_cop_dea) then {
+				_ctrl lbAdd format["%1",_temp];
+				_ctrl lbSetValue [(lbSize _ctrl)-1,_i];
+			};
+		}
+		else {
+			_ctrl lbAdd format["%1",_temp];
+			_ctrl lbSetValue [(lbSize _ctrl)-1,_i];
+		};
 	};
 };
 

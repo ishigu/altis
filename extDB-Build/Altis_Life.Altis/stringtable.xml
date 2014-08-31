@@ -4433,7 +4433,7 @@
 		<Key ID="STR_pInAct_SearchPlayer">
 			<Original>Search Player</Original>
 			<English>Search Player</English>
-			<German>Spieler durchsuchen</German>
+			<German>Durchsuchen</German>
 			<French>Fouiller Joueur</French>
 			<Italian>Ricerca Giocatore</Italian>
 			<Portuguese>Buscar por Jogador</Portuguese>
@@ -4441,7 +4441,7 @@
 		<Key ID="STR_pInAct_StopEscort">
 			<Original>Stop Escorting</Original>
 			<English>Stop Escorting</English>
-			<German>Eskortieren stoppen</German>
+			<German>Stoppen</German>
 			<French>Arrêter Escorte</French>
 			<Italian>Ferma Scorta</Italian>
 			<Portuguese>Parar de Escoltar</Portuguese>
@@ -4449,7 +4449,7 @@
 		<Key ID="STR_pInAct_Escort">
 			<Original>Escort Player</Original>
 			<English>Escort-Player</English>
-			<German>Spieler eskortieren</German>
+			<German>Eskortieren</German>
 			<French>Escorter Joueur</French>
 			<Italian>Scorta Giocatore</Italian>
 			<Portuguese>Escoltar Jogador</Portuguese>
@@ -4497,7 +4497,7 @@
 		<Key ID="STR_pInAct_SearchHouse">
 			<Original>Search house</Original>
 			<English>Search house</English>
-			<German>Haus durchsuchen</German>
+			<German>Durchsuchen</German>
 			<French>Fouiller la maison</French>
 			<Italian>Cerca Casa</Italian>
 			<Portuguese>Vasculhar a Casa</Portuguese>
@@ -4505,7 +4505,7 @@
 		<Key ID="STR_pInAct_LockHouse">
 			<Original>Lock up house</Original>
 			<English>Lock up house</English>
-			<German>Haus abschließen</German>
+			<German>Abschließen</German>
 			<French>Fermer la maison</French>
 			<Italian>Chiudi Casa</Italian>
 			<Portuguese>Trancar a Casa</Portuguese>
@@ -4643,7 +4643,7 @@
 		<Key ID="STR_vInAct_SearchVehicle">
 			<Original>Search Vehicle</Original>
 			<English>Search Vehicle</English>
-			<German>Fahrzeug durchsuchen</German>
+			<German>Durchsuchen</German>
 			<French>Fouiller Véhicule</French>
 			<Italian>Cerca Veicolo</Italian>
 			<Portuguese>Vasculhar Veículo</Portuguese>
@@ -4651,7 +4651,7 @@
 		<Key ID="STR_vInAct_PullOut">
 			<Original>Pullout Players</Original>
 			<English>Pullout Players</English>
-			<German>Aus Fahrzeug ziehen</German>
+			<German>Rausziehen</German>
 			<French>Sortir Personnes</French>
 			<Italian>Estrai Giocatore</Italian>
 			<Portuguese>Retirar Jogadores</Portuguese>
