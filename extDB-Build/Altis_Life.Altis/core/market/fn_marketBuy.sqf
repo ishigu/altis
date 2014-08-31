@@ -53,7 +53,7 @@ if(!_israw) then
 		}
 		else
 		{
-			[_x select 0, _relamount, true, false] call life_fnc_marketSell; //Make prices higher, no broadcast!
+			[_x select 0, _relamount, true, false] call life_fnc_marketSell; //Make prices lower, no broadcast!
 		};
 	}
 	foreach (_arr_resource select 6); //in change array
