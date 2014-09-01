@@ -18,6 +18,7 @@ switch (playerSide) do
 	case west:
 	{
 		// Waffen Beschlagnahmen
+		life_actions = life_actions + [player addAction["<t color='#00FF00'>Polizeimarke zeigen</t>",life_fnc_copShowLicense,cursorTarget,1,false,true,"",'!isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (alive cursorTarget) && (player distance cursorTarget) < 6']];
         life_actions = life_actions + [player addAction["<t color='#FFFF00'>Waffen beschlagnahmen</t>",life_fnc_seizeWeapon,cursorTarget,0,false,false,"",'!isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side (group cursorTarget) in [east,civilian]) && (cursorTarget getVariable "restrained") && ((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "cop_spawn_3") < 30) OR (player distance (getMarkerPos "cop_spawn_5") < 30))']];
         
 		// Blaulicht
