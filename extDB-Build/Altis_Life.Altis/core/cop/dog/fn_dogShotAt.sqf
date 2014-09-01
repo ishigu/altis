@@ -18,5 +18,5 @@ if ((_unit getvariable "seek") == "true") then
 	_unit setVariable ["step","go"];
 	_unit setVariable ["seek","false"];
 	_dog doMove (getpos _unit);
-	["dog_whine", _dog, 20] spawn life_fnc_dogPlaySound;
+	["dog_whine", _dog] spawn life_fnc_dogPlaySound;
 };

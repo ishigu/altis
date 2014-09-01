@@ -64,7 +64,8 @@ switch (_vehicle) do
 			["textures\vehicles\offroad_monster.jpg","civ"],
 			["textures\vehicles\offroad_nyan.jpg","civ"],
 			["textures\vehicles\offroad_pokemon.jpg","civ"],
-			["textures\vehicles\adac_offroad.paa","adac"]
+			["textures\vehicles\adac_offroad.paa","adac"],
+			["#(ai,64,64,1)Fresnel(0.3,3)","cop"]
 		];
 	};
 	
@@ -84,7 +85,9 @@ switch (_vehicle) do
 			["textures\vehicles\hatchback_kitty.jpg","civ"],
 			["textures\vehicles\hatchback_blue.jpg","civ"],
 			["textures\vehicles\hatchback_metallica.jpg","civ"],
-			["textures\vehicles\hatchback_police.jpg","cop"]
+			["textures\vehicles\hatchback_police.jpg","cop"],
+			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","cop"]
 		];
 	};
 	
@@ -102,7 +105,9 @@ switch (_vehicle) do
 			["textures\vehicles\suv_ragecore.jpg","civ"],
 			["textures\vehicles\suv_batman.paa","civ"],
 			["textures\vehicles\suv_superman.paa","civ"],
-			["textures\vehicles\medic_suv.paa","med"]
+			["textures\vehicles\medic_suv.paa","med"],
+			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
+			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa","cop"]
 		];
 	};
 	

@@ -12,14 +12,14 @@ life_market_resources = [
 	//Schema: SHORTNAME, DEFAULT-WERT, MIN-WERT, MAX-WERT, VERÄNDERUNG BEI AKTION [VERKAUF Multipliziert mit 1, Kauf multipliziert um -1
 	//["gold", 1500, 450, 2300, 8, 5],
 			
-	["apple", 45, 35, 60, 1, 1, 
+	["apple", 45, 35, 75, 1, 1, 
 		[ 
 			
 			["peach",1]
 		] 
 	],
 	
-	["peach", 60, 50, 75, 1, 1, 
+	["peach", 60, 50, 90, 1, 1, 
 		[ 
 			["apple",1] 
 		] 
@@ -27,13 +27,13 @@ life_market_resources = [
 	
 	["benzin", 2000, 1000, 3000, 5, 1, 
 		[ 
-			["diamondc",1],
+			["diamondc",2],
 			["chemical",1],
 			["oilp",0],
-			["iron_r",1],
-			["copper_r",1],
-			["cement",1],
-			["glass",1] 
+			["iron_r",2],
+			["copper_r",2],
+			["cement",2],
+			["glass",2] 
 		] 
 	],
 		
@@ -53,15 +53,15 @@ life_market_resources = [
 	
 	["medical", 3900, 1000, 4900, 6, 1, 
 		[ 
-			["diamondc",1], 
-			["benzin",0],
+			["diamondc",2], 
+			["benzin",1],
 			["chemical",1],
-			["oilp",0],
-			["iron_r",1],
-			["copper_r",1],
-			["salt_r",1],
-			["cement",1],
-			["glass",1] 
+			["oilp",1],
+			["iron_r",2],
+			["copper_r",2],
+			["salt_r",2],
+			["cement",3],
+			["glass",3] 
 		] 
 	],
 	
@@ -72,84 +72,84 @@ life_market_resources = [
 			["chemical",0],
 			["medical",1],
 			["iron_r",1],
-			["copper_r",1],
-			["salt_r",1],
-			["cement",1],
-			["glass",1] 
+			["copper_r",2],
+			["salt_r",2],
+			["cement",3],
+			["glass",3] 
 		] 
 	],
 	
 	["iron_r", 2400, 1500, 3600, 4, 1,  
 		[ 
-			["diamondc",1], 
-			["benzin",1],
+			["diamondc",2], 
+			["benzin",2],
 			["chemical",1],
-			["medical",1],
-			["oilp",1],
-			["copper_r",1],
-			["salt_r",1],
-			["cement",1],
-			["glass",1] 
+			["medical",2],
+			["oilp",2],
+			["copper_r",2],
+			["salt_r",2],
+			["cement",3],
+			["glass",3] 
 		] 
 	],
 	
 	["diamondc", 2500, 700, 4000, 4, 1, 
 		[ 
-			["oilp",1],
-			["benzin",1],
+			["oilp",2],
+			["benzin",2],
 			["chemical",1],
-			["medical",1],
-			["iron_r",1],
-			["copper_r",1],
-			["salt_r",1],
-			["cement",1],
-			["glass",1] 
+			["medical",2],
+			["iron_r",2],
+			["copper_r",2],
+			["salt_r",2],
+			["cement",3],
+			["glass",3] 
 		] 
 	],
 	
-	["copper_r", 800, 300, 1550, 4, 1, 
+	["copper_r", 800, 300, 1850, 4, 1, 
 		[ 
-			["diamondc",1], 
-			["benzin",1],
+			["diamondc",2], 
+			["benzin",4],
 			["chemical",1],
 			["medical",1],
-			["oilp",1],
-			["iron_r",1],
-			["salt_r",1],
-			["cement",1],
-			["glass",1] 
+			["oilp",2],
+			["iron_r",2],
+			["salt_r",2],
+			["cement",3],
+			["glass",3] 
 		] 
 	],
 	
-	["salt_r", 1750, 500, 2750, 6, 1, 
+	["salt_r", 1750, 500, 2950, 6, 1, 
 		[ 
-			["diamondc",1], 
-			["benzin",1],
-			["chemical",1],
-			["medical",1],
-			["oilp",1],
-			["iron_r",1],
-			["copper_r",1],
-			["cement",1],
-			["glass",1] 
+			["diamondc",2], 
+			["benzin",2],
+			["chemical",2],
+			["medical",2],
+			["oilp",2],
+			["iron_r",2],
+			["copper_r",2],
+			["cement",3],
+			["glass",3] 
 		] 
 	],
 	
-	["glass", 1000, 500, 1800, 5, 1, 
+	["glass", 1000, 500, 2300, 5, 1, 
 		[ 
-			["diamondc",1], 
-			["benzin",1],
-			["chemical",1],
-			["medical",1],
-			["oilp",1],
-			["iron_r",1],
-			["copper_r",1],
-			["salt_r",1],
-			["cement",1]
+			["diamondc",2], 
+			["benzin",2],
+			["chemical",2],
+			["medical",2],
+			["oilp",2],
+			["iron_r",2],
+			["copper_r",2],
+			["salt_r",2],
+			["cement",2]
 		] 
 	],
 	
-	["cement", 1000, 500, 1800, 4, 1, 
+	["cement", 1000, 500, 2250, 4, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -167,45 +167,46 @@ life_market_resources = [
 	
 	["turtle", 9000, 5000, 15000, 40, 1,  
 		[ 
-			["marijuana",1], 
-			["cocainep",1],
-			["heroinp",1],
-			["meth",0]
+			["marijuana",3], 
+			["cocainep",3],
+			["heroinp",3],
+			["meth",3]
 		] 
 	],
 	
-	["marijuana", 2250, 1500, 3000, 10, 1,   
+	["marijuana", 2250, 1500, 3250, 10, 1,   
 		[ 
-			["turtle",1], 
-			["cocainep",1],
-			["heroinp",1],
-			["meth",1]
+			["turtle",3], 
+			["cocainep",3],
+			["heroinp",3],
+			["meth",3]
 		] 
 	],
 	
-	["cocainep", 3500, 2000, 4500, 8, 1,   
+	["cocainep", 3500, 2000, 4800, 8, 1,   
 		[ 
-			["marijuana",1], 
-			["turtle",1],
-			["heroinp",1],
-			["meth",1]
+			["marijuana",3], 
+			["turtle",3],
+			["heroinp",3],
+			["meth",3]
 		] 
 	],
 	
-	["heroinp", 2850, 1500, 3600, 10, 1,   
+	["heroinp", 2850, 1500, 3900, 10, 1,   
 		[ 
-			["marijuana",1], 
-			["cocainep",1],
-			["turtle",1],
-			["meth",1]
+			["marijuana",3], 
+			["cocainep",3],
+			["turtle",3],
+			["meth",3]
 		] 
 	],
 	
 	["meth", 6000, 2000, 9500, 16, 1,   
 		[ 
-			["marijuana",1], 
-			["cocainep",1],
-			["turtle",0]
+			["marijuana",3], 
+			["cocainep",3],
+			["heroinp",3],
+			["turtle",3]
 		] 
 	]
 	

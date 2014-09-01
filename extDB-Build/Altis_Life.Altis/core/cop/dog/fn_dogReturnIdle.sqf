@@ -14,6 +14,6 @@ while {alive _dog} do
 {
 	waituntil {(((_dog distance _unit)>30)&&((_unit getvariable "order")=="idle"))};
 	_dog domove (getpos _unit);
-	["dog_whine", _dog, 20] spawn life_fnc_dogPlaySound;
+	["dog_whine", _dog] spawn life_fnc_dogPlaySound;
 	waituntil {unitReady _dog};
 };

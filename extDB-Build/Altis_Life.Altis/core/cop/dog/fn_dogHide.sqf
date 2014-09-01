@@ -10,11 +10,12 @@ private ["_unit","_dog"];
 _unit 	= _this select 0;
 _dog 	= _unit getvariable "dog";
 
-hint "Jessie, Hide!";
+hint "Versteck dich, Rex!";
 
 _unit setvariable ["follow",'false'];
 _unit setvariable ["order","nil"];
 _unit setvariable ["step","go"];
+_unit setvariable ["action","false"];
 
 sleep 3;
 deleteVehicle _dog;

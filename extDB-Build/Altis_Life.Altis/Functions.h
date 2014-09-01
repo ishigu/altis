@@ -481,5 +481,7 @@ class Life_Client_Core
 		class dogStop {};
 		class dogVehicle {};
 		class dogWhistle {};
+		class dogSearchDrugs {};
+		class searchDrugsClient {};
 	};
 };

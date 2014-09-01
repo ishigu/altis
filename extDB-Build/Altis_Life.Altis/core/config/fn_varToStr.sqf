@@ -76,6 +76,7 @@ switch (_var) do
 	case "life_inv_barrier": {"Strassensperre"};
 	case "life_inv_radartrap": {"Blitzer"};
 	case "life_inv_ghilliepack": {"Ghillie Paket"};
+	case "life_inv_dogfood": {"Hundefutter"};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};
@@ -108,4 +109,5 @@ switch (_var) do
 	case "license_med_car": {"Fuehrerschein Sani"};
 	case "license_civ_lawyer": {"Anwaltslizenz"};
 	case "license_cop_sniper": {"Praezisionsschuetze"};
+	case "license_cop_dea": {"DEA Ausbildung"};
 };

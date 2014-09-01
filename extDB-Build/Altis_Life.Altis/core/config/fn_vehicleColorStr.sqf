@@ -34,6 +34,7 @@ switch (_vehicle) do
 			case 14: {_color = "Nyan"};
 			case 15: {_color = "Pokemon"};
 			case 16: {_color = "ADAC"};
+			case 17: {_color = "Schwarz Metallic"};
 		};
 	};
 	
@@ -73,6 +74,8 @@ switch (_vehicle) do
 			case 10: {_color = "Pimp Blue"};
 			case 11: {_color = "Metallica"};
 			case 12: {_color = "Polizei"};
+			case 13: {_color = "Schwarz Metallic"};
+			case 14: {_color = "Schwarz"};
 		};
 	};
 	
@@ -107,6 +110,8 @@ switch (_vehicle) do
 			case 8: {_color = "Batman";};
 			case 9: {_color = "Superman";};
 			case 10: {_color = "Notarzt";};
+			case 11: {_color = "Schwarz Metallic";};
+			case 12: {_color = "Schwarz";};
 		};
 	};
 	

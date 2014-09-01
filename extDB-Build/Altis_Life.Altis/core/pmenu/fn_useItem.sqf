@@ -113,6 +113,16 @@ switch (true) do
 		};	
 	};
 	
+	case (_item == "dogfood"):
+	{
+		if ((player getVariable["action", "false"]) == "false") then {
+			if(([false,_item,1] call life_fnc_handleInv)) then
+			{
+				[player] spawn life_fnc_dogInit;
+			};
+		};
+	};
+	
 	case (_item == "heroinp"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then

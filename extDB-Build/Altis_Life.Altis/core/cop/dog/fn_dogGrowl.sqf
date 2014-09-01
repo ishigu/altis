@@ -26,7 +26,7 @@ while {alive _dog} do
 	
 	if ((count _objs) > 0) then
 	{
-		["dog_growl", _dog, 11] spawn life_fnc_dogPlaySound;
+		["dog_growl", _dog] spawn life_fnc_dogPlaySound;
 	};
 		
 	sleep _timer;

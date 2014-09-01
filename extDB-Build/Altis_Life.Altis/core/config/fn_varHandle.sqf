@@ -81,6 +81,7 @@ switch (_mode) do
 			case "barrier": {"life_inv_barrier"};
 			case "radartrap":{"life_inv_radartrap"};
 			case "ghilliepack":{"life_inv_ghilliepack"};
+			case "dogfood":{"life_inv_dogfood"};
 		};
 	};
 	
@@ -153,6 +154,7 @@ switch (_mode) do
 			case "life_inv_barrier": {"barrier"};
 			case "life_inv_radartrap": {"radartrap"};
 			case "life_inv_ghilliepack": {"ghilliepack"};
+			case "life_inv_dogfood": {"dogfood"};
 		};
 	};
 };

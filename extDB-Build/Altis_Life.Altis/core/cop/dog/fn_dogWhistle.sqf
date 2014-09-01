@@ -9,8 +9,8 @@
 private ["_unit","_tempPos","_side","_group1","_dog"];
 _unit = _this select 0;
 
-["dog_whistle",_unit, 20] spawn life_fnc_dogPlaySound;
-hint "Jessie, here girl!";
+["dog_whistle",_unit] spawn life_fnc_dogPlaySound;
+hint "Rex, komm raus!";
 sleep 1;
 _unit setvariable ["follow",'false'];
 _tempPos = [(getpos _unit) select 0,((getpos _unit) select 1) + 1,0];
