@@ -1,16 +1,19 @@
 /*
 	File: fn_wantedAdd.sqf
 	Author: Bryan "Tonic" Boardwine
+	Edited by: Shentoza, ishi
 	
 	Description:
 	Adds or appends a unit to the wanted list.
 */
-private["_uid","_type","_index","_data","_crimes","_val","_customBounty","_name"];
+private["_uid","_type","_index","_data","_crimes","_val","_customBounty","_name","_data2","_type2"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 _type = [_this,2,"",[""]] call BIS_fnc_param;
 _customBounty = [_this,3,-1,[0]] call BIS_fnc_param;
+_data2 = [_this,4,"",[""]] call BIS_fnc_param; // Some additional params for certain events like robbing people
 if(_uid == "" OR _type == "" OR _name == "") exitWith {}; //Bad data passed.
+_type2 = _type; // Backup, as _type is overwritten
 
 //What is the crime?
 switch(_type) do
@@ -22,7 +25,7 @@ switch(_type) do
 	case "261A": {_type = ["Versuchte Vergewaltigung (A)",3000];};
 	case "215": {_type = ["Versuchter Autodiebstahl (A)",5000];};
 	case "213": {_type = ["Illegale Verwendung von Sprengstoff (A)",10000];};
-	case "211": {_type = ["Raubueberfall (A)",40000];};
+	case "211": {_type = ["Raub (A)",40000];};
 	case "207": {_type = ["Entfuehrung (A)",100000];};
 	case "207A": {_type = ["Versuchte Entfuehrung",30000];};
 	case "487": {_type = ["Autodiebstahl(A)",20000];};
@@ -112,11 +115,16 @@ switch(_type) do
 
 if(count _type == 0) exitWith {}; //Not our information being passed...
 //Is there a custom bounty being sent? Set that as the pricing.
-if(_customBounty != -1) then {_type set[1,_customBounty];};
+if(_customBounty != -1 && _type2 != "211") then {_type set[1,_customBounty];};
 //Search the wanted list to make sure they are not on it.
 _index = [_uid,life_wanted_list] call fnc_index;
 
-if(_index != -1) then
+if (_type2 == "211") then { // Robbery
+	_type set[0,(_type select 0) + format[" - %1 ($%2)", _data2, [_customBounty] call life_fnc_numberText]]; // Add Name + Robbed Money
+	_type set[1,(_type select 1) + _customBounty]; // Add Robbed money to bounty
+};
+
+if(_index != -1) then // Always create new entry for robbery
 {
 	_data = life_wanted_list select _index;
 	_crimes = _data select 2;
@@ -124,7 +132,7 @@ if(_index != -1) then
 	_val = _data select 3;
 	life_wanted_list set[_index,[_name,_uid,_crimes,(_type select 1) + _val]];
 }
-	else
+else
 {
 	life_wanted_list set[count life_wanted_list,[_name,_uid,[(_type select 0)],(_type select 1)]];
 };

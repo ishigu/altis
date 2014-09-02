@@ -10,7 +10,7 @@ class life_wanted_menu {
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
-			w = 0.8;
+			w = 1.0;
 			h = (1 / 25);
 		};
 		
@@ -19,7 +19,7 @@ class life_wanted_menu {
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
-			w = 0.8;
+			w = 1.0;
 			h = 0.6 - (22 / 250);
 		};
 	};
@@ -33,7 +33,7 @@ class life_wanted_menu {
 			text = "$STR_Wanted_Title";
 			x = 0.1;
 			y = 0.2;
-			w = 0.8;
+			w = 1.0;
 			h = (1 / 25);
 		};
 		
@@ -51,7 +51,7 @@ class life_wanted_menu {
 			onLBSelChanged = "[] call life_fnc_wantedInfo";
 			
 			x = 0.12; y = 0.26;
-			w = 0.2; h = 0.4;
+			w = 0.20; h = 0.4;
 		};
 		
 		class WantedDetails : Life_RscListBox
@@ -63,7 +63,7 @@ class life_wanted_menu {
 			
 			x = 0.34;
 			y = 0.35;
-			w = 0.46;
+			w = 0.73;
 			h = 0.32;
 		};
 		
