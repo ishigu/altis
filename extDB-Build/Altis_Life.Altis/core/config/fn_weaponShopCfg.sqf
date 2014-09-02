@@ -66,255 +66,105 @@ switch(_shop) do
 			};
 		};
 	};
-
-	case "cop_basic":
+	
+	case "cop":
 	{
-		switch(true) do
-		{
-			case (playerSide != west): {"Du bist kein Polizist!"};
-			default
-			{
-				["Polizeirekut",
-					[
-						["arifle_sdar_F","Taser Rifle",500],
-						["hgun_P07_snds_F","Stun Pistol",250],
-						["muzzle_snds_L",nil,650],
-						["MineDetector",nil,1000],
-						["Binocular",nil,150],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,2500],
-						["FirstAidKit",nil,150],
-						["NVGoggles",nil,2000],
-						["16Rnd_9x21_Mag",nil,50],
-						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125]
-					]
-				];
-			};
+		case (playerSide != west): {"Du bist kein Polizist!"};
+		
+		_return =
+		[
+			["arifle_sdar_F","Taser Rifle",500],
+			["hgun_P07_snds_F","Stun Pistol",250],
+			["muzzle_snds_L",nil,650],
+			["MineDetector",nil,1000],
+			["Binocular",nil,150],
+			["ItemGPS",nil,100],
+			["ToolKit",nil,2500],
+			["FirstAidKit",nil,150],
+			["NVGoggles",nil,2000],
+			["16Rnd_9x21_Mag",nil,50],
+			["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125],
+			["Chemlight_red",nil,100],
+			["Chemlight_yellow",nil,100],
+			["Chemlight_green",nil,100],
+			["Chemlight_blue",nil,100]
+		];
+		if (__GETC__(life_coplevel) >= 2) then {
+			_return = _return + 
+			[
+				["SMG_02_F",nil,8000],
+				["30Rnd_9x21_Mag",nil,250],
+				["muzzle_snds_L",nil,650],
+				["optic_Aco",nil,1500],
+				["optic_ACO_grn",nil,1500]
+			];
 		};
-	};
-
-	case "cop_patrol":
-	{
-		switch (true) do 
-		{
-			case (playerSide != west): {"Du bist kein Polizist!"};
-			case (__GETC__(life_coplevel) < 2): {"Du hast nicht den benoetigten Rang!"};
-			default
-			{
-				["Polizeibeamter",
-					[
-						["SMG_02_F",nil,8000],
-						["30Rnd_9x21_Mag",nil,250],
-						["muzzle_snds_L",nil,650],
-						["optic_Aco",nil,1500],
-						["optic_ACO_grn",nil,1500],
-						["Binocular",nil,150],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,2500],
-						["FirstAidKit",nil,150],
-						["NVGoggles",nil,2000],
-						["Chemlight_red",nil,100],
-						["Chemlight_yellow",nil,100],
-						["Chemlight_green",nil,100],
-						["Chemlight_blue",nil,100]
-					]
-				];
-			};
+		if (__GETC__(life_coplevel) >= 3) then {
+			_return = _return + 
+			[
+				["arifle_MXC_Black_F",nil,10000],
+				["30Rnd_65x39_caseless_mag",nil,300],
+				["muzzle_snds_H",nil,650],
+				["optic_Hamr",nil,3500]
+			];
 		};
-	};
-
-	case "cop_sergeant":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"Du bist kein Polizist!"};
-			case (__GETC__(life_coplevel) < 3): {"Du hast nicht den benoetigten Rang!"};
-			default
-			{
-				["Polizeimeister",
-					[
-						["arifle_MXC_Black_F",nil,10000],
-						["30Rnd_65x39_caseless_mag",nil,300],
-						["muzzle_snds_H",nil,650],
-						["optic_Hamr",nil,3500],
-						["Binocular",nil,150],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,2500],
-						["FirstAidKit",nil,150],
-						["NVGoggles",nil,2000],
-						["Chemlight_red",nil,100],
-						["Chemlight_yellow",nil,100],
-						["Chemlight_green",nil,100],
-						["Chemlight_blue",nil,100]
-
-					]
-				];
-			};
+		if (__GETC__(life_coplevel) >= 4) then {
+			_return = _return + 
+			[
+				["arifle_MX_SW_Black_F",nil,10000],
+				["muzzle_snds_H_SW",nil,2000],
+				["optic_SOS",nil,200],
+				["rangefinder",nil,1000]
+			];
 		};
-	};
-
-	case "cop_leader":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"Du bist kein Polizist!"};
-			case (__GETC__(life_coplevel) < 4): {"Du hast nicht den benoetigten Rang!"};
-			default
-			{
-				["Polizei Hauptmeister",
-					[
-						["arifle_MXC_Black_F",nil,10000],
-						["arifle_MX_SW_Black_F",nil,10000],
-						["30Rnd_65x39_caseless_mag",nil,300],
-						["muzzle_snds_H_SW",nil,2000],
-						["muzzle_snds_H",nil,2000],
-						["optic_SOS",nil,200],
-						["optic_Hamr",nil,3500],
-						["rangefinder",nil,1000],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,2500],
-						["FirstAidKit",nil,150],
-						["NVGoggles",nil,2000],
-						["Chemlight_red",nil,100],
-						["Chemlight_yellow",nil,100],
-						["Chemlight_green",nil,100],
-						["Chemlight_blue",nil,100]
-					]
-				];
-			};
+		if (__GETC__(life_coplevel) >= 5) then {
+			_return = _return + 
+			[
+				["srifle_EBR_F",nil,10000],
+				["20Rnd_762x51_Mag",nil,200],
+				["muzzle_snds_B",nil,2000],
+				["B_UAV_01_backpack_F",nil,50000],
+				["B_UavTerminal",nil,50000],
+				["SmokeShell",nil,100]
+			];
 		};
-	};
-
-	case "cop_gsg9":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"Du bist kein Polizist!"};
-			case (__GETC__(life_coplevel) < 5): {"Du hast nicht den benoetigten Rang!"};
-			default
-			{
-				["Kommissar",
-					[	
-						["arifle_MXC_Black_F",nil,10000],
-						["arifle_MX_SW_Black_F",nil,10000],
-						["30Rnd_65x39_caseless_mag",nil,300],
-						["muzzle_snds_H_SW",nil,2000],
-						["muzzle_snds_H",nil,2000],
-						["srifle_EBR_F",nil,10000],
-						["20Rnd_762x51_Mag",nil,200],
-						["muzzle_snds_B",nil,2000],	
-						["optic_SOS",nil,200],
-						["optic_Hamr",nil,3500],
-						["B_UAV_01_backpack_F",nil,50000],
-						["B_UavTerminal",nil,50000],
-						["rangefinder",nil,1000],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,2500],
-						["FirstAidKit",nil,150],
-						["NVGoggles",nil,2000],
-						["Chemlight_red",nil,100],
-						["Chemlight_yellow",nil,100],
-						["Chemlight_green",nil,100],
-						["Chemlight_blue",nil,100],
-						["SmokeShell",nil,100]
-					]
-				];
-			};
+		if (__GETC__(life_coplevel) >= 6) then {
+			
 		};
-	};
-
-	case "cop_gsg9Lead":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"Du bist kein Polizist!"};
-			case (!(license_cop_sniper)): {"Du hast nicht die benoetigte Ausbildung!"};
-			default
-			{
-				["Präzisionsschütze",
-					[
-						["arifle_MXC_Black_F",nil,10000],
-						["arifle_MX_SW_Black_F",nil,10000],
-						["arifle_MX_GL_Black_F",nil,10000],
-						["30Rnd_65x39_caseless_mag",nil,300],
-						["muzzle_snds_H_SW",nil,2000],
-						["muzzle_snds_H",nil,2000],
-						["srifle_EBR_F",nil,20000],
-						["20Rnd_762x51_Mag",nil,200],
-						["muzzle_snds_B",nil,2000],
-						["optic_SOS",nil,200],
-						["optic_Hamr",nil,3500],
-						["B_UAV_01_backpack_F",nil,50000],
-						["B_UavTerminal",nil,50000],
-						["rangefinder",nil,1000],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,2500],
-						["FirstAidKit",nil,150],
-						["NVGoggles",nil,2000],
-						["Chemlight_red",nil,100],
-						["Chemlight_yellow",nil,100],
-						["Chemlight_green",nil,100],
-						["Chemlight_blue",nil,100],
-						["SmokeShell",nil,100],
-						["3Rnd_UGL_FlareWhite_F",nil,100],
-						["3Rnd_UGL_FlareRed_F",nil,100],
-						["3Rnd_UGL_FlareYellow_F",nil,100],
-						["3Rnd_Smoke_Grenade_shell",nil,100],
-						["3Rnd_SmokeGreen_Grenade_shell",nil,100],
-						["3Rnd_SmokeRed_Grenade_shell",nil,100],
-						["3Rnd_SmokeBlue_Grenade_shell",nil,100],
-						["3Rnd_SmokeYellow_Grenade_shell",nil,100]
-					]
-				];
-			};
+		if (__GETC__(life_coplevel) >= 7) then {
+			_return = _return + 
+			[
+				["muzzle_snds_H_MG",nil,2000]
+			];
 		};
-	};
-
-	case "cop_chef":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"Du bist kein Polizist!"};
-			case (__GETC__(life_coplevel) < 7): {"Du hast nicht den benoetigten Rang!"};
-			default
-			{
-				["Altis Polizeipraesident",
-					[
-						["arifle_MXC_Black_F",nil,10000],
-						["arifle_MX_SW_Black_F",nil,10000],
-						["arifle_MX_GL_Black_F",nil,10000],
-						["30Rnd_65x39_caseless_mag",nil,300],
-						["muzzle_snds_H_MG",nil,2000],
-						["muzzle_snds_H",nil,2000],
-						["srifle_EBR_F",nil,20000],
-						["20Rnd_762x51_Mag",nil,200],
-						["muzzle_snds_B",nil,2000],
-						["optic_SOS",nil,200],
-						["optic_Hamr",nil,3500],
-						["B_UAV_01_backpack_F",nil,50000],
-						["B_UavTerminal",nil,50000],
-						["rangefinder",nil,1000],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,2500],
-						["FirstAidKit",nil,150],
-						["NVGoggles",nil,2000],
-						["Chemlight_red",nil,100],
-						["Chemlight_yellow",nil,100],
-						["Chemlight_green",nil,100],
-						["Chemlight_blue",nil,100],
-						["SmokeShell",nil,100],
-						["3Rnd_UGL_FlareWhite_F",nil,100],
-						["3Rnd_UGL_FlareRed_F",nil,100],
-						["3Rnd_UGL_FlareYellow_F",nil,100],
-						["3Rnd_Smoke_Grenade_shell",nil,100],
-						["3Rnd_SmokeGreen_Grenade_shell",nil,100],
-						["3Rnd_SmokeRed_Grenade_shell",nil,100],
-						["3Rnd_SmokeBlue_Grenade_shell",nil,100],
-						["3Rnd_SmokeYellow_Grenade_shell",nil,100]
-					]
-				];
-			};
+		if (license_cop_sniper) then {
+			_return = _return + 
+			[
+				["arifle_MX_GL_Black_F",nil,10000],
+				["3Rnd_UGL_FlareWhite_F",nil,100],
+				["3Rnd_UGL_FlareRed_F",nil,100],
+				["3Rnd_UGL_FlareYellow_F",nil,100],
+				["3Rnd_Smoke_Grenade_shell",nil,100],
+				["3Rnd_SmokeGreen_Grenade_shell",nil,100],
+				["3Rnd_SmokeRed_Grenade_shell",nil,100],
+				["3Rnd_SmokeBlue_Grenade_shell",nil,100],
+				["3Rnd_SmokeYellow_Grenade_shell",nil,100]
+			];
 		};
+		if (license_cop_dea) then {
+			_return = _return + 
+			[
+				["hgun_Pistol_heavy_01_F",nil,2000],
+				["11Rnd_45ACP_Mag",nil,100],
+				["muzzle_snds_acp",nil,300],
+				["optic_MRD",nil,300],
+				["arifle_MX_Black_F",nil,100],
+				["30Rnd_65x39_caseless_mag",nil,100],
+				["optic_Hamr",nil,100],
+				["muzzle_snds_H",nil,100]
+			];
+		};
+		if(true) exitWith{[format ["Polizei Rang %1", __GETC__(life_coplevel)],_return]};
 	};
 
 	case "rebel":
