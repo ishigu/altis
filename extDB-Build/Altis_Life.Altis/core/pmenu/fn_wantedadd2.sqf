@@ -246,32 +246,32 @@ _data = "43";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Innerorts über 50km/h $750";
+_text = "Innerorts über 50km/h $1.500";
 _data = "44";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Innerorts über 60km/h $1.500";
+_text = "Innerorts über 60km/h $3.000";
 _data = "45";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Innerorts über 85km/h $5.000";
+_text = "Innerorts über 85km/h $7.000";
 _data = "46";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Innerorts über 110km/h $20.000";
+_text = "Innerorts über 110km/h $25.000";
 _data = "47";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Innerorts über 200km/h $50.000";
+_text = "Innerorts über 200km/h $60.000";
 _data = "48";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Außerorts über 130km/h $5.000";
+_text = "Außerorts über 130km/h $6.000";
 _data = "49";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
@@ -281,7 +281,7 @@ _data = "50";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
 
-_text = "Außerorts über 230km/h+ $20.000";
+_text = "Außerorts über 230km/h+ $25.000";
 _data = "51";
 _list2 lbAdd format["%1 (%2)",_text,_data];
 _list2 lbSetData [(lbSize _list2)-1,_data];
