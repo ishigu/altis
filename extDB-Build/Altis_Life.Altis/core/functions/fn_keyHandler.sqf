@@ -347,7 +347,7 @@ switch (_code) do
 	//1 Key
 	case 2:
 	{
-		if(playerSide == west) then
+		if(playerSide == west || __GETC__(life_adminlevel) > 2 ) then
 		{
 			[] call life_fnc_wantedMenu;
 		};

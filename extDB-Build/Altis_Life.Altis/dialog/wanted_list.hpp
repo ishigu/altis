@@ -101,7 +101,7 @@ class life_wanted_menu {
 			idc = 9800;
 			//shortcuts[] = {0x00050000 + 2};
 			text = "Wanted +";
-			onButtonClick = "if((call life_coplevel) < 3) exitWith{hint ""Du hast nicht den benötigten Rang!"";};createDialog ""life_wantedadd2"";";
+			onButtonClick = "if((call life_coplevel) < 3 && (call life_adminlevel < 3)) exitWith{hint ""Du hast nicht den benötigten Rang!"";};createDialog ""life_wantedadd2"";";
 			x = 0.14 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
