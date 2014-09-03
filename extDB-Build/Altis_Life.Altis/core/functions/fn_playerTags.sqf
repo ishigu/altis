@@ -65,7 +65,7 @@ _units = _units - [player];
 			_idc ctrlCommit 0;
 			if (isNil {(_x getVariable "hideNametag")}) then {
 				_idc ctrlShow true;
-			}
+			};
 		} else {
 			_idc ctrlShow false;
 		};
