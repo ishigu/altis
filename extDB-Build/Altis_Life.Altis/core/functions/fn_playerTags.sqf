@@ -63,7 +63,9 @@ _units = _units - [player];
 			_idc ctrlSetScale scale;
 			_idc ctrlSetFade 0;
 			_idc ctrlCommit 0;
-			_idc ctrlShow true;
+			if (isNil {(_x getVariable "hideNametag")}) then {
+				_idc ctrlShow true;
+			}
 		} else {
 			_idc ctrlShow false;
 		};
