@@ -4,13 +4,22 @@
 	Description:
 	Inserts the gang into the database.
 */
-private["_ownerID","_uid","_gangName","_query","_queryResult","_gangMembers","_group"];
+private["_ownerID","_uid","_gangName","_query","_queryResult","_gangMembers","_group","_side"];
 _ownerID = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _uid = [_this,1,"",[""]] call BIS_fnc_param;
 _gangName = [_this,2,"",[""]] call BIS_fnc_param;
 _group = group _ownerID;
 
 if(isNull _ownerID OR _uid == "" OR _gangName == "") exitWith {}; //Fail
+
+_side = switch((side _group)) do
+{
+	case west:{"cop"};
+	case civilian: {"civ"};
+	case independent: {"med"};
+	case east: {"reb"};
+	default {"Error"};
+};
 
 _ownerID = owner _ownerID;
 _gangName = [_gangName] call DB_fnc_mresString;
@@ -25,7 +34,7 @@ if(count _queryResult != 0) exitWith {
 	[{missionNamespace setVariable["life_action_gangInUse",nil];},"BIS_fnc_Spawn",true,false] call BIS_fnc_MP;
 };
 
-_query = format["SELECT id FROM gangs WHERE members LIKE '%2%1%2' AND active='1'",_uid,"%"];
+_query = format["SELECT id FROM gangs WHERE members LIKE '%2%1%2' AND active='1' AND side='%3'",_uid,"%",_side];
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
@@ -43,9 +52,9 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 _gangMembers = [[_uid]] call DB_fnc_mresArray;
 
 if(count _queryResult != 0) then {
-	_query = format["UPDATE gangs SET active='1', owner='%1',members='%2' WHERE id='%3'",_uid,_gangMembers,(_queryResult select 0)];
+	_query = format["UPDATE gangs SET active='1', owner='%1',members='%2', side='%3' WHERE id='%3'",_uid,_gangMembers,(_queryResult select 0),_side];
 } else {
-	_query = format["INSERT INTO gangs (owner, name, members) VALUES('%1','%2','%3')",_uid,_gangName,_gangMembers];
+	_query = format["INSERT INTO gangs (owner, name, members, side) VALUES('%1','%2','%3','%4')",_uid,_gangName,_gangMembers,_side];
 };
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,1] call DB_fnc_asyncCall;

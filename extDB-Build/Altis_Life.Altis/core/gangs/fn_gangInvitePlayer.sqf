@@ -13,6 +13,7 @@ _unit = call compile format["%1",getSelData(2632)];
 if(isNull _unit) exitWith {}; //Bad unit?
 if(_unit == player) exitWith {hint localize "STR_GNOTF_InviteSelf"};
 if(!isNil {(group _unit) getVariable "gang_name"}) exitWith {hint "This player is already in a gang"}; //Added
+if((side (group _unit)) != playerSide) exitWith {hint "Dieser Spieler ist auf der falschen Seite!"};
 
 if(count(grpPlayer getVariable ["gang_members",3]) == (grpPlayer getVariable ["gang_maxMembers",3])) exitWith {hint localize "STR_GNOTF_MaxSlot"};
 

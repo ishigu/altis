@@ -88,7 +88,7 @@ switch (_side) do {
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["houses_%1",_uid],[]])];
-		_gangData = _uid spawn TON_fnc_queryPlayerGang;
+		_gangData = [_uid,_side] spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["gang_%1",_uid],[]])];
 	};
@@ -98,7 +98,7 @@ switch (_side) do {
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["houses_%1",_uid],[]])];
-		_gangData = _uid spawn TON_fnc_queryPlayerGang;
+		_gangData = [_uid,_side] spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["gang_%1",_uid],[]])];
 		missionNamespace setVariable[format["gang_%1",_uid],nil];

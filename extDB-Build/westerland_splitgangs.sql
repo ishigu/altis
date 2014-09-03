@@ -1,0 +1,1 @@
+ALTER TABLE `gangs`	ADD COLUMN `side` VARCHAR(15) NOT NULL DEFAULT 'civ' AFTER `active`;
