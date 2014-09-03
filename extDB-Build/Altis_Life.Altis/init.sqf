@@ -46,6 +46,7 @@ if (isDedicated) then {
 
 [] execVM "scripts\zlt_fastrope.sqf";
 [] execVM "scripts\stopsidechat.sqf";
+[] execVM "scripts\D41_wetter.sqf";
 StartProgress = true;
 west setFriend [east, 1]; 
 east setFriend [west, 1];

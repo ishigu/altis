@@ -1,2 +1,2 @@
 1 "" !="life_HC_isActive" !="HC_UID"
-7 "" !="life_fnc_MP_packet" !="BIS_fnc_MP_packet" !="JipTimeNow" !="life_HC_isActive" !="HC_UID" !="life_gang_list" !="bank_addfunds"
+7 "" !="life_fnc_MP_packet" !="BIS_fnc_MP_packet" !="JipTimeNow" !="life_HC_isActive" !="HC_UID" !="life_gang_list" !="bank_addfunds" !="BTC_id_repo" !="BTC_cargo_repo" !="clientStarted_WP" !="bank_query" !="life_market_prices" !="dog1" !="sound" !="D41_Nebel" !="D41_Wellen" !="D41_Vorschau" !="D41_Wind" !="D41_Regen"
