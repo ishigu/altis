@@ -78,6 +78,7 @@ switch(_shop) do
 			["muzzle_snds_L",nil,650],
 			["MineDetector",nil,1000],
 			["Binocular",nil,150],
+			["ItemMap",nil,100],
 			["ItemGPS",nil,100],
 			["ToolKit",nil,2500],
 			["FirstAidKit",nil,150],
@@ -117,7 +118,7 @@ switch(_shop) do
 				["rangefinder",nil,1000]
 			];
 		};
-		if (__GETC__(life_coplevel) >= 5) then {
+		if (__GETC__(life_coplevel) >= 5 || license_cop_sniper) then {
 			_return = _return + 
 			[
 				["srifle_EBR_F",nil,10000],

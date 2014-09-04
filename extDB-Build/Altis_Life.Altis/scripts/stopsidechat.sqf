@@ -30,7 +30,7 @@
 	};
 	
 	while {true} do {
-		waitUntil {sleep 1;((!isNull findDisplay 63) && (!isNull findDisplay 55))};
+		waitUntil {sleep 3;((!isNull findDisplay 63) && (!isNull findDisplay 55))};
 		if (ctrlText ((findDisplay 55) displayCtrl 101) == "\A3\ui_f\data\igui\rscingameui\rscdisplayvoicechat\microphone_ca.paa") then 
 		{
 			if (ctrlText ((findDisplay 63) displayCtrl 101) == "Side Channel") then 
