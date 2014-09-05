@@ -64,7 +64,7 @@ if(_curTarget isKindOf "House_F" && playerSide == west) exitWith {
 			_Btn3 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_raidHouse; closeDialog 0;";
 			_Btn3 ctrlShow true;
 			
-			if(player distance _curTarget > 3.6) then {
+			if((player distance _curTarget > 3.6) || !(_curTarget getVariable["copBreakDoor",false])) then {
 				_Btn3 ctrlEnable false;
 			};
 			
