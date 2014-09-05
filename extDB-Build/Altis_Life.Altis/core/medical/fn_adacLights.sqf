@@ -25,8 +25,8 @@ switch (typeOf _vehicle) do {
 	case "O_Heli_Light_02_unarmed_F": { _attach = [[-0.75, +4.2, -1.5],[0.75, +4.2, -1.5]]; };
 };
 
-_lightRed = [20, 0.1, 0.1];
-_lightBlue = [0.1, 0.1, 20];
+_lightRed = [20, 20, 0.1];
+_lightBlue = [20, 20, 0.1];
 
 _lightleft = createVehicle ["#lightpoint", getPos _vehicle, [], 0, "CAN_COLLIDE"];
 sleep 0.2;
@@ -63,7 +63,7 @@ if (sunOrMoon < 1) then { // Nacht
 		_lightright setLightIntensity 20;
 	} else {
 		_brightness = 40; //Tag
-		_lightleft setLightIntensity 50
+		_lightleft setLightIntensity 30;
 		_lightright setLightIntensity 10;
 	};
 };

@@ -251,7 +251,7 @@ switch (_vehicle) do
 		_ret =
 		[
 			["textures\vehicles\hellcat_angry.jpg","civ"],
-			["textures\vehicles\hellcat_angry.jpg","reb"],
+			["\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co","reb"],
 			["textures\vehicles\hellcat_polizei.paa","cop"],
 			["\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co","reb"]
 		];

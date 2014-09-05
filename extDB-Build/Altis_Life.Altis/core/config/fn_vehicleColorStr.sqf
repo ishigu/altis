@@ -43,7 +43,7 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Angry"};
-			case 1: {_color = "Angry"};
+			case 1: {_color = "Rebel Green"};
 			case 2: {_color = "Polizei"};
 			case 3: {_color = "Rebel Green"};
 		};

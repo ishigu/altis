@@ -176,10 +176,8 @@ switch (_code) do
 					if(playerSide == west || _vehSide == "cop") then {
 						[vehicle player] call life_fnc_sirenLights;
 					};
-					if(player call life_fnc_isMedic || _vehSide == "med") then{
+					if(playerSide == independent || _vehSide == "med" || _vehSide == "adac") then{
 						[vehicle player] call life_fnc_medicSirenLights;
-					};
-					if(player call life_fnc_isADAC || _vehSide == "adac") then{
 					};
 				};
 					_handled = true;

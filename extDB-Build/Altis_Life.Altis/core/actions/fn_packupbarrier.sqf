@@ -1,5 +1,5 @@
 /*
-    File: fn_packuppylon.sqf
+    File: fn_packupbarrier.sqf
     Author: Bryan "Tonic" Boardwine
     Edited by: oVo
 

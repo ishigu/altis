@@ -83,6 +83,7 @@ class Life_Client_Core
 		class isMedic {};
 		class medicRequestRecieve {};
 		class countMedic {};
+		class adacLights {};
 	};
 	
 	class Actions

@@ -92,7 +92,7 @@ _vehicle allowDamage true;
 _vehicle lock 2;
 //Remove fuel from fueltracks for now
 _vehicle setFuelCargo 0;
-[[_veh,0],"life_fnc_setFuelCargo",true,false] spawn life_fnc_MP;
+[[_vehicle,0],"life_fnc_setFuelCargo",true,false] spawn life_fnc_MP;
 //Reskin the vehicle 
 [[_vehicle,_vInfo select 8],"life_fnc_colorVehicle",nil,false] spawn life_fnc_MP;
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
@@ -112,12 +112,12 @@ if((_vInfo select 1) == "cop" && (_vInfo select 2) in ["C_Offroad_01_F","B_MRAP_
 	[[_vehicle,"cop_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
 
-if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_Offroad_01_F") then
+if((((_vInfo select 1) == "med") || ((_vInfo select 1) == "adac")) && (_vInfo select 2) == "C_Offroad_01_F") then
 {
 	[[_vehicle,"med_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
 [[1,"Your vehicle is ready!"],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
-if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_SUV_01_F") then
+if((((_vInfo select 1) == "med") || ((_vInfo select 1) == "adac")) && (_vInfo select 2) == "C_SUV_01_F") then
 {
 	_vehicle setVariable["lights",false,true];
 };
