@@ -90,7 +90,7 @@ class life_wanted_menu {
 		class PardonButtonKey : Life_RscButtonMenu {
 			idc = 2405;
 			text = "$STR_Wanted_Pardon";
-			onButtonClick = "if((call life_coplevel) < 3) exitWith{hint ""Du hast nicht den benötigten Rang!"";};[] call life_fnc_pardon; lbClear ((findDisplay 2400) displayCtrl 2401);lbClear((findDisplay 2400) displayCtrl 2402);ctrlSetText[2403,""""];[[player],""life_fnc_wantedFetch"",false,false] spawn life_fnc_MP;";
+			onButtonClick = "if((call life_coplevel) < 3 && (call life_adminlevel < 3)) exitWith{hint ""Du hast nicht den benötigten Rang!"";};[] call life_fnc_pardon; lbClear ((findDisplay 2400) displayCtrl 2401);lbClear((findDisplay 2400) displayCtrl 2402);ctrlSetText[2403,""""];[[player],""life_fnc_wantedFetch"",false,false] spawn life_fnc_MP;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
