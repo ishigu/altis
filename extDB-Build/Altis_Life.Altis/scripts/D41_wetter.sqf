@@ -27,12 +27,12 @@
 					{
 						D41_Nebel = [0,0,0]; D41_Wellen = 0; D41_Vorschau = 0.2; D41_Wind = [5, 5, true]; D41_Regen = 0; D41_RegenCounter = 0;
 						D41_WMod = round(random 9);
-						if(D41_WMod == 0)	then {D41_Nebel = [0.5, 0.1,10];		D41_Regen = 0.1;	D41_Vorschau = 0.4;}; //Dicht
-						if(D41_WMod == 1)	then {D41_Nebel = [0.42, 0.2,10];		D41_Regen = 0.2;	D41_Vorschau = 0.3;};
-						if(D41_WMod == 2)	then {D41_Nebel = [0.38, 0.3,10];		D41_Regen = 0.2;	D41_Vorschau = 0.2;}; //geht so, akzeptabler Nebel
-						if(D41_WMod == 3)	then {D41_Nebel = [0.34, 0.1,15];	D41_RegenCounter = 0;}; //Dicht
-						if(D41_WMod == 4)	then {D41_Nebel = [0.28, 0.1,15];	D41_Regen = 0.2;	D41_Vorschau = 0.4;};
-						if(D41_WMod == 5)	then {D41_Nebel = [0.24, 0.1,15];	D41_RegenCounter = 0;}; //geht so, akzeptabler Nebel
+						if(D41_WMod == 0)	then {D41_Nebel = [0.4, 0.1,10];		D41_Regen = 0.1;	D41_Vorschau = 0.4;}; //Dicht
+						if(D41_WMod == 1)	then {D41_Nebel = [0.35, 0.2,10];		D41_Regen = 0.2;	D41_Vorschau = 0.3;};
+						if(D41_WMod == 2)	then {D41_Nebel = [0.30, 0.3,10];		D41_Regen = 0.2;	D41_Vorschau = 0.2;}; //geht so, akzeptabler Nebel
+						if(D41_WMod == 3)	then {D41_Nebel = [0.28, 0.1,15];	D41_RegenCounter = 0;}; //Dicht
+						if(D41_WMod == 4)	then {D41_Nebel = [0.24, 0.1,15];	D41_Regen = 0.2;	D41_Vorschau = 0.4;};
+						if(D41_WMod == 5)	then {D41_Nebel = [0.22, 0.1,15];	D41_RegenCounter = 0;}; //geht so, akzeptabler Nebel
 						if(D41_WMod == 6)	then {D41_Nebel = [0.20, 0.1,30];	D41_RegenCounter = 0;};
 						if(D41_WMod == 7)	then {D41_Nebel = [0.16, 0.1,30];	D41_Regen = 0.2;	D41_Vorschau = 0.5;};
 						if(D41_WMod == 8)	then {D41_Nebel = [0.10, 0.1,30];	D41_RegenCounter = 0;}; //geht so, akzeptabler Nebel
