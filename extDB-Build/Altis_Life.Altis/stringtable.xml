@@ -3402,12 +3402,12 @@
 			<Portuguese>Tanque de Gasolina Vazio</Portuguese>
 		</Key>
 		<Key ID="STR_Item_FuelF">
-			<Original>Full Fuel Can</Original>
-			<English>Full Fuel Can</English>
-			<German>Benzinkanister</German>
-			<French>Jerrican de Carburant</French>
-			<Italian>Tanica di carburante piena</Italian>
-			<Portuguese>Tanque de Gasolina Cheio</Portuguese>
+			<Original>Full Fuel Can (50L)</Original>
+			<English>Full Fuel Can (50L)</English>
+			<German>Benzinkanister (50L)</German>
+			<French>Jerrican de Carburant (50L)</French>
+			<Italian>Tanica di carburante piena (50L)</Italian>
+			<Portuguese>Tanque de Gasolina Cheio (50L)</Portuguese>
 		</Key>
 		<Key ID="STR_Item_Pickaxe">
 			<Original>Pickaxe</Original>
@@ -5279,6 +5279,11 @@
 		</Key>
 		<Key ID="STR_Smartphone_Antworten">
 			<Original>Antworten</Original>
+		</Key>
+		<Key ID="STR_FuelStation_NotNear">
+			<Original>There isn't a vehicle near the fuel station or it needs a different type of gas.</Original>
+			<English>There isn't a vehicle near the fuel station or it needs a different type of gas.</English>
+			<German>Es befindet sich kein Fahrzeug in der Nähe der Zapfsäule oder benötigt anderen Treibstoff.</German>
 		</Key>
 	</Package>
 </Project>

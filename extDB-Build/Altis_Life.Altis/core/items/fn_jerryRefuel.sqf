@@ -5,7 +5,7 @@
 	Description:
 	Refuels the vehicle if the player has a fuel can.
 */
-private["_vehicle","_displayName","_upp","_ui","_progress","_pgText","_cP","_previousState"];
+private["_vehicle","_displayName","_upp","_ui","_progress","_pgText","_cP","_previousState","_refill"];
 _vehicle = cursorTarget;
 life_interrupted = false;
 if(isNull _vehicle) exitWith {hint localize "STR_ISTR_Jerry_NotLooking"};
@@ -53,6 +53,7 @@ player playActionNow "stop";
 if(!alive player) exitWith {};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; [true,"fuelF",1] call life_fnc_handleInv; };
 
+_refill = (50 / ([typeOf _vehicle] call life_fnc_fuelStationVehicleCapacity));
 
 switch (true) do
 {
@@ -60,11 +61,11 @@ switch (true) do
 	{
 		if(!local _vehicle) then
 		{
-			[[[_vehicle],{_this select 0 setFuel ((Fuel (_this select 0)) + 0.5);}],"BIS_fnc_spawn",_vehicle,false] spawn life_fnc_MP;
+			[[[_vehicle],{_this select 0 setFuel ((Fuel (_this select 0)) + _refill);}],"BIS_fnc_spawn",_vehicle,false] spawn life_fnc_MP;
 		}
 			else
 		{
-			_vehicle setFuel ((Fuel _vehicle) + 0.5);
+			_vehicle setFuel ((Fuel _vehicle) + _refill);
 		};
 	};
 	
@@ -72,11 +73,11 @@ switch (true) do
 	{
 		if(!local _vehicle) then
 		{
-			[[[_vehicle],{_this select 0 setFuel ((Fuel (_this select 0)) + 0.2);}],"BIS_fnc_spawn",_vehicle,false] spawn life_fnc_MP;
+			[[[_vehicle],{_this select 0 setFuel ((Fuel (_this select 0)) + _refill);}],"BIS_fnc_spawn",_vehicle,false] spawn life_fnc_MP;
 		}
 			else
 		{
-			_vehicle setFuel ((Fuel _vehicle) + 0.2);
+			_vehicle setFuel ((Fuel _vehicle) + _refill);
 		};
 	};
 	
@@ -84,11 +85,11 @@ switch (true) do
 	{
 		if(!local _vehicle) then
 		{
-			[[[_vehicle],{_this select 0 setFuel ((Fuel (_this select 0)) + 0.35);}],"BIS_fnc_spawn",_vehicle,false] spawn life_fnc_MP;
+			[[[_vehicle],{_this select 0 setFuel ((Fuel (_this select 0)) + _refill);}],"BIS_fnc_spawn",_vehicle,false] spawn life_fnc_MP;
 		}
 			else
 		{
-			_vehicle setFuel ((Fuel _vehicle) + 0.35);
+			_vehicle setFuel ((Fuel _vehicle) + _refill);
 		};
 	};
 };

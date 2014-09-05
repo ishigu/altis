@@ -182,6 +182,7 @@ class Life_Client_Core
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 		class houseConfig {};
+		class fuelStationVehicleCapacity {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -271,6 +272,7 @@ class Life_Client_Core
 		class lockedCar {};
 		class getRole {};
 		class weedSmoke {};
+		class emptyFuelStations {};
 	};
 	
 	class Network
@@ -286,6 +288,7 @@ class Life_Client_Core
 		class setFuel {};
 		class setTexture {};
 		class say3D {};
+		class setFuelCargo {};
 	};
 	
 	class Civilian
@@ -318,6 +321,10 @@ class Life_Client_Core
 		class vehicleWeight {};
 		class deviceMine {};
 		class addVehicle2Chain {};
+		class fuelStationShowMenu {};
+		class fuelStationSliderChange {};
+		class fuelStationSelectVehicle {};
+		class fuelStationFill {};
 	};
 	
 	class Cop

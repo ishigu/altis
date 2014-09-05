@@ -90,6 +90,9 @@ _vehicle allowDamage true;
 //Send keys over the network.
 [[_vehicle],"life_fnc_addVehicle2Chain",_unit,false] spawn life_fnc_MP;
 _vehicle lock 2;
+//Remove fuel from fueltracks for now
+_vehicle setFuelCargo 0;
+[[_veh,0],"life_fnc_setFuelCargo",true,false] spawn life_fnc_MP;
 //Reskin the vehicle 
 [[_vehicle,_vInfo select 8],"life_fnc_colorVehicle",nil,false] spawn life_fnc_MP;
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];

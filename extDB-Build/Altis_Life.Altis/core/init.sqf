@@ -124,5 +124,7 @@ life_fnc_moveIn = compileFinal
 [[],"life_fnc_renewUniform",true,false] spawn life_fnc_MP;
 [] spawn life_fnc_radartrapMonitoring;
 [] spawn life_fnc_lockedCar;
+_handle = [] spawn life_fnc_emptyFuelStations;
+waitUntil {scriptDone _handle};
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.

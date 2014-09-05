@@ -43,3 +43,5 @@
 
 #include "veh_repaint.hpp" // ADAC
 #include "distress_list.hpp"
+
+#include "fuelStation.hpp"

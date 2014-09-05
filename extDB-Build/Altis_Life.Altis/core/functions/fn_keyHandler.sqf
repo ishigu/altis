@@ -299,8 +299,10 @@ switch (_code) do
 					if(_locked == 2) then {
 						if(local _veh) then {
 							_veh lock 0;
+							_veh setFuelCargo 0;
 						} else {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
+							[[_veh,0],"life_fnc_setFuelCargo",_veh,false] spawn life_fnc_MP;
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 						playSound "carunlock";
