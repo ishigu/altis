@@ -7,7 +7,9 @@
 
 private["_target", "_message","_rank","_coplevel"];
 
-_target = [_this,3,objNull,[objNull]] call BIS_fnc_param;
+//_target = [_this,3,objNull,[objNull]] call BIS_fnc_param;
+_target = cursorTarget;
+
 if(isNull _target) exitWith{};
 
 if(playerSide != west) exitWith
@@ -26,7 +28,8 @@ switch (__GETC__(life_coplevel)) do
 	case 7: { _rank = "Polizeipräsident";};
 	default {_rank =  "Ungültiger Rang";};
 };
-
+if (license_cop_dea) then { _rank = "DEA Beamter"; };
+if (__GETC__(life_adminlevel) > 0) then { _rank = "N.S.A. Beamter"}
 
 
 //Compose message

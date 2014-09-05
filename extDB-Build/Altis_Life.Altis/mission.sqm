@@ -20182,7 +20182,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=337;
+		items=338;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -22811,6 +22811,14 @@ class Mission
 		{
 			position[]={14173.49,16.301176,16542.291};
 			name="fuelstation_30";
+			text="Tankstelle";
+			type="loc_Fuelstation";
+			colorName="ColorRed";
+		};
+		class Item337
+		{
+			position[]={5768.8716,222.35425,20085.711};
+			name="fuelstation_31";
 			text="Tankstelle";
 			type="loc_Fuelstation";
 			colorName="ColorRed";

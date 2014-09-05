@@ -7,7 +7,7 @@
  * Description:
  * Refuelling menu
  */
-private["_fuelstation","_menu","_mode","_types","_objs","_index","_fuelPrice","_marketprice","_type","_info","_capacity","_diff","_distance"];
+private["_fuelstation","_menu","_mode","_types","_objs","_index","_fuelPrice","_marketprice","_type","_info","_capacity","_diff","_distance","_mod"];
 disableSerialization;
 
 _fuelstation = [_this,0,objNull] call BIS_fnc_param;
@@ -44,7 +44,9 @@ if(_marketprice != -1) then
 	_fuelPrice = _marketprice;
 };
 _fuelPrice = ([(_fuelPrice / 200), 2] call BIS_fnc_cutDecimals) max 3;
-life_fuelstation_price = _fuelPrice;
+_mod = 1;
+if (playerSide in [west,independent]) then { _mod = 0.5; }; // Make it cheaper for cops and medics/adac
+life_fuelstation_price = _fuelPrice * _mod;
 
 
 // Try to find the Vehicle
