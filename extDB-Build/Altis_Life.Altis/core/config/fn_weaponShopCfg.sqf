@@ -100,7 +100,7 @@ switch(_shop) do
 				["optic_ACO_grn",nil,1500]
 			];
 		};
-		if (__GETC__(life_coplevel) >= 3) then {
+		if (__GETC__(life_coplevel) >= 3 || license_cop_sniper) then {
 			_return = _return + 
 			[
 				["arifle_MXC_Black_F",nil,10000],
@@ -109,7 +109,7 @@ switch(_shop) do
 				["optic_Hamr",nil,3500]
 			];
 		};
-		if (__GETC__(life_coplevel) >= 4) then {
+		if (__GETC__(life_coplevel) >= 4 || license_cop_sniper) then {
 			_return = _return + 
 			[
 				["arifle_MX_SW_Black_F",nil,10000],

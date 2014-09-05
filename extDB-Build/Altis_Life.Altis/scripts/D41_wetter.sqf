@@ -8,7 +8,7 @@
 	private ["_fnc_D41_WetterWerte"];
 
 	//PreLoad Variablen
-	if (isDedicated) then
+	if (isServer) then
 	{
 		D41_Nebel = [0,0,0];
 		D41_Wellen = 0;
@@ -20,7 +20,7 @@
 	
 	_fnc_D41_WetterWerte =
 	{
-		if (isDedicated) then
+		if (isServer) then
 			{
 				D41_ChanceN = round(random 100);
 				if(D41_ChanceN <= 7) then

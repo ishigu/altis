@@ -22,7 +22,7 @@ call compile preprocessFile "UI\HUD.sqf";
 [] spawn ICE_HUD;
 [] execVM "scripts\IgiLoad\IgiLoadInit.sqf"; // ADAC HEMMT
 
-if(isDedicated && isNil("life_market_prices")) then
+if(isServer && isNil("life_market_prices")) then
 {
 	[] call life_fnc_marketconfiguration;
 	diag_log "Marktpreise erstellt!";
@@ -40,7 +40,7 @@ if (thirdPartyScripts) then {
 [] execVM "a3m\scripts\thirdParty.sqf";
 };
 */
-if (isDedicated) then {
+if (isServer) then {
 	null = [5, "scripts"] execVM "scripts\helipad_lights\helipad_light_auto.sqf";	
 };
 
