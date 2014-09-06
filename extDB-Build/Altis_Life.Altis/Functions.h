@@ -62,6 +62,8 @@ class Life_Client_Core
 		class adminFreeze {};
 		class adminMarkers {};
 		class adminCarKey {};
+		class adminInvisible {};
+		class adminRevive {};
 	};
 	
 	class Medical_System
