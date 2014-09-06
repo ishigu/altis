@@ -6,8 +6,8 @@
 	Author:
 	Shentoza für Westerland
 */
-private["_position","_radarTrap","_radarTrapStationary","_radarTrapMobile","_radarTraps"];
-if(isServer) exitWith{};
+private["_radarTraps"];
+if(isDedicated) exitWith{};
 while{true} do
 {
 	waitUntil{
@@ -18,6 +18,7 @@ while{true} do
 		(count _radarTraps > 0)};
 	{	
 		_x spawn {
+			private["_position","_radarTrap","_radarTrapStationary","_radarTrapMobile","_unit","_type","_price","_copPresent","_vehicle","_dir","_conversion","_toleranceLower","_toleranceUpper","_dirveh","_rightDir","_mode","_data","_triggered","_distance","_speedRaw","_speedTol","_timer"];
 			_radarTrap = _this;
 			_unit = player;
 			if( (vehicle _unit != _unit) && (vehicle _unit isKindOf "Car") && (driver (vehicle _unit) == _unit)) then //viable Vehicle&driver check 
@@ -89,10 +90,36 @@ while{true} do
 				if(!_triggered) exitWith{};
 				_radarTrap setVariable ["ready",false,false];
 				_timer = round(time) + 10;
-				[[1,format["%1 wurde %2 mit %3km/h geblitzt. Nach Abzug der Toleranz sind das noch %4km/h. Nach ihm wird nun gefahndet.",name _unit,_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-				[[1,format["Du wurdest %1 mit %2km/h geblitzt. Nach Abzug der Toleranz sind das noch %3km/h.",_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
-				[[getPlayerUID _unit,name _unit,_data],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-				[[_radarTrap,0,300],"life_fnc_radartrapFlash",true,false] spawn life_fnc_MP;
+
+				if (_data != "") then {
+					_type = ["empty",0];
+					switch (_data) do {
+						case "44B": {_type = ["Innerorts über 50km/h (A)",1500];};
+						case "45B": {_type = ["Innerorts über 60km/h (A)",3000];};
+						case "46B": {_type = ["Innerorts über 85km/h (A)",7000];};
+						case "47B": {_type = ["Innerorts über 110km/h (A)",25000];};
+						case "48B": {_type = ["Innerorts über 200km/h (A)",60000];};
+						case "49B": {_type = ["Außerorts über 130km/h (A)",6000];};
+						case "50B": {_type = ["Außerorts über 180km/h (A)",10000];};
+						case "51B": {_type = ["Außerorts über 230km/h+ (A)",25000];};
+					};
+					_price = _type select 1;
+					if (_price > life_atmcash) then {
+						[[1,format["%1 wurde %2 mit %3km/h geblitzt. Nach Abzug der Toleranz sind das noch %4km/h. Nach ihm wird nun gefahndet, da er die Strafe nicht zahlen konnte.",_unit getVariable ["realname",name _unit],_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+						[[1,format["Du wurdest %1 mit %2km/h geblitzt. Nach Abzug der Toleranz sind das noch %3km/h. Da du das Ticket von %4$ nicht bezahlen kannst, wird nun nach dir gefahndet.",_mode,_speedRaw,_speedTol,[_price] call life_fnc_numberText]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+						[[getPlayerUID _unit,name _unit,_data],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+					} else {
+						life_atmcash = life_atmcash - _price;
+						[[1,format["%1 wurde %2 mit %3km/h geblitzt. Nach Abzug der Toleranz sind das noch %4km/h. Das Bußgeld wurde ihm/ihr in Rechnung gestellt.",_unit getVariable ["realname",name _unit],_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+						[[1,format["Du wurdest %1 mit %2km/h geblitzt. Nach Abzug der Toleranz sind das noch %3km/h. Ein Bußgeld in Höhe von %4$ wurde dir in Rechnung gestellt",_mode,_speedRaw,_speedTol,[_price] call life_fnc_numberText]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+					};
+					if (sunOrMoon < 1) then { //Nacht
+						[[_radarTrap,0,50],"life_fnc_radartrapFlash",true,false] spawn life_fnc_MP;
+					} else { // Tag
+						[[_radarTrap,0,180],"life_fnc_radartrapFlash",true,false] spawn life_fnc_MP;
+					};
+				};
+				
 				waitUntil {(( _radarTrap distance _vehicle > 50) || (!alive _radarTrap) || (round(time) == _timer) ) };
 				if(alive _radarTrap) then{	_radarTrap setVariable ["ready",true,false]; };
 			};

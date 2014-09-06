@@ -2287,7 +2287,7 @@
 		</Key>
 		<Key ID="STR_NOTF_WeaponsSeized_Cop">
 			<Original>You have seized %1's weapons</Original>
-			<English>You have seized %1's weapons/English>
+			<English>You have seized %1's weapons</English>
 			<German>Du hast %1 entwaffnet</German>
 		</Key>
 	</Package>

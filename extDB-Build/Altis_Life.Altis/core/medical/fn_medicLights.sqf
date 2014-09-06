@@ -63,7 +63,7 @@ if (sunOrMoon < 1) then { // Nacht
 		_lightright setLightIntensity 20;
 	} else {
 		_brightness = 40; //Tag
-		_lightleft setLightIntensity 50
+		_lightleft setLightIntensity 50;
 		_lightright setLightIntensity 10;
 	};
 };

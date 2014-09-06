@@ -88,7 +88,7 @@ _xPos = getPos _helipad select 0;
 _yPos = getPos _helipad select 1;
 _zPos = getPos _helipad select 2;
 
-hint format["%1 %2 %3", _xPos, _yPos, _zPos];
+//hint format["%1 %2 %3", _xPos, _yPos, _zPos];
 
 switch (_innerLight) do
 {
