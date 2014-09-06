@@ -39,7 +39,11 @@ life_fuelstation_fitamount = _fitFuel;
 _sliFit ctrlShow true;
 _sliFit sliderSetSpeed [1,1];
 _sliFit sliderSetRange [0, _fitFuel];
-_cashFit = floor _fitFuel;
+_cashFit = ( floor (life_cash / life_fuelstation_price)) min _fitFuel;
+
+_sliFit sliderSetPosition _cashFit;
+_txtCash ctrlShow true;
+_txtCash ctrlSetText format["$%1", round (_cashFit * life_fuelstation_price)];
 
 _txtFit ctrlShow true;
 _txtFit ctrlSetText format["%1 / %2 Liter", _cashFit, _fitFuel];

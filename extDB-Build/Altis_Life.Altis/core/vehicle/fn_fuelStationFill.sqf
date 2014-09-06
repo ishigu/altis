@@ -15,6 +15,9 @@ life_interrupted = false;
 
 _veh = life_fuelstation_lockVeh;
 
+if (life_fuelstation_amount == 0) exitWith{life_action_inUse = false; closeDialog 0; hint localize "STR_FuelStation_MustSetAmount";};
+if ((life_fuelstation_amount*life_fuelstation_price) > life_cash || life_cash == 0) exitWith{life_action_inUse = false; closeDialog 0; hint localize "STR_FuelStation_NotEnoughMoney";};
+
 _txtStation = "Zapfsaeule";
 _txtVehicle = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
 

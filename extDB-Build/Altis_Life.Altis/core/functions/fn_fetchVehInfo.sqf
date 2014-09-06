@@ -50,7 +50,8 @@ _speed = getNumber(configFile >> "CfgVehicles" >> _class >> "maxSpeed");
 _armor = getNumber(configFile >> "CfgVehicles" >> _class >> "armor");
 _seats = getNumber(configFile >> "CfgVehicles" >> _class >> "transportSoldier");
 _hp = getNumber(configFile >> "CfgVehicles" >> _class >> "enginePower");
-_fuel = getNumber(configFile >> "CfgVehicles" >> _class >> "fuelCapacity");
+//_fuel = getNumber(configFile >> "CfgVehicles" >> _class >> "fuelCapacity");
+_fuel = ([_class] call life_fnc_fuelStationVehicleCapacity);
 
 //Return
 [_class,_scope,_picture,_displayName,_vehicleClass,_side,_faction,_superClass,_speed,_armor,_seats,_hp,_fuel];

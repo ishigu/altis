@@ -5291,5 +5291,15 @@
 			<English>There isn't a vehicle near the fuel station or it needs a different type of gas.</English>
 			<German>Es befindet sich kein Fahrzeug in der Nähe der Zapfsäule oder benötigt anderen Treibstoff.</German>
 		</Key>
+		<Key ID="STR_FuelStation_NotEnoughMoney">STR_FuelStation_MustSetAmount
+			<Original>You do not have enough money!</Original>
+			<English>You do not have enough money!</English>
+			<German>Du hast nicht genug Geld!</German>
+		</Key>
+		<Key ID="STR_FuelStation_MustSetAmount">
+			<Original>You need to select atleast one litre!</Original>
+			<English>You need to select atleast one litre!</English>
+			<German>Du musst mindestens einen Liter tanken!</German>
+		</Key>
 	</Package>
 </Project>

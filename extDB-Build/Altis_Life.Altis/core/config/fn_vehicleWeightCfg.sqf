@@ -12,6 +12,16 @@ switch (_className) do
 {
 	case "C_Offroad_01_F": {65};
 	case "B_G_Offroad_01_F": {65};
+	case "B_G_Offroad_01_armed_F": {0};
+	case "B_Heli_Transport_01_F": {0};
+	case "B_SDV_01_F": {0};
+	case "B_Truck_01_mover_F": {400};
+	case "C_Kart_01_Blu_F": {0};
+	case "C_Kart_01_Fuel_F": {0};
+	case "C_Kart_01_Red_F": {0};
+	case "C_Kart_01_Vrana_F": {0};
+	case "C_Van_01_fuel_F": {100};
+	case "O_Truck_03_fuel_F": {500};
 	case "B_Quadbike_01_F": {25};
 	case "I_Truck_02_covered_F": {250};
 	case "I_Truck_02_transport_F": {200};
