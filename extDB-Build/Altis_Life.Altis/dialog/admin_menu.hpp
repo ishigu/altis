@@ -162,5 +162,23 @@ class life_admin_menu {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		class Invisible : Life_RscButtonMenu {
+			idc = 2912;
+			text = "$STR_Admin_Invisible";
+			onButtonClick = "[] call life_fnc_adminInvisible;";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.89 + (1/25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class Revive : Life_RscButtonMenu {
+			idc = 2913;
+			text = "$STR_Admin_Revive";
+			onButtonClick = "[] call life_fnc_adminRevive;";
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.89 + (1/25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
 	};
 };
