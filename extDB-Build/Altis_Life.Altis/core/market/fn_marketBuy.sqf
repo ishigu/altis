@@ -18,7 +18,7 @@ _arr_price = [_shortname] call life_fnc_marketGetPriceRow;
 //Calculate the new price of the product
 _price = _arr_price select 1; //current price
 _globalprice = _arr_price select 2; //current change rate
-
+diag_log format["marketBuy: _shortname:%1 _price:%2 _globalprice:%3 _arr_resource:%4",_shortname,_price,_globalprice,_arr_resource];
 _modifier = (_amount * (_arr_resource select 5)); //calculate modifier
 
 _price = _price + _modifier;

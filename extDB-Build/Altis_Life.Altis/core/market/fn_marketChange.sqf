@@ -105,7 +105,7 @@ switch(true) do
 		["cocaine", [60,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
 		["cocainep", [60,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
 		["heroinu", [60,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
-		["heroinp", [6030] call life_fnc_randomRound, true] call life_fnc_marketSell; 
+		["heroinp", [60,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
 		["meth", [60,30] call life_fnc_randomRound, true] call life_fnc_marketSell;
 		["turtle", [60,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
 		

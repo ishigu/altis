@@ -14,7 +14,6 @@ life_market_resources = [
 			
 	["apple", 45, 35, 75, 1, 1, 
 		[ 
-			
 			["peach",1]
 		] 
 	],
