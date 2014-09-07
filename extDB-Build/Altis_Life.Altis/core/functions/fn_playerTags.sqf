@@ -27,7 +27,7 @@ _units = _units - [player];
 {
 	private["_text"];
 	_idc = _ui displayCtrl (iconID + _forEachIndex);
-	if(!(lineIntersects [eyePos player, eyePos _x, player, _x]) && {!isNil {_x getVariable "realname"}}) then {
+	if(!(lineIntersects [eyePos player, eyePos _x, player, _x]) && {!isNil {_x getVariable "realname"}} && {!isNil {_x getVariable "hideNametag"}}) then {
 		_pos = switch(typeOf _x) do {
 			case "Land_Pallet_MilBoxes_F": {[visiblePosition _x select 0, visiblePosition _x select 1, (getPosATL _x select 2) + 1.5]};
 			case "Land_Sink_F": {[visiblePosition _x select 0, visiblePosition _x select 1, (getPosATL _x select 2) + 2]};
@@ -63,9 +63,7 @@ _units = _units - [player];
 			_idc ctrlSetScale scale;
 			_idc ctrlSetFade 0;
 			_idc ctrlCommit 0;
-			if (isNil {(_x getVariable "hideNametag")}) then {
-				_idc ctrlShow true;
-			};
+			_idc ctrlShow true;
 		} else {
 			_idc ctrlShow false;
 		};
