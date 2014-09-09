@@ -105,7 +105,7 @@ switch (_shop) do
 		{
 			_return set[count _return,["C_SUV_01_F",15000]];			
 		};
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) > 2 || license_cop_dea) then
 		{
 			_return set[count _return,["C_Offroad_01_F",5000]];
 		};
