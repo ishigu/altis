@@ -10,7 +10,7 @@ if(playerSide == west) then {
 			_unit setObjectTextureGlobal [0,_path];
 		};
 		case "V_TacVest_blk" : { //Polizei Weste
-			_path = "textures\uniform\police_vest.paa";
+			_path = "textures\uniform\police_vest.jpg";
 			_unit setObjectTextureGlobal [0,_path];
 		};
 		

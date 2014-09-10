@@ -43,9 +43,8 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Angry"};
-			case 1: {_color = "Rebel Green"};
-			case 2: {_color = "Polizei"};
-			case 3: {_color = "Rebel Green"};
+			case 1: {_color = "Polizei"};
+			case 2: {_color = "Rebel Green"};
 		};
 	};
 	
@@ -104,14 +103,12 @@ switch (_vehicle) do
 			case 2: {_color = "Orange";};
 			case 3: {_color = "Weiss";};
 			case 4: {_color = "Polizei";};
-			case 5: {_color = "Carbon";};
-			case 6: {_color = "Carbon / Felgen";};
-			case 7: {_color = "RageCore";};
-			case 8: {_color = "Batman";};
-			case 9: {_color = "Superman";};
-			case 10: {_color = "Notarzt";};
-			case 11: {_color = "Schwarz Metallic";};
-			case 12: {_color = "Schwarz";};
+			case 5: {_color = "RageCore";};
+			case 6: {_color = "Batman";};
+			case 7: {_color = "Superman";};
+			case 8: {_color = "Notarzt";};
+			case 9: {_color = "Schwarz Metallic";};
+			case 10: {_color = "Schwarz";};
 		};
 	};
 	
@@ -190,12 +187,9 @@ switch (_vehicle) do
 			case 1: {_color = "Weiss / Blau"};
 			case 2: {_color = "Digital Gruen"};
 			case 3: {_color = "Digital Braun"};
-			case 4: {_color = "Weiss / Gruen"};
-			case 5: {_color = "Weiss / Orange"};
-			case 6: {_color = "Weiss / Grau"};
-			case 7: {_color = "Schwarz"};
-			case 8: {_color = "Notarzt"};
-			case 9: {_color = "Adac"};
+			case 4: {_color = "Schwarz"};
+			case 5: {_color = "Notarzt"};
+			case 6: {_color = "Adac"};
 		};
 	};
 	
@@ -204,9 +198,6 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Polizei"};
-			/*case 1: {_color = "Schwarz"};
-			case 2: {_color = "Polizei"};
-			case 3: {_color = "SEK"};*/
 		};
 	};
 	
@@ -227,8 +218,6 @@ switch (_vehicle) do
 			case 0: {_color = "Black"};
 			case 1: {_color = "Death"};
 			case 2: {_color = "Sand"};
-			case 3: {_color = "GoldGelb"};
-			case 4: {_color = "BluePixel"};
 		};
 	};
 	

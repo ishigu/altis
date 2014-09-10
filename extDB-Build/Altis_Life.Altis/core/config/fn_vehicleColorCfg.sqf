@@ -100,8 +100,6 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
 			["textures\vehicles\Suvweiss.paa","civ"],
 			["textures\vehicles\SUV_polizei.paa","cop"],
-			["textures\vehicles\SUV_var_02.paa","civ"],
-			["textures\vehicles\SUV_var_03.paa","civ"],
 			["textures\vehicles\suv_ragecore.jpg","civ"],
 			["textures\vehicles\suv_batman.paa","civ"],
 			["textures\vehicles\suv_superman.paa","civ"],
@@ -177,9 +175,6 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","reb"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"],
-			["textures\vehicles\heli_light_02_green.paa","civ"],
-			["textures\vehicles\heli_light_02_orange.paa","civ"],
-			["textures\vehicles\heli_light_02_grey.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa","civ"],
 			["textures\vehicles\medic_orca.paa","med"],
 			["textures\vehicles\adac_orca.paa","adac"]
@@ -190,10 +185,7 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			/*["\A3\Soft_F\MRAP_01\Data\mrap_01_base_co.paa","cop"],
-			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","cop"],*/
 			["textures\vehicles\hunter_polizei_front2.paa","cop","#(argb,8,8,3)color(0.05,0.05,0.05,1)"]
-			//["textures\vehicles\hunter_sek.paa","cop"]
 		];
 	};
 	
@@ -251,7 +243,6 @@ switch (_vehicle) do
 		_ret =
 		[
 			["textures\vehicles\hellcat_angry.jpg","civ"],
-			["\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co","reb"],
 			["textures\vehicles\hellcat_polizei.paa","cop"],
 			["\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co","reb"]
 		];
@@ -261,9 +252,7 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["\a3\Soft_F_Beta\MRAP_03\Data\mrap_03_ext_co.paa","cop"],
-			["textures\vehicles\strider_camo.paa","reb"],
-			["textures\vehicles\ifrit_sand0.paa","reb"]
+			["\a3\Soft_F_Beta\MRAP_03\Data\mrap_03_ext_co.paa","cop"]
 		];
 	};
 	
@@ -273,9 +262,7 @@ switch (_vehicle) do
 		[
 			["textures\vehicles\ifrit_black.jpg","reb","textures\vehicles\ifrit_black.jpg"],
 			["textures\vehicles\ifrit_death1.jpg","reb","textures\vehicles\ifrit_death2.jpg","textures\vehicles\ifrit_death3.jpg"],
-			["textures\vehicles\ifrit_sand0.paa","reb","textures\vehicles\ifrit_sand1.paa","textures\vehicles\ifrit_sand0.paa"],
-			["textures\vehicles\ifrit_gold.jpg","reb","textures\vehicles\ifrit_gold.jpg"],
-			["textures\vehicles\ifrit_pixel.jpg","reb","textures\vehicles\ifrit_pixel.jpg"]
+			["textures\vehicles\ifrit_sand0.paa","reb","textures\vehicles\ifrit_sand1.paa","textures\vehicles\ifrit_sand0.paa"]
 		];
 	};
 	
