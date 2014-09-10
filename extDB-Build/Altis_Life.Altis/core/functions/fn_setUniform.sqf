@@ -31,6 +31,10 @@ if(playerSide == west) then {
 		};
 	};
 	
+	if((backpack _unit) == "B_Bergen_sgg" && license_cop_dea) then {
+		(unitBackpack _unit) setObjectTextureGlobal [0, "textures\backpack_dea_bergen.paa"];
+	};
+	
 	// Hide backpack
 	//(unitBackpack player) setObjectTextureGlobal [0, ""];
 };

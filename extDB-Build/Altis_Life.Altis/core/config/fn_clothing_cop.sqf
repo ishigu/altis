@@ -99,10 +99,14 @@ switch (_filter) do
 			["B_Kitbag_cbr",nil,800],
 			["B_FieldPack_blk",nil,500],
 			["B_AssaultPack_blk",nil,700],
-			["B_Bergen_sgg",nil,2500],
 			["B_Carryall_cbr",nil,3500],
 			["B_Parachute",nil,500]
 		];
+		if(license_cop_dea) then {
+			_ret set[count _ret,["B_Bergen_sgg","DEA Rucksack",2500]];
+		} else {
+			_ret set[count _ret,["B_Bergen_sgg",nil,2500]];
+		};
 	};
 };
 
