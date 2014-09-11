@@ -93,11 +93,11 @@ switch(playerSide) do {
 
 switch(__GETC__(life_donator)) do
 {
-	case 1: {life_paycheck = life_paycheck + 750;};
-	case 2: {life_paycheck = life_paycheck + 1500;};
-	case 3: {life_paycheck = life_paycheck + 2000;};
-	case 4: {life_paycheck = life_paycheck + 2000;};
-	case 5: {life_paycheck = life_paycheck + 2000;};
+	case 1: {life_paycheck = life_paycheck + 1250;};
+	case 2: {life_paycheck = life_paycheck + 2000;};
+	case 3: {life_paycheck = life_paycheck + 2500;};
+	case 4: {life_paycheck = life_paycheck + 2500;};
+	case 5: {life_paycheck = life_paycheck + 2500;};
 };
 
 life_session_completed = true;

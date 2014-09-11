@@ -21826,7 +21826,7 @@ class Mission
 		{
 			position[]={132.12535,-0.089471892,14819.055};
 			name="ts";
-			text="Ts ip: ishigure.de:9999";
+			text="Teamspeak: ts.westerland-altis.de";
 			type="hd_dot";
 			colorName="ColorRed";
 		};
