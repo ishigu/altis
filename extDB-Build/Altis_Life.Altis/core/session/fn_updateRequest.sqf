@@ -15,7 +15,13 @@ _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case 
 _packet set[count _packet,_array];
 
 [] call life_fnc_saveGear;
-_packet set[count _packet, life_gear];
+
+// Fuck you combatloggers!
+if(alive player && !(player getVariable["Revive",FALSE])) then {
+	_packet set[count _packet, life_gear];
+} else {
+	_packet set[count _packet, []];
+};
 switch (playerSide) do {
 	case civilian: {
 		_packet set[count _packet,life_is_arrested];

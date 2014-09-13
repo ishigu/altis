@@ -105,3 +105,15 @@
 		};
 	};
 };
+
+// Save life_gear more often, should help with items missing after beeing revived
+[] spawn
+{
+	while {true} do
+	{
+		sleep 180;
+		if(alive player && !(player getVariable["Revive",FALSE])) then {
+			[] call life_fnc_saveGear;
+		};
+	};
+};
