@@ -43,9 +43,9 @@ if(_marketprice != -1) then
 {
 	_fuelPrice = _marketprice;
 };
-_fuelPrice = ([(_fuelPrice / 200), 2] call BIS_fnc_cutDecimals) max 3;
+_fuelPrice = ([(_fuelPrice / 230), 2] call BIS_fnc_cutDecimals) max 3;
 _mod = 1;
-if (playerSide in [west,independent]) then { _mod = 0.5; }; // Make it cheaper for cops and medics/adac
+if (playerSide in [west,independent]) then { _mod = 0.6; }; // Make it cheaper for cops and medics/adac
 life_fuelstation_price = _fuelPrice * _mod;
 
 
