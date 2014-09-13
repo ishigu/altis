@@ -12,19 +12,19 @@ life_market_resources = [
 	//Schema: SHORTNAME, DEFAULT-WERT, MIN-WERT, MAX-WERT, VERÄNDERUNG BEI AKTION [VERKAUF Multipliziert mit 1, Kauf multipliziert um -1
 	//["gold", 1500, 450, 2300, 8, 5],
 			
-	["apple", 45, 35, 75, 1, 1, 
+	["apple", 45, 35, 75, 0.6, 0.6, 
 		[ 
 			["peach",1]
 		] 
 	],
 	
-	["peach", 60, 50, 90, 1, 1, 
+	["peach", 60, 50, 90, 0.6, 0.6, 
 		[ 
 			["apple",1] 
 		] 
 	],
 	
-	["benzin", 2000, 1000, 3000, 5, 1, 
+	["benzin", 2000, 1000, 3000, 2, 1, 
 		[ 
 			["diamondc",2],
 			["chemical",1],
@@ -36,7 +36,7 @@ life_market_resources = [
 		] 
 	],
 		
-	["chemical", 1000, 500, 1750, 10, 5, 
+	["chemical", 1000, 500, 1750, 1, 5, 
 		[ 
 			["benzin",0],
 			["medical",0],
@@ -50,7 +50,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["medical", 3900, 1000, 4900, 6, 1, 
+	["medical", 3900, 1000, 4900, 2, 1, 
 		[ 
 			["diamondc",2], 
 			["benzin",1],
@@ -64,7 +64,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["oilp", 1950, 500, 2950, 5, 1, 
+	["oilp", 1950, 500, 2950, 2, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",0],
@@ -78,7 +78,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["iron_r", 2400, 1500, 3600, 4, 1,  
+	["iron_r", 2400, 1500, 3600, 2, 1,  
 		[ 
 			["diamondc",2], 
 			["benzin",2],
@@ -92,7 +92,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["diamondc", 2500, 700, 4000, 4, 1, 
+	["diamondc", 2500, 700, 4000, 2, 1, 
 		[ 
 			["oilp",2],
 			["benzin",2],
@@ -106,7 +106,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["copper_r", 800, 300, 1850, 4, 1, 
+	["copper_r", 800, 300, 1850, 2, 1, 
 		[ 
 			["diamondc",2], 
 			["benzin",4],
@@ -120,7 +120,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["salt_r", 1750, 500, 2950, 6, 1, 
+	["salt_r", 1750, 500, 2950, 2, 1, 
 		[ 
 			["diamondc",2], 
 			["benzin",2],
@@ -134,7 +134,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["glass", 1000, 500, 2300, 5, 1, 
+	["glass", 1000, 500, 2300, 1, 1, 
 		[ 
 			["diamondc",2], 
 			["benzin",2],
@@ -148,7 +148,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["cement", 1000, 500, 2250, 4, 1, 
+	["cement", 1000, 500, 2250, 1, 1, 
 		[ 
 			["diamondc",1], 
 			["benzin",1],
@@ -164,7 +164,7 @@ life_market_resources = [
 	
 	///////////////////////////////////
 	
-	["turtle", 9000, 5000, 15000, 40, 1,  
+	["turtle", 9000, 5000, 15000, 10, 1,  
 		[ 
 			["marijuana",3], 
 			["cocainep",3],
@@ -173,7 +173,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["marijuana", 2250, 1500, 3250, 10, 1,   
+	["marijuana", 2250, 1500, 3250, 3, 1,   
 		[ 
 			["turtle",3], 
 			["cocainep",3],
@@ -182,7 +182,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["cocainep", 3500, 2000, 4800, 8, 1,   
+	["cocainep", 3500, 2000, 4800, 3, 1,   
 		[ 
 			["marijuana",3], 
 			["turtle",3],
@@ -191,7 +191,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["heroinp", 2850, 1500, 3900, 10, 1,   
+	["heroinp", 2850, 1500, 3900, 3, 1,   
 		[ 
 			["marijuana",3], 
 			["cocainep",3],
@@ -200,7 +200,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["meth", 6000, 2000, 9500, 16, 1,   
+	["meth", 6000, 2000, 9500, 4, 1,   
 		[ 
 			["marijuana",3], 
 			["cocainep",3],
