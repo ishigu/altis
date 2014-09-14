@@ -54,7 +54,6 @@ switch(_shop) do
 						["Binocular",nil,150],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,0],
-						["Medikit",nil,0],
 						["NVGoggles",nil,200],
 						["B_Kitbag_cbr",nil,250],
 						["H_Cap_blk",nil,50],
