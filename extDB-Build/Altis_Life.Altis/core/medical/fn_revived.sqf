@@ -46,6 +46,8 @@ life_corpse setVariable["name",nil,TRUE];
 [[life_corpse],"life_fnc_corpse",true,false] spawn life_fnc_MP;
 hideBody life_corpse;
 
+life_iamdead = false;
+
 player setVariable["Revive",nil,TRUE];
 player setVariable["name",nil,TRUE];
 player setVariable["Reviving",nil,TRUE];

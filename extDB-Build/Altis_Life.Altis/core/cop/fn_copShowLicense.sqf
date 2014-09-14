@@ -33,7 +33,7 @@ if (__GETC__(life_adminlevel) > 0) then { _rank = "N.S.A. Beamter"; };
 
 
 //Compose message
-_message = format["<img size='10' color='#FFFFFF' image='bilder\police_gold.paa'/><br/><br/><t size='2.5'>%1</t><br/><t size='1.5'>%2</t><br/><t size='1'>Altis Polzeidirektion</t>", player getVariable["realname",name player], _rank];
+_message = format["<img size='10' color='#FFFFFF' image='bilder\police_gold.paa'/><br/><br/><t size='2'>%1</t><br/><t size='1.5'>%2</t><br/><t size='1'>Altis Polizeidirektion</t>", player getVariable["realname",name player], _rank];
 
 //Show license to target player
 [[player, _message],"life_fnc_copLicenseShown",_target,false] spawn life_fnc_MP;

@@ -485,3 +485,5 @@ life_fuelstation_price = 0;
 life_fuelstation_lockVeh = objNull;
 life_fuelstation_amount = 0;
 life_fuelstation_fitamount = 0;
+
+life_iamdead = false;
