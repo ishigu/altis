@@ -14,7 +14,7 @@ _adacs = [];
 
 sleep 0.5;
 if(visibleMap) then {
-	{if(_x call life_fnc_isADAC) then {_adacs set[count _adacs,_x];}} foreach playableUnits; //Fetch list of ADACs
+	{if(_x call life_fnc_isADAC && (!(_x getVariable ["hideNametag",false])) ) then {_adacs set[count _adacs,_x];}} foreach playableUnits; //Fetch list of ADACs
 	
 	 //Create ADAC markers
 	{

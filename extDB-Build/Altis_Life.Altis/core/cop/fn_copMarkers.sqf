@@ -15,12 +15,14 @@ if(visibleMap) then {
 	
 	//Create markers
 	{
+		if (!(_x getVariable ["hideNametag",false])) then{
 		_marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
 		_marker setMarkerColorLocal "ColorBlue";
 		_marker setMarkerTypeLocal "Mil_dot";
 		_marker setMarkerTextLocal format["%1", _x getVariable["realname",name _x]];
 	
 		_markers set[count _markers,[_marker,_x]];
+		};
 	} foreach _cops;
 		
 	while {visibleMap} do

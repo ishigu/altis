@@ -29,7 +29,7 @@ switch (__GETC__(life_coplevel)) do
 	default {_rank =  "Ungültiger Rang";};
 };
 if (license_cop_dea) then { _rank = "DEA Beamter"; };
-if (__GETC__(life_adminlevel) > 0) then { _rank = "N.S.A. Beamter"; };
+if (__GETC__(life_adminlevel) > 0 && (__GETC__(life_coplevel) == 7)) then { _rank = "N.S.A. Beamter"; };
 
 
 //Compose message

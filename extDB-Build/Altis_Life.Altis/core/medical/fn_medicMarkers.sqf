@@ -19,7 +19,7 @@ if(visibleMap) then {
 	// Get medics
 	{
 		if (_selfmedic) then {
-			if((_x call life_fnc_isMedic)) then {
+			if((_x call life_fnc_isMedic) && (!(_x getVariable ["hideNametag",false]))) then {
 				_units set[count _units,_x];
 			};
 		};

@@ -95,6 +95,7 @@ LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObje
 [] call life_fnc_settingsInit;
 player setVariable["steam64ID",getPlayerUID player];
 player setVariable["realname",profileName,true];
+player setVariable["hideNametag",false,true];
 
 //Aliases updating / preparing for admin menu
 _aliases = player getVariable ["aliases",[]];
