@@ -186,6 +186,15 @@ class CfgNotifications
 		priority = 6;
 	};
 	
+	class NewsBroadcast
+	{
+		title = "Neue Übertragung";
+		iconPicture = "icons\messagenew.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
 	class PoliceDispatch
 	{
 		title = "Polizei Notrufzentrale";

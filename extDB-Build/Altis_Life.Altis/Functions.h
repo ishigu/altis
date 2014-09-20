@@ -276,6 +276,8 @@ class Life_Client_Core
 		class getRole {};
 		class weedSmoke {};
 		class emptyFuelStations {};
+		class broadcastNews {};
+		class broadcastNewsRecieve{};
 	};
 	
 	class Network

@@ -45,3 +45,5 @@
 #include "distress_list.hpp"
 
 #include "fuelStation.hpp"
+
+#include "broadcastNews.hpp"
