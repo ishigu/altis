@@ -40,10 +40,10 @@ else
 	{
 		if((_x select 0) == _shortname) exitWith
 		{
-			ctrlSetText [1001, format["$%1", [_x select 1] call life_fnc_numberText ] ];
+			ctrlSetText [1001, format["$%1", [round(_x select 1)] call life_fnc_numberText ] ];
 			
 			//Trend Global
-			ctrlSetText [1004, format["$%1", [_x select 2] call life_fnc_numberText ] ];
+			ctrlSetText [1004, format["$%1", [round(_x select 2)] call life_fnc_numberText ] ];
 			
 			if((_x select 2) >= 0) then
 			{
@@ -55,7 +55,7 @@ else
 			};
 			
 			//Trend local
-			ctrlSetText [1005, format["$%1", [_x select 3] call life_fnc_numberText ] ];
+			ctrlSetText [1005, format["$%1", [round(_x select 3)] call life_fnc_numberText ] ];
 			
 			if((_x select 3) >= 0) then
 			{
