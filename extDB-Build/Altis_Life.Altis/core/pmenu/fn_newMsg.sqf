@@ -84,7 +84,7 @@ switch(_type) do
 		hint format["Adminnacht an: %1 - Text: %2",name life_smartphoneTarget,_msg];
 		closeDialog 88883;
 	};
-	//emergencyloading
+	//emergencyloading + Lottery loading
 	case 6:
 	{
 		if((__GETC__(life_adminlevel) < 1)) then
@@ -94,6 +94,12 @@ switch(_type) do
 		} else {
 			ctrlShow[888898,true];
 			//ctrlShow[888896,false];
+		};
+		if(life_bet_done) then
+		{
+			ctrlShow[888795,false];
+		} else {
+			ctrlShow[888795,true];
 		};
 	};
 	//adminMsgAll

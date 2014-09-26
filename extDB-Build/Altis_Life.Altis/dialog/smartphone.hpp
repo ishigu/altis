@@ -343,6 +343,19 @@ class Life_smartphone_notruf {
 			h = (1 / 25);
 		};
 		
+		class BuyLotteryTicket : life_RscButtonMenu 
+		{
+			idc = 888795;
+			text = "Lotterie";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			onButtonClick = "[(ctrlText 888894),player] spawn life_fnc_betBuyTicket;";
+			
+			x = 0.32;
+			y = 0.37;
+			w = 0.2;
+			h = (1 / 25);
+		};
+		
 		class TxtAdminButton : life_RscButtonMenu 
 		{
 			idc = 888896;

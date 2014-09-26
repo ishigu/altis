@@ -99,6 +99,7 @@ client_session_list = [];
 } foreach allUnits;
 
 [] spawn TON_fnc_initHouses;
+[] spawn TON_fnc_betMonitor;
 
 //Lockup the dome
 private["_dome","_rsb"];

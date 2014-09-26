@@ -5269,7 +5269,7 @@
 			<Original>Schreiben</Original>
 		</Key>
 		<Key ID="STR_Smartphone_Notruf">
-			<Original>Notruf</Original>
+			<Original>Funktionen</Original>
 		</Key>
 		<Key ID="STR_Smartphone_Absenden">
 			<Original>Absenden</Original>
@@ -5278,7 +5278,7 @@
 			<Original>Nachricht an:</Original>
 		</Key>
 		<Key ID="STR_Smartphone_NotrufTitle">
-			<Original>NOTRUFE</Original>
+			<Original>Funktionen</Original>
 		</Key>
 		<Key ID="STR_Smartphone_Clear">
 			<Original>Leeren</Original>

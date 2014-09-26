@@ -278,6 +278,7 @@ class Life_Client_Core
 		class emptyFuelStations {};
 		class broadcastNews {};
 		class broadcastNewsRecieve{};
+		class betBuyTicket {};
 	};
 	
 	class Network

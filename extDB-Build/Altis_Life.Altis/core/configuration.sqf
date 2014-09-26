@@ -487,3 +487,4 @@ life_fuelstation_amount = 0;
 life_fuelstation_fitamount = 0;
 
 life_iamdead = false;
+life_bet_done = false;

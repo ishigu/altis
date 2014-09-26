@@ -108,6 +108,8 @@ class CfgFunctions
 			class cleanupRequest {};
 			class vehicleRepaint {};
 			class getImpoundedVehiclesPlus {};
+			class betAdd {};
+			class betMonitor {};
 		};
 		
 		class Housing
