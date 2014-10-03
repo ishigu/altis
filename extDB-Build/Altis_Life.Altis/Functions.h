@@ -162,7 +162,6 @@ class Life_Client_Core
 		class distressRemove {};
 		class adacMarkers {};
 		class distressMenu {};
-		class impoundPlusAction {};
 	};
 	
 	class Config
@@ -361,6 +360,7 @@ class Life_Client_Core
 		class seizeWeapon {};
 		class copShowLicense {};
 		class copLicenseShown {};
+		class impoundPlusAction {};
 	};
 	
 	class Gangs
@@ -421,6 +421,7 @@ class Life_Client_Core
 		class barrier {};
 		class radartrap {};
 		class ghilliepack {};
+		class radarReader {};
 	};
 	
 	class Dialog_Controls

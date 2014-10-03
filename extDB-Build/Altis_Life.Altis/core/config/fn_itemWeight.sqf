@@ -72,6 +72,8 @@ switch (_item) do
 	case "radartrap":{5};
 	case "ghilliepack":{20};
 	case "dogfood":{5};
+	case "handcuffs": {2};
+	case "radarreader": {2};
 	/*
 	case "cocoa": {2};
 	case "milk": {2};

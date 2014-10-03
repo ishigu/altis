@@ -22,7 +22,7 @@ switch (_shop) do
 	case "iron": {["Altis Industriehaendler",["iron_r","copper_r"]]};
 	case "diamond": {["Diamantenhaendler",["diamond","diamondc"]]};
 	case "salt": {["Salzhaendler",["salt_r"]]};
-	case "cop": {["Polizeibedarf",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","barrier","pylon","radartrap","ghilliepack","defusekit","dogfood"]]};
+	case "cop": {["Polizeibedarf",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","barrier","pylon","radartrap","ghilliepack","defusekit","dogfood","handcuffs","radarreader"]]};
 	case "cement": {["Zementhaendler",["cement"]]};
 	case "gold": {["Gold Buyer",["goldbar"]]};
 	case "benzin": {["Benzinhaendler",["benzin"]]};

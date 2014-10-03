@@ -18,7 +18,7 @@ while{true} do
 		(count _radarTraps > 0)};
 	{	
 		_x spawn {
-			private["_position","_radarTrap","_radarTrapStationary","_radarTrapMobile","_unit","_copPresent","_vehicle","_dir","_conversion","_toleranceLower","_toleranceUpper","_dirveh","_rightDir","_mode","_triggered","_distance","_speedRaw","_speedTol","_timer"];
+			private["_position","_radarTrap","_radarTrapStationary","_radarTrapMobile","_unit","_copPresent","_vehicle","_dir","_conversion","_toleranceLower","_toleranceUpper","_dirveh","_rightDir","_mode","_triggered","_distance","_speedRaw","_speedTol","_timer","_list"];
 			_radarTrap = _this;
 			_unit = player;
 			if( (vehicle _unit != _unit) && (vehicle _unit isKindOf "Car") && (driver (vehicle _unit) == _unit)) then //viable Vehicle&driver check 
@@ -28,7 +28,7 @@ while{true} do
 					if( side _x == west && isPlayer _x) exitWith{ _copPresent = true;};  //Cops around?
 				}forEach ((getPos _radarTrap) nearEntities["Man",25]);
 				if(_radarTrap getVariable ["item","Stationary"] != "radarTrapDeployed") then {_copPresent = true;}; //is Stationary?
-				if(!_copPresent) exitWith {};
+				//if(!_copPresent) exitWith {};
 				_vehicle = vehicle _unit;
 				_dir = getDir _radarTrap;
 				switch (true) do
@@ -90,14 +90,20 @@ while{true} do
 				if(!_triggered) exitWith{};
 				_radarTrap setVariable ["ready",false,false];
 				_timer = round(time) + 10;
-				[[1,format["%1 wurde %2 mit %3km/h geblitzt. Nach Abzug der Toleranz sind das noch %4km/h. Nach ihm wird nun gefahndet.",name _unit,_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-				[[1,format["Du wurdest %1 mit %2km/h geblitzt. Nach Abzug der Toleranz sind das noch %3km/h.",_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
-				[[getPlayerUID _unit,name _unit,_data],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+				//[[1,format["%1 wurde %2 mit %3km/h geblitzt. Nach Abzug der Toleranz sind das noch %4km/h. Nach ihm wird nun gefahndet.",name _unit,_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+				//[[1,format["Du wurdest %1 mit %2km/h geblitzt. Nach Abzug der Toleranz sind das noch %3km/h.",_mode,_speedRaw,_speedTol]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+				//[[getPlayerUID _unit,name _unit,_data],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 				if (sunOrMoon < 1) then { //Nacht
 					[[_radarTrap,0,50],"life_fnc_radartrapFlash",true,false] spawn life_fnc_MP;
 				} else { // Tag
 					[[_radarTrap,0,180],"life_fnc_radartrapFlash",true,false] spawn life_fnc_MP;
 				};
+				
+				// Add driver to list
+				if (isNil{_radarTrap getVariable "DriverList"}) then {_list = [];} else {_list = _radarTrap getVariable "DriverList";};
+				_list pushBack [getPlayerUID _unit,name _unit,_data];
+				_radarTrap setVariable["DriverList",_list,true];
+				
 				waitUntil {(( _radarTrap distance _vehicle > 50) || (!alive _radarTrap) || (round(time) == _timer) ) };
 				if(alive _radarTrap) then{	_radarTrap setVariable ["ready",true,false]; };
 			};
