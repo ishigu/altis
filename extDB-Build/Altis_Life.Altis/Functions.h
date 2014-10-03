@@ -130,6 +130,7 @@ class Life_Client_Core
 		class radartrapFlash {};
 		class seizeWeaponAction {};
 		class extinguishJoint {};
+		class stealPhoneAction {};
 	};
 	
 	class Housing
@@ -221,6 +222,7 @@ class Life_Client_Core
 		class smartphone {};
 		class newMsg {};
 		class showMsg {};
+		class openSmartphone {};
 	};
 	
 	class Functions
@@ -310,6 +312,8 @@ class Life_Client_Core
 		class zoneCreator {};
 		class demoChargeTimer {};
 		class civLoadout {};
+		class stealPhoneClient {};
+		class playerInteractionMenu {};
 	};
 	
 	class Vehicle

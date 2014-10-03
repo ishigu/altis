@@ -84,6 +84,7 @@ switch (_mode) do
 			case "dogfood":{"life_inv_dogfood"};
 			case "handcuffs": {"life_inv_handcuffs"};
 			case "radarreader": {"life_inv_radarreader"};
+			case "smartphone": {"life_inv_smartphone"};
 		};
 	};
 	
@@ -159,6 +160,7 @@ switch (_mode) do
 			case "life_inv_dogfood": {"dogfood"};
 			case "life_inv_handcuffs": {"handcuffs"};
 			case "life_inv_radarreader": {"radarreader"};
+			case "life_inv_smartphone": {"smartphone"};
 		};
 	};
 };

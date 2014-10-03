@@ -22,6 +22,7 @@ _marketprice = [_type] call life_fnc_marketGetBuyPrice;
 if(__GETC__(life_coplevel) < _restriction) exitWith {hint "Du hast nicht den benötigten Rang!";};
 if((_type == "ghilliepack") && ( !(license_cop_sniper)) ) exitWith {hint "Du hast nicht die benötigte Ausbildung!"};
 if((_type == "dogfood") && ( !(license_cop_dea)) ) exitWith {hint "Du bist kein DEA Mitglied!"};
+if((_type == "smartphone") && (life_inv_smartphone > 0)) exitWith {hint "Du kannst nur ein Smartphone besitzen!"};
 
 if(_marketprice != -1) then
 {

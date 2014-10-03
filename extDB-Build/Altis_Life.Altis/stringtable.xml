@@ -2232,6 +2232,26 @@
             <English>Added drivers to the wanted list</English>
             <German>Geblitzte Fahrer wurden der Fahndungsliste hinzugefügt</German>
         </Key>
+		<Key ID="STR_NOTF_SmartphoneNoItem">
+            <Original>You dont own a smartphone!</Original>
+            <English>You dont own a smartphone!</English>
+            <German>Du besitzt kein Smartphone!</German>
+        </Key>
+		<Key ID="STR_NOTF_SmartphoneStolen">
+            <Original>%1 stole your smartphone!</Original>
+            <English>%1 stole your smartphone!</English>
+            <German>%1 hat dir dein Smartphone geklaut!</German>
+        </Key>
+		<Key ID="STR_NOTF_SmartphoneSteal">
+            <Original>You stole %1's smartphone!</Original>
+            <English>You stole %1's smartphone!</English>
+            <German>Du hast %1's Smartphone geklaut!</German>
+        </Key>
+		<Key ID="STR_NOTF_SmartphoneHasNoItem">
+            <Original>%1 does not own a smartphone!</Original>
+            <English>%1 does not own a smartphone!</English>
+            <German>%1 besitzt kein Smartphone!</German>
+        </Key>
 	</Package>
 	<Package name="Jail_Strings">
 		<Key ID="STR_Jail_Warn">
@@ -3649,6 +3669,11 @@
 			<Original>RadarReader</Original>
 			<English>RadarReader</English>
 			<German>Radarlesegerät</German>
+		</Key>
+		<Key ID="STR_Item_Smartphone">
+			<Original>Smartphone</Original>
+			<English>Smartphone</English>
+			<German>Smartphone</German>
 		</Key>
 	</Package>
 	<Package name="Life_License">
@@ -5282,6 +5307,11 @@
 			<French>Rob Person</French>
 			<Italian>Rob Person</Italian>		
 			<Portuguese>Roubar Jogador</Portuguese>
+		</Key>
+		<Key ID="STR_pAct_SmartphoneSteal">
+			<Original>Strip smartphone</Original>
+			<English>Strip smartphone</English>
+			<German>Smartphone klauen</German>
 		</Key>
 	</Package>
 	<Package name="Smartphone">

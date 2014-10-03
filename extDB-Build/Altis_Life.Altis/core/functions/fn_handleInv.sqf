@@ -21,6 +21,9 @@ if(_math) then
 _weight = ([_item] call life_fnc_itemWeight) * _num;
 _value = missionNamespace getVariable _var;
 
+if (_item == "smartphone" && _math && (missionNamespace getVariable _var) > 0) exitWith {false};
+if (_item == "smartphone" && _math && (missionNamespace getVariable _var) == 0) then {_num = 1;};
+
 if(_math) then
 {
 	//Lets add!

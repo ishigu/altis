@@ -74,6 +74,7 @@ switch (_item) do
 	case "dogfood":{5};
 	case "handcuffs": {2};
 	case "radarreader": {2};
+	case "smartphone": {0};
 	/*
 	case "cocoa": {2};
 	case "milk": {2};

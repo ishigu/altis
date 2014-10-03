@@ -89,6 +89,7 @@ player createDiarySubject ["Steuerung","Steuerung"];
 				Admin K3V1N<br/><br/>
 				Admin Harry Connor<br/><br/>
 				Supporter BlackBlood<br/><br/>
+				Supporter Hermann Staudinger<br/><br/>
 				"
 		]
 	];

@@ -12,6 +12,7 @@ if(isNull _target) exitWith {};
 if(_target != player) exitWith {};
 if(_who == "") exitWith {};
 
+player setVariable["knockedout",true,true];
 titleText[format[localize "STR_Civ_KnockedOut",_who],"PLAIN"];
 player playMoveNow "Incapacitated";
 _obj = "Land_ClutterCutter_small_F" createVehicle (getPosATL player);
@@ -22,3 +23,4 @@ player playMoveNow "amovppnemstpsraswrfldnon";
 detach player;
 deleteVehicle _obj;
 player setVariable["robbed",FALSE,TRUE];
+player setVariable["knockedout",false,true];
