@@ -83,9 +83,9 @@ while {true} do {
 	
 	//Locality checks...
 	if(local _vehicle) then {
-		_vehicle setFuel (fuel _vehicle)-0.045;
+		_vehicle setFuel (fuel _vehicle)-0.03;
 	} else {
-		[[_vehicle,(fuel _vehicle)-0.04],"life_fnc_setFuel",_vehicle,false] spawn life_fnc_MP;
+		[[_vehicle,(fuel _vehicle)-0.03],"life_fnc_setFuel",_vehicle,false] spawn life_fnc_MP;
 	};
 	
 	if(fuel _vehicle == 0) exitWith {titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];};
