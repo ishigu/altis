@@ -186,7 +186,8 @@ life_inv_items =
 	"life_inv_radartrap",
 	"life_inv_ghilliepack",
 	"life_inv_dogfood",
-	"life_inv_handcuffs"
+	"life_inv_handcuffs",
+	"life_inv_radarreader"
 	
 	/*
 	"life_inv_cocoa",
@@ -296,7 +297,8 @@ sell_array =
 	["radartrap",1500],
 	["ghilliepack",1000],
 	["dogfood",300],
-	["handcuffs",200]
+	["handcuffs",200],
+	["radarreader",400]
 	
 	/*
 	["cocoa",100],
@@ -345,7 +347,8 @@ buy_array =
 	["radartrap",3000],
 	["ghilliepack",2000],
 	["dogfood",600],
-	["handcuffs",200]
+	["handcuffs",200],
+	["radarreader",200]
 ];
 __CONST__(buy_array,buy_array);
 

@@ -83,6 +83,7 @@ switch (_mode) do
 			case "ghilliepack":{"life_inv_ghilliepack"};
 			case "dogfood":{"life_inv_dogfood"};
 			case "handcuffs": {"life_inv_handcuffs"};
+			case "radarreader": {"life_inv_radarreader"};
 		};
 	};
 	
@@ -157,6 +158,7 @@ switch (_mode) do
 			case "life_inv_ghilliepack": {"ghilliepack"};
 			case "life_inv_dogfood": {"dogfood"};
 			case "life_inv_handcuffs": {"handcuffs"};
+			case "life_inv_radarreader": {"radarreader"};
 		};
 	};
 };

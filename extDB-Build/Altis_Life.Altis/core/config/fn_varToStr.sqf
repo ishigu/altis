@@ -78,6 +78,7 @@ switch (_var) do
 	case "life_inv_ghilliepack": {"Ghillie Paket"};
 	case "life_inv_dogfood": {"Hundefutter"};
 	case "life_inv_handcuffs": {(localize "STR_Item_Handcuffs")};
+	case "life_inv_radarreader": {(localize "STR_Item_RadartrapReader")};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

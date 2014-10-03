@@ -421,6 +421,7 @@ class Life_Client_Core
 		class barrier {};
 		class radartrap {};
 		class ghilliepack {};
+		class radarReader {};
 	};
 	
 	class Dialog_Controls

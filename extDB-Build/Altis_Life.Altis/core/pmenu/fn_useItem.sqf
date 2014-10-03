@@ -165,6 +165,11 @@ switch (true) do
 		[] spawn life_fnc_pickAxeUse;
 	};
 	
+	case (_item == "radarreader"):
+	{
+		[] spawn life_fnc_radarReader;
+	};
+	
 	default
 	{
 		hint localize "STR_ISTR_NotUsable";

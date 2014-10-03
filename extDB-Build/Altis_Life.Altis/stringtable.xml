@@ -2217,6 +2217,21 @@
             <English>You dont have Handcuffs</English>
             <German>Du hast keine Handschellen</German>
         </Key>
+		<Key ID="STR_NOTF_RadartrapNotNear">
+            <Original>You need to be near a radartrap</Original>
+            <English>You need to be near a radartrap</English>
+            <German>Du musst dich in der Nähe einer Radarfalle befinden</German>
+        </Key>
+		<Key ID="STR_NOTF_RadartrapNoEntries">
+            <Original>No entries found</Original>
+            <English>No entries found</English>
+            <German>Die Radarfalle wurde nicht ausgelöst</German>
+        </Key>
+		<Key ID="STR_NOTF_RadartrapFound">
+            <Original>Added drivers to the wanted list</Original>
+            <English>Added drivers to the wanted list</English>
+            <German>Geblitzte Fahrer wurden der Fahndungsliste hinzugefügt</German>
+        </Key>
 	</Package>
 	<Package name="Jail_Strings">
 		<Key ID="STR_Jail_Warn">
@@ -3629,6 +3644,11 @@
 			<Original>Handcuffs</Original>
 			<English>Handcuffs</English>
 			<German>Handschellen</German>
+		</Key>
+		<Key ID="STR_Item_RadartrapReader">
+			<Original>RadarReader</Original>
+			<English>RadarReader</English>
+			<German>Radarlesegerät</German>
 		</Key>
 	</Package>
 	<Package name="Life_License">
