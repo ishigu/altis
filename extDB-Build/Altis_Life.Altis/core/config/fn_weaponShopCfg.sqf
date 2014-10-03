@@ -284,6 +284,11 @@ switch(_shop) do
 			if (__GETC__(life_donator) >= 3) then {
 				_return set[count _return,["hgun_pistol_heavy_01_F",nil,5850]];
 				_return set[count _return,["11Rnd_45ACP_Mag",nil,85]];
+				_return set[count _return,["arifle_TRG21_F","TRG-21 5,56 mm",10000]];
+				_return set[count _return,["30Rnd_556x45_Stanag",nil,125]];
+				_return set[count _return,["30Rnd_556x45_Stanag_Tracer_Red",nil,125]];
+				_return set[count _return,["30Rnd_556x45_Stanag_Tracer_Green",nil,125]];
+				_return set[count _return,["30Rnd_556x45_Stanag_Tracer_Yellow",nil,125]];
 				_return set[count _return,["optic_MRCO",nil,5000]];
 				_return set[count _return,["U_C_Driver_1",nil,1000]];
 				_return set[count _return,["H_RacingHelmet_1_F",nil,1000]];
