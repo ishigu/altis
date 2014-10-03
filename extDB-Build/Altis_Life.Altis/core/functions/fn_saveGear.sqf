@@ -175,7 +175,8 @@ if(count (handGunItems player) > 0) then
     ["life_inv_barrier", life_inv_barrier],
     ["life_inv_radartrap", life_inv_radartrap],
     ["life_inv_ghilliepack", life_inv_ghilliepack],
-	["life_inv_dogfood", life_inv_dogfood]
+	["life_inv_dogfood", life_inv_dogfood],
+	["life_inv_handcuffs", life_inv_handcuffs]
 ];
 
 _return set[count _return,_uItems];

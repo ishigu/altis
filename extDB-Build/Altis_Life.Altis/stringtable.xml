@@ -2207,6 +2207,16 @@
 			<English>You're already using a pickaxe.</English>
 			<German>Du benutzt bereits eine Spitzhacke.</German>
 		</Key>
+		<Key ID="STR_NOTF_RestrainedPerson">
+            <Original>The person is now tied up!</Original>
+            <English>The person is now tied up!</English>
+            <German>Die Person ist nun gefesselt!</German>
+        </Key>
+        <Key ID="STR_NOTF_NoHandcuffs">
+            <Original>You dont have Handcuffs</Original>
+            <English>You dont have Handcuffs</English>
+            <German>Du hast keine Handschellen</German>
+        </Key>
 	</Package>
 	<Package name="Jail_Strings">
 		<Key ID="STR_Jail_Warn">
@@ -3614,6 +3624,11 @@
 			<French>Herse</French>
 			<Italian>Striscia Chiodata</Italian>
 			<Portuguese>Spike Strip</Portuguese>
+		</Key>
+		<Key ID="STR_Item_Handcuffs">
+			<Original>Handcuffs</Original>
+			<English>Handcuffs</English>
+			<German>Handschellen</German>
 		</Key>
 	</Package>
 	<Package name="Life_License">
