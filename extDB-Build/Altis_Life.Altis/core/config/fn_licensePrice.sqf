@@ -40,7 +40,7 @@ switch (_type) do
 	case "dangerousgoods": {5000};
 	case "mair": {15000};
 	case "home": {75000};
-	case "clawyer":{500000};
+	case "clawyer":{150000};
 	case "sniper":{0};
 	case "dea":{0};
 };
