@@ -34,8 +34,9 @@ switch(_shop) do
 						["NVGoggles",nil,100],
 						["Chemlight_yellow",nil,10],
 						["SmokeShellYellow",nil,10],
+						["H_Cap_blk",nil,50],
 						["U_I_CombatUniform","Uniform",500],
-						["B_Kitbag_cbr","Rucksack",nil,250]
+						["B_Kitbag_cbr","Rucksack",250]
 					]
 				];
 			};
