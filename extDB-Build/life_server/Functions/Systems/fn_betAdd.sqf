@@ -20,5 +20,5 @@ _player = getPlayerUID _player;
 if(_number == life_bet_number) then {
 life_bet_players set[count life_bet_players,_player];
 };
-
+life_bet_tickets = life_bet_tickets + 5000;
 life_bet_funds = life_bet_funds + 45000;
