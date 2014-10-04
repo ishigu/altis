@@ -6,23 +6,25 @@ Description: Monitors when to distribute profits.
 _played = 0;
 _playedMaximum = 4;
 life_bet_number = 0;
-life_bet_funds = 0;
+life_bet_funds = 100000;
 life_bet_done = false;
+life_bet_tickets = 0;
 while {true} do
 {
-life_bet_funds = life_bet_funds + 30000;
 _played = _played +1;
 life_bet_players = [];
 if(_played > _playedMaximum) exitWith 
 {
 	diag_log "4x Lotterie gespielt, Funktion gestoppt!";
+	diag_log (format ["ticket fees: $%1      remaining amount in jackpot: $%2",life_bet_tickets,life_bet_funds]);
 	[[{systemChat "Die letzte Runde Lotto wurde für ""heute"" gespielt! Bitte keinen neuen Tickets kaufen!";life_bet_done = true;}], "BIS_fnc_spawn", true, false] spawn life_fnc_MP;
 	life_bet_number = -1;
 };
 
 life_bet_number = round(random 100);
 diag_log format["RNG Number for Lottery: %1",life_bet_number];
-sleep 1500;
+//sleep 1500;
+sleep 5;
 [[[life_bet_funds],
 {
 	_amount = [_this,0,0,[0]] call BIS_fnc_param;
@@ -92,8 +94,8 @@ if(count life_bet_players > 0) then {
 		hint parseText format["<t color='#B43104'><t size='2'><t align='center'>Channel 7 News<br/><t align='left'><t size='1'><t color='#ffffff'><br/>Die Lottozahl der Stunde ist %1!<br/>Und das sind unsere Gewinner:<br/><t align='center'>%2<br/><br/><t align='left'>Insgesamt wurden %3 Mio ausgeschüttet!",_number,_winnerString,round(_amount/10000)/100];
 		};
 	}], "BIS_fnc_spawn", true, false] spawn life_fnc_MP;
-	diag_log format["Lotterie Gewinner dieser %1. Runde: %2",_played,_winnerString];
-	life_bet_funds = 0;
+	diag_log format["Lotterie Gewinner dieser %1. Runde: %2. Insgesamt $%3",_played,_winnerString,life_bet_funds];
+	life_bet_funds = 100000;
 }
 else
 {
