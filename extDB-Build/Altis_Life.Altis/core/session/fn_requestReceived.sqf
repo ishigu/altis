@@ -101,3 +101,4 @@ switch(__GETC__(life_donator)) do
 };
 
 life_session_completed = true;
+[[getPlayerUID player,playerSide],"TON_fnc_addSideCheck",false,false] call life_fnc_MP;

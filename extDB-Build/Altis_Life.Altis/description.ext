@@ -122,8 +122,28 @@ class CfgDebriefing
 	class SpyGlass
 	{
 		title = "The SpyGlass sieht dich";
-		subTitle = Du wurdest vom SpyGlass entdeckt";
+		subTitle = "Du wurdest vom SpyGlass entdeckt";
 		description = "Du wurdest beim Cheaten entdeckt und dem Server gemeldet. Schoenen Tag.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+	
+	class CopRebel
+	{
+		title = "Seitenbegrenzung";
+		subTitle = "Slot nicht erlaubt";
+		description = "Du warst bereits als Polizist eingeloggt und kannst dich deshalb momentan nicht als Rebell einloggen";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+	
+	class RebelCop
+	{
+		title = "Seitenbegrenzung";
+		subTitle = "Slot nicht erlaubt";
+		description = "Du warst bereits als Rebell eingeloggt und kannst dich deshalb momentan nicht als Polizist einloggen";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};

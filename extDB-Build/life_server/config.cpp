@@ -110,6 +110,8 @@ class CfgFunctions
 			class getImpoundedVehiclesPlus {};
 			class betAdd {};
 			class betMonitor {};
+			class checkSide {};
+			class addSideCheck {};
 		};
 		
 		class Housing

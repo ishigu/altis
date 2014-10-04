@@ -58,6 +58,7 @@ life_gang_list = [];
 publicVariable "life_gang_list";
 life_wanted_list = [];
 client_session_list = [];
+life_side_players = [];
 
 [] execFSM "\life_server\cleanup.fsm";
 

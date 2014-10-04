@@ -128,4 +128,7 @@ life_fnc_moveIn = compileFinal
 _handle = [] spawn life_fnc_emptyFuelStations;
 waitUntil {scriptDone _handle};
 
+// Cop -> Rebel, Rebel -> Cop checks
+[[getPlayerUID player,player],"TON_fnc_checkSide",false,false] call life_fnc_MP;
+
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
