@@ -64,5 +64,6 @@ switch (_className) do
 	case "B_supplyCrate_F": {500};
 	case "I_Heli_light_03_unarmed_F": {150};
 	case "I_Plane_Fighter_03_CAS_F": {10};
+	case "Land_WoodenBox_F": {1000};
 	default {-1};
 };
