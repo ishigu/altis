@@ -112,6 +112,7 @@ class CfgFunctions
 			class betMonitor {};
 			class checkSide {};
 			class addSideCheck {};
+			class spawnParadrop {};
 		};
 		
 		class Housing
