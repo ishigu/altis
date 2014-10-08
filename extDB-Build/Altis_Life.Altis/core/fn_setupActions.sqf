@@ -14,6 +14,12 @@ switch (playerSide) do
 		//Rob person
 		life_actions = life_actions + [player addAction[localize "STR_pAct_RobPerson",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
+		
+		//Oildrill
+		life_actions = life_actions + [player addAction["Öl absaugen",life_fnc_oildrillEmpty,"",0,false,false,"",' _barrel = nearestObjects[getPos player,["Land_MetalBarrel_F"],2] select 0; !isNil "_barrel" && (_barrel getVariable ["oil",0] != 0)']];
+		life_actions = life_actions + [player addAction["Ölbohrer einschalten",life_fnc_oildrillActivate,"",0,false,false,"",' _generator = nearestObjects[getPos player,["Land_Portable_generator_F"],2] select 0; !isNil "_generator" && (!(_generator getVariable ["mining",false]))']];
+		life_actions = life_actions + [player addAction["Ölbohrer abschalten",life_fnc_oildrillStop,"",0,false,false,"",' _generator = nearestObjects[getPos player,["Land_Portable_generator_F"],2] select 0; !isNil "_generator" && ((_generator getVariable ["mining",false]))']];
+		life_actions = life_actions + [player addAction["Ölbohrer abbauen",life_fnc_packupOildrill,"",0,false,false,"",' _generator = nearestObjects[getPos player,["Land_Portable_generator_F"],2] select 0; !isNil "_generator" && (_generator getVariable ["item",""] == "generatorDeployed")']];
 	};
 	case west:
 	{
@@ -27,7 +33,7 @@ switch (playerSide) do
 		
 		life_actions = life_actions + [player addAction["Nagelband einpacken",life_fnc_packupSpikes,"",0,false,false,"",' _spikes = nearestObjects[getPos player,["Land_Razorwire_F"],8] select 0; !isNil "_spikes" && !isNil {(_spikes getVariable "item")}']];
 		//RadarTrap
-		life_actions = life_actions + [player addAction["Blitzer einpacken",life_fnc_packupRadarTrap,"",200,false,false,"",' _radarTrap = nearestObjects[getPos player,["Land_PortableLight_single_F"],2] select 0; !isNil "_radarTrap" && !isNil {(_radarTrap getVariable "item")}']];
+		life_actions = life_actions + [player addAction["Blitzer einpacken",life_fnc_packupRadarTrap,"",200,false,false,"",' _radarTrap = nearestObjects[getPos player,["Land_PortableLight_single_F"],2] select 0; !isNil "_radarTrap" && (_radarTrap getVariable ["item",""] == "radarTrapDeployed")']];
 		life_actions = life_actions + [player addAction["Blitzer auf <t color='#00FF00'>'Ausserorts'</t> einstellen",life_fnc_radartrapSwitch,"",50,false,false,"",' _radarTrap = nearestObjects[getPos player,["Land_PortableLight_single_F"],2] select 0;!isNil "_radarTrap" && !isNil {(_radarTrap getVariable "item")} && (_radarTrap getVariable "mode" == "innerorts")']];
 		life_actions = life_actions + [player addAction["Blitzer auf <t color='#00FF00'>'Innerorts'</t> einstellen",life_fnc_radartrapSwitch,"",50,false,false,"",' _radarTrap = nearestObjects[getPos player,["Land_PortableLight_single_F"],2] select 0; !isNil "_radarTrap" && !isNil {(_radarTrap getVariable "item")} && ( _radarTrap getVariable "mode" == "ausserorts" )']];
 		//Pylons + Barriers
@@ -55,6 +61,12 @@ switch (playerSide) do
 		//Rob person
 		life_actions = life_actions + [player addAction[localize "STR_pAct_RobPerson",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
+		
+		//Oildrill
+		life_actions = life_actions + [player addAction["Öl absaugen",life_fnc_oildrillEmpty,"",0,false,false,"",' _barrel = nearestObjects[getPos player,["Land_MetalBarrel_F"],2] select 0; !isNil "_barrel" && (_barrel getVariable ["oil",0] != 0)']];
+		life_actions = life_actions + [player addAction["Ölbohrer einschalten",life_fnc_oildrillActivate,"",0,false,false,"",' _generator = nearestObjects[getPos player,["Land_Portable_generator_F"],2] select 0; !isNil "_generator" && (!(_generator getVariable ["mining",false]))']];
+		life_actions = life_actions + [player addAction["Ölbohrer abschalten",life_fnc_oildrillStop,"",0,false,false,"",' _generator = nearestObjects[getPos player,["Land_Portable_generator_F"],2] select 0; !isNil "_generator" && ((_generator getVariable ["mining",false]))']];
+		life_actions = life_actions + [player addAction["Ölbohrer abbauen",life_fnc_packupOildrill,"",0,false,false,"",' _generator = nearestObjects[getPos player,["Land_Portable_generator_F"],2] select 0; !isNil "_generator" && (_generator getVariable ["item",""] == "generatorDeployed")']];
 	};
 };
 //Use Chemlights in hand

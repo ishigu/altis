@@ -132,6 +132,10 @@ class Life_Client_Core
 		class seizeWeaponAction {};
 		class extinguishJoint {};
 		class stealPhoneAction {};
+		class oildrillActivate {};
+		class oildrillEmpty {};
+		class packupOildrill {};
+		class oildrillStop {};
 	};
 	
 	class Housing
@@ -281,6 +285,7 @@ class Life_Client_Core
 		class broadcastNews {};
 		class broadcastNewsRecieve{};
 		class betBuyTicket {};
+		class upgradeTools {};
 	};
 	
 	class Network
@@ -297,6 +302,7 @@ class Life_Client_Core
 		class setTexture {};
 		class say3D {};
 		class setFuelCargo {};
+		//class objectSound {};
 	};
 	
 	class Civilian
@@ -427,6 +433,7 @@ class Life_Client_Core
 		class radartrap {};
 		class ghilliepack {};
 		class radarReader {};
+		class oildrill {};
 	};
 	
 	class Dialog_Controls

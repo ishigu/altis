@@ -30,6 +30,7 @@ if(_action) then {
 		};
 	};
 	[[player,_value],"life_fnc_broadcastNewsRecieve",true,false] call life_fnc_MP;
+	playSound "cashregister";
 	closeDialog 0;
 } else {
 	hint localize "STR_NOTF_ActionCancel";

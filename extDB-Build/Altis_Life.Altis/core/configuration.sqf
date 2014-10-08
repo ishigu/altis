@@ -187,6 +187,8 @@ life_inv_items =
 	"life_inv_ghilliepack",
 	"life_inv_dogfood",
 	"life_inv_handcuffs",
+	"life_inv_oildrill",
+	"life_inv_oildrill1",
 	"life_inv_radarreader",
 	"life_inv_smartphone"
 	
@@ -300,7 +302,9 @@ sell_array =
 	["dogfood",300],
 	["handcuffs",200],
 	["radarreader",400],
-	["smartphone",10]
+	["smartphone",10],
+	["oildrill",75000],
+	["oildrill1",300000]
 	
 	/*
 	["cocoa",100],
@@ -351,7 +355,9 @@ buy_array =
 	["dogfood",600],
 	["handcuffs",200],
 	["radarreader",200],
-	["smartphone",10]
+	["smartphone",10],
+	["oildrill",150000],
+	["oildrill1",600000]
 ];
 __CONST__(buy_array,buy_array);
 
@@ -477,6 +483,19 @@ life_garage_sell =
 	["O_Truck_03_fuel_F",80000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
+
+//Limited items: [ ["itemname",maxAmount], .... ]
+//: or [ [["different items"],maxAmount]
+life_limited_items =
+[
+	[["defib"],1],
+	[["radarreader"],1],
+	[["smartphone"],1],
+	[["oildrill","oildrill1"],1]
+];
+__CONST__(life_limited_items,life_limited_items);
+
+
 
 life_medic_slots = ["medic_1","medic_2","medic_3","medic_4","medic_5","medic_6","medic_7","medic_8","medic_9","medic_10"];
 life_adac_slots = ["adac_1","adac_2","adac_3","adac_4"];

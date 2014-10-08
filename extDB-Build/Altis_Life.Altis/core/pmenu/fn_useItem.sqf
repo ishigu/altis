@@ -27,6 +27,7 @@ switch (true) do
 	};
 	
 	case (_item == "blastingcharge"): {
+		if(vehicle player != player) exitWith{hint localize "STR_NOTF_InsideVehicle";};
 		player reveal fed_bank;
 		(group player) reveal fed_bank;
 		[cursorTarget] spawn life_fnc_blastingCharge;
@@ -69,6 +70,7 @@ switch (true) do
 	
 	case (_item == "spikeStrip"):
 	{
+		if(vehicle player != player) exitWith{hint localize "STR_NOTF_InsideVehicle";};
 		if(!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
@@ -78,6 +80,7 @@ switch (true) do
 	
 	case (_item == "pylon"):
 	{
+		if(vehicle player != player) exitWith{hint localize "STR_NOTF_InsideVehicle";};
 		if(!isNull life_pylon) exitWith {hint "Du stellst schon einen Pylon auf!"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
@@ -87,6 +90,7 @@ switch (true) do
 	
 	case (_item == "barrier"):
 	{
+		if(vehicle player != player) exitWith{hint localize "STR_NOTF_InsideVehicle";};
 		if(!isNull life_barrier) exitWith {hint "Du stellst schon eine Straßensperre auf!"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
@@ -96,6 +100,7 @@ switch (true) do
 	
 	case (_item == "radartrap"):
 	{
+		if(vehicle player != player) exitWith{hint localize "STR_NOTF_InsideVehicle";};
 		if(!isNull life_pylon) exitWith {hint "Du stellst schon einen Blitzer auf!"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
@@ -168,6 +173,28 @@ switch (true) do
 	case (_item == "radarreader"):
 	{
 		[] spawn life_fnc_radarReader;
+	};
+	case (_item == "oildrill"):
+	{
+		if(vehicle player != player) exitWith{hint localize "STR_NOTF_InsideVehicle";};
+		if(!isNull life_oildrill) exitWith {hint "Du stellst schon einen Bohrturm auf!";};
+		if(! (playerSide in [civilian,east]) ) exitWith {hint "Du darfst das nicht benutzen!"};
+		if( (player distance (getMarkerPos "oil_1") > 40) && (player distance getMarkerPos "oil_2" > 40) ) exitWith {hint localize "STR_NOTF_notNearResource";};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[0] spawn life_fnc_oildrill;
+		};
+	};
+	case (_item == "oildrill1"):
+	{
+		if(vehicle player != player) exitWith{hint localize "STR_NOTF_InsideVehicle";};
+		if(!isNull life_oildrill) exitWith {hint "Du stellst schon einen Bohrturm auf!"};
+		if(! (playerSide in [civilian,east]) ) exitWith {hint "Du darfst das nicht benutzen!"};
+		if( (player distance (getMarkerPos "oil_1") > 40) && (player distance getMarkerPos "oil_2" > 40) ) exitWith {hint localize "STR_NOTF_notNearResource";};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[1] spawn life_fnc_oildrill;
+		};
 	};
 	
 	default

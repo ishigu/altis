@@ -22,8 +22,27 @@ _marketprice = [_type] call life_fnc_marketGetBuyPrice;
 if(__GETC__(life_coplevel) < _restriction) exitWith {hint "Du hast nicht den benötigten Rang!";};
 if((_type == "ghilliepack") && ( !(license_cop_sniper)) ) exitWith {hint "Du hast nicht die benötigte Ausbildung!"};
 if((_type == "dogfood") && ( !(license_cop_dea)) ) exitWith {hint "Du bist kein DEA Mitglied!"};
-if((_type == "smartphone") && (life_inv_smartphone > 0)) exitWith {hint "Du kannst nur ein Smartphone besitzen!"};
 
+
+//Check if item is limited
+_limit = -1;
+{
+		if(_type in (_x select 0)) exitWith {_limit = _forEachIndex;};
+}forEach __GETC__(life_limited_items);
+
+_value = -1;
+if(_limit != -1) then
+	{
+		_value = 0;
+		{_value = _value + (missionNamespace getVariable ( [_x,0] call life_fnc_varHandle ));} forEach ((__GETC__(life_limited_items) select _limit) select 0);
+		_limit = (__GETC__(life_limited_items) select _limit) select 1;
+	};
+if ( (_limit != -1) && ((_value+parseNumber(_amount)) > _limit) ) exitWith {
+		hint format [localize "STR_Shop_Virt_AmountRestr",_limit,( [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr )];
+	};
+
+	
+	
 if(_marketprice != -1) then
 {
 	_price = _marketprice;

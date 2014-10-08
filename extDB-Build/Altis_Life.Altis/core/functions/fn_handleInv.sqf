@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_handleInv.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -21,8 +22,23 @@ if(_math) then
 _weight = ([_item] call life_fnc_itemWeight) * _num;
 _value = missionNamespace getVariable _var;
 
-if (_item == "smartphone" && _math && (missionNamespace getVariable _var) > 0) exitWith {false};
-if (_item == "smartphone" && _math && (missionNamespace getVariable _var) == 0) then {_num = 1;};
+//Check if item is limited, if partially limited, only add the max possible amount
+_limit = -1;
+if(_math) then 
+{
+	{
+		if( (_item in (_x select 0)) ) exitWith {_limit = _forEachIndex;};
+	}forEach __GETC__(life_limited_items);
+	
+	if(_limit != -1) then
+	{
+		_value = 0;
+		{_value = _value + (missionNamespace getVariable ( [_x,0] call life_fnc_varHandle ))} forEach ((__GETC__(life_limited_items) select _limit) select 0);
+		_limit = (__GETC__(life_limited_items) select _limit) select 1;
+	};
+};
+if (_math && _limit != -1 && (_value >= _limit)) exitWith {false};
+if (_math && _limit != -1 && ( (_value+_num) > _limit) ) exitWith {_num = _limit - _value;[_math,_item,_num] call life_fnc_handleInv;false};
 
 if(_math) then
 {

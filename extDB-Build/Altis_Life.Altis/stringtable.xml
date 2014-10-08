@@ -1804,7 +1804,7 @@
 		<Key ID="STR_NOTF_DeviceMining">
 			<Original>The Device is mining...</Original>
 			<English>The Device is mining...</English>
-			<German>Das Fahrzeug sammelt...</German>
+			<German>Das Gerät sammelt...</German>
 			<French>Le véhicule est en train de miner...</French>
 			<Italian>Il veicolo sta estrando risorse...</Italian>
 			<Portuguese>A máquina está minerando...</Portuguese>
@@ -2212,6 +2212,11 @@
             <English>The person is now tied up!</English>
             <German>Die Person ist nun gefesselt!</German>
         </Key>
+		<Key ID="STR_NOTF_InsideVehicle">
+			<Original>You cannot do that inside a vehicle</Original>
+			<English>You cannot do that inside a vehicle</English>
+			<German>Du kannst das im Fahrzeug nicht tun</German>
+		</Key>
         <Key ID="STR_NOTF_NoHandcuffs">
             <Original>You dont have Handcuffs</Original>
             <English>You dont have Handcuffs</English>
@@ -3674,6 +3679,16 @@
 			<Original>Smartphone</Original>
 			<English>Smartphone</English>
 			<German>Smartphone</German>
+		</Key>
+		<Key ID="STR_Item_Oildrill">
+			<Original>Damaged Oildrill</Original>
+			<English>Damaged Oildrill</Original>
+			<German>Ölbohrer(besch.)</German>
+		</Key>
+		<Key ID="STR_Item_Oildrill1">
+			<Original>Oildrill</Original>
+			<English>Oildrill</Original>
+			<German>Ölbohrer</German>
 		</Key>
 	</Package>
 	<Package name="Life_License">
@@ -5144,6 +5159,11 @@
 			<Italian>Non hai tutti quegli oggetti da vendere!</Italian>
 			<Portuguese>Você não tem todos esse items para vender</Portuguese>
 		</Key>
+		<Key ID="STR_Shop_Virt_AmountRestr">
+			<Original>You can only own %1 %2!</Original>
+			<English>You can only own %1 %2!</English>
+			<German>Du kannst nur %1 %2 besitzen!</German>
+		</Key>
 		<Key ID="STR_Shop_Virt_Gang_FundsMSG">
 			<Original>The gang has enough funds to pay for this, would you like to pay with the gangs funds or your own?</Original>
 			<English>The gang has enough funds to pay for this, would you like to pay with the gangs funds or your own?</English>
@@ -5367,4 +5387,51 @@
 			<German>Du musst mindestens einen Liter tanken!</German>
 		</Key>
 	</Package>
+	<Package name="Tools">
+		<Key ID="STR_NOTF_DeviceBroke">
+			<Original>Your oil drill has engine issues and stopped. You have to reactivate it.</Original>
+			<English>Your oil drill has engine issues and stopped. You have to reactivate it.</English>
+			<German>Dein Ölbohrer hat Motorstörungen. Du musst ihn erneut anschalten.</German>
+		</Key>
+		<Key ID="STR_NOTF_BarrelFull">
+			<Original>Your oil barrel is full. The engine has stopped.</Original>
+			<English>Your oil barrel is full. The engine has stopped.</English>
+			<German>Dein Ölfass ist voll. Der Bohrer hat sich ausgeschaltet.</German>
+		</Key>
+		<Key ID="STR_NOTF_BarrelProgress">
+			<Original> %1 / %2 oil pumped </Original>
+			<English> %1 / %2 oil pumped </English>
+			<German> %1 / %2 Öl abgebaut </German>
+		</Key>
+		<Key ID="STR_NOTF_DeviceStopped">
+			<Original>Your oil drill has been stopped.</Original>
+			<English>Your oil drill engine has been stopped.</English>
+			<German>Dein Ölbohrer wurde angehalten.</German>
+		</Key>
+		<Key ID="STR_NOTF_DeviceActivate">
+			<Original>Starting the oil drill...</Original>
+			<English>Starting the oil drill...</English>
+			<German>Starte Ölbohrer...</German>
+		</Key>
+		<Key ID="STR_NOTF_DeviceIsRunning">
+			<Original>The oil drill must be stopped to do that</Original>
+			<English>The oil drill must be stopped to do that</English>
+			<German>Der Ölbohrer darf dafür nicht eingeschaltet sein</German>
+		</Key>
+		<Key ID="STR_NOTF_DeviceTook">
+			<Original>You've siphoned %1 unprocessed oil from the drill</Original>
+			<English>You've siphoned %1 unprocessed oil from the drill</English>
+			<German>Du hast %1 Rohöl aus dem Fass gezapft</German>
+		</Key>
+		<Key ID="STR_NOTF_EmptyDevice">
+			<Original>There is no oil to siphon</Original>
+			<English>There is no oil to siphon</English>
+			<German>Das Fass ist leer.</German>
+		</Key>
+		<Key ID="STR_NOTF_UpgradeText">
+			<Original>Upgrading this tool will cost you $%1</Original>
+			<English>Upgrading this tool will cost you $%1</English>
+			<German>Dieses Werkzeug aufzuwerten kostet $%1</German>
+		</Key>
+	</Package
 </Project>

@@ -73,6 +73,8 @@ switch (_item) do
 	case "ghilliepack":{20};
 	case "dogfood":{5};
 	case "handcuffs": {2};
+	case "oildrill":{15};
+	case "oildrill1":{15};
 	case "radarreader": {2};
 	case "smartphone": {0};
 	/*

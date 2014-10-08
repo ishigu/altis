@@ -83,6 +83,8 @@ switch (_mode) do
 			case "ghilliepack":{"life_inv_ghilliepack"};
 			case "dogfood":{"life_inv_dogfood"};
 			case "handcuffs": {"life_inv_handcuffs"};
+			case "oildrill":{"life_inv_oildrill"};
+			case "oildrill1":{"life_inv_oildrill1"};
 			case "radarreader": {"life_inv_radarreader"};
 			case "smartphone": {"life_inv_smartphone"};
 		};
@@ -159,6 +161,8 @@ switch (_mode) do
 			case "life_inv_ghilliepack": {"ghilliepack"};
 			case "life_inv_dogfood": {"dogfood"};
 			case "life_inv_handcuffs": {"handcuffs"};
+			case "life_inv_oildrill": {"oildrill"};
+			case "life_inv_oildrill1":{"oildrill1"};
 			case "life_inv_radarreader": {"radarreader"};
 			case "life_inv_smartphone": {"smartphone"};
 		};
