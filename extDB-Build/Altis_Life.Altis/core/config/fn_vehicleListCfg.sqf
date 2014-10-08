@@ -39,7 +39,8 @@ switch (_shop) do
 	case "med_shop":
 	{
 		_return = [
-			["C_SUV_01_F",5000]
+			["C_SUV_01_F",5000],
+			["C_Van_01_box_F",5000]
 		];
 	};
 	

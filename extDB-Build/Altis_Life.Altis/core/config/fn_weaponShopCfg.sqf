@@ -106,7 +106,8 @@ switch(_shop) do
 				["arifle_MXC_Black_F",nil,10000],
 				["30Rnd_65x39_caseless_mag",nil,300],
 				["muzzle_snds_H",nil,650],
-				["optic_Hamr",nil,3500]
+				["optic_Hamr",nil,3500],
+				["optic_Arco",nil,3500]
 			];
 		};
 		if (__GETC__(life_coplevel) >= 4 || license_cop_sniper) then {
@@ -126,7 +127,9 @@ switch(_shop) do
 				["muzzle_snds_B",nil,2000],
 				["B_UAV_01_backpack_F",nil,50000],
 				["B_UavTerminal",nil,50000],
-				["SmokeShell",nil,100]
+				["SmokeShell",nil,100],
+				["SmokeShellRed",nil,100],
+				["SmokeShellBlue",nil,100]
 			];
 		};
 		if (__GETC__(life_coplevel) >= 6) then {
@@ -161,7 +164,8 @@ switch(_shop) do
 				["optic_MRD",nil,300],
 				["arifle_MX_Black_F",nil,100],
 				["30Rnd_65x39_caseless_mag",nil,100],
-				["optic_Hamr",nil,100],
+				["optic_Hamr",nil,1500],
+				["optic_Arco",nil,1500],
 				["muzzle_snds_H",nil,100]
 			];
 		};
@@ -196,10 +200,14 @@ switch(_shop) do
                         ["30Rnd_45ACP_Mag_SMG_01",nil,300],
 						["optic_ACO_grn",nil,3500],
 						["optic_Holosight",nil,3600],
-						["optic_SOS",nil,3600],
+						["optic_LRPS",nil,3600],
 						["acc_flashlight",nil,1000],
 						["optic_Hamr",nil,7500],
-						["30Rnd_9x21_Mag",nil,200]
+						["optic_Arco",nil,7500],
+						["30Rnd_9x21_Mag",nil,200],
+						["SmokeShell",nil,900],
+						["SmokeShellRed",nil,900],
+						["SmokeShellGreen",nil,900]
 					]
 				];
 			};

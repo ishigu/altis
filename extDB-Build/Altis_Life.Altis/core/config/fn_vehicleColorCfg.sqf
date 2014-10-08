@@ -114,7 +114,8 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa","civ"],
-			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa","civ"]
+			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa","civ"],
+			["textures\vehicles\medic_van_01.paa","med","textures\vehicles\medic_van_02.paa"]
 		];
 	};
 	

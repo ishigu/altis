@@ -53,6 +53,7 @@ __CONST__(life_houseLimit,10); //Maximum amount of houses a player can buy (TODO
 __CONST__(life_gangPrice,75000); //Price for creating a gang (They're all persistent so keep it high to avoid 345345345 gangs).
 __CONST__(life_gangUpgradeBase,100000); // life_gangUpgradeBase*life_gangUpgradeMultipler^(maxMembers - 3) = upgrade price
 __CONST__(life_gangUpgradeMultipler,2); //BLAH
+__CONST__(life_gangUpgradeLimit,3200000);
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];

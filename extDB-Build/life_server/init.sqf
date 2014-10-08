@@ -102,6 +102,40 @@ life_side_players = [];
 [] spawn TON_fnc_initHouses;
 [] spawn TON_fnc_betMonitor;
 
+life_cratedrop_positions = [
+	[4335,19740,"Suedwestlich des Kokainfelds"],
+	[6679,19021,"Nordoestlich der Sandverarbeitung"],
+	[7355,21293,"Beim Windpark Synneforos"],
+	[11209,21442,"Im Norden von Altis"],
+	[11776,19526,"Noerdlich von Koroni"],
+	[14715,19993,"Suedlich von DP6"],
+	[12042,17115,"Noerdlich von Lakka"],
+	[16995,17294,"Oestlich der Zentralbank"],
+	[17887,15727,"In der Naehe von Charkia"],
+	[21916,16160,"In der Naehe von Kalochori"],
+	[22273,19033,"Westlich der Almyra-Salzmine"],
+	[25675,20427,"Suedlich Sofia"],
+	[26182,23399,"In der Naehe von Molos"],
+	[21474,13458,"Suedlich des Sumpfs"],
+	[17786,10904,"Suedoestlich des Steinbruchs"],
+	[19864,8571,"Westlich Panagia"],
+	[9820,7119,"In der Naehe des Rebellendorfs"],
+	[12060,7606,"Beim Windpark Skopos"],
+	[11691,9424,"Bei Vikos"],
+	[11022,10995,"Bei Drimea"],
+	[11067,12767,"Zwischen Poliakko und Therisa"],
+	[10473,14518,"Westlich von Alikampos"],
+	[7105,14831,"Suedoestlich des Medikamentenhaendlers"],
+	[5013,13355,"Oestlich von Kavala"],
+	[4302,11000,"Westlich von DP8"],
+	[7430,11295,"Bei Edessa"],
+	[8212,12872,"In der Naehe der Kokainverarbeitung"],
+	[10644,16014,"Zwischen DP11 und DP12"],
+	[3073,13151,"In der Naehe der Burg Kavala"]
+];
+
+[] spawn TON_fnc_spawnParadrop;
+
 //Lockup the dome
 private["_dome","_rsb"];
 _dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
