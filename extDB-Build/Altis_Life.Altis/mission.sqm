@@ -22383,7 +22383,7 @@ class Mission
 		};
 		class Item285
 		{
-			position[]={8904,0,8053.0498};
+			position[]={8902.8252,0,8057.4316};
 			name="civ_ship_4";
 			type="Empty";
 		};

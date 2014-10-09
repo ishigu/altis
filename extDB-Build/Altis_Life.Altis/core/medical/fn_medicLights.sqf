@@ -1,4 +1,6 @@
 /*
+	File: fn_medicLights.sqf
+	
 	@Version: 1.0
 	@Author: Tonic, [BWG] Joe
 	@Edited: 28.08.2013
@@ -23,6 +25,7 @@ switch (typeOf _vehicle) do {
 	case "B_MRAP_01_hmg_F": { _attach = [[-1, -2.8, 0.55], [1, -2.8, 0.55]]; };
 	case "B_MRAP_01_F": { _attach = [[-1, -2.8, 0.55], [1, -2.8, 0.55]]; };
 	case "O_Heli_Light_02_unarmed_F": { _attach = [[-0.75, +4.2, -1.5],[0.75, +4.2, -1.5]]; };
+	case "C_Van_01_box_F": { _attach = [[-0.88,-0.13,1.48],[0.88,-0.13,1.48]]; };
 };
 
 _lightRed = [20, 0.1, 0.1];

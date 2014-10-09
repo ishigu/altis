@@ -117,7 +117,7 @@ if((((_vInfo select 1) == "med") || ((_vInfo select 1) == "adac")) && (_vInfo se
 	[[_vehicle,"med_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
 [[1,"Your vehicle is ready!"],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
-if((((_vInfo select 1) == "med") || ((_vInfo select 1) == "adac")) && (_vInfo select 2) == "C_SUV_01_F") then
+if(((_vInfo select 1) == "med") || ((_vInfo select 1) == "adac")) then
 {
 	_vehicle setVariable["lights",false,true];
 };
