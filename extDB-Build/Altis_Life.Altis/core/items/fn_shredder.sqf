@@ -96,6 +96,7 @@ waitUntil{
 				((_trunk select 0) select _index) set [1,_currentItems];
 				_trunk set [1,_weight];
 			};
+		_vehicle setVariable ["Trunk",_trunk,true];
 		hint format[localize "STR_NOTF_ShredderProgress",_currentItems,_itemName];
 		};
 		_nextTime = time + _time;
