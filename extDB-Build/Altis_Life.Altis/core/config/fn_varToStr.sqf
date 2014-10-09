@@ -80,6 +80,8 @@ switch (_var) do
 	case "life_inv_handcuffs": {(localize "STR_Item_Handcuffs")};
 	case "life_inv_oildrill": {(localize "STR_Item_Oildrill")};
 	case "life_inv_oildrill1": {(localize "STR_Item_Oildrill1")};
+	case "life_inv_shredder": {(localize "STR_Item_Shredder")};
+	case "life_inv_shredder1": {(localize "STR_Item_Shredder1")};
 	case "life_inv_radarreader": {(localize "STR_Item_RadartrapReader")};
 	case "life_inv_smartphone": {(localize "STR_Item_Smartphone")};
 

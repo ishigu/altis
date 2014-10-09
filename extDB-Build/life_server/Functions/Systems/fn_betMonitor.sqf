@@ -23,8 +23,7 @@ if(_played > _playedMaximum) exitWith
 
 life_bet_number = round(random 100);
 diag_log format["RNG Number for Lottery: %1",life_bet_number];
-//sleep 1500;
-sleep 5;
+sleep 1500;
 [[[life_bet_funds],
 {
 	_amount = [_this,0,0,[0]] call BIS_fnc_param;

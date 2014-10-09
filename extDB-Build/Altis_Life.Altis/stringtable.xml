@@ -3690,6 +3690,16 @@
 			<English>Oildrill</Original>
 			<German>Ölbohrer</German>
 		</Key>
+		<Key ID="STR_Item_Shredder">
+			<Original>Damaged Harvester</Original>
+			<English>Damaged Harvester</English>
+			<German>Mähwerk(besch.)</German>
+		</Key>
+		<Key ID="STR_Item_Shredder1">
+			<Original>Harvester</Original>
+			<English>Harvester</English>
+			<German>Mähwerk</German>
+		</Key>
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Driver">
@@ -5419,8 +5429,8 @@
 			<German>Der Ölbohrer darf dafür nicht eingeschaltet sein</German>
 		</Key>
 		<Key ID="STR_NOTF_DeviceTook">
-			<Original>You've siphoned %1 unprocessed oil from the drill</Original>
-			<English>You've siphoned %1 unprocessed oil from the drill</English>
+			<Original>You've siphoned %1 unprocessed oil from the barrel</Original>
+			<English>You've siphoned %1 unprocessed oil from the barrel</English>
 			<German>Du hast %1 Rohöl aus dem Fass gezapft</German>
 		</Key>
 		<Key ID="STR_NOTF_EmptyDevice">
@@ -5428,10 +5438,35 @@
 			<English>There is no oil to siphon</English>
 			<German>Das Fass ist leer.</German>
 		</Key>
+		<Key ID="STR_NOTF_ShredderVehicle">
+			<Original>You have to be in a truck with cargo area</Original>
+			<English>You have to be in a truck with cargo area</English>
+			<German>Du musst in einem Truck mit Ladefläche sein</German>
+		</Key>
+		<Key ID="STR_NOTF_ShredderDriver">
+			<Original>You have to be on the driver's seat</Original>
+			<English>You have to be on the driver's seat</English>
+			<German>Du musst der Fahrer sein</German>
+		</Key>
+		<Key ID="STR_NOTF_ShredderStopped">
+			<Original>Your combine harvester has been stopped</Original>
+			<English>Your combine harvester has been stopped</English>
+			<German>Dein Mähdrescher hat angehalten</German>
+		</Key>
+		<Key ID="STR_NOTF_ShredderSpeed">
+			<Original>In order to harvest you have to be atleast at 5km/h</Original>
+			<English>In order to harvest you have to be atleast at 5km/h</English>
+			<German>Um abzubauen, musst du mindestens 5km/h fahren.</German>
+		</Key>
+		<Key ID="STR_NOTF_ShredderProgress">
+			<Original>Currently %1 %2 harvested</Original>
+			<English>Currently %1 %2 harvested</English>
+			<German>Aktuell %1 %2 geerntet.</German>
+		</Key>
 		<Key ID="STR_NOTF_UpgradeText">
 			<Original>Upgrading this tool will cost you $%1</Original>
 			<English>Upgrading this tool will cost you $%1</English>
 			<German>Dieses Werkzeug aufzuwerten kostet $%1</German>
 		</Key>
-	</Package
+	</Package>
 </Project>

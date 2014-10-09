@@ -434,6 +434,7 @@ class Life_Client_Core
 		class ghilliepack {};
 		class radarReader {};
 		class oildrill {};
+		class shredder {};
 	};
 	
 	class Dialog_Controls

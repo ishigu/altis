@@ -196,6 +196,19 @@ switch (true) do
 			[1] spawn life_fnc_oildrill;
 		};
 	};
+	case (_item == "shredder"):
+	{
+		if(!((typeOf vehicle player) in ["C_Van_01_box_F","I_Truck_02_transport_F","I_Truck_02_covered_F","B_Truck_01_transport_F","B_Truck_01_covered_F","O_Truck_03_covered_F","O_Truck_03_ammo_F","B_Truck_01_box_F"])) exitWith{hint localize "STR_NOTF_ShredderVehicle";};
+		if(! (playerSide in [civilian,east]) ) exitWith {hint "Du darfst das nicht benutzen!"};
+		[_item] spawn life_fnc_shredder;
+	};
+	case (_item == "shredder1"):
+	{
+		if(!((typeOf vehicle player) in ["C_Van_01_box_F","I_Truck_02_transport_F","I_Truck_02_covered_F","B_Truck_01_transport_F","B_Truck_01_covered_F","O_Truck_03_covered_F","O_Truck_03_ammo_F","B_Truck_01_box_F"])) exitWith{hint localize "STR_NOTF_ShredderVehicle";};
+		if(! (playerSide in [civilian,east]) ) exitWith {hint "Du darfst das nicht benutzen!"};
+		[_item] spawn life_fnc_shredder;
+	};
+	
 	
 	default
 	{
