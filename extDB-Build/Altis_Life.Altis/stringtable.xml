@@ -5433,6 +5433,11 @@
 			<English>You've siphoned %1 unprocessed oil from the barrel</English>
 			<German>Du hast %1 Rohöl aus dem Fass gezapft</German>
 		</Key>
+		<Key ID="STR_NOTF_DeviceNotAll">
+			<Original>You only could siphon %1 unprocessed oil</Original>
+			<English>You only could siphon %1 unprocessed oil</English>
+			<German>Du konntest nur %1 Rohöl abzapfen</German>
+		</Key>
 		<Key ID="STR_NOTF_EmptyDevice">
 			<Original>There is no oil to siphon</Original>
 			<English>There is no oil to siphon</English>

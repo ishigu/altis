@@ -22,16 +22,31 @@ _resourceZones = ["heroin_1","cocaine_1","weed_1"];
 } foreach _resourceZones;
 if(_zone == "") exitWith {hint localize "STR_NOTF_notNearResource";};
 
-switch (_mode) do {
-	case "shredder": {_val = 1;_time = 5;};
-	case "shredder1": {_val = 2;_time = 5;};
-	default {_val = 1;_time = 5;};
-};
 switch(true) do {
 	case (_zone in ["heroin_1"]): {_gather = "heroinu";};
 	case (_zone in ["cocaine_1"]): {_gather = "cocaine";};
 	case (_zone in ["weed_1"]): {_gather = "cannabis";};
 	default {""};
+};
+
+switch (_mode) do {
+	case "shredder": 
+	{
+		switch(_gather) do {
+			case "heroinu": {_val = 1;_time = 4;};
+			case "cocaine": {_val = 1;_time = 4;};
+			case "cannabis": {_val = 1;_time = 3;};
+		};
+	};
+	case "shredder1": 
+	{
+		switch(_gather) do {
+			case "heroinu": {_val = 1;_time = 3;};
+			case "cocaine": {_val = 1;_time = 3;};
+			case "cannabis": {_val = 2;_time = 3;};
+		};
+	};
+	default {_val = 1;_time = 15;};
 };
 switch(true) do {
 	case ((typeOf _vehicle) in ["C_Van_01_box_F"]): {_pos = [0,3.2,-0.8];}; // Boxer Trucks
