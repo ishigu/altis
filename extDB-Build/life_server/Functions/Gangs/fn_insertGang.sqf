@@ -51,11 +51,12 @@ waitUntil{!DB_Async_Active};
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 _gangMembers = [[_uid]] call DB_fnc_mresArray;
 
-if(count _queryResult != 0) then {
-	_query = format["UPDATE gangs SET active='1', owner='%1',members='%2', side='%3' WHERE id='%3'",_uid,_gangMembers,(_queryResult select 0),_side];
-} else {
+if(count _queryResult != 0) exitWith {
+	[[1,"Es gibt bereits eine Gang mit diesem Namen. Falls diese geloescht wurde, musst du bis zum naechsten Serverrestart warten, bis der Name wieder frei ist"],"life_fnc_broadcast",_ownerID,false] spawn life_fnc_MP;
+	//_query = format["UPDATE gangs SET active='1', owner='%1',members='%2', side='%4' WHERE id='%3'",_uid,_gangMembers,(_queryResult select 0),_side];
+};// else {
 	_query = format["INSERT INTO gangs (owner, name, members, side) VALUES('%1','%2','%3','%4')",_uid,_gangName,_gangMembers,_side];
-};
+//};
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,1] call DB_fnc_asyncCall;
 
