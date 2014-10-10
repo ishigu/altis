@@ -112,8 +112,11 @@ _patchList =
 "A3_Soft_F_Bootcamp_Truck","A3_Soft_F_Bootcamp_Quadbike","A3_Soft_F_Bootcamp_Offroad_01","A3_Weapons_F_Bootcamp","A3_Modules_F_Bootcamp_Misc","A3_Modules_F_Bootcamp","A3_Characters_F_Bootcamp_Common","A3_Weapons_F_Bootcamp_Ammoboxes","A3_UI_F_Bootcamp",
 "A3_Characters_F_Bootcamp","A3_Weapons_F_Bootcamp_LongRangeRifles_M320","A3_Weapons_F_Bootcamp_LongRangeRifles_GM6","A3_Structures_F_Bootcamp_Items_Food","A3_Structures_F_Bootcamp_Items_Electronics","A3_Structures_F_Bootcamp_Civ_SportsGrounds",
 "A3_Structures_F_Bootcamp_Civ_Camping","A3_Language_F_Bootcamp","A3_Functions_F_Bootcamp","A3_Structures_F_Bootcamp_VR_Helpers","A3_Structures_F_Bootcamp_VR_CoverObjects","A3_Structures_F_Bootcamp_VR_Blocks","A3_Structures_F_Bootcamp_Training",
-"A3_Structures_F_Bootcamp_System","A3_Structures_F_Bootcamp_Items_Sport","A3_Structures_F_Bootcamp_Ind_Cargo","A3_Sounds_F_Bootcamp","A3_Data_F_Bootcamp","A3_Map_VR_Scenes","A3_Missions_F_Bootcamp","A3_Music_F_Bootcamp","Map_VR"
-];
+"A3_Structures_F_Bootcamp_System","A3_Structures_F_Bootcamp_Items_Sport","A3_Structures_F_Bootcamp_Ind_Cargo","A3_Sounds_F_Bootcamp","A3_Data_F_Bootcamp","A3_Map_VR_Scenes","A3_Missions_F_Bootcamp","A3_Music_F_Bootcamp","Map_VR",
+"A3_Air_F_RTD","A3_Air_F_RTD_Heli_Light_01","A3_Air_F_Heli_Plane_CAS_02","A3_Air_F_Heli_Plane_Fighter_03","A3_Air_F_RTD","A3_Air_F_Heli_Plane_Fighter_03","A3_Air_F_RTD_Heli_Transport_02","A3_Air_F_RTD_Heli_Light_01","A3_Air_F_RTD_Heli_Attack_02",
+"A3_Air_F_RTD_Heli_Transport_02","A3_Air_F_RTD_Heli_Transport_01","A3_Air_F_RTD_Heli_Light_03","A3_Air_F_RTD_Heli_Transport_01","A3_Air_F_RTD_Heli_Light_03","A3_Air_F_RTD_Heli_Attack_01","A3_Air_F_RTD_Heli_Light_02","A3_Air_F_RTD_Heli_Light_02",
+"A3_Air_F_RTD_Heli_Attack_02","A3_Air_F_RTD_Heli_Attack_01","A3_Soft_F_Heli_TruckHeavy","A3_Soft_F_Heli_HEMTT","A3_CargoPoses_F_Heli","A3_Soft_F_Heli_HEMTT","A3_Soft_F_Heli_Offroad_01","A3_Air_F_Heli_UAV_02","A3_Boat_F_Heli_Boat_Transport_01",
+"A3_Soft_F_Heli_Offroad_01","A3_Air_F_Heli_UAV_02","A3_Boat_F_Heli_Boat_Transport_01","A3_Soft_F_Heli_TruckHeavy","A3_Soft_F_Heli_Truck_03","A3_CargoPoses_F_Heli","A3_Soft_F_Heli_Truck_03"];
 
 uiNamespace setVariable["RscDisplayRemoteMissions",displayNull]; //For Spy-Glass..
 
