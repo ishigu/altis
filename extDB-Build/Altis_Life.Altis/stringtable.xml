@@ -5446,7 +5446,7 @@
 		<Key ID="STR_NOTF_ShredderVehicle">
 			<Original>You have to be in a truck with cargo area</Original>
 			<English>You have to be in a truck with cargo area</English>
-			<German>Du musst in einem Truck mit Ladefläche sein</German>
+			<German>Du musst in einem LKW mit Ladefläche sein</German>
 		</Key>
 		<Key ID="STR_NOTF_ShredderDriver">
 			<Original>You have to be on the driver's seat</Original>
