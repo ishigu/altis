@@ -75,6 +75,8 @@ switch (_item) do
 	case "handcuffs": {2};
 	case "oildrill":{15};
 	case "oildrill1":{15};
+	case "shredder":{18};
+	case "shredder1":{18};
 	case "radarreader": {2};
 	case "smartphone": {0};
 	/*

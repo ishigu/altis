@@ -15,12 +15,11 @@ _oilold = life_inv_oilu;
 
 if(([true,"oilu",_oilamount] call life_fnc_handleInv)) then
 {
-	_itemName = [(["oilu",0] call life_fnc_varHandle)] call life_fnc_varToStr;
 	titleText[format[localize "STR_NOTF_DeviceTook",(_barrel getVariable "oil")],"PLAIN"];
 	_oilnew = life_inv_oilu;
 	_diff = _oilnew - _oilold;
 	_barrel setVariable ["oil",(_oilamount - _diff),true];
-	if(_oilamount - _diff != 0) then {titleText[localize "STR_NOTF_NoSpace","PLAIN"];};
+	if(_oilamount - _diff != 0) then {titleText[format[localize "STR_NOTF_DeviceNotAll",_diff],"PLAIN"];};
 }
 else {
 	titleText[localize "STR_NOTF_InvFull","PLAIN"];

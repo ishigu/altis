@@ -85,6 +85,8 @@ switch (_mode) do
 			case "handcuffs": {"life_inv_handcuffs"};
 			case "oildrill":{"life_inv_oildrill"};
 			case "oildrill1":{"life_inv_oildrill1"};
+			case "shredder":{"life_inv_shredder"};
+			case "shredder1":{"life_inv_shredder1"};
 			case "radarreader": {"life_inv_radarreader"};
 			case "smartphone": {"life_inv_smartphone"};
 		};
@@ -163,6 +165,8 @@ switch (_mode) do
 			case "life_inv_handcuffs": {"handcuffs"};
 			case "life_inv_oildrill": {"oildrill"};
 			case "life_inv_oildrill1":{"oildrill1"};
+			case "life_inv_shredder": {"shredder"};
+			case "life_inv_shredder1": {"shredder1"};
 			case "life_inv_radarreader": {"radarreader"};
 			case "life_inv_smartphone": {"smartphone"};
 		};

@@ -190,6 +190,8 @@ life_inv_items =
 	"life_inv_handcuffs",
 	"life_inv_oildrill",
 	"life_inv_oildrill1",
+	"life_inv_shredder",
+	"life_inv_shredder1",
 	"life_inv_radarreader",
 	"life_inv_smartphone"
 	
@@ -305,7 +307,9 @@ sell_array =
 	["radarreader",400],
 	["smartphone",10],
 	["oildrill",75000],
-	["oildrill1",300000]
+	["oildrill1",300000],
+	["shredder",80000],
+	["shredder1",350000]
 	
 	/*
 	["cocoa",100],
@@ -358,7 +362,9 @@ buy_array =
 	["radarreader",200],
 	["smartphone",10],
 	["oildrill",150000],
-	["oildrill1",600000]
+	["oildrill1",600000],
+	["shredder",160000],
+	["shredder1",700000]
 ];
 __CONST__(buy_array,buy_array);
 
@@ -492,7 +498,8 @@ life_limited_items =
 	[["defib"],1],
 	[["radarreader"],1],
 	[["smartphone"],1],
-	[["oildrill","oildrill1"],1]
+	[["oildrill","oildrill1"],1],
+	[["shredder","shredder1"],1]
 ];
 __CONST__(life_limited_items,life_limited_items);
 

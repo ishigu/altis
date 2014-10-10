@@ -180,7 +180,9 @@ if(count (handGunItems player) > 0) then
 	["life_inv_radarreader", life_inv_radarreader],
 	["life_inv_smartphone", life_inv_smartphone],
 	["life_inv_oildrill", life_inv_oildrill],
-	["life_inv_oildrill1", life_inv_oildrill1]
+	["life_inv_oildrill1", life_inv_oildrill1],
+	["life_inv_shredder",life_inv_shredder],
+	["life_inv_shredder1",life_inv_shredder1]
 ];
 
 _return set[count _return,_uItems];
