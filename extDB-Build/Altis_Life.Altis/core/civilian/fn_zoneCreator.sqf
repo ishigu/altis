@@ -77,12 +77,12 @@ _weedZones = ["weed_1"];
 //Create cocaine zones
 {
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
-	_zone setTriggerArea[150,150,0,false];
+	_zone setTriggerArea[100,100,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_Coke = player addAction[(localize ""STR_Gather_Cocaine""),life_fnc_gather,'',0,false,false,'','!life_action_mining_hotkey_inuse'];","player removeAction LIFE_Action_Coke;"];
 
 	_zoneReb = createTrigger ["EmptyDetector",(getMarkerPos _x)];
-	_zoneReb setTriggerArea[150,150,0,false];
+	_zoneReb setTriggerArea[100,100,0,false];
 	_zoneReb setTriggerActivation["EAST","PRESENT",true];
 	_zoneReb setTriggerStatements["player in thislist","LIFE_Action_Coke = player addAction[(localize ""STR_Gather_Cocaine""),life_fnc_gather,'',0,false,false,'','!life_action_mining_hotkey_inuse'];","player removeAction LIFE_Action_Coke;"];
 
