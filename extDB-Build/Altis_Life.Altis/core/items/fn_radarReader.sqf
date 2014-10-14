@@ -18,7 +18,8 @@ if (count _radarTraps == 0) exitWith {hint localize "STR_NOTF_RadartrapNotNear"}
 		{
 			[_x,"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 		} forEach _list;
-	}
+	};
+	_trap setVariable["DriverList",[],true];
 } forEach _radarTraps;
 
 if (!_found) then { hint localize "STR_NOTF_RadartrapNoEntries"; }

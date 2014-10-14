@@ -5900,7 +5900,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1444;
+		items=1445;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -20146,6 +20146,17 @@ class Mission
 			vehicle="Land_CashDesk_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this setVectorUp [0,0,1];";
+		};
+		class Item1444
+		{
+			position[]={3608.6531,9.9778795,13115.87};
+			azimut=276;
+			offsetY=-1;
+			id=1798;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this setObjectTexture [0, ""markt.jpg""]";
 		};
 	};
 	class Markers
