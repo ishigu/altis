@@ -188,6 +188,7 @@ life_inv_items =
 	"life_inv_ghilliepack",
 	"life_inv_dogfood",
 	"life_inv_handcuffs",
+	"life_inv_pickaxe1",
 	"life_inv_oildrill",
 	"life_inv_oildrill1",
 	"life_inv_shredder",
@@ -306,6 +307,7 @@ sell_array =
 	["handcuffs",200],
 	["radarreader",400],
 	["smartphone",10],
+	["pickaxe1",150000],
 	["oildrill",75000],
 	["oildrill1",300000],
 	["shredder",80000],
@@ -361,6 +363,7 @@ buy_array =
 	["handcuffs",200],
 	["radarreader",200],
 	["smartphone",10],
+	["pickaxe1",300000],
 	["oildrill",150000],
 	["oildrill1",600000],
 	["shredder",160000],
@@ -498,6 +501,7 @@ life_limited_items =
 	[["defib"],1],
 	[["radarreader"],1],
 	[["smartphone"],1],
+	[["pickaxe","pickaxe1"],1],
 	[["oildrill","oildrill1"],1],
 	[["shredder","shredder1"],1]
 ];

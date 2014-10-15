@@ -259,14 +259,14 @@ switch (_code) do
         if((!life_action_inUse) && (vehicle player == player) && (!life_action_mining_hotkey_inuse) && (!life_delay_pickaxe)) then
         {
             {
-                _str = [_x] call life_fnc_varToStr;
+                _str = [_x,1] call life_fnc_varHandle;
                 _val = missionNameSpace getVariable _x;
                 if(_val > 0 ) then
                 {
-                    if( _str == "Spitzhacke" || _str == "pickaxe" ) then
+                    if(_str == "pickaxe" || _str == "pickaxe1") then
                     {
 						delay_pickaxe = true;
-                        [] spawn life_fnc_pickAxeUse;
+                        [_str] spawn life_fnc_pickAxeUse;
                     };
                 };
             } foreach life_inv_items;

@@ -83,6 +83,7 @@ switch (_mode) do
 			case "ghilliepack":{"life_inv_ghilliepack"};
 			case "dogfood":{"life_inv_dogfood"};
 			case "handcuffs": {"life_inv_handcuffs"};
+			case "pickaxe1": {"life_inv_pickaxe1"};
 			case "oildrill":{"life_inv_oildrill"};
 			case "oildrill1":{"life_inv_oildrill1"};
 			case "shredder":{"life_inv_shredder"};
@@ -163,6 +164,7 @@ switch (_mode) do
 			case "life_inv_ghilliepack": {"ghilliepack"};
 			case "life_inv_dogfood": {"dogfood"};
 			case "life_inv_handcuffs": {"handcuffs"};
+			case "life_inv_pickaxe1": {"pickaxe1"};
 			case "life_inv_oildrill": {"oildrill"};
 			case "life_inv_oildrill1":{"oildrill1"};
 			case "life_inv_shredder": {"shredder"};
