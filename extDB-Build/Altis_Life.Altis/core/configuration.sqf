@@ -524,3 +524,5 @@ life_fuelstation_fitamount = 0;
 
 life_iamdead = false;
 life_bet_done = false;
+
+life_lastspawn = [0,0,0]; // Cop, Rebel, Civ

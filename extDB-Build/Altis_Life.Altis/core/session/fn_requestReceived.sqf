@@ -47,6 +47,7 @@ switch(playerSide) do {
 		__CONST__(life_medicLevel,0);
 		__CONST__(life_rebellevel,0);
 		life_blacklisted = _this select 10;
+		life_lastspawn = _this select 11;
 	};
 	
 	case civilian: {
@@ -54,17 +55,19 @@ switch(playerSide) do {
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
 		__CONST__(life_rebellevel,0);
-		life_houses = _this select 10;
+		life_houses = _this select 11;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
 			life_vehicles set[count life_vehicles,_house];
 		} foreach life_houses;
 		
-		life_gangData = _This select 11;
+		life_gangData = _This select 12;
 		if(count life_gangData != 0) then {
 			[] spawn life_fnc_initGang;
 		};
 		[] spawn life_fnc_initHouses;
+		
+		life_lastspawn = _this select 10;
 	};
 	
 	case independent: {
@@ -77,17 +80,19 @@ switch(playerSide) do {
 		__CONST__(life_rebellevel,parseNumber(_this select 10));
 		__CONST__(life_copLevel,0);
 		__CONST__(life_medicLevel,0);
-		life_houses = _this select 11;
+		life_houses = _this select 12;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
 			life_vehicles set[count life_vehicles,_house];
 		} foreach life_houses;
 		
-		life_gangData = _This select 12;
+		life_gangData = _This select 13;
 		if(count life_gangData != 0) then {
 			[] spawn life_fnc_initGang;
 		};
 		[] spawn life_fnc_initHouses;
+		
+		life_lastspawn = _this select 11;
 	};
 };
 

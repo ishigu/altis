@@ -23,10 +23,10 @@ _ownerID = owner _ownerID;
 	The other part is well the SQL statement.
 */
 _query = switch(_side) do {
-	case west: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, aliases, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, aliases, civ_licenses, arrested, civ_gear FROM players WHERE playerid='%1'",_uid];};
+	case west: {_returnCount = 12; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, aliases, cop_licenses, coplevel, cop_gear, blacklist, last_spawn FROM players WHERE playerid='%1'",_uid];};
+	case civilian: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, aliases, civ_licenses, arrested, civ_gear, last_spawn FROM players WHERE playerid='%1'",_uid];};
 	case independent: {_returnCount = 9; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, aliases, med_licenses, mediclevel FROM players WHERE playerid='%1'",_uid];};
-	case east: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, aliases, civ_licenses, arrested, reb_gear, rebellevel FROM players WHERE playerid='%1'",_uid];};
+	case east: {_returnCount = 12; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, aliases, civ_licenses, arrested, reb_gear, rebellevel, last_spawn FROM players WHERE playerid='%1'",_uid];};
 };
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
@@ -81,6 +81,12 @@ _queryResult set[9,_new];
 switch (_side) do {
 	case west: {
 		_queryResult set[10,([_queryResult select 10,1] call DB_fnc_bool)];
+		
+		// Parse last_spawn
+		_new = [(_queryResult select 11)] call DB_fnc_mresToArray;
+		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
+		if(count _new == 0) then {_new = [0,0,0];};
+		_queryResult set [11,_new];
 	};
 	
 	case civilian: {
@@ -91,6 +97,12 @@ switch (_side) do {
 		_gangData = [_uid,_side] spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["gang_%1",_uid],[]])];
+		
+		// Parse last_spawn
+		_new = [(_queryResult select 10)] call DB_fnc_mresToArray;
+		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
+		if(count _new == 0) then {_new = [0,0,0];};
+		_queryResult set [10,_new];
 	};
 	
 	case east: {
@@ -102,6 +114,12 @@ switch (_side) do {
 		waitUntil{scriptDone _gangData};
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["gang_%1",_uid],[]])];
 		missionNamespace setVariable[format["gang_%1",_uid],nil];
+		
+		// Parse last_spawn
+		_new = [(_queryResult select 11)] call DB_fnc_mresToArray;
+		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
+		if(count _new == 0) then {_new = [0,0,0];};
+		_queryResult set [11,_new];
 	};
 };
 

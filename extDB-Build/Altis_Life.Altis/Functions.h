@@ -286,6 +286,7 @@ class Life_Client_Core
 		class broadcastNewsRecieve{};
 		class betBuyTicket {};
 		class upgradeTools {};
+		class getNearestSpawnPos {};
 	};
 	
 	class Network
