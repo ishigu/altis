@@ -3680,6 +3680,11 @@
 			<English>Smartphone</English>
 			<German>Smartphone</German>
 		</Key>
+		<Key ID="STR_Item_Pickaxe1">
+			<Original>Pickaxe+</Original>
+			<English>Pickaxe+</English>
+			<German>Spitzhacke+</German>
+		</Key>
 		<Key ID="STR_Item_Oildrill">
 			<Original>Damaged Oildrill</Original>
 			<English>Damaged Oildrill</Original>

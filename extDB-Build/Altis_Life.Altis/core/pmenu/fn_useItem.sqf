@@ -165,9 +165,9 @@ switch (true) do
 		[] spawn fnc_fishing;
 	};
 	
-	case (_item == "pickaxe"):
+	case (_item == "pickaxe" || _item == "pickaxe1"):
 	{
-		[] spawn life_fnc_pickAxeUse;
+		[_item] spawn life_fnc_pickAxeUse;
 	};
 	
 	case (_item == "radarreader"):
