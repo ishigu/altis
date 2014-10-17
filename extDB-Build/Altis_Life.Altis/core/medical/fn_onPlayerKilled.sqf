@@ -114,9 +114,9 @@ if(!isNull _killer && {_killer != _unit}) then {
 life_hunger = 100;
 life_thirst = 100;
 life_carryWeight = 0;
-//life_cash = 0;
-// _handle = [_unit] spawn life_fnc_dropItems;
-// waitUntil {scriptDone _handle};
+_handle = [_unit] spawn life_fnc_dropItems;
+waitUntil {scriptDone _handle};
+life_cash = 0;
 
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;

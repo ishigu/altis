@@ -166,6 +166,7 @@ if(count (handGunItems player) > 0) then
     ["life_inv_tbacon", life_inv_tbacon],
     ["life_inv_lockpick", life_inv_lockpick],
     ["life_inv_redgull", life_inv_redgull],
+	["life_inv_beer",life_inv_beer],
     ["life_inv_peach", life_inv_peach],
     ["life_inv_spikeStrip", life_inv_spikeStrip],
     ["life_inv_defusekit", life_inv_defusekit],

@@ -49,3 +49,4 @@ if(_diff != _itemInfo select 1) then
 		titleText[format[localize "STR_NOTF_Picked",_diff,_itemName],"PLAIN"];
 	};
 };
+[] call SOCK_fnc_updateRequest;
