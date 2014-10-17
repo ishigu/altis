@@ -530,3 +530,4 @@ life_iamdead = false;
 life_bet_done = false;
 
 life_lastspawn = [0,0,0]; // Cop, Rebel, Civ
+life_showAllSpawnpoints = false;

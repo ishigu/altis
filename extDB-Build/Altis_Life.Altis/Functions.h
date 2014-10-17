@@ -465,6 +465,7 @@ class Life_Client_Core
 		class impoundPlusLBChange {};
 		class impoundPlusMenu {};
 		class unimpoundPlus {};
+		class spawnPointCustomCfg {};
 	};
 
 	class market
