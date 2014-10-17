@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_checkSideReceived.sqf
 	Author: ishi
@@ -6,7 +7,7 @@
 	Received sideCheck result from server
 */
 
-if (playerSide != _this) then {
+if (playerSide != _this && __GETC__(life_adminlevel) < 3) then {
 	if (playerSide == west && _this == east) then {
 		["RebelCop",FALSE,TRUE] call BIS_fnc_endMission;
 		sleep 35;
