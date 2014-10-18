@@ -85,6 +85,8 @@ switch (_var) do
 	case "life_inv_shredder1": {(localize "STR_Item_Shredder1")};
 	case "life_inv_radarreader": {(localize "STR_Item_RadartrapReader")};
 	case "life_inv_smartphone": {(localize "STR_Item_Smartphone")};
+	case "life_inv_zipties": {(localize "STR_Item_Zipties")};
+	case "life_inv_blindbag": {(localize "STR_Item_Blindbag")};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

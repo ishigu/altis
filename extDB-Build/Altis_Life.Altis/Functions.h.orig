@@ -137,8 +137,11 @@ class Life_Client_Core
 		class oildrillEmpty {};
 		class packupOildrill {};
 		class oildrillStop {};
+<<<<<<< Updated upstream
 		class toggleVehicleDoor {};
+=======
 		class removeBlindfold {};
+>>>>>>> Stashed changes
 	};
 	
 	class Housing

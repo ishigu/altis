@@ -184,7 +184,9 @@ if(count (handGunItems player) > 0) then
 	["life_inv_oildrill", life_inv_oildrill],
 	["life_inv_oildrill1", life_inv_oildrill1],
 	["life_inv_shredder",life_inv_shredder],
-	["life_inv_shredder1",life_inv_shredder1]
+	["life_inv_shredder1",life_inv_shredder1],
+	["life_inv_zipties",life_inv_zipties],
+	["life_inv_blindbag",life_inv_blindbag]
 ];
 
 _return set[count _return,_uItems];

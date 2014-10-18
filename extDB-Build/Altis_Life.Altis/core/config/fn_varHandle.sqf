@@ -90,6 +90,8 @@ switch (_mode) do
 			case "shredder1":{"life_inv_shredder1"};
 			case "radarreader": {"life_inv_radarreader"};
 			case "smartphone": {"life_inv_smartphone"};
+			case "zipties": {"life_inv_zipties"};
+			case "blindbag": {"life_inv_blindbag"};
 		};
 	};
 	
@@ -171,6 +173,8 @@ switch (_mode) do
 			case "life_inv_shredder1": {"shredder1"};
 			case "life_inv_radarreader": {"radarreader"};
 			case "life_inv_smartphone": {"smartphone"};
+			case "life_inv_zipties": {"zipties"};
+			case "life_inv_blindbag": {"blindbag"};
 		};
 	};
 };

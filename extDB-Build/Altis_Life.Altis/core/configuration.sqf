@@ -194,7 +194,9 @@ life_inv_items =
 	"life_inv_shredder",
 	"life_inv_shredder1",
 	"life_inv_radarreader",
-	"life_inv_smartphone"
+	"life_inv_smartphone",
+	"life_inv_zipties",
+	"life_inv_blindbag"
 	
 	/*
 	"life_inv_cocoa",
@@ -311,7 +313,9 @@ sell_array =
 	["oildrill",75000],
 	["oildrill1",300000],
 	["shredder",80000],
-	["shredder1",350000]
+	["shredder1",350000],
+	["zipties",25000],
+	["blindbag",50000]
 	
 	/*
 	["cocoa",100],
@@ -367,7 +371,9 @@ buy_array =
 	["oildrill",150000],
 	["oildrill1",600000],
 	["shredder",160000],
-	["shredder1",700000]
+	["shredder1",700000],
+	["zipties",50000],
+	["blindbag",100000]
 ];
 __CONST__(buy_array,buy_array);
 

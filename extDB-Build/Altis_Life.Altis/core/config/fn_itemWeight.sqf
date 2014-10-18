@@ -80,6 +80,8 @@ switch (_item) do
 	case "pickaxe1": {2};
 	case "radarreader": {2};
 	case "smartphone": {0};
+	case "zipties": {2};
+	case "blindbag": {10};
 	/*
 	case "cocoa": {2};
 	case "milk": {2};

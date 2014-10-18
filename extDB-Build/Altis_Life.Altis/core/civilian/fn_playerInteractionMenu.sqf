@@ -32,7 +32,8 @@ _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 life_pInact_curTarget = _curTarget;
-
+_buttonArray = [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn5,_Btn6,_Btn7];
+_select = 0;
 _Btn1 ctrlShow false;
 _Btn2 ctrlShow false;
 _Btn3 ctrlShow false;
@@ -42,8 +43,47 @@ _Btn6 ctrlShow false;
 _Btn7 ctrlShow false;
 
 if (life_pInact_curTarget getVariable["knockedout",false]) then {
-	_Btn1 ctrlShow true;
-	_Btn1 ctrlSetText localize "STR_pAct_SmartphoneSteal";
-	_Btn1 buttonSetAction "[] call life_fnc_stealPhoneAction;";
+	(_buttonArray select _select) ctrlSetText localize "STR_pAct_SmartphoneSteal";
+	(_buttonArray select _select) buttonSetAction "[] call life_fnc_stealPhoneAction;";
+	(_buttonArray select _select) ctrlShow true;
+	_select = _select +1;
 };
-		
+
+if(life_pInact_curTarget getVariable["rebelRestrain",false]) then {
+	if(!(life_pInact_curTarget getVariable["blindfolded",false])) then {
+		(_buttonArray select _select) ctrlSetText localize "STR_pAct_Blindfold";
+		(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_blindfold;";
+		(_buttonArray select _select) ctrlShow true;
+		_select = _select +1;
+	}else{
+		(_buttonArray select _select) ctrlSetText localize "STR_pAct_UnBlindfold";
+		(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_removeBlindfold;";
+		(_buttonArray select _select) ctrlShow true;
+		_select = _select +1;
+	};
+	
+	(_buttonArray select _select) ctrlSetText localize "STR_pInAct_Unrestrain";
+	(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrainRebel; closeDialog 0;";
+	(_buttonArray select _select) ctrlShow true;
+	_select = _select +1;
+	
+	(_buttonArray select _select) ctrlSetText localize "STR_pInAct_PutInCar";
+	(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
+	(_buttonArray select _select) ctrlShow true;
+	_select = _select +1;
+};
+
+if((life_pInact_curTarget getVariable["Escorting",false])) then {
+	(_buttonArray select _select) ctrlSetText localize "STR_pInAct_StopEscort";
+	(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscortingRebel; [life_pInact_curTarget] call life_fnc_playerInteractionMenu;";
+	(_buttonArray select _select) ctrlShow true;
+	_select = _select +1;
+} else {
+	if(life_pInact_curTarget getVariable["rebelRestrain",false]) then {
+		(_buttonArray select _select) ctrlSetText localize "STR_pInAct_Escort";
+		(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_escortActionRebel; closeDialog 0;";
+		(_buttonArray select _select) ctrlShow true;
+		_select = _select +1;
+	};
+};
+
