@@ -136,6 +136,7 @@ class Life_Client_Core
 		class oildrillEmpty {};
 		class packupOildrill {};
 		class oildrillStop {};
+		class toggleVehicleDoor {};
 	};
 	
 	class Housing
