@@ -466,6 +466,7 @@ class Life_Client_Core
 		class impoundPlusMenu {};
 		class unimpoundPlus {};
 		class spawnPointCustomCfg {};
+		class gangWithdraw {};
 	};
 
 	class market
