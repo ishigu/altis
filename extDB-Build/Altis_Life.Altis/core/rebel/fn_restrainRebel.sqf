@@ -26,7 +26,8 @@ if(isNull _unit) exitWith {};
 	titleText[localize "STR_Reb_VictimUnres","PLAIN"];
 };
 
-hint localize "STR_Reb_TiedUp";		
+hint localize "STR_Reb_TiedUp";	
+waitUntil{(!(player getVariable ["knockedout",false]))};
 while {player getVariable ["restrained",false]} do
 {
 	showHUD false;

@@ -16,6 +16,8 @@ titleText[localize "STR_Reb_BlindfoldedPerson","PLAIN"];
 _blocker = (findDisplay 46) displayAddEventHandler ["KeyDown", "if((_this select 1) == 1) then {true}"]; // Disable ESC, so you can't remove the black screen
 _oldGroup = group player;
 [player] joinSilent grpNull;
+life_sidechat = false;
+[[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 showMap false;
 showGPS false;
 showCompass false;
@@ -47,6 +49,8 @@ if(player getVariable ["adminBlindfold",true]) then
 showMap true;
 showGPS true;
 showCompass true;
+life_sidechat = true;
+[[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 titleText["","PLAIN"];
 sleep 2;
 "DynamicBlur" ppEffectEnable false;
