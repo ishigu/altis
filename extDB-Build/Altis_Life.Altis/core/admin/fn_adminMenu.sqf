@@ -6,8 +6,8 @@
 	Description:
 	Opens the admin menu, sorry nothing special in here. Take a look for yourself.
 	Adjusted by: Shentoza
-	Level 1 - Support auf Probe [Kein CarKey,Console,Freeze,Compensate,Teleport,TeleportToMe,Markers,Invisible,Revive]
-	Level 2 - Support [Kein CarKey,Console,Freeze,Compensate,Teleport,TeleportToMe,Markers,Invisible,Revive]
+	Level 1 - Support auf Probe [Kein CarKey,Console,Freeze,Compensate,Teleport,TeleportToMe,Markers,Invisible,Revive,Blind]
+	Level 2 - Support [Kein CarKey,Console,Freeze,Compensate,Teleport,TeleportToMe,Markers,Invisible,Revive,Blind]
 	Level 3 - Admin auf Probe [Kein Console,Compensate]
 	Level 4 - Admin []
 	Level 5 - Projektleitung []
