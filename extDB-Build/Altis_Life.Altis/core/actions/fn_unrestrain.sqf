@@ -9,11 +9,6 @@ _unit setVariable["restrained",FALSE,TRUE];
 _unit setVariable["Escorting",FALSE,TRUE];
 _unit setVariable["transporting",FALSE,TRUE];
 detach _unit;
-if(!(_unit getVariable ["rebelRestrain",false])) then
-{
-	[true,"handcuffs",1] call life_fnc_handleInv;
-}else{
-	_unit setVariable["rebelRestrain",nil,true];
-};
+[true,"handcuffs",1] call life_fnc_handleInv;
 
 [[0,format[localize "STR_NOTF_Unrestrain",_unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",west,FALSE] call life_fnc_MP;

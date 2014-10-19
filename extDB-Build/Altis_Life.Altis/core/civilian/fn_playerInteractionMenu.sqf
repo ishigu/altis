@@ -1,6 +1,7 @@
 /*
 	File: fn_playerInteractionMenu.sqf
 	Author: ishi
+	Edited: Shentoza
 	
 	Description:
 	Player actions
@@ -49,7 +50,7 @@ if (life_pInact_curTarget getVariable["knockedout",false]) then {
 	_select = _select +1;
 };
 
-if(life_pInact_curTarget getVariable["rebelRestrain",false]) then {
+if(life_pInact_curTarget getVariable["rebelRestrain",false] && playerSide == east) then {
 	if(!(life_pInact_curTarget getVariable["blindfolded",false])) then {
 		(_buttonArray select _select) ctrlSetText localize "STR_pAct_Blindfold";
 		(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_blindfold;";
@@ -61,29 +62,37 @@ if(life_pInact_curTarget getVariable["rebelRestrain",false]) then {
 		(_buttonArray select _select) ctrlShow true;
 		_select = _select +1;
 	};
-	
-	(_buttonArray select _select) ctrlSetText localize "STR_pInAct_Unrestrain";
-	(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrainRebel; closeDialog 0;";
-	(_buttonArray select _select) ctrlShow true;
-	_select = _select +1;
-	
 	(_buttonArray select _select) ctrlSetText localize "STR_pInAct_PutInCar";
 	(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 	(_buttonArray select _select) ctrlShow true;
 	_select = _select +1;
-};
-
-if((life_pInact_curTarget getVariable["Escorting",false])) then {
+	
+	if((life_pInact_curTarget getVariable["Escorting",false])) then {
 	(_buttonArray select _select) ctrlSetText localize "STR_pInAct_StopEscort";
 	(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscortingRebel; [life_pInact_curTarget] call life_fnc_playerInteractionMenu;";
 	(_buttonArray select _select) ctrlShow true;
 	_select = _select +1;
-} else {
-	if(life_pInact_curTarget getVariable["rebelRestrain",false]) then {
-		(_buttonArray select _select) ctrlSetText localize "STR_pInAct_Escort";
-		(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_escortActionRebel; closeDialog 0;";
+	} else {
+		if(!(life_pInact_curTarget getVariable["Escorting",false])) then {
+			(_buttonArray select _select) ctrlSetText localize "STR_pInAct_Escort";
+			(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_escortActionRebel; closeDialog 0;";
+			(_buttonArray select _select) ctrlShow true;
+			_select = _select +1;
+		};
+	};
+}else
+{
+	if(life_pInact_curTarget getVariable["blindfolded",false]) then {
+		(_buttonArray select _select) ctrlSetText localize "STR_pAct_UnBlindfold";
+		(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_removeBlindfold;";
 		(_buttonArray select _select) ctrlShow true;
 		_select = _select +1;
 	};
 };
 
+if(life_pInact_curTarget getVariable["rebelRestrain",false]) then {
+	(_buttonArray select _select) ctrlSetText localize "STR_pInAct_Unrestrain";
+	(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrainRebel; closeDialog 0;";
+	(_buttonArray select _select) ctrlShow true;
+	_select = _select +1;
+};

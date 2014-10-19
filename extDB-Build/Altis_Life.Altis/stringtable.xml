@@ -2790,6 +2790,31 @@
 		</Key>
 	</Package>
 	<Package name="Rebel_Strings">
+		<Key ID="STR_Reb_Blinding">
+			<Original>Blindfolding</Original>
+			<English>Blindfolding</English>
+			<German>Setze Sack auf</German>
+		</Key>
+		<Key ID="STR_Reb_PullingOut">
+			<Original>Pulling out restrained players</Original>
+			<English>Pulling out restrained players</English>
+			<German>Ziehe gefesselte Spieler heraus</German>
+		</Key>
+		<Key ID="STR_Reb_Unrestraining">
+			<Original>Unrestraining</Original>
+			<English>Unrestraining</English>
+			<German>Befreie</German>
+		</Key>
+		<Key ID="STR_Reb_Restraining">
+			<Original>Restraining</Original>
+			<English>Restraining</English>
+			<German>Fessele</German>
+		</Key>
+		<Key ID="STR_Reb_Unblinding">
+			<Original>Removing sack</Original>
+			<English>Removing sack</English>
+			<German>Nehme Sack ab</German>
+		</Key>
 		<Key ID="STR_Reb_NoZipties">
 			<Original>You don't have any zipties</Original>
 			<English>You don't have any zipties</English>
