@@ -34,6 +34,7 @@ titleText[format[localize "STR_Cop_Retrained",_cop getVariable["realname",name _
 				
 while {player getVariable "restrained"} do
 {
+	showHUD false;
 	if(vehicle player == player) then {
 		player playMove "AmovPercMstpSnonWnonDnon_Ease";
 	};
@@ -51,12 +52,11 @@ while {player getVariable "restrained"} do
 	
 	if(vehicle player != player) then
 	{
-		//disableUserInput true;
 		if(driver (vehicle player) == player) then {player action["eject",vehicle player];};
 	};
 };
 
-//disableUserInput false;
+showHUD true;
 		
 if(alive player) then
 {

@@ -166,6 +166,7 @@ if(count (handGunItems player) > 0) then
     ["life_inv_tbacon", life_inv_tbacon],
     ["life_inv_lockpick", life_inv_lockpick],
     ["life_inv_redgull", life_inv_redgull],
+	["life_inv_beer",life_inv_beer],
     ["life_inv_peach", life_inv_peach],
     ["life_inv_spikeStrip", life_inv_spikeStrip],
     ["life_inv_defusekit", life_inv_defusekit],
@@ -179,10 +180,13 @@ if(count (handGunItems player) > 0) then
 	["life_inv_handcuffs", life_inv_handcuffs],
 	["life_inv_radarreader", life_inv_radarreader],
 	["life_inv_smartphone", life_inv_smartphone],
+	["life_inv_pickaxe1", life_inv_pickaxe1],
 	["life_inv_oildrill", life_inv_oildrill],
 	["life_inv_oildrill1", life_inv_oildrill1],
 	["life_inv_shredder",life_inv_shredder],
-	["life_inv_shredder1",life_inv_shredder1]
+	["life_inv_shredder1",life_inv_shredder1],
+	["life_inv_zipties",life_inv_zipties],
+	["life_inv_blindbag",life_inv_blindbag]
 ];
 
 _return set[count _return,_uItems];

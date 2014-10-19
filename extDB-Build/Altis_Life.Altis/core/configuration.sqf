@@ -188,12 +188,15 @@ life_inv_items =
 	"life_inv_ghilliepack",
 	"life_inv_dogfood",
 	"life_inv_handcuffs",
+	"life_inv_pickaxe1",
 	"life_inv_oildrill",
 	"life_inv_oildrill1",
 	"life_inv_shredder",
 	"life_inv_shredder1",
 	"life_inv_radarreader",
-	"life_inv_smartphone"
+	"life_inv_smartphone",
+	"life_inv_zipties",
+	"life_inv_blindbag"
 	
 	/*
 	"life_inv_cocoa",
@@ -306,10 +309,13 @@ sell_array =
 	["handcuffs",200],
 	["radarreader",400],
 	["smartphone",10],
+	["pickaxe1",150000],
 	["oildrill",75000],
 	["oildrill1",300000],
 	["shredder",80000],
-	["shredder1",350000]
+	["shredder1",350000],
+	["zipties",15000],
+	["blindbag",50000]
 	
 	/*
 	["cocoa",100],
@@ -361,10 +367,13 @@ buy_array =
 	["handcuffs",200],
 	["radarreader",200],
 	["smartphone",10],
+	["pickaxe1",300000],
 	["oildrill",150000],
 	["oildrill1",600000],
 	["shredder",160000],
-	["shredder1",700000]
+	["shredder1",700000],
+	["zipties",30000],
+	["blindbag",100000]
 ];
 __CONST__(buy_array,buy_array);
 
@@ -498,6 +507,7 @@ life_limited_items =
 	[["defib"],1],
 	[["radarreader"],1],
 	[["smartphone"],1],
+	[["pickaxe","pickaxe1"],1],
 	[["oildrill","oildrill1"],1],
 	[["shredder","shredder1"],1]
 ];
@@ -524,3 +534,6 @@ life_fuelstation_fitamount = 0;
 
 life_iamdead = false;
 life_bet_done = false;
+
+life_lastspawn = [0,0,0]; // Cop, Rebel, Civ
+life_showAllSpawnpoints = false;

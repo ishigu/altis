@@ -78,12 +78,15 @@ switch (_var) do
 	case "life_inv_ghilliepack": {"Ghillie Paket"};
 	case "life_inv_dogfood": {"Hundefutter"};
 	case "life_inv_handcuffs": {(localize "STR_Item_Handcuffs")};
+	case "life_inv_pickaxe1": {(localize "STR_Item_Pickaxe1")};
 	case "life_inv_oildrill": {(localize "STR_Item_Oildrill")};
 	case "life_inv_oildrill1": {(localize "STR_Item_Oildrill1")};
 	case "life_inv_shredder": {(localize "STR_Item_Shredder")};
 	case "life_inv_shredder1": {(localize "STR_Item_Shredder1")};
 	case "life_inv_radarreader": {(localize "STR_Item_RadartrapReader")};
 	case "life_inv_smartphone": {(localize "STR_Item_Smartphone")};
+	case "life_inv_zipties": {(localize "STR_Item_Zipties")};
+	case "life_inv_blindbag": {(localize "STR_Item_Blindbag")};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

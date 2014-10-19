@@ -419,6 +419,16 @@
 			<Italian>Hai despoitato €%1 nel conto bancario della tua gang</Italian>
 			<Portuguese>Você depositou R$%1 na conta de sua gangue.</Portuguese>
  		</Key>
+		<Key ID="STR_ATM_WithdrawGang">
+ 			<Original>You have withdrawn $%1 from your gangs bank account</Original>
+ 			<English>You have withdrawn $%1 from your gangs bank account</English>
+			<German>Du hast $%1 von deinem Gang Konto abgehoben</German>
+ 		</Key>
+		<Key ID="STR_ATM_WithdrawGangNotLeader">
+ 			<Original>You are not the leader of the gang</Original>
+ 			<English>You are not the leader of the gang</English>
+			<German>Du bist nicht der Leiter der Gang!</German>
+ 		</Key>
 	</Package>
 	<Package name="Cell_Phone">
 		<Key ID="STR_CELL_Title">
@@ -2349,12 +2359,9 @@
 	</Package>
 	<Package name="Civ_Strings">
 		<Key ID="STR_Civ_KnockedOut">
-			<Original>%1 has knocked you out.</Original>
-			<English>%1 has knocked you out.</English>
-			<German>%1 hat dich niedergeschlagen.</German>
-			<French>%1 vous a assommé.</French>
-			<Italian>%1 ti ha colpito stordendoti.</Italian>
-			<Portuguese>%1 nocauteou você.</Portuguese>
+			<Original>You have been knocked out</Original>
+			<English>You have been knocked out</English>
+			<German>Du wurdest niedergeschlagen</German>
 		</Key>
 		<Key ID="STR_Civ_LicenseRemove_1">
 			<Original>You have lost all your motor vehicle licenses for vehicular manslaughter.</Original>
@@ -2780,6 +2787,58 @@
 			<French>Vous avez été menotté par %1</French>
 			<Italian>%1 ti ha tolto le manette</Italian>
 			<Portuguese>Você foi solto por %1</Portuguese>
+		</Key>
+	</Package>
+	<Package name="Rebel_Strings">
+		<Key ID="STR_Reb_NoZipties">
+			<Original>You don't have any zipties</Original>
+			<English>You don't have any zipties</English>
+			<German>Du hast keine Kabelbinder</German>
+		</Key>
+		<Key ID="STR_Reb_NoBlindbag">
+			<Original>You don't have a blindbag</Original>
+			<English>You don't have a blindbag</English>
+			<German>Du hast keinen Blindsack</German>
+		</Key>
+		<Key ID="STR_Reb_TiedUp">
+			<Original>You have been tied up</Original>
+			<English>You have been tied up</English>
+			<German>Du wurdest gefesselt</German>
+		</Key>
+		<Key ID="STR_Reb_RebUnres">
+			<Original>Your victim is no longer tied, because he was unrestrained</Original>
+			<English>Your victim is no longer tied, because he was unrestrained</English>
+			<German>Dein Opfer ist nicht mehr gefesselt</German>
+		</Key>
+		<Key ID="STR_Reb_RebDistance">
+			<Original>Your victim is no longer tied, because you went too far away</Original>
+			<English>Your victim is no longer tied, because you went too far away</English>
+			<German>Dein Opfer ist nicht mehr gefesselt, weil Du dich zu weit entfernt hast</German>
+		</Key>
+		<Key ID="STR_Reb_VictimUnres">
+			<Original>You're tied no longer</Original>
+			<English>You're tied no longer</English>
+			<German>Du bist nicht mehr gefesselt</German>
+		</Key>
+		<Key ID="STR_Reb_BlindfoldedPerson">
+			<Original>You have been blindfolded</Original>
+			<English>You have been blindfolded</English>
+			<German>Dir wurde einen Sack über den Kopf gezogen</German>
+		</Key>
+		<Key ID="STR_Reb_AlreadyBlind">
+			<Original>The person has already been blindfolded</Original>
+			<English>The person has already been blindfolded</English>
+			<German>Diese Person hat bereits einen Sack über dem Kopf</German>
+		</Key>
+		<Key ID="STR_Reb_Blindfold">
+			<Original>You have blindfolded %1</Original>
+			<English>You have blindfolded %1</English>
+			<German>Du hast %1 einen Sack über den Kopf gezogen</German>
+		</Key>
+		<Key ID="STR_Reb_UnBlindfold">
+			<Original>You have removed %1's blindfold</Original>
+			<English>You have removed %1's blindfold</English>
+			<German>Du hast %1 den Sack abgenommen</German>
 		</Key>
 	</Package>
 	<Package name="MISC_Strings">
@@ -3680,6 +3739,11 @@
 			<English>Smartphone</English>
 			<German>Smartphone</German>
 		</Key>
+		<Key ID="STR_Item_Pickaxe1">
+			<Original>Pickaxe+</Original>
+			<English>Pickaxe+</English>
+			<German>Spitzhacke+</German>
+		</Key>
 		<Key ID="STR_Item_Oildrill">
 			<Original>Damaged Oildrill</Original>
 			<English>Damaged Oildrill</Original>
@@ -3699,6 +3763,16 @@
 			<Original>Harvester</Original>
 			<English>Harvester</English>
 			<German>Mähwerk</German>
+		</Key>
+		<Key ID="STR_Item_Zipties">
+			<Original>Zipties</Original>
+			<English>Zipties</English>
+			<German>Kabelbinder</German>
+		</Key>
+		<Key ID="STR_Item_Blindbag">
+			<Original>Blindfold Bag</Original>
+			<English>Blindfold Bag</English>
+			<German>Foltersack</German>
 		</Key>
 	</Package>
 	<Package name="Life_License">
@@ -4681,6 +4755,11 @@
 			<Italian>Deposita alla Gang</Italian>
 			<Portuguese>Depositar para a Gangue</Portuguese>
 		</Key>
+		<Key ID="STR_pInAct_WithdrawFromGang">
+			<Original>Withdraw From Gang</Original>
+			<English>Withdraw From Gang</English>
+			<German>Von Gang-Konto abheben</German>
+		</Key>
 	</Package>
 		<Package name="Vehicle_Interaction">
 		<Key ID="STR_vInAct_Title">
@@ -5342,6 +5421,16 @@
 			<Original>Strip smartphone</Original>
 			<English>Strip smartphone</English>
 			<German>Smartphone klauen</German>
+		</Key>
+		<Key ID="STR_pAct_UnBlindfold">
+			<Original>Remove Blindfold</Original>
+			<English>Remove Blindfold</English>
+			<German>Sack abnehmen</German>
+		</Key>
+		<Key ID="STR_pAct_Blindfold">
+			<Original>Blindfold</Original>
+			<English>Blindfold</English>
+			<German>Augen verb.</German>
 		</Key>
 	</Package>
 	<Package name="Smartphone">

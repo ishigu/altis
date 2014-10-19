@@ -12,7 +12,7 @@ _zone = "";
 
 //Find out what zone we're near
 {
-	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
+	if(player distance (getMarkerPos _x) < 100) exitWith {_zone = _x;}; // Range is limited by the distance in which the action is shown (zoneCreator), so no need to hardcode limit it to 30 here. Raised the limit to fit the distances in zoneCreator but should probably be removed sometime
 } foreach _resourceZones;
 
 if(_zone == "") exitWith {

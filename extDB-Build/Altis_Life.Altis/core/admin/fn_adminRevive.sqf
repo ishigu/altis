@@ -21,4 +21,5 @@ _target setVariable["Reviving",NIL,TRUE];
 _target setVariable["Revive",TRUE,TRUE];
 [[{life_atmcash = life_atmcash + (call life_revive_fee);}], "BIS_fnc_spawn", _target, false] spawn life_fnc_MP;
 [[{systemChat "Du wurdest von einem Admin wiederbelebt! Die Kosten für den Medic wurden erstattet!";}], "BIS_fnc_spawn", _target, false] spawn life_fnc_MP;
+if(_target == player) then {closeDialog 0;};
 [[profileName],"life_fnc_revived",_target,FALSE] spawn life_fnc_MP;

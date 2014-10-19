@@ -80,3 +80,30 @@ life_actions = life_actions + [player addAction["Knicklicht (Blau) in die Hand n
 ' isNil "life_chemlight" && "Chemlight_blue" in (magazines player) && vehicle player == player ']];
 //Drop Chemlight
 life_actions = life_actions + [player addAction["Drop Chemlight",{if(isNil "life_chemlight") exitWith {};if(isNull life_chemlight) exitWith {};detach life_chemlight; life_chemlight = nil;},"",-1,false,false,"",'!isNil "life_chemlight" && !isNull life_chemlight && vehicle player == player ']];
+
+// Fahrzeug Türen öffnen
+// Hunter
+life_actions = life_actions + [player addAction["Tür (VL) betätigen",life_fnc_toggleVehicleDoor,["Door_LF"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "B_MRAP_01_F"']];
+life_actions = life_actions + [player addAction["Tür (VR) betätigen",life_fnc_toggleVehicleDoor,["Door_RF"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "B_MRAP_01_F"']];
+life_actions = life_actions + [player addAction["Tür (HL) betätigen",life_fnc_toggleVehicleDoor,["Door_LB"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "B_MRAP_01_F"']];
+life_actions = life_actions + [player addAction["Tür (HR) betätigen",life_fnc_toggleVehicleDoor,["Door_RB"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "B_MRAP_01_F"']];
+
+// Ifrit
+life_actions = life_actions + [player addAction["Tür (VL) betätigen",life_fnc_toggleVehicleDoor,["Door_LF"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "O_MRAP_02_F"']];
+life_actions = life_actions + [player addAction["Tür (VR) betätigen",life_fnc_toggleVehicleDoor,["Door_RF"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "O_MRAP_02_F"']];
+life_actions = life_actions + [player addAction["Tür (ML) betätigen",life_fnc_toggleVehicleDoor,["Door_LM"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "O_MRAP_02_F"']];
+life_actions = life_actions + [player addAction["Tür (MR) betätigen",life_fnc_toggleVehicleDoor,["Door_RM"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "O_MRAP_02_F"']];
+life_actions = life_actions + [player addAction["Tür (KR) betätigen",life_fnc_toggleVehicleDoor,["Door_rear"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "O_MRAP_02_F"']];
+
+// Strider
+life_actions = life_actions + [player addAction["Tür (VL) betätigen",life_fnc_toggleVehicleDoor,["Door_LF"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "I_MRAP_03_F"']];
+life_actions = life_actions + [player addAction["Tür (VR) betätigen",life_fnc_toggleVehicleDoor,["Door_RF"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "I_MRAP_03_F"']];
+
+// Mohawk
+life_actions = life_actions + [player addAction["Tür (L) betätigen",life_fnc_toggleVehicleDoor,["Door_Back_L"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "I_Heli_Transport_02_F"']];
+life_actions = life_actions + [player addAction["Tür (R) betätigen",life_fnc_toggleVehicleDoor,["Door_Back_R"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "I_Heli_Transport_02_F"']];
+life_actions = life_actions + [player addAction["Tür (H) betätigen",life_fnc_toggleVehicleDoor,["CargoRamp_Open"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "I_Heli_Transport_02_F"']];
+
+// Ghost Hawk
+life_actions = life_actions + [player addAction["Tür (L) betätigen",life_fnc_toggleVehicleDoor,["Door_L"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "B_Heli_Transport_01_F"']];
+life_actions = life_actions + [player addAction["Tür (R) betätigen",life_fnc_toggleVehicleDoor,["Door_R"],0,false,false,"",' _veh = nearestObjects[getPos player,["Air","LandVehicle"],7] select 0; !isNil "_veh" && _veh in life_vehicles && _veh isKindOf "B_Heli_Transport_01_F"']];

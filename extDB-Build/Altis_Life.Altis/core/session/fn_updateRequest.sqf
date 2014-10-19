@@ -2,7 +2,7 @@
 	File: fn_updateRequest.sqf
 	Author: Tonic
 */
-private["_packet","_array","_flag"];
+private["_packet","_array","_flag","_idx"];
 _packet = [getPlayerUID player,(profileName),playerSide,life_cash,life_atmcash];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"}; case east: {"civ"}};
@@ -22,13 +22,21 @@ if(alive player && !(player getVariable["Revive",FALSE])) then {
 } else {
 	_packet set[count _packet, []];
 };
+_packet set[count _packet,life_is_arrested];
+
+_idx = 0; // lastspawn array index, 0-> cop
 switch (playerSide) do {
 	case civilian: {
-		_packet set[count _packet,life_is_arrested];
+		_idx = 2;
 	};
 	case east: {
-		_packet set[count _packet,life_is_arrested];
+		_idx = 1;
 	};
 };
+
+//Update lastspawn position
+if (isNil {life_lastspawn}) then { life_lastspawn = [0,0,0]; };
+life_lastspawn set[_idx,[] call life_fnc_getNearestSpawnPos];
+_packet pushBack life_lastspawn;
 
 [_packet,"DB_fnc_updateRequest",false,false] spawn life_fnc_MP;

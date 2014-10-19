@@ -80,6 +80,7 @@ hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >
 //};
 
 //Side Specific actions.
+_side = player call life_fnc_getRole;
 switch(playerSide) do {
 	case west: {
 		[_vehicle,"cop_offroad",true] spawn life_fnc_vehicleAnimate;
@@ -92,7 +93,8 @@ switch(playerSide) do {
 	};
 	
 	case independent: {
-		[_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
+		if (_side == "adac") then { [_vehicle,"adac_offroad",true] spawn life_fnc_vehicleAnimate; } 
+		else { [_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate; };
 		_vehicle setVariable["lights",false,true];
 	};
 	
@@ -102,7 +104,6 @@ switch(playerSide) do {
 		};
 	};
 };
-_side = player call life_fnc_getRole;
 _vehicle setVariable ["side",_side,true];
 
 _vehicle allowDamage true;

@@ -11,7 +11,7 @@ cutText ["","BLACK IN"];
 if(count life_spawn_point == 0) then
 {
 	private["_sp","_spCfg"];
-	_spCfg = [playerSide] call life_fnc_spawnPointCfg;
+	_spCfg = [playerSide] call life_fnc_spawnPointCustomCfg;
 	_sp = _spCfg select 0;
 	
 	if(playerSide in [civilian,east]) then
@@ -66,4 +66,5 @@ if(life_firstSpawn) then {
 	life_firstSpawn = false;
 	[] call life_fnc_welcomeNotification;
 };
+life_showAllSpawnpoints = false;
 [] call life_fnc_hudSetup;

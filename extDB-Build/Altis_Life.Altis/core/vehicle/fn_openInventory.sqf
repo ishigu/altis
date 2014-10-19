@@ -35,6 +35,7 @@ if(_veh_data select 0 == -1 && {!(_vehicle isKindOf "House_F")}) exitWith {close
 
 ctrlSetText[3504,format[(localize "STR_MISC_Weight")+ " %1/%2",_veh_data select 1,_veh_data select 0]];
 [_vehicle] call life_fnc_vehInventory;
+_vehicle setVariable ["invOpenedBy", getPlayerUID player, true];
 life_trunk_vehicle = _vehicle;
 
 _vehicle spawn
@@ -43,5 +44,17 @@ _vehicle spawn
 	_this setVariable["trunk_in_use",false,true];
 	if(_this isKindOf "House_F") then {
 		[[_this],"TON_fnc_updateHouseTrunk",false,false] spawn life_fnc_MP;
+	};
+};
+
+_vehicle spawn {
+	private["_invOpen"];
+	while {true} do {
+		_invOpen = _this getVariable ["invOpenedBy", ""];
+		if (_invOpen != getPlayerUID player) exitWith {
+			closeDialog 0;
+			_this setVariable["trunk_in_use",false,true];
+		};
+		sleep 0.1;
 	};
 };

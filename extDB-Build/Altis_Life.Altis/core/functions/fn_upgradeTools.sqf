@@ -33,6 +33,15 @@ switch (true) do
 			_newTool = "life_inv_shredder1";
 		};
 	};
+	case(_tool == "pickaxe"):
+	{
+		if(life_inv_pickaxe > 0) then
+		{
+			_cost = 300000;
+			_oldTool = "life_inv_pickaxe";
+			_newTool = "life_inv_pickaxe1";
+		};
+	};
 	default {_cost = -1;};
 };
 if(_cost == -1) exitWith {};

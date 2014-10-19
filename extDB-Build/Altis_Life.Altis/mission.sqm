@@ -5853,7 +5853,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false;this setVariable [""realname"",""Werkzeuge""];this addAction[""Werkzeuge"",life_fnc_virt_menu,""tools"",1.5,false,true,"""",'playerSide in [east,civilian]'];this addAction[""Ölbohrer aufwerten"",life_fnc_upgradeTools,""oildrill"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_oildrill > 0)'];this addAction[""Mähwerk aufwerten"",life_fnc_upgradeTools,""shredder"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_shredder > 0)'];";
+					init="this allowDamage false; this enableSimulation false;this setVariable [""realname"",""Werkzeuge""];this addAction[""Werkzeuge"",life_fnc_virt_menu,""tools"",1.5,false,true,"""",'playerSide in [east,civilian]'];this addAction[""Ölbohrer aufwerten"",life_fnc_upgradeTools,""oildrill"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_oildrill > 0)'];this addAction[""Mähwerk aufwerten"",life_fnc_upgradeTools,""shredder"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_shredder > 0)'];this addAction[""Spitzhacke aufwerten"",life_fnc_upgradeTools,""pickaxe"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_pickaxe > 0)'];";
 				};
 			};
 		};
@@ -5873,7 +5873,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false;this setVariable [""realname"",""Werkzeuge""];this addAction[""Werkzeuge"",life_fnc_virt_menu,""tools"",1.5,false,true,"""",'playerSide in [east,civilian]'];this addAction[""Ölbohrer aufwerten"",life_fnc_upgradeTools,""oildrill"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_oildrill > 0)'];this addAction[""Mähwerk aufwerten"",life_fnc_upgradeTools,""shredder"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_shredder > 0)'];";
+					init="this allowDamage false; this enableSimulation false;this setVariable [""realname"",""Werkzeuge""];this addAction[""Werkzeuge"",life_fnc_virt_menu,""tools"",1.5,false,true,"""",'playerSide in [east,civilian]'];this addAction[""Ölbohrer aufwerten"",life_fnc_upgradeTools,""oildrill"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_oildrill > 0)'];this addAction[""Mähwerk aufwerten"",life_fnc_upgradeTools,""shredder"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_shredder > 0)'];this addAction[""Spitzhacke aufwerten"",life_fnc_upgradeTools,""pickaxe"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_pickaxe > 0)'];";
 				};
 			};
 		};
@@ -5893,14 +5893,14 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false;this setVariable [""realname"",""Werkzeuge""];this addAction[""Werkzeuge"",life_fnc_virt_menu,""tools"",1.5,false,true,"""",'playerSide in [east,civilian]'];this addAction[""Ölbohrer aufwerten"",life_fnc_upgradeTools,""oildrill"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_oildrill > 0)'];this addAction[""Mähwerk aufwerten"",life_fnc_upgradeTools,""shredder"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_shredder > 0)'];";
+					init="this allowDamage false; this enableSimulation false;this setVariable [""realname"",""Werkzeuge""];this addAction[""Werkzeuge"",life_fnc_virt_menu,""tools"",1.5,false,true,"""",'playerSide in [east,civilian]'];this addAction[""Ölbohrer aufwerten"",life_fnc_upgradeTools,""oildrill"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_oildrill > 0)'];this addAction[""Mähwerk aufwerten"",life_fnc_upgradeTools,""shredder"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_shredder > 0)'];this addAction[""Spitzhacke aufwerten"",life_fnc_upgradeTools,""pickaxe"",1.5,true,true,"""",'playerSide in [east,civilian] && (life_inv_pickaxe > 0)'];";
 				};
 			};
 		};
 	};
 	class Vehicles
 	{
-		items=1444;
+		items=1445;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -20146,6 +20146,17 @@ class Mission
 			vehicle="Land_CashDesk_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this setVectorUp [0,0,1];";
+		};
+		class Item1444
+		{
+			position[]={3608.6531,9.9778795,13115.87};
+			azimut=276;
+			offsetY=-1;
+			id=1798;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this setObjectTexture [0, ""markt.jpg""]";
 		};
 	};
 	class Markers

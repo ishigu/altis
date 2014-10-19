@@ -30,13 +30,16 @@ _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
+_BtnArray = [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7];
+_select = 0;
 life_vInact_curTarget = _curTarget;
 
 //Set Repair Action
-_Btn1 ctrlSetText localize "STR_vInAct_Repair";
-_Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
+(_BtnArray select _select) ctrlSetText localize "STR_vInAct_Repair";
+(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
 
-if("ToolKit" in (items player) || (!(player call life_fnc_isMedic) && (playerSide == independent)) ) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
+if("ToolKit" in (items player) || (player call life_fnc_isADAC) ) then {(_BtnArray select _select) ctrlEnable true;} else {(_BtnArray select _select) ctrlEnable false;};
+_select = _select +1;
 
 _Btn2 ctrlShow false; 
 _Btn3 ctrlShow false; 
@@ -46,92 +49,85 @@ _Btn6 ctrlShow false;
 _Btn7 ctrlShow false;
 
 if(playerSide == west) then {
-	_Btn2 ctrlShow true;
-	_Btn3 ctrlShow true;
-	_Btn4 ctrlShow true;
-	_Btn5 ctrlShow true;
-	_Btn6 ctrlShow true;
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_Registration";
+	(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
 	
-	_Btn2 ctrlSetText localize "STR_vInAct_Registration";
-	_Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_SearchVehicle";
+	(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vehInvSearch;";
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
 	
-	_Btn3 ctrlSetText localize "STR_vInAct_SearchVehicle";
-	_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vehInvSearch;";
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_PullOut";
+	(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
+	(_BtnArray select _select) ctrlShow true;
+	if(count crew _curTarget == 0) then {(_BtnArray select _select) ctrlEnable false;};
+	_select = _select +1;
 	
-	_Btn4 ctrlSetText localize "STR_vInAct_PullOut";
-	_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
-	if(count crew _curTarget == 0) then {_Btn4 ctrlEnable false;};
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_Impound";
+	(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
 	
-	_Btn5 ctrlSetText localize "STR_vInAct_Impound";
-	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
-	
-	_Btn6 ctrlSetText localize "STR_vInAct_ImpoundPlus";
-	_Btn6 buttonSetAction "closeDialog 0; [life_vInact_curTarget] spawn life_fnc_impoundPlusAction;";
-	
-	if(_curTarget isKindOf "Ship") then {
-		_Btn7 ctrlShow true;
-		_Btn7 ctrlSetText localize "STR_vInAct_PushBoat";
-		_Btn7 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
-		if(_curTarget isKindOf "Ship" && {local _curTarget} && {count crew _curTarget == 0}) then { _Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false};
-	} else {
-		if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F"]) then {
-			_Btn7 ctrlShow true;
-			_Btn7 ctrlSetText localize "STR_vInAct_GetInKart";
-			_Btn7 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false};
-		};
-	};
-	
-} else {
-	if(_curTarget isKindOf "Ship") then {
-		_Btn2 ctrlShow true;
-		_Btn2 ctrlSetText localize "STR_vInAct_PushBoat";
-		_Btn2 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
-		if(_curTarget isKindOf "Ship" && {local _curTarget} && {count crew _curTarget == 0}) then { _Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
-	} else {
-		if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F"]) then {
-			_Btn2 ctrlShow true;
-			_Btn2 ctrlSetText localize "STR_vInAct_GetInKart";
-			_Btn2 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
-		} else {
-			if (player call life_fnc_isADAC) then {
-				_Btn2 ctrlShow true;
-				_Btn3 ctrlShow true;
-				_Btn4 ctrlShow true;
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_ImpoundPlus";
+	(_BtnArray select _select) buttonSetAction "closeDialog 0; [life_vInact_curTarget] spawn life_fnc_impoundPlusAction;";
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
+};
 
-				_Btn2 ctrlSetText localize "STR_vInAct_Unflip";
-				_Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-				if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
+if (player call life_fnc_isADAC) then {
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_Unflip";
+	(_BtnArray select _select) buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
+	if(count crew _curTarget == 0 && {canMove _curTarget}) then { (_BtnArray select _select) ctrlEnable false;} else {(_BtnArray select _select) ctrlEnable true;};
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
 				
-				_Btn3 ctrlSetText localize "STR_vInAct_Impound";
-				_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_Impound";
+	(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
 				
-				_Btn4 ctrlSetText localize "STR_vInAct_Repaint";
-				_Btn4 buttonSetAction "closeDialog 0; [] spawn life_fnc_adacRepaintMenu;";
-			};
-		};
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_Repaint";
+	(_BtnArray select _select) buttonSetAction "closeDialog 0; [] spawn life_fnc_adacRepaintMenu;";
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
+};
+
+if(playerSide == east) then {
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_PullOut";
+	(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutActionRebel;";
+	(_BtnArray select _select) ctrlShow true;
+	if((count crew _curTarget == 0) || (locked _curTarget == 2)) then {(_BtnArray select _select) ctrlEnable false;};
+	_select = _select +1;
+};
+
+if(_curTarget isKindOf "Ship") then {
+	(_BtnArray select _select) ctrlShow true;
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_PushBoat";
+	(_BtnArray select _select) buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
+	if(_curTarget isKindOf "Ship" && {local _curTarget} && {count crew _curTarget == 0}) then { (_BtnArray select _select) ctrlEnable true;} else {(_BtnArray select _select) ctrlEnable false};
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
+};
+	
+if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F"]) then {
+	(_BtnArray select _select) ctrlShow true;
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_GetInKart";
+	(_BtnArray select _select) buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
+	if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {(_BtnArray select _select) ctrlEnable true;} else {(_BtnArray select _select) ctrlEnable false};
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
+};
+	
+if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles)) then {
+	(_BtnArray select _select) ctrlShow true;
+	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_DeviceMine";
+	(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
+	if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
+		(_BtnArray select _select) ctrlEnable false;
+	} else {
+		(_BtnArray select _select) ctrlEnable true;
 	};
-	//Tempest Device non ADAC
-	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (!(player call life_fnc_isADAC))) then {
-		_Btn3 ctrlShow true;
-		_Btn3 ctrlSetText localize "STR_vInAct_DeviceMine";
-		_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
-		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
-			_Btn3 ctrlEnable false;
-		} else {
-			_Btn3 ctrlEnable true;
-		};
-	};
-	//Tempest Device als ADAC
-	if(typeOf _curTarget == "O_Truck_03_device_F" && (_curTarget in life_vehicles) && (player call life_fnc_isADAC) ) then {
-		_Btn5 ctrlShow true;
-		_Btn5 ctrlSetText localize "STR_vInAct_DeviceMine";
-		_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
-		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
-			_Btn5 ctrlEnable false;
-		} else {
-			_Btn5 ctrlEnable true;
-		};
-	};
+	_select = _select +1;
 };

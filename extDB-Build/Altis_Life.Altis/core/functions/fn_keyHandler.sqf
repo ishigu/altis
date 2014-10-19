@@ -109,25 +109,62 @@ switch (_code) do
 	//Restraining (Shift + R)
 	case 19:
 	{
-		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
-		{
-			if([false,"handcuffs",1] call life_fnc_handleInv) then
+		if(playerSide == west && alive player && (vehicle player == player)) then {
+			if(_shift) then {_handled = true;};
+			if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 			{
-				[cursorTarget] call life_fnc_restrainAction;
-				systemChat localize "STR_NOTF_RestrainedPerson";
-			}else{
-				systemChat localize "STR_NOTF_NoHandcuffs";
+				if([false,"handcuffs",1] call life_fnc_handleInv) then
+				{
+					[cursorTarget] call life_fnc_restrainAction;
+					systemChat localize "STR_NOTF_RestrainedPerson";
+				}else{
+					systemChat localize "STR_NOTF_NoHandcuffs";
+				};
+			}
+			else
+			{
+				_target = ((getPos player) nearEntities["Man",3.5]);
+				_target = _target - [player];
+				_target = _target select 0;
+				if (_shift && !isNull _target && (isPlayer _target) && (side _target in [civilian,independent,east]) && alive _target && _target distance player < 3.5 && !(_target getVariable "Escorting") && !(_target getVariable "restrained") && speed _target < 1) then
+				{
+					if([false,"handcuffs",1] call life_fnc_handleInv) then
+					{
+						[_target] call life_fnc_restrainAction;
+						systemChat localize "STR_NOTF_RestrainedPerson";
+					}else{
+						systemChat localize "STR_NOTF_NoHandcuffs";
+					};
+				};
 			};
-		}
-		else
-		{
-			_target = ((getPos player) nearEntities["Man",3.5]);
-			_target = _target - [player];
-			_target = _target select 0;
-			if (_shift && playerSide == west && !isNull _target && (isPlayer _target) && (side _target in [civilian,independent,east]) && alive _target && _target distance player < 3.5 && !(_target getVariable "Escorting") && !(_target getVariable "restrained") && speed _target < 1) then
+		};
+		if(playerSide == east && alive player && (vehicle player == player)) then {
+			if(_shift) then {_handled = true;};
+			if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable ["Escorting",false]) && !(cursorTarget getVariable ["restrained",false]) && speed cursorTarget < 1 && (cursorTarget getVariable["knockedout",false])) then
 			{
-				[_target] call life_fnc_restrainAction;
+				if([false,"zipties",1] call life_fnc_handleInv) then
+				{
+					[cursorTarget] call life_fnc_restrainActionRebel;
+					systemChat localize "STR_NOTF_RestrainedPerson";
+				}else{
+					titleText[localize "STR_NOTF_NoZipties","PLAIN"];
+				};
+			}
+			else
+			{
+				_target = ((getPos player) nearEntities["Man",3.5]);
+				_target = _target - [player];
+				_target = _target select 0;
+				if (_shift && !isNull _target && (isPlayer _target) &&  alive _target && _target distance player < 3.5 && !(_target getVariable ["Escorting",false]) && !(_target getVariable ["restrained",false]) && speed _target < 1 && _target getVariable["knockedout",false]) then
+				{
+					if([false,"zipties",1] call life_fnc_handleInv) then
+					{
+						[_target] call life_fnc_restrainActionRebel;
+						systemChat localize "STR_NOTF_RestrainedPerson";
+					}else{
+						titleText[localize "STR_NOTF_NoZipties","PLAIN"];
+					};
+				};
 			};
 		};
 	};
@@ -259,14 +296,14 @@ switch (_code) do
         if((!life_action_inUse) && (vehicle player == player) && (!life_action_mining_hotkey_inuse) && (!life_delay_pickaxe)) then
         {
             {
-                _str = [_x] call life_fnc_varToStr;
+                _str = [_x,1] call life_fnc_varHandle;
                 _val = missionNameSpace getVariable _x;
                 if(_val > 0 ) then
                 {
-                    if( _str == "Spitzhacke" || _str == "pickaxe" ) then
+                    if(_str == "pickaxe" || _str == "pickaxe1") then
                     {
 						delay_pickaxe = true;
-                        [] spawn life_fnc_pickAxeUse;
+                        [_str] spawn life_fnc_pickAxeUse;
                     };
                 };
             } foreach life_inv_items;
