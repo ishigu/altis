@@ -1,8 +1,7 @@
 /*
 	File: fn_blindfolded.sqf
-	Author: Tonic (basically)
-			& Shentoza
-	Description: Restraining for Rebels
+	Author: Shentoza
+	Description: Blindfolds you
 */
 _player = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if(isNull _player) exitWith {};

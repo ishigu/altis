@@ -314,7 +314,7 @@ sell_array =
 	["oildrill1",300000],
 	["shredder",80000],
 	["shredder1",350000],
-	["zipties",25000],
+	["zipties",15000],
 	["blindbag",50000]
 	
 	/*
@@ -372,7 +372,7 @@ buy_array =
 	["oildrill1",600000],
 	["shredder",160000],
 	["shredder1",700000],
-	["zipties",50000],
+	["zipties",30000],
 	["blindbag",100000]
 ];
 __CONST__(buy_array,buy_array);
