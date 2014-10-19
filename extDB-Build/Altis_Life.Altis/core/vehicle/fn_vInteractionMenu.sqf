@@ -98,7 +98,7 @@ if(playerSide == east) then {
 	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_PullOut";
 	(_BtnArray select _select) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutActionRebel;";
 	(_BtnArray select _select) ctrlShow true;
-	if((count crew _curTarget == 0) || (locked _curTarget == 2) then {(_BtnArray select _select) ctrlEnable false;};
+	if((count crew _curTarget == 0) || (locked _curTarget == 2)) then {(_BtnArray select _select) ctrlEnable false;};
 	_select = _select +1;
 };
 

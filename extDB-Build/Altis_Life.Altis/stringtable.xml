@@ -5430,7 +5430,7 @@
 		<Key ID="STR_pAct_Blindfold">
 			<Original>Blindfold</Original>
 			<English>Blindfold</English>
-			<German>Sack über den Kopf</German>
+			<German>Augen verb.</German>
 		</Key>
 	</Package>
 	<Package name="Smartphone">
