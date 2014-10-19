@@ -29,6 +29,7 @@ if(isNull _unit) exitWith {};
 hint localize "STR_Reb_TiedUp";		
 while {player getVariable ["restrained",false]} do
 {
+	showHUD false;
 	if(vehicle player == player) then {
 		player playMove "AmovPercMstpSnonWnonDnon_Ease";
 	};
@@ -46,13 +47,11 @@ while {player getVariable ["restrained",false]} do
 	
 	if(vehicle player != player) then
 	{
-		//disableUserInput true;
 		if(driver (vehicle player) == player) then {player action["eject",vehicle player];};
 	};
 };
 
-//disableUserInput false;
-		
+showHUD true;
 if(alive player) then
 {
 	player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
