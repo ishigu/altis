@@ -9,7 +9,7 @@ private["_unit"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _unit OR !isPlayer _unit) exitWith {};
 
-_nearestVehicle = {if(_x in life_vehicles) exitWith {_x};} forEach nearestObjects[getPosATL player,["Car","Ship","Submarine","Air"],10]
+_nearestVehicle = {if(_x in life_vehicles) exitWith {_x};} forEach nearestObjects[getPosATL player,["Car","Ship","Submarine","Air"],10];
 if(isNil "_nearestVehicle" || isNull _nearestVehicle) exitWith {hint localize "STR_NOTF_VehicleNear"};
 
 detach _unit;

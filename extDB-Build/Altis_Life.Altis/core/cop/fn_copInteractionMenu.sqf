@@ -37,7 +37,7 @@ _select = 0;
 {_x ctrlShow false;}forEach _buttonArray;
 
 //Set Unrestrain Button
-if(_curTarget getVariable ["restrained",false] && (!(_curTarget getVariable ["rebelRestrain",false])) then {
+if(_curTarget getVariable ["restrained",false] && (!(_curTarget getVariable ["rebelRestrain",false]))) then {
 	(_buttonArray select _select) ctrlSetText localize "STR_pInAct_Unrestrain";
 	(_buttonArray select _select) buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
 	(_buttonArray select _select) ctrlShow true;
