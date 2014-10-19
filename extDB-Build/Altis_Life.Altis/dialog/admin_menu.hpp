@@ -182,7 +182,7 @@ class life_admin_menu {
 		};
 		
 		class Blind : Life_RscButtonMenu {
-			idc = 2913;
+			idc = 2914;
 			text = "$STR_pAct_Blindfold";
 			onButtonClick = "[] call life_fnc_adminBlindfold;";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));

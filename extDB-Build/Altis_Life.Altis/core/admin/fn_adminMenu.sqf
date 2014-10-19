@@ -6,8 +6,8 @@
 	Description:
 	Opens the admin menu, sorry nothing special in here. Take a look for yourself.
 	Adjusted by: Shentoza
-	Level 1 - Support auf Probe [Kein CarKey,Console,Freeze,Compensate,Teleport,TeleportToMe,Markers,Invisible,Revive]
-	Level 2 - Support [Kein CarKey,Console,Freeze,Compensate,Teleport,TeleportToMe,Markers,Invisible,Revive]
+	Level 1 - Support auf Probe [Kein CarKey,Console,Freeze,Compensate,Teleport,TeleportToMe,Markers,Invisible,Revive,Blind]
+	Level 2 - Support [Kein CarKey,Console,Freeze,Compensate,Teleport,TeleportToMe,Markers,Invisible,Revive,Blind]
 	Level 3 - Admin auf Probe [Kein Console,Compensate]
 	Level 4 - Admin []
 	Level 5 - Projektleitung []
@@ -27,12 +27,14 @@ switch(__GETC__(life_adminlevel)) do
 	ctrlShow [2908,false];ctrlShow [2904,false];ctrlShow [2911,false];
 	ctrlShow [2909,false];ctrlShow [2907,false];ctrlShow [2906,false];
 	ctrlShow [2910,false];ctrlShow [2912,false];ctrlShow [2913,false];
+	ctrlShow [2914,false];
 	};
 	
 	case 2: {
 	ctrlShow [2908,false];ctrlShow [2904,false];ctrlShow [2911,false];
 	ctrlShow [2909,false];ctrlShow [2907,false];ctrlShow [2906,false];
 	ctrlShow [2910,false];ctrlShow [2912,false];ctrlShow [2913,false];
+	ctrlShow [2914,false];
 	};
 	
 	case 3: {
