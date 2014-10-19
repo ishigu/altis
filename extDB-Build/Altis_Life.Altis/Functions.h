@@ -87,7 +87,6 @@ class Life_Client_Core
 		class isMedic {};
 		class medicRequestRecieve {};
 		class countMedic {};
-		class adacLights {};
 	};
 	
 	class Actions
@@ -171,6 +170,7 @@ class Life_Client_Core
 		class distressRemove {};
 		class adacMarkers {};
 		class distressMenu {};
+		class adacLights {};
 	};
 	
 	class Config

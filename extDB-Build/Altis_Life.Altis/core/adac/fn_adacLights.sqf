@@ -38,7 +38,7 @@ _lightleft setLightFlareSize 0.38;
 _lightleft setLightFlareMaxDistance 130;
 _lightleft setLightUseFlare true;
 _lightleft setLightDayLight true;
-_lightleft setLightAmbient [0.1,0.1,1];
+_lightleft setLightAmbient [1, 1, 0.1];
 
 _lightright = createVehicle ["#lightpoint", getPos _vehicle, [], 0, "CAN_COLLIDE"];
 sleep 0.2;
@@ -49,12 +49,12 @@ _lightright setLightAttenuation [0.181, 0, 1000, 130];
 _lightright setLightFlareSize 0.38;
 _lightright setLightFlareMaxDistance 130;
 _lightright setLightUseFlare true;
-_lightright setLightAmbient [1,0.1,0.1]; 
+_lightright setLightAmbient [1, 1, 0.1]; 
 _lightright setLightDayLight true;
 
 if (sunOrMoon < 1) then { // Nacht
-	_brightness = 15;
-	_lightleft setLightIntensity 10;
+	_brightness = 10;
+	_lightleft setLightIntensity 5;
 	_lightright setLightIntensity 5;
 } else { //Tag
 	if((_vehicle isKindOf "Air")) then { //Heli?

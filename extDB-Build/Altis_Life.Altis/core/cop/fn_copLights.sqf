@@ -54,7 +54,7 @@ _lightright setLightAmbient [0.1,0.1,1];
 _lightright setLightDayLight true;
 
 if (sunOrMoon < 1) then { //Nacht
-	_brightness = 15;
+	_brightness = 10;
 	_lightleft setLightIntensity 10;
 	_lightright setLightIntensity 5;
 } else { //Tag
