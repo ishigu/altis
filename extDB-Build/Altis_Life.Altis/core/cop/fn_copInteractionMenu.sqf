@@ -32,7 +32,7 @@ _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 life_pInact_curTarget = _curTarget;
-_buttonArray = [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn5,_Btn6,_Btn7];
+_buttonArray = [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7];
 _select = 0;
 {_x ctrlShow false;}forEach _buttonArray;
 
