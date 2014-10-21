@@ -14,6 +14,34 @@ _unit = _this select 0;
 	
 	switch(_item) do
 	{
+		case "life_inv_smartphone":
+		{
+			missionNamespace setVariable[_x,0];
+		};
+		case "life_inv_dogfood":
+		{
+			missionNamespace setVariable[_x,0];
+		};
+		case "life_inv_defusekit":
+		{
+			missionNamespace setVariable[_x,0];
+		};
+		case "life_inv_defusekit":
+		{
+			missionNamespace setVariable[_x,0];
+		};
+		case "life_inv_ghilliepack":
+		{
+			missionNamespace setVariable[_x,0];
+		};
+		case "life_inv_dogfood":
+		{
+			missionNamespace setVariable[_x,0];
+		};
+		case "life_inv_radarreader":
+		{
+			missionNamespace setVariable[_x,0];
+		};
 		case "life_inv_water":
 		{
 			if(_value > 0) then

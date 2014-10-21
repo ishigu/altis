@@ -22,7 +22,10 @@ if(_unit == player) exitWith {hint localize "STR_ANOTF_Error";};
   };
 };
 life_spectate_pos = getPos player;
-[] call life_fnc_adminInvisible;
+
+_handle = [] spawn life_fnc_adminInvisible;
+waitUntil {scriptDone _handle};
+
 player allowDamage false;
 player attachTo [_unit,[0,-2,0.8]];
 _unit switchCamera "INTERNAL";
