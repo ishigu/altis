@@ -41,6 +41,10 @@ DB_Async_ExtraLock = false;
 DB_Async_Active = false;
 //Get the Array of information blah blah
 _queryResult = call compile format["%1",_queryResult];
+
+//Make everything possible for DB_RAW_V2
+_queryResult = (_queryResult select 1);
+
 if(count (_queryResult select 1) == 0) exitWith {[]};
 _return = (_queryResult select 1) select 0;
 if(_multiarr) then {

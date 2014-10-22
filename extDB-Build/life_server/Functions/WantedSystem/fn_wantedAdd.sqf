@@ -117,7 +117,7 @@ if(count _type == 0) exitWith {}; //Not our information being passed...
 //Is there a custom bounty being sent? Set that as the pricing.
 if(_customBounty != -1 && _type2 != "211") then {_type set[1,_customBounty];};
 //Search the wanted list to make sure they are not on it.
-_index = [_uid,life_wanted_list] call fnc_index;
+_index = [_uid,life_wanted_list] call TON_fnc_index;
 
 if (_type2 == "211") then { // Robbery
 	_type set[0,(_type select 0) + format[" - %1 ($%2)", _data2, [_customBounty] call life_fnc_numberText]]; // Add Name + Robbed Money

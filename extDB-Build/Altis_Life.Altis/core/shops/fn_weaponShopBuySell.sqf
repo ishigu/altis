@@ -70,5 +70,4 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 	};
 };
 [] call life_fnc_saveGear;
-
 [player, uniform player] call life_fnc_setUniform;

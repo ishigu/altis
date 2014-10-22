@@ -11,7 +11,7 @@ if((lbCurSel 2401) == -1) exitWith {hint localize "STR_Shop_Virt_Nothing"};
 _type = lbData[2401,(lbCurSel 2401)];
 _price = lbValue[2401,(lbCurSel 2401)];
 _amount = ctrlText 2404;
-if(!([_amount] call fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
+if(!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
 _restriction = 0;
 switch (_type) do {
 	case "radartrap": { _restriction = 2;};
@@ -99,3 +99,5 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 	};
 	[] call life_fnc_virt_update;
 };
+
+[0] call SOCK_fnc_updatePartial;
