@@ -42,6 +42,10 @@ _unit = _this select 0;
 		{
 			missionNamespace setVariable[_x,0];
 		};
+		case "life_inv_defib":
+		{
+			missionNamespace setVariable[_x,0];
+		};
 		case "life_inv_water":
 		{
 			if(_value > 0) then
