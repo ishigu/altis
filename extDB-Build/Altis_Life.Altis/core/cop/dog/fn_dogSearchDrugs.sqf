@@ -56,6 +56,7 @@ _nearest = [];
 			_cnt = 0;
 			while {(isNil {_unit getVariable "hasDrugs"}) && (_cnt <= 10)} do {
 				sleep 0.2;
+                _cnt = _cnt + 1;
 			};
 			
 			if (_unit getVariable ["hasDrugs", false]) exitWith {_nearest = _nearest + [_unit]};
