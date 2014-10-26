@@ -15,6 +15,7 @@ if(_current) then
 	player setVariable ["hideNametag",nil,true];
 	player setVariable ["oldGroup",nil];
 	[player] joinSilent _oldGroup;
+	player allowDamage true;
 };
 if(!_current) then
 {
@@ -22,4 +23,5 @@ if(!_current) then
 	player setVariable ["hideNametag",true,true];
 	player setVariable ["oldGroup",group player];
 	[player] joinSilent grpNull;
+	player allowDamage false;
 };
