@@ -26,7 +26,7 @@ switch (_this select 0) do {
 		_tmp pushBack _x;
 	};
 	
-	_tmpIdx = [_x select 0, _spCfg] call fnc_index;
+	_tmpIdx = [_x select 0, _spCfg] call TON_fnc_index;
 	if ((_tmpIdx == _lastSpawn) || life_showAllSpawnpoints) then {
 		_tmp pushBack _x;
 	};

@@ -17,7 +17,7 @@ if(isNull _unit) exitWith {ctrlShow[2001,true];};
 
 //A series of checks *ugh*
 if(!life_use_atm) exitWith {hint "Du hast vor kurzem die Bank ausgeraubt. Warte eine weile bis du das Geld ausgibst.";ctrlShow[2001,true];};
-if(!([_amount] call fnc_isnumber)) exitWith {hint "Ungueltiges Zeichen.";ctrlShow[2001,true];};
+if(!([_amount] call TON_fnc_isnumber)) exitWith {hint "Ungueltiges Zeichen.";ctrlShow[2001,true];};
 if(parseNumber(_amount) <= 0) exitWith {hint "Ungueltige Menge.";ctrlShow[2001,true];};
 if(parseNumber(_amount) > life_cash) exitWith {hint "Du hast nicht genug Geld!";ctrlShow[2001,true];};
 if(isNull _unit) exitWith {ctrlShow[2001,true];};

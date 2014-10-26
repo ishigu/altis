@@ -11,7 +11,7 @@ _side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
 
 if (!(_side in [east,west])) exitWith{};
 
-_index = [_uid, life_side_players] call fnc_index;
+_index = [_uid, life_side_players] call TON_fnc_index;
 if (_index == -1) then { life_side_players pushBack [_uid, _side]; };
 
 //diag_log format["SideCheck - addSideCheck UID:%1 Side:%2",_uid,_side];

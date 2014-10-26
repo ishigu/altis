@@ -116,7 +116,7 @@ _patchList =
 "A3_Air_F_RTD","A3_Air_F_RTD_Heli_Light_01","A3_Air_F_Heli_Plane_CAS_02","A3_Air_F_Heli_Plane_Fighter_03","A3_Air_F_RTD","A3_Air_F_Heli_Plane_Fighter_03","A3_Air_F_RTD_Heli_Transport_02","A3_Air_F_RTD_Heli_Light_01","A3_Air_F_RTD_Heli_Attack_02",
 "A3_Air_F_RTD_Heli_Transport_02","A3_Air_F_RTD_Heli_Transport_01","A3_Air_F_RTD_Heli_Light_03","A3_Air_F_RTD_Heli_Transport_01","A3_Air_F_RTD_Heli_Light_03","A3_Air_F_RTD_Heli_Attack_01","A3_Air_F_RTD_Heli_Light_02","A3_Air_F_RTD_Heli_Light_02",
 "A3_Air_F_RTD_Heli_Attack_02","A3_Air_F_RTD_Heli_Attack_01","A3_Soft_F_Heli_TruckHeavy","A3_Soft_F_Heli_HEMTT","A3_CargoPoses_F_Heli","A3_Soft_F_Heli_HEMTT","A3_Soft_F_Heli_Offroad_01","A3_Air_F_Heli_UAV_02","A3_Boat_F_Heli_Boat_Transport_01",
-"A3_Soft_F_Heli_Offroad_01","A3_Air_F_Heli_UAV_02","A3_Boat_F_Heli_Boat_Transport_01","A3_Soft_F_Heli_TruckHeavy","A3_Soft_F_Heli_Truck_03","A3_CargoPoses_F_Heli","A3_Soft_F_Heli_Truck_03","A3Data","A3_Data_F_Hook"];
+"A3_Soft_F_Heli_Offroad_01","A3_Air_F_Heli_UAV_02","A3_Boat_F_Heli_Boat_Transport_01","A3_Soft_F_Heli_TruckHeavy","A3_Soft_F_Heli_Truck_03","A3_CargoPoses_F_Heli","A3_Soft_F_Heli_Truck_03","A3Data","A3_Data_F_Hook","mcc_sandbox"];
 
 uiNamespace setVariable["RscDisplayRemoteMissions",displayNull]; //For Spy-Glass..
 

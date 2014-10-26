@@ -132,7 +132,7 @@ switch (true) do
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			[] spawn fnc_drug_use;
+			//[] spawn fnc_drug_use;
 		};
 	};
 	
