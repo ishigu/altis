@@ -129,7 +129,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Altis Life RPG";
-		overviewText="Altis Life RPG 3.1.4.5";
+		overviewText="Altis Life RPG 3.1.4.8";
 		resistanceEast=1;
 		timeOfChanges=8400;
 		startWind=0;

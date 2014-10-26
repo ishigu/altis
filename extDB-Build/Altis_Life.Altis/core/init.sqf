@@ -120,6 +120,14 @@ life_fnc_moveIn = compileFinal
 	player moveInCargo (_this select 0);
 ";
 
+life_fnc_garageRefund = compileFinal
+"
+	_price = _this select 0;
+	_unit = _this select 1;
+	if(_unit != player) exitWith {};
+	life_atmcash = life_atmcash + _price;
+";
+
 [] execVM "core\init_survival.sqf";
 [] execVM "core\functions\fn_keyRestore.sqf";
 [[],"life_fnc_renewUniform",true,false] spawn life_fnc_MP;

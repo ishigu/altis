@@ -91,7 +91,7 @@ switch (_cfg) do
 					_thiscfgitem = _x select _i;
 					if (isClass _thiscfgitem) then {
 						if !((configName _thiscfgitem) in _slotclasses) then {
-							_slotclasses set [count _slotclasses, configName _thiscfgitem];
+							_slotclasses pushBack configName _thiscfgitem;
 						};
 					};
 				};
@@ -115,7 +115,7 @@ switch (_cfg) do
 				{
 					_tmp = getArray(_base >> _x >> "magazines");
 					{
-						_magazines set[count _magazines, _x];
+						_magazines pushBack _x;
 					} foreach (_tmp);
 				};
 			} foreach _muzzles;

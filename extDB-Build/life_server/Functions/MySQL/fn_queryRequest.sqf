@@ -93,7 +93,7 @@ switch (_side) do {
 		_queryResult set[8,([_queryResult select 8,1] call DB_fnc_bool)];
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
-		_queryResult set[count _queryResult,(missionNamespace getVariable[format["houses_%1",_uid],[]])];
+		_queryResult pushBack (missionNamespace getVariable[format["houses_%1",_uid],[]]);
 		_gangData = [_uid,_side] spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["gang_%1",_uid],[]])];
@@ -112,7 +112,7 @@ switch (_side) do {
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["houses_%1",_uid],[]])];
 		_gangData = [_uid,_side] spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
-		_queryResult set[count _queryResult,(missionNamespace getVariable[format["gang_%1",_uid],[]])];
+		_queryResult pushBack (missionNamespace getVariable[format["gang_%1",_uid],[]]);
 		missionNamespace setVariable[format["gang_%1",_uid],nil];
 		
 		// Parse last_spawn
@@ -122,5 +122,8 @@ switch (_side) do {
 		_queryResult set [11,_new];
 	};
 };
+
+_keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
+_queryResult set[12,_keyArr];
 
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;

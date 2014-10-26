@@ -97,7 +97,8 @@ compileFinal "
 	{
 		_name = getText(configFile >> ""CfgVehicles"" >> (typeOf _vehicle) >> ""displayName"");
 		hint format[""%1 hat seine Schluessel fuer den %2 gegeben"",_giver,_name];
-		life_vehicles set[count life_vehicles, _vehicle];
+		life_vehicles pushBack _vehicle;
+		[[getPlayerUID player,playerSide,_vehicle,1],""TON_fnc_keyManagement"",false,false] spawn life_fnc_MP;
 	};
 ";
 

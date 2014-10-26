@@ -15,7 +15,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	_vehicleData = _vehicle getVariable["vehicle_info_owners",[]];
 	if(count _vehicleData == 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
 	_vehicleName = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
-	[[0,format[localize "STR_NOTF_BeingTowed",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,"STR_NOTF_BeingTowed",true,[(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	life_action_inUse = true;
 	
 	_upp = localize "STR_NOTF_Towing";
@@ -64,7 +64,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		_vehicle setvariable ["zlt_ropes", [], true];
 		waitUntil {!life_impound_inuse};
 		hint format[localize "STR_NOTF_Towed",_type,_price];
-		[[0,format[localize "STR_NOTF_HasTowed",profileName,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"STR_NOTF_HasTowed",true,[profileName,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		life_atmcash = life_atmcash + _price;
 	}
 		else

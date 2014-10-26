@@ -20,7 +20,7 @@ _pos = [0,0,0];
 {
 	_slots = _house getVariable ["slots",[]];
 	if(!(_forEachIndex in _slots)) exitWith {
-		_slots set[count _slots,_forEachIndex];
+		_slots pushBack _forEachIndex;
 		_house setVariable["slots",_slots,true];
 		_pos = _x;
 	};
@@ -32,7 +32,7 @@ switch (_boxType) do {
 		_container = "Box_IND_Grenades_F" createVehicle [0,0,0];
 		_container setPosATL _pos;
 		
-		_containers set [count _containers,_container];
+		_containers pushBack _container;
 		_house setVariable["containers",_containers,true];
 		[[_house],"TON_fnc_updateHouseContainers",false,false] spawn life_fnc_MP;
 		
@@ -47,7 +47,7 @@ switch (_boxType) do {
 		_container = "B_supplyCrate_F" createVehicle [0,0,0];
 		_container setPosATL _pos;
 		
-		_containers set [count _containers,_container];
+		_containers pushBack _container;
 		_house setVariable["containers",_containers,true];
 		[[_house],"TON_fnc_updateHouseContainers",false,false] spawn life_fnc_MP;
 		

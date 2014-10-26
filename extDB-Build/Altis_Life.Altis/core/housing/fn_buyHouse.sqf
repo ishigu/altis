@@ -19,7 +19,6 @@ closeDialog 0;
 
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;
 if(count _houseCfg == 0) exitWith {};
-if(life_atmcash < (_houseCfg select 0)) exitWith {hint format["%1 Dieses Haus kostet %2$.",localize "STR_House_NotEnough", [(_houseCfg select 0)] call life_fnc_numberText]};
 
 _purchaseText = localize "STR_House_Purchase";
 if ((typeOf _house) in ["Land_i_Garage_V1_F","Land_i_Garage_V2_F"]) then { _purchaseText = localize "STR_Garage_Purchase"; };
@@ -31,6 +30,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
+	if(life_atmcash < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
 	[[_uid,_house],"TON_fnc_addHouse",false,false] spawn life_fnc_MP;
 	_house setVariable["house_owner",[_uid,profileName],true];
 	_house setVariable["locked",true,true];
@@ -38,8 +38,8 @@ if(_action) then {
 	_house setVariable["containers",[],true];
 	_house setVariable["uid",round(random 99999),true];
 	life_atmcash = life_atmcash - (_houseCfg select 0);
-	life_vehicles set[count life_vehicles,_house];
-	life_houses set[count life_houses,[str(getPosATL _house),[]]];
+	life_vehicles pushBack _house;
+	life_houses pushBack [str(getPosATL _house),[]];
 	_marker = createMarkerLocal [format["house_%1",(_house getVariable "uid")],getPosATL _house];
 	_houseName = getText(configFile >> "CfgVehicles" >> (typeOf _house) >> "displayName");
 	_marker setMarkerTextLocal _houseName;

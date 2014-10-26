@@ -33,6 +33,7 @@ life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
 life_removeWanted = false;
+life_action_gathering = false;
 life_action_mining_hotkey_inuse = false; // Fix pressing actionkey + q to mine/gather faster
 life_delay_pickaxe = false; // Try to fix Q spam
 life_request_timer = false;
