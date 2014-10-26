@@ -12,6 +12,7 @@ diag_log "----------------------------------------------------------------------
 diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
 diag_log "------------------------------------------------------------------------------------------------------";
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
+[] call compile PreprocessFileLineNumbers "core\clientValidator.sqf";
 //Setup initial client core functions
 diag_log "::Life Client:: Initialization Variables";
 [] call compile PreprocessFileLineNumbers "core\configuration.sqf";
@@ -140,3 +141,4 @@ waitUntil {scriptDone _handle};
 [[getPlayerUID player,player],"TON_fnc_checkSide",false,false] call life_fnc_MP;
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
+player enableFatigue (__GETC__(life_enableFatigue));

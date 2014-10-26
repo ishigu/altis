@@ -8,6 +8,7 @@ private["_building","_doors","_door","_cP","_cpRate","_ui","_title","_titleText"
 _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
+_doors = 1;
 _doors = getNumber(configFile >> "CfgVehicles" >> (typeOf _building) >> "NumberOfDoors");
 
 _door = 0;

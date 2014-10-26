@@ -8,6 +8,7 @@
 private["_unit"];
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {}; //Not valid
+if((player distance _unit > 3)) exitWith {};
 if((_unit getVariable "restrained")) exitWith {};
 if(side _unit == west) exitWith {};
 if(player == _unit) exitWith {};

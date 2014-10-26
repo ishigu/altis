@@ -56,6 +56,8 @@ __CONST__(life_gangUpgradeBase,100000); // life_gangUpgradeBase*life_gangUpgrade
 __CONST__(life_gangUpgradeMultipler,2); //BLAH
 __CONST__(life_gangUpgradeLimit,3200000);
 
+__CONST__(life_enableFatigue,true); //Enable / Disable the ARMA 3 Fatigue System
+
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 /*

@@ -21,7 +21,6 @@ life_versionInfo = "Altis Life RPG v3.1.4.8";
 call compile preprocessFile "UI\HUD.sqf";
 [] spawn ICE_HUD;
 [] execVM "scripts\IgiLoad\IgiLoadInit.sqf"; // ADAC HEMMT
-
 if(isServer && isNil("life_market_prices")) then
 {
 	[] call life_fnc_marketconfiguration;
