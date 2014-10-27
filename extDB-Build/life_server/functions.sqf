@@ -7,7 +7,7 @@ compileFinal "
 
 publicVariable "life_fnc_sidechat";
 
-fnc_index =
+TON_fnc_index =
 compileFinal "
 	private[""_item"",""_stack""];
 	_item = _this select 0;
@@ -23,7 +23,7 @@ compileFinal "
 	_return;
 ";
 
-fnc_player_query =
+TON_fnc_player_query =
 compileFinal "
 	private[""_ret""];
 	_ret = _this select 0;
@@ -32,24 +32,24 @@ compileFinal "
 	
 	[[life_atmcash,life_cash,owner player,player],""life_fnc_admininfo"",_ret,false] spawn life_fnc_MP;
 ";
-publicVariable "fnc_player_query";
+publicVariable "TON_fnc_player_query";
 
-publicVariable "fnc_index";
+publicVariable "TON_fnc_index";
 
-clientWireTransfer =
+TON_fnc_clientWireTransfer =
 compileFinal "
 	private[""_unit"",""_val"",""_from""];
 	_val = _this select 0;
 	_from = _this select 1;
-	if(!([str(_val)] call fnc_isnumber)) exitWith {};
+	if(!([str(_val)] call TON_fnc_isnumber)) exitWith {};
 	if(_from == """") exitWith {};
 	life_atmcash = life_atmcash + _val;
 	hint format[""%1 hat dir $%2 auf dein Konto ueberwiesen."",_from,[_val] call life_fnc_numberText];
 	
 ";
-publicVariable "clientWireTransfer";
+publicVariable "TON_fnc_clientWireTransfer";
 
-fnc_isnumber =
+TON_fnc_isnumber =
 compileFinal "
 	private[""_valid"",""_value"",""_compare""];
 	_value = _this select 0;
@@ -68,9 +68,9 @@ compileFinal "
 	_return;
 ";
 
-publicVariable "fnc_isnumber";
+publicVariable "TON_fnc_isnumber";
 
-clientGangKick =
+TON_fnc_clientGangKick =
 compileFinal "
 	private[""_unit"",""_group""];
 	_unit = _this select 0;
@@ -84,9 +84,9 @@ compileFinal "
 		
 	};
 ";
-publicVariable "clientGangKick";
+publicVariable "TON_fnc_clientGangKick";
 
-clientGetKey =
+TON_fnc_clientGetKey =
 compileFinal "
 	private[""_vehicle"",""_unit"",""_giver""];
 	_vehicle = _this select 0;
@@ -97,13 +97,14 @@ compileFinal "
 	{
 		_name = getText(configFile >> ""CfgVehicles"" >> (typeOf _vehicle) >> ""displayName"");
 		hint format[""%1 hat seine Schluessel fuer den %2 gegeben"",_giver,_name];
-		life_vehicles set[count life_vehicles, _vehicle];
+		life_vehicles pushBack _vehicle;
+		[[getPlayerUID player,playerSide,_vehicle,1],""TON_fnc_keyManagement"",false,false] spawn life_fnc_MP;
 	};
 ";
 
-publicVariable "clientGetKey";
+publicVariable "TON_fnc_clientGetKey";
 
-clientGangLeader =
+TON_fnc_clientGangLeader =
 compileFinal "
 	private[""_unit"",""_group""];
 	_unit = _this select 0;
@@ -117,7 +118,7 @@ compileFinal "
 	};
 ";
 
-publicVariable "clientGangLeader";
+publicVariable "TON_fnc_clientGangLeader";
 
 //Cell Phone Messaging
 /*
@@ -129,7 +130,7 @@ publicVariable "clientGangLeader";
 */
 
 //To EMS
-fnc_cell_emsrequest = 
+TON_fnc_cell_emsrequest = 
 compileFinal "
 private[""_msg"",""_to""];
 	ctrlShow[3022,false];
@@ -137,13 +138,13 @@ private[""_msg"",""_to""];
 	_to = ""EMS Units"";
 	if(_msg == """") exitWith {hint ""Du musst eine Nachricht eingeben!"";ctrlShow[3022,true];};
 		
-	[[_msg,name player,5],""clientMessage"",independent,false] spawn life_fnc_MP;
+	[[_msg,name player,5],""TON_fnc_clientMessage"",independent,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""You have sent a message to all EMS Units."",_to,_msg];
 	ctrlShow[3022,true];
 ";
 //To One Person
-fnc_cell_textmsg =
+TON_fnc_cell_textmsg =
 compileFinal "
 	private[""_msg"",""_to""];
 	ctrlShow[3015,false];
@@ -154,13 +155,13 @@ compileFinal "
 	if(isNil ""_to"") exitWith {ctrlShow[3015,true];};
 	if(_msg == """") exitWith {hint ""Du musst eine Nachricht eingeben!"";ctrlShow[3015,true];};
 	
-	[[_msg,name player,0],""clientMessage"",_to,false] spawn life_fnc_MP;
+	[[_msg,name player,0],""TON_fnc_clientMessage"",_to,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""Du hast %1 eine Nachricht geschickt: %2"",name _to,_msg];
 	ctrlShow[3015,true];
 ";
 //To All Cops
-fnc_cell_textcop =
+TON_fnc_cell_textcop =
 compileFinal "
 	private[""_msg"",""_to""];
 	ctrlShow[3016,false];
@@ -168,13 +169,13 @@ compileFinal "
 	_to = ""The Police"";
 	if(_msg == """") exitWith {hint ""Du musst eine Nachricht eingeben!"";ctrlShow[3016,true];};
 		
-	[[_msg,name player,1],""clientMessage"",true,false] spawn life_fnc_MP;
+	[[_msg,name player,1],""TON_fnc_clientMessage"",true,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""Du hast %1 eine Nachricht geschickt: %2"",_to,_msg];
 	ctrlShow[3016,true];
 ";
 //To All Admins
-fnc_cell_textadmin =
+TON_fnc_cell_textadmin =
 compileFinal "
 	private[""_msg"",""_to"",""_from""];
 	ctrlShow[3017,false];
@@ -182,13 +183,13 @@ compileFinal "
 	_to = ""The Admins"";
 	if(_msg == """") exitWith {hint ""Du musst eine Nachricht eingeben!"";ctrlShow[3017,true];};
 		
-	[[_msg,name player,2],""clientMessage"",true,false] spawn life_fnc_MP;
+	[[_msg,name player,2],""TON_fnc_clientMessage"",true,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""Du hast %1 eine Nachricht geschickt: %2"",_to,_msg];
 	ctrlShow[3017,true];
 ";
 //Admin To One Person
-fnc_cell_adminmsg =
+TON_fnc_cell_adminmsg =
 compileFinal "
 	if(isServer) exitWith {};
 	if((call life_adminlevel) < 1) exitWith {hint ""Du bist kein Admin!"";};
@@ -198,12 +199,12 @@ compileFinal "
 	if(isNull _to) exitWith {};
 	if(_msg == """") exitWith {hint ""Du musst eine Nachricht eingeben!"";};
 	
-	[[_msg,name player,3],""clientMessage"",_to,false] spawn life_fnc_MP;
+	[[_msg,name player,3],""TON_fnc_clientMessage"",_to,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""Admin geschickt an: %1 - Nachricht: %2"",name _to,_msg];
 ";
 
-fnc_cell_adminmsgall =
+TON_fnc_cell_adminmsgall =
 compileFinal "
 	if(isServer) exitWith {};
 	if((call life_adminlevel) < 1) exitWith {hint ""Du bist kein Admin!"";};
@@ -211,17 +212,17 @@ compileFinal "
 	_msg = ctrlText 3003;
 	if(_msg == """") exitWith {hint ""Du musst eine Nachricht eingeben!"";};
 	
-	[[_msg,name player,4],""clientMessage"",true,false] spawn life_fnc_MP;
+	[[_msg,name player,4],""TON_fnc_clientMessage"",true,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""Admin Nachricht an alle: %1"",_msg];
 ";
 
-publicVariable "fnc_cell_textmsg";
-publicVariable "fnc_cell_textcop";
-publicVariable "fnc_cell_textadmin";
-publicVariable "fnc_cell_adminmsg";
-publicVariable "fnc_cell_adminmsgall";
-publicVariable "fnc_cell_emsrequest";
+publicVariable "TON_fnc_cell_textmsg";
+publicVariable "TON_fnc_cell_textcop";
+publicVariable "TON_fnc_cell_textadmin";
+publicVariable "TON_fnc_cell_adminmsg";
+publicVariable "TON_fnc_cell_adminmsgall";
+publicVariable "TON_fnc_cell_emsrequest";
 //Client Message
 /*
 	0 = private message
@@ -230,7 +231,7 @@ publicVariable "fnc_cell_emsrequest";
 	3 = message from admin
 	4 = admin message to all
 */
-clientMessage =
+TON_fnc_clientMessage =
 compileFinal "
 	if(isServer) exitWith {};
 	private[""_msg"",""_from"", ""_type""];
@@ -315,7 +316,7 @@ compileFinal "
 		};
 	};
 ";
-publicVariable "clientMessage";
+publicVariable "TON_fnc_clientMessage";
 
 // Function by KillzoneKid http://killzonekid.com/arma-scripting-tutorials-epic-armour-drop/
 fnc_paraDrop = 

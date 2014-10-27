@@ -2202,6 +2202,10 @@
 			<Original>You can't gather from inside a car!</Original>
 			<English>You can't gather from inside a car!</English>
 		</Key>
+		<Key ID="STR_NOTF_NoLootingPerson">
+			<Original>You are not allowed to loot dead bodies</Original>
+			<English>You are not allowed to loot dead bodies</English>
+		</Key>
 		<Key ID="STR_NOTF_Frozen">
 			<Original>You have been frozen by an administrator</Original>
 			<English>You have been frozen by an administrator</English>

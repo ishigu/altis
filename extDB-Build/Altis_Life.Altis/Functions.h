@@ -9,6 +9,7 @@ class Socket_Reciever
 		class insertPlayerInfo {};
 		class updateRequest {};
 		class syncData {};
+		class updatePartial {};
 		class checkSideReceived {};
 	};
 };
@@ -372,6 +373,7 @@ class Life_Client_Core
 		class doorAnimate {};
 		class fedCamDisplay {};
 		class copLoadout {};
+		class ticketPaid {};
 		class seizeWeapon {};
 		class copShowLicense {};
 		class copLicenseShown {};

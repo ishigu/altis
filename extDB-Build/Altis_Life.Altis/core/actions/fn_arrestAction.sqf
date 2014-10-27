@@ -21,4 +21,4 @@ if(isNull _unit) exitWith {}; //Not valid
 detach _unit;
 [[_unit,false],"life_fnc_jail",_unit,false] spawn life_fnc_MP;
 [true,"handcuffs",1] call life_fnc_handleInv;
-[[0,format[localize "STR_NOTF_Arrested_1", _unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[0,"STR_NOTF_Arrested_1",true, [_unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;

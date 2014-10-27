@@ -17,7 +17,7 @@ _name = name player;
 // Iterate trough all cars and check for the owners
 {
 	_owners = _x getVariable ["vehicle_info_owners",[]];
-	_index = [_name,_owners] call fnc_index;
+	_index = [_name,_owners] call TON_fnc_index;
 	
 	if(!(_index == -1)) then {
 		life_vehicles set[count life_vehicles, _x];

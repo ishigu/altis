@@ -14,7 +14,7 @@ if(isNull _vehicle) exitWith{ hint "Kein Fahrzeug ausgewählt!";};
 
 _uid = getPlayerUID player;
 _owners = _vehicle getVariable "vehicle_info_owners";
-_index = [_uid,_owners] call fnc_index;
+_index = [_uid,_owners] call TON_fnc_index;
 if(_index != -1) exitWith {hint "Du besitzt den Schlüssel bereits.";};
 if(_index == -1) then 
 {

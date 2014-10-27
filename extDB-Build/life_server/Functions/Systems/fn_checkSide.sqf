@@ -10,7 +10,7 @@ _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _plr = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _side = civilian;
 
-_index = [_uid, life_side_players] call fnc_index;
+_index = [_uid, life_side_players] call TON_fnc_index;
 if (_index != -1) then { _side = (life_side_players select _index) select 1; };
 
 [_side,"SOCK_fnc_checkSideReceived",_plr,false] spawn life_fnc_MP;

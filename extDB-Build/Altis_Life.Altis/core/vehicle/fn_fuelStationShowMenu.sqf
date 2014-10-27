@@ -36,7 +36,7 @@ waitUntil {!isNull findDisplay 25500};
 _menu = findDisplay 25500;
 
 // Get price
-_index = ["benzin",__GETC__(sell_array)] call fnc_index;
+_index = ["benzin",__GETC__(sell_array)] call TON_fnc_index;
 _fuelPrice = (__GETC__(sell_array) select _index) select 1;
 _marketprice = ["benzin"] call life_fnc_marketGetSellPrice;
 if(_marketprice != -1) then

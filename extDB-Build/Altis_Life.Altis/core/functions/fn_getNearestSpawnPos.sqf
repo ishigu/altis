@@ -16,7 +16,7 @@ if (count _markers > 0) then {
 			_str resize 6;
 			_str = toString _str;
 			
-			if (_str != "house_") then { _nearest = [_x select 0, _markers] call fnc_index; };
+			if (_str != "house_") then { _nearest = [_x select 0, _markers] call TON_fnc_index; };
 		};
 	} forEach _markers;
 };

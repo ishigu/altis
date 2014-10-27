@@ -17,7 +17,7 @@ _vehicleColor = [_className,_dataArr select 1] call life_fnc_vehicleColorStr;
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 
-_retrievePrice = [_className,__GETC__(life_garage_prices)] call fnc_index;
+_retrievePrice = [_className,__GETC__(life_garage_prices)] call TON_fnc_index;
 _retrievePrice = if(_retrievePrice == -1) then {1000} else {(__GETC__(life_garage_prices) select _retrievePrice) select 1;};
 _retrievePrice = _retrievePrice * 2;
 

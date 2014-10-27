@@ -12,6 +12,7 @@ diag_log "----------------------------------------------------------------------
 diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
 diag_log "------------------------------------------------------------------------------------------------------";
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
+[] call compile PreprocessFileLineNumbers "core\clientValidator.sqf";
 //Setup initial client core functions
 diag_log "::Life Client:: Initialization Variables";
 [] call compile PreprocessFileLineNumbers "core\configuration.sqf";
@@ -23,7 +24,7 @@ diag_log "::Life Client:: Setting up user actions";
 [] call life_fnc_setupActions;
 diag_log "::Life Client:: User actions completed";
 diag_log "::Life Client:: Waiting for server functions to transfer..";
-waitUntil {(!isNil {clientGangLeader})};
+waitUntil {(!isNil {TON_fnc_clientGangLeader})};
 diag_log "::Life Client:: Received server functions.";
 0 cutText ["Waiting for the server to be ready...","BLACK FADED"];
 0 cutFadeOut 99999999;
@@ -120,6 +121,14 @@ life_fnc_moveIn = compileFinal
 	player moveInCargo (_this select 0);
 ";
 
+life_fnc_garageRefund = compileFinal
+"
+	_price = _this select 0;
+	_unit = _this select 1;
+	if(_unit != player) exitWith {};
+	life_atmcash = life_atmcash + _price;
+";
+
 [] execVM "core\init_survival.sqf";
 [] execVM "core\functions\fn_keyRestore.sqf";
 [[],"life_fnc_renewUniform",true,false] spawn life_fnc_MP;
@@ -132,3 +141,4 @@ waitUntil {scriptDone _handle};
 [[getPlayerUID player,player],"TON_fnc_checkSide",false,false] call life_fnc_MP;
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
+player enableFatigue (__GETC__(life_enableFatigue));

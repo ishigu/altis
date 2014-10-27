@@ -14,14 +14,13 @@ doors = false; // enable HeliDoors
 if(!isDedicated) then { X_Client = true;};
 enableSaving[false,false];
 
-life_versionInfo = "Altis Life RPG v3.1.4.5";
+life_versionInfo = "Altis Life RPG v3.1.4.8";
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
 
 call compile preprocessFile "UI\HUD.sqf";
 [] spawn ICE_HUD;
 [] execVM "scripts\IgiLoad\IgiLoadInit.sqf"; // ADAC HEMMT
-
 if(isServer && isNil("life_market_prices")) then
 {
 	[] call life_fnc_marketconfiguration;

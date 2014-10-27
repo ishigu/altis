@@ -55,9 +55,9 @@ _value = 0;
 	_var = _x select 0;
 	_val = _x select 1;
 	
-	_index = [_var,life_illegal_items] call fnc_index;
+	_index = [_var,life_illegal_items] call TON_fnc_index;
 	if(_index != -1) then {
-		_vIndex = [_var,__GETC__(sell_array)] call fnc_index;
+		_vIndex = [_var,__GETC__(sell_array)] call TON_fnc_index;
 		if(_vIndex != -1) then {
 			_houseInvData set[_forEachIndex,-1];
 			_houseInvData = _houseInvData - [-1];
@@ -68,7 +68,7 @@ _value = 0;
 } foreach (_houseInv select 0);
 
 if(_value > 0) then {
-	[[0,format[localize "STR_House_Raid_Successful",[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,"STR_House_Raid_Successful",true,[[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	life_atmcash = life_atmcash + _value;
 	_house setVariable["Trunk",[_houseInvData,_houseInvVal],true];
 	[[_house],"TON_fnc_updateHouseTrunk",false,false] spawn life_fnc_MP;
