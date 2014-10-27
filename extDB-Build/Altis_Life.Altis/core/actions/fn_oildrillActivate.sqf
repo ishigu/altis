@@ -51,6 +51,7 @@ while {true} do
 };
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
+if(_cp < 1) exitWith {};
 
 _generator setVariable ["mining",true,true];
 _timesDrilled = 0;

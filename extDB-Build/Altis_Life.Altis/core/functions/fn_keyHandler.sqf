@@ -144,7 +144,7 @@ switch (_code) do
 			{
 				if([false,"zipties",1] call life_fnc_handleInv) then
 				{
-					[cursorTarget] call life_fnc_restrainActionRebel;
+					[cursorTarget] spawn life_fnc_restrainActionRebel;
 					systemChat localize "STR_NOTF_RestrainedPerson";
 				}else{
 					titleText[localize "STR_NOTF_NoZipties","PLAIN"];
@@ -159,7 +159,7 @@ switch (_code) do
 				{
 					if([false,"zipties",1] call life_fnc_handleInv) then
 					{
-						[_target] call life_fnc_restrainActionRebel;
+						[_target] spawn life_fnc_restrainActionRebel;
 						systemChat localize "STR_NOTF_RestrainedPerson";
 					}else{
 						titleText[localize "STR_NOTF_NoZipties","PLAIN"];

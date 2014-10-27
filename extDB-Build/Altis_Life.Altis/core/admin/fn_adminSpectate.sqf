@@ -22,10 +22,12 @@ if(_unit == player) exitWith {hint localize "STR_ANOTF_Error";};
   };
 };
 life_spectate_pos = getPos player;
-[] call life_fnc_adminInvisible;
-player allowDamage false;
+
+_handle = [] spawn life_fnc_adminInvisible;
+waitUntil {scriptDone _handle};
+
 player attachTo [_unit,[0,-2,0.8]];
 _unit switchCamera "INTERNAL";
 hint format["You are now spectating %1 \n\n Press F10 to stop Spectating.",_unit getVariable["realname",name _unit]];
 
-AM_Exit = (findDisplay 46) displayAddEventHandler ["KeyDown","if((_this select 1) == 68) then {(findDisplay 46) displayRemoveEventHandler ['KeyDown',AM_Exit];detach player;player setPos life_spectate_pos;life_spectate_pos =nil;[] call life_fnc_adminInvisible;player allowDamage true;player switchCamera 'INTERNAL';hint 'You have stopped spectating';};false"];
+AM_Exit = (findDisplay 46) displayAddEventHandler ["KeyDown","if((_this select 1) == 68) then {(findDisplay 46) displayRemoveEventHandler ['KeyDown',AM_Exit];detach player;player setPos life_spectate_pos;life_spectate_pos =nil;[] call life_fnc_adminInvisible;player switchCamera 'INTERNAL';hint 'You have stopped spectating';};false"];

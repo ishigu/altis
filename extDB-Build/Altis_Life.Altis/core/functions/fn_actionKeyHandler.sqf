@@ -37,9 +37,9 @@ life_action_inUse = true;
 };
 
 //Check if it's a dead body.
-if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,independent]}) exitWith {
+if(_curTarget isKindOf "Man" && {!alive _curTarget} && {player call life_fnc_isMedic}) exitWith {
 	//Hotfix code by ins0
-	if(((playerSide == blufor && {(call life_revive_cops)}) || playerSide == independent) && {life_inv_defib > 0}) then {
+	if(((playerSide == blufor && {(call life_revive_cops)}) || (player call life_fnc_isMedic)) && {life_inv_defib > 0}) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
 };
@@ -47,10 +47,10 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
-	if((_curTarget getVariable["restrained",false]) && !dialog && playerSide == west) then {
+	if(((_curTarget getVariable["restrained",false]) || (_curTarget getVariable["blindfolded",false])) && !dialog && playerSide == west && _curTarget distance player < 3) then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
-	if(!dialog && playerSide in [civilian,east]) then {
+	if(!dialog && playerSide in [civilian,east] && _curTarget distance player < 3) then {
 		[_curTarget] call life_fnc_playerInteractionMenu;
 	};
 } else {
