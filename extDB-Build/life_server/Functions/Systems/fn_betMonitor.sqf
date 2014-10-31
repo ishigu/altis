@@ -6,7 +6,7 @@ Description: Monitors when to distribute profits.
 _played = 0;
 _playedMaximum = 4;
 life_bet_number = 0;
-life_bet_funds = 100000;
+life_bet_funds = 5000000;
 life_bet_done = false;
 life_bet_tickets = 0;
 while {true} do
@@ -94,7 +94,7 @@ if(count life_bet_players > 0) then {
 		};
 	}], "BIS_fnc_spawn", true, false] spawn life_fnc_MP;
 	diag_log format["Lotterie Gewinner dieser %1. Runde: %2. Insgesamt $%3",_played,_winnerString,life_bet_funds];
-	life_bet_funds = 100000;
+	life_bet_funds = 5000000;
 }
 else
 {
