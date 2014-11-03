@@ -199,7 +199,11 @@ life_inv_items =
 	"life_inv_radarreader",
 	"life_inv_smartphone",
 	"life_inv_zipties",
-	"life_inv_blindbag"
+	"life_inv_blindbag",
+	"life_inv_cotton",
+	"life_inv_cloth",
+	"life_inv_grape",
+	"life_inv_moonshine"
 	
 	/*
 	"life_inv_cocoa",
@@ -243,7 +247,9 @@ life_licenses =
 	["license_med_car","med"],
 	["license_civ_lawyer","civ"],
 	["license_cop_sniper","cop"],
-	["license_cop_dea","cop"]
+	["license_cop_dea","cop"],
+	["license_civ_cloth","civ"],
+	["license_civ_moonshine","civ"]
 
 	/*
 	["license_civ_chocolate","civ"],
@@ -310,7 +316,7 @@ sell_array =
 	["ghilliepack",1000],
 	["dogfood",300],
 	["handcuffs",200],
-	["radarreader",400],
+	["radarreader",100],
 	["smartphone",10],
 	["pickaxe1",150000],
 	["oildrill",75000],
@@ -318,7 +324,11 @@ sell_array =
 	["shredder",80000],
 	["shredder1",350000],
 	["zipties",15000],
-	["blindbag",50000]
+	["blindbag",50000],
+	["cotton",150],
+	["cloth",1000],
+	["grape",80],
+	["moonshine",1000]
 	
 	/*
 	["cocoa",100],

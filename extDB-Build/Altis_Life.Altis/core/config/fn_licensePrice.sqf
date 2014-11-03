@@ -43,4 +43,6 @@ switch (_type) do
 	case "clawyer":{150000};
 	case "sniper":{0};
 	case "dea":{0};
+	case "cloth_l":{10000};
+	case "moonshine_l":{10000};
 };

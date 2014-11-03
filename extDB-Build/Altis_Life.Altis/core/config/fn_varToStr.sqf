@@ -87,6 +87,10 @@ switch (_var) do
 	case "life_inv_smartphone": {(localize "STR_Item_Smartphone")};
 	case "life_inv_zipties": {(localize "STR_Item_Zipties")};
 	case "life_inv_blindbag": {(localize "STR_Item_Blindbag")};
+	case "life_inv_cotton": {(localize "STR_Item_Cotton")};
+	case "life_inv_cloth": {(localize "STR_Item_Cloth")};
+	case "life_inv_grape": {(localize "STR_Item_Grape")};
+	case "life_inv_moonshine": {(localize "STR_Item_Moonshine")};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};
@@ -120,4 +124,6 @@ switch (_var) do
 	case "license_civ_lawyer": {"Anwaltslizenz"};
 	case "license_cop_sniper": {"Praezisionsschuetze"};
 	case "license_cop_dea": {"DEA Ausbildung"};
+	case "license_civ_cloth": {(localize "STR_License_Cloth")};
+	case "license_civ_moonshine": {(localize "STR_License_Moonshine")};
 };

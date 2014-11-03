@@ -3803,6 +3803,26 @@
 			<English>Blindfold Bag</English>
 			<German>Foltersack</German>
 		</Key>
+		<Key ID="STR_Item_Cotton">
+			<Original>Cotton</Original>
+			<English>Cotton</English>
+			<German>Baumwolle</German>
+		</Key>
+		<Key ID="STR_Item_Cloth">
+			<Original>Cloth</Original>
+			<English>Cloth</English>
+			<German>Stoff</German>
+		</Key>
+		<Key ID="STR_Item_Grape">
+			<Original>Grapes</Original>
+			<English>Grapes</English>
+			<German>Weintrauben</German>
+		</Key>
+		<Key ID="STR_Item_Moonshine">
+			<Original>Moonshine</Original>
+			<English>Moonshine</English>
+			<German>Schnaps</German>
+		</Key>
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Driver">
@@ -3961,6 +3981,16 @@
 			<French>Droit de Propriété</French>
 			<Italian>Licenza possesso Casa</Italian>
 			<Portuguese>Licença de Casas</Portuguese>
+		</Key>
+		<Key ID="STR_License_Cloth">
+			<Original>Tailoring License</Original>
+			<English>Tailoring License</English>
+			<German>Schneiderlizenz</German>
+		</Key>
+		<Key ID="STR_License_Moonshine">
+			<Original>Brewing License</Original>
+			<English>Brewing License</English>
+			<German>Braulizenz</German>
 		</Key>
 	</Package>
 	<Package name="More_Item_Strings">

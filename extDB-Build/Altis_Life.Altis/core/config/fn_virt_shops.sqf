@@ -30,4 +30,6 @@ switch (_shop) do
 	case "medic": {["Notarztitems",["smartphone","water","tbacon","defib","pylon"]]};
 	case "adac": {["ADAC Shop",["smartphone","water","tbacon","fuelF","paint","pylon","barrier"]]};
 	case "tools": {["Werkzeuge",["oildrill","shredder","pickaxe"]]};
+	case "cloth": {["Westerland Seide und Stoffe GmbH",["cloth"]]};
+	case "booze": {["Spirituosenhandel",["moonshine"]]};
 };

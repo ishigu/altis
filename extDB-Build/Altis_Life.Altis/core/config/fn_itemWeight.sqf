@@ -82,6 +82,10 @@ switch (_item) do
 	case "smartphone": {0};
 	case "zipties": {2};
 	case "blindbag": {10};
+	case "cotton": {6};
+	case "cloth": {4};
+	case "grape": {4};
+	case "moonshine": {2};
 	/*
 	case "cocoa": {2};
 	case "milk": {2};

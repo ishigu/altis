@@ -28,6 +28,8 @@ _itemInfo = switch (_type) do
 	case "benzin": {["oilu","benzin",1000,"Benzin herstellen"]};
 	case "medical": {["chemical","medical",1200,"Medizin herstellen"]};
 	case "meth": {["chemical","meth",1500,"Meth kochen"]};
+	case "moonshine": {["grape","moonshine",500,"Schnaps destillieren"]};
+	case "cloth": {["cotton","cloth",500,"Stoff weben"]};
 	default {[];};
 };
 

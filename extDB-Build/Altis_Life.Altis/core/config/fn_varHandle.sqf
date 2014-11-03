@@ -92,6 +92,10 @@ switch (_mode) do
 			case "smartphone": {"life_inv_smartphone"};
 			case "zipties": {"life_inv_zipties"};
 			case "blindbag": {"life_inv_blindbag"};
+			case "cotton": {"life_inv_cotton"};
+			case "cloth": {"life_inv_cloth"};
+			case "grape": {"life_inv_grape"};
+			case "moonshine": {"life_inv_moonshine"};
 		};
 	};
 	
@@ -175,6 +179,10 @@ switch (_mode) do
 			case "life_inv_smartphone": {"smartphone"};
 			case "life_inv_zipties": {"zipties"};
 			case "life_inv_blindbag": {"blindbag"};
+			case "life_inv_cotton": {"cotton"};
+			case "life_inv_cloth": {"cloth"};
+			case "life_inv_grape": {"grape"};
+			case "life_inv_moonshine": {"moonshine"};
 		};
 	};
 };
