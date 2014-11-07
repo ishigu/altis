@@ -346,6 +346,7 @@ class Life_Client_Core
 		class fuelStationSliderChange {};
 		class fuelStationSelectVehicle {};
 		class fuelStationFill {};
+		class cutRopeIfNoKey {};
 	};
 	
 	class Cop
