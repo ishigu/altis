@@ -73,10 +73,8 @@ switch(_shop) do
 		
 		_return =
 		[
-			["arifle_sdar_F","Taser Rifle",500],
 			["hgun_P07_snds_F","Stun Pistol",250],
 			["muzzle_snds_L",nil,650],
-			["MineDetector",nil,1000],
 			["Binocular",nil,150],
 			["ItemMap",nil,100],
 			["ItemGPS",nil,100],
@@ -84,7 +82,6 @@ switch(_shop) do
 			["FirstAidKit",nil,150],
 			["NVGoggles",nil,2000],
 			["16Rnd_9x21_Mag",nil,50],
-			["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125],
 			["Chemlight_red",nil,100],
 			["Chemlight_yellow",nil,100],
 			["Chemlight_green",nil,100],
@@ -93,57 +90,53 @@ switch(_shop) do
 		if (__GETC__(life_coplevel) >= 2) then {
 			_return = _return + 
 			[
-				["SMG_02_F",nil,8000],
-				["30Rnd_9x21_Mag",nil,250],
-				["muzzle_snds_L",nil,650],
-				["optic_Aco",nil,1500],
-				["optic_ACO_grn",nil,1500]
+				["arifle_sdar_F","Taser Rifle",500],
+				["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125],
+				["MineDetector",nil,1000]
 			];
 		};
 		if (__GETC__(life_coplevel) >= 3 || license_cop_sniper) then {
 			_return = _return + 
 			[
-				["arifle_MXC_Black_F",nil,10000],
-				["30Rnd_65x39_caseless_mag",nil,300],
-				["muzzle_snds_H",nil,650],
-				["optic_Hamr",nil,3500],
-				["optic_Arco",nil,3500]
+				["SMG_02_F",nil,8000],
+				["30Rnd_9x21_Mag",nil,250],
+				["muzzle_snds_L",nil,650],
+				["optic_Aco",nil,1500],
 			];
 		};
 		if (__GETC__(life_coplevel) >= 4 || license_cop_sniper) then {
 			_return = _return + 
 			[
-				["arifle_MX_SW_Black_F",nil,10000],
-				["muzzle_snds_H_SW",nil,2000],
-				["optic_SOS",nil,200],
-				["rangefinder",nil,1000]
+				["arifle_MXC_Black_F",nil,10000],
+				["30Rnd_65x39_caseless_mag",nil,300],
+				["muzzle_snds_H",nil,650],
+				["optic_ACO_grn",nil,1500]
 			];
 		};
 		if (__GETC__(life_coplevel) >= 5 || license_cop_sniper) then {
 			_return = _return + 
 			[
-				["srifle_EBR_F",nil,10000],
-				["20Rnd_762x51_Mag",nil,200],
-				["muzzle_snds_B",nil,2000],
-				["B_UAV_01_backpack_F",nil,50000],
-				["B_UavTerminal",nil,50000],
+				["optic_Hamr",nil,3500],
 				["SmokeShell",nil,100],
 				["SmokeShellRed",nil,100],
 				["SmokeShellBlue",nil,100]
 			];
 		};
+		
 		if (__GETC__(life_coplevel) >= 6) then {
-			
+			_return = _return + 
+			[
+				["arifle_MX_SW_Black_F",nil,10000],
+				["muzzle_snds_H_MG",nil,2000],
+				["muzzle_snds_H_SW",nil,2000],
+				["optic_Arco",nil,3500]
+			];
 		};
+		
 		if (__GETC__(life_coplevel) >= 7) then {
 			_return = _return + 
 			[
-				["muzzle_snds_H_MG",nil,2000]
-			];
-		};
-		if (license_cop_sniper) then {
-			_return = _return + 
-			[
+				["rangefinder",nil,1000],
 				["arifle_MX_GL_Black_F",nil,10000],
 				["3Rnd_UGL_FlareWhite_F",nil,100],
 				["3Rnd_UGL_FlareRed_F",nil,100],
@@ -153,6 +146,30 @@ switch(_shop) do
 				["3Rnd_SmokeRed_Grenade_shell",nil,100],
 				["3Rnd_SmokeBlue_Grenade_shell",nil,100],
 				["3Rnd_SmokeYellow_Grenade_shell",nil,100]
+			];
+		};
+		
+		if (__GETC__(life_coplevel) >= 8) then {
+			_return = _return + 
+			[
+				["srifle_EBR_F",nil,10000],
+				["20Rnd_762x51_Mag",nil,200],
+				["muzzle_snds_B",nil,2000],
+				["optic_SOS",nil,200]
+			];
+		};
+		
+		if (__GETC__(life_coplevel) >= 9) then {
+			_return = _return + 
+			[
+				["B_UAV_01_backpack_F",nil,50000],
+				["B_UavTerminal",nil,50000]
+			];
+		};
+
+		if (license_cop_sniper) then {
+			_return = _return + 
+			[	
 			];
 		};
 		if (license_cop_dea) then {
