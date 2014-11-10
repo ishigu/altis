@@ -96,6 +96,9 @@ _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
 _vehicle setVariable["side",(_vInfo select 1),TRUE];
 //_vehicle addEventHandler["Killed","_this spawn TON_fnc_vehicleDead"]; //Obsolete function?
+if (_vehicle isKindOf "Air") then {
+	_vehicle addEventHandler["ropeAttach","_this spawn TON_fnc_vehicleRopeAttach"];
+};
 [_vehicle] call life_fnc_clearVehicleAmmo;
 
 //Sets of animations

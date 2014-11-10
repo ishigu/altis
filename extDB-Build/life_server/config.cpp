@@ -115,6 +115,7 @@ class CfgFunctions
 			class checkSide {};
 			class addSideCheck {};
 			class spawnParadrop {};
+			class vehicleRopeAttach {};
 		};
 		
 		class Housing

@@ -111,9 +111,18 @@ if(_curTarget isKindOf "Ship") then {
 	_select = _select +1;
 };
 	
-if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F"]) then {
+if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F",""]) then {
 	(_BtnArray select _select) ctrlShow true;
 	(_BtnArray select _select) ctrlSetText localize "STR_vInAct_GetInKart";
+	(_BtnArray select _select) buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
+	if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {(_BtnArray select _select) ctrlEnable true;} else {(_BtnArray select _select) ctrlEnable false};
+	(_BtnArray select _select) ctrlShow true;
+	_select = _select +1;
+};
+
+if(typeOf (_curTarget) in ["B_Heli_Transport_03_F","B_Heli_Transport_03_unarmed_F","C_Heli_Light_01_civil_F","O_Heli_Transport_04_F","O_Heli_Transport_04_ammo_F","O_Heli_Transport_04_bench_F","O_Heli_Transport_04_box_F","O_Heli_Transport_04_box_F","O_Heli_Transport_04_medevac_F","O_Heli_Transport_04_repair_F","O_Heli_Transport_04_covered_F"]) then {
+	(_BtnArray select _select) ctrlShow true;
+	(_BtnArray select _select) ctrlSetText "Einsteigen";
 	(_BtnArray select _select) buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
 	if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {(_BtnArray select _select) ctrlEnable true;} else {(_BtnArray select _select) ctrlEnable false};
 	(_BtnArray select _select) ctrlShow true;
